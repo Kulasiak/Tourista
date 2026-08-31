@@ -35,6 +35,7 @@
 | [04-hotel-richiesta-preventivo.md](04-hotel-richiesta-preventivo.md) | Brief alberghi + testo e-mail pronto da inviare (IT/EN) |
 | [05-checklist-prenotazioni.md](05-checklist-prenotazioni.md) | Scadenzario prenotazioni musei, guide, trasporti, permessi |
 | [06-trasporti.md](06-trasporti.md) | Confronto pullman GT vs treno, tratte, tempi, permessi ZTL |
+| [dossier.html](dossier.html) | Dossier visuale completo in una pagina — [versione pubblicata](https://claude.ai/code/artifact/151a2e2e-301a-4fdc-8a71-28e44c0cdd5f) |
 | [rooming-list.csv](rooming-list.csv) | Modello rooming list 25 camere / 43 pax |
 | [budget-dettagliato.csv](budget-dettagliato.csv) | Budget in formato tabellare per foglio di calcolo |
 
