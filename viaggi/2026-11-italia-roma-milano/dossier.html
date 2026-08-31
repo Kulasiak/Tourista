@@ -1,0 +1,1093 @@
+<title>Italia in nove notti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#EEF0EC;
+  --surface:#FFFFFF;
+  --surface-2:#F7F8F6;
+  --ink:#131B18;
+  --ink-soft:#5C6862;
+  --ink-faint:#8C978F;
+  --rule:#D3D9D4;
+  --rule-strong:#B4BEB8;
+  --accent:#0E5A4E;
+  --accent-ink:#0E5A4E;
+  --accent-tint:#D7E4DE;
+  --on-accent:#FFFFFF;
+  --accent-wash:#E9F0ED;
+  --signal:#A33320;
+  --signal-wash:#F6E7E3;
+  --amber:#7E5E15;
+  --amber-wash:#F3EEDD;
+  --shadow:0 1px 2px rgba(19,27,24,.06),0 8px 24px -12px rgba(19,27,24,.18);
+  --measure:74rem;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1412;
+    --surface:#161D1A;
+    --surface-2:#1B231F;
+    --ink:#E6ECE8;
+    --ink-soft:#98A49E;
+    --ink-faint:#6D7A74;
+    --rule:#28322D;
+    --rule-strong:#3A4741;
+    --accent:#54C4A8;
+    --accent-ink:#7FD8C1;
+    --accent-tint:#1D3831;
+    --on-accent:#07100D;
+    --accent-wash:#152420;
+    --signal:#E88A70;
+    --signal-wash:#2C1A15;
+    --amber:#D6B35E;
+    --amber-wash:#241E10;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -14px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1412;
+  --surface:#161D1A;
+  --surface-2:#1B231F;
+  --ink:#E6ECE8;
+  --ink-soft:#98A49E;
+  --ink-faint:#6D7A74;
+  --rule:#28322D;
+  --rule-strong:#3A4741;
+  --accent:#54C4A8;
+  --accent-ink:#7FD8C1;
+  --accent-tint:#1D3831;
+  --on-accent:#07100D;
+  --accent-wash:#152420;
+  --signal:#E88A70;
+  --signal-wash:#2C1A15;
+  --amber:#D6B35E;
+  --amber-wash:#241E10;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -14px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
+
+/* ---------- typography ---------- */
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{
+  font-family:"Bodoni Moda",Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-size:clamp(2.7rem,7.5vw,5.4rem);
+  line-height:.98;
+  letter-spacing:-.015em;
+}
+h2{
+  font-family:"Bodoni Moda",Georgia,serif;
+  font-weight:400;
+  font-size:clamp(1.7rem,3.4vw,2.6rem);
+  line-height:1.08;
+  letter-spacing:-.01em;
+}
+h3{font-size:1.05rem;font-weight:600;letter-spacing:-.005em}
+p{margin:0}
+.lede{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--ink-soft);max-width:60ch}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.7rem;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent-ink);
+}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:1px solid var(--rule);
+  background:var(--surface);
+  padding:clamp(2.5rem,6vw,4.5rem) 0 0;
+}
+.masthead .wrap{display:flex;flex-direction:column;gap:1.5rem}
+.mast-top{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:baseline}
+.mast-route{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+}
+.mast-route b{color:var(--ink);font-weight:600}
+.factstrip{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));
+  border-top:1px solid var(--rule);
+  margin-top:.5rem;
+}
+.fact{
+  padding:1.15rem 1.25rem 1.35rem 0;
+  border-right:1px solid var(--rule);
+  display:flex;flex-direction:column;gap:.15rem;
+}
+.fact:last-child{border-right:0}
+.fact .k{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);
+}
+.fact .v{
+  font-family:"Bodoni Moda",Georgia,serif;
+  font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.1;font-weight:500;
+  font-variant-numeric:tabular-nums;
+}
+.fact .v small{font-size:.5em;font-family:"Archivo",sans-serif;font-weight:500;color:var(--ink-soft);letter-spacing:0}
+
+/* ---------- sticky nav ---------- */
+nav.toc{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--surface) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+nav.toc .wrap{display:flex;gap:0;overflow-x:auto;scrollbar-width:thin}
+nav.toc a{
+  flex:0 0 auto;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-soft);text-decoration:none;
+  padding:.85rem 1.1rem .8rem 0;margin-right:1.1rem;
+  border-bottom:2px solid transparent;white-space:nowrap;
+}
+nav.toc a:hover{color:var(--accent-ink);border-bottom-color:var(--accent-tint)}
+nav.toc a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- sections ---------- */
+section{padding:clamp(3rem,6vw,5rem) 0;border-bottom:1px solid var(--rule)}
+.sec-head{display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem;max-width:62ch}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1.25rem}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
+.stack{display:flex;flex-direction:column;gap:1.25rem}
+
+/* ---------- route board ---------- */
+.board{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(11.5rem,1fr));
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);
+}
+.stop{
+  background:var(--surface);
+  padding:1.35rem 1.25rem 1.5rem;
+  display:flex;flex-direction:column;gap:.4rem;
+  position:relative;
+}
+.stop .idx{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:.68rem;letter-spacing:.14em;color:var(--ink-faint);
+}
+.stop .city{
+  font-family:"Bodoni Moda",Georgia,serif;
+  font-size:1.85rem;line-height:1;font-weight:500;
+}
+.stop .dates{font-size:.82rem;color:var(--ink-soft);font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.stop .nights{
+  margin-top:.35rem;display:inline-flex;align-items:center;gap:.45rem;
+  align-self:flex-start;
+  background:var(--accent-wash);color:var(--accent-ink);
+  border:1px solid var(--accent-tint);
+  border-radius:2px;padding:.2rem .5rem;
+  font-size:.72rem;font-weight:600;letter-spacing:.03em;
+}
+.stop .dots{display:flex;gap:3px;margin-top:.15rem}
+.stop .dots i{width:7px;height:7px;background:var(--accent);border-radius:50%;opacity:.85}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.9rem}
+caption{
+  text-align:left;padding:1rem 1.1rem .75rem;
+  font-family:"IBM Plex Mono",monospace;font-size:.68rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);
+  border-bottom:1px solid var(--rule);
+}
+th,td{padding:.62rem 1.1rem;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:"IBM Plex Mono",monospace;font-size:.66rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);
+  border-bottom:1px solid var(--rule-strong);white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{
+  border-top:2px solid var(--rule-strong);border-bottom:0;
+  font-weight:700;background:var(--surface-2);
+}
+tr.total td.n{color:var(--accent-ink)}
+td .sub{display:block;font-size:.76rem;color:var(--ink-faint);line-height:1.45;margin-top:.15rem}
+
+/* ---------- total block + scenario toggle ---------- */
+.totalcard{
+  background:var(--accent);color:var(--on-accent);
+  padding:1.75rem;
+  display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:flex-end;
+}
+.totalcard .k{
+  font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.78;
+}
+.totalcard .big{
+  font-family:"Bodoni Moda",Georgia,serif;font-weight:500;
+  font-size:clamp(2.4rem,5.5vw,3.6rem);line-height:1;font-variant-numeric:tabular-nums;
+}
+.totalcard .side{text-align:right;font-variant-numeric:tabular-nums}
+.totalcard .side .pp{font-size:1.6rem;font-family:"Bodoni Moda",serif}
+
+.switch{display:flex;gap:0;border:1px solid var(--rule-strong);width:fit-content;background:var(--surface)}
+.switch button{
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;
+  padding:.55rem .95rem;border:0;background:transparent;color:var(--ink-soft);
+  cursor:pointer;border-right:1px solid var(--rule);
+}
+.switch button:last-child{border-right:0}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper);font-weight:600}
+.switch button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+/* ---------- notes ---------- */
+.note{
+  border-left:3px solid var(--accent);
+  background:var(--accent-wash);
+  padding:1rem 1.15rem;font-size:.89rem;line-height:1.6;
+}
+.note.warn{border-left-color:var(--signal);background:var(--signal-wash)}
+.note.amber{border-left-color:var(--amber);background:var(--amber-wash)}
+.note b{font-weight:600}
+.note .tag{
+  display:block;font-family:"IBM Plex Mono",monospace;font-size:.64rem;
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:.4rem;color:var(--ink-soft);
+}
+.note.warn .tag{color:var(--signal)}
+.note.amber .tag{color:var(--amber)}
+
+/* ---------- itinerary rail ---------- */
+.rail{display:flex;flex-direction:column;border-left:1px solid var(--rule);margin-left:.5rem}
+.day{display:grid;grid-template-columns:8.5rem 1fr;gap:1.5rem;padding:1.6rem 0 1.6rem 1.75rem;position:relative}
+.day+.day{border-top:1px solid var(--rule)}
+.day::before{
+  content:"";position:absolute;left:-5px;top:2.05rem;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--rule-strong);
+}
+.day.arrive::before{background:var(--accent);border-color:var(--accent)}
+.day .when{display:flex;flex-direction:column;gap:.2rem}
+.day .dnum{font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase}
+.day .date{font-family:"Bodoni Moda",Georgia,serif;font-size:1.5rem;line-height:1;font-variant-numeric:tabular-nums}
+.day .dow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--ink-soft);text-transform:lowercase}
+.day .place{
+  font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent-ink);margin-top:.35rem;
+}
+.day .what{display:flex;flex-direction:column;gap:.55rem}
+.day .what h3{font-size:1.02rem}
+.day ul{margin:0;padding-left:1.05rem;display:flex;flex-direction:column;gap:.3rem;font-size:.89rem;color:var(--ink-soft)}
+.day ul b{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.15rem}
+.chip{
+  font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.06em;
+  border:1px solid var(--rule-strong);color:var(--ink-soft);
+  padding:.16rem .45rem;border-radius:2px;white-space:nowrap;
+}
+.chip.book{border-color:var(--signal);color:var(--signal);background:var(--signal-wash)}
+.chip.move{border-color:var(--accent-tint);color:var(--accent-ink);background:var(--accent-wash)}
+
+/* ---------- cards ---------- */
+.card{background:var(--surface);border:1px solid var(--rule);padding:1.35rem 1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.card .k{font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.card p{font-size:.89rem;color:var(--ink-soft);line-height:1.6}
+.card .big{font-family:"Bodoni Moda",serif;font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.pri{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;margin-right:.4rem;vertical-align:baseline}
+.pri.p1{background:var(--signal)}
+.pri.p2{background:var(--amber)}
+.pri.p3{background:var(--accent)}
+
+/* ---------- footer ---------- */
+footer{padding:3rem 0 4rem;font-size:.83rem;color:var(--ink-soft)}
+footer .wrap{display:flex;flex-direction:column;gap:1rem}
+footer a{color:var(--accent-ink)}
+footer ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.2rem;font-size:.78rem}
+
+@media (max-width:640px){
+  .day{grid-template-columns:1fr;gap:.75rem}
+  .fact{padding-right:1rem}
+  .totalcard{flex-direction:column;align-items:flex-start}
+  .totalcard .side{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{
+  nav.toc{display:none}
+  body{background:#fff}
+  section{break-inside:auto;border-bottom:1px solid #ccc}
+  .day{break-inside:avoid}
+}
+
+/* ---------- hotel shortlist ---------- */
+.hotels{display:flex;flex-direction:column;gap:2.25rem}
+.city-block{display:flex;flex-direction:column;gap:1rem}
+.city-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.85rem;border-bottom:1px solid var(--rule-strong);padding-bottom:.5rem}
+.city-head .cn{font-family:"Bodoni Moda",Georgia,serif;font-size:1.8rem;line-height:1;font-weight:500}
+.city-head .cd{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.hotel{background:var(--surface);border:1px solid var(--rule);padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:.85rem}
+.hotel.pick{border-left:3px solid var(--accent)}
+.hotel-top{display:flex;flex-wrap:wrap;gap:.6rem .9rem;align-items:baseline;justify-content:space-between}
+.hotel h3{font-size:1.12rem}
+.rank{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;padding:.2rem .48rem;border:1px solid var(--rule-strong);color:var(--ink-soft);white-space:nowrap;border-radius:2px}
+.rank.first{background:var(--accent-wash);border-color:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+.rank.no{background:var(--signal-wash);border-color:var(--signal);color:var(--signal)}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(11.5rem,1fr));gap:.7rem 1.4rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.85rem 0}
+.spec{display:flex;flex-direction:column;gap:.12rem}
+.spec .sk{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.59rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.spec .sv{font-size:.85rem;line-height:1.45}
+.hotel p{font-size:.89rem;color:var(--ink-soft);line-height:1.62}
+.hotel p b,.spec .sv b{color:var(--ink);font-weight:600}
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-top">
+      <span class="eyebrow">Dossier operativo · gruppo 43 pax</span>
+      <span class="mast-route">Arrivo <b>Roma</b> &nbsp;→&nbsp; Partenza <b>Milano</b></span>
+    </div>
+    <h1>Italia<br>in nove notti</h1>
+    <p class="lede">Roma · Firenze · Pisa · Venezia · Milano — da lunedì <b>2</b> a mercoledì <b>11 novembre 2026</b>. Programma giorno per giorno, budget alloggio a 75&nbsp;€ per persona a notte in pernottamento e prima colazione, e tassa di soggiorno calcolata comune per comune.</p>
+    <div class="factstrip">
+      <div class="fact"><span class="k">Partecipanti</span><span class="v">43</span></div>
+      <div class="fact"><span class="k">Camere</span><span class="v">25 <small>6 sgl · 19 dbl</small></span></div>
+      <div class="fact"><span class="k">Notti</span><span class="v">9</span></div>
+      <div class="fact"><span class="k">Città</span><span class="v">5</span></div>
+      <div class="fact"><span class="k">Totale p.p.</span><span class="v">€&thinsp;722<small>,50</small></span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#tappe">Tappe</a>
+    <a href="#budget">Budget</a>
+    <a href="#tassa">Tassa di soggiorno</a>
+    <a href="#alberghi">Alberghi</a>
+    <a href="#programma">Programma</a>
+    <a href="#criticita">Criticità</a>
+    <a href="#accessori">Costi accessori</a>
+  </div>
+</nav>
+
+<section id="tappe">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">01 — Il percorso</span>
+      <h2>Cinque tappe, nove notti, 25 camere ogni sera</h2>
+      <p class="lede">La stessa configurazione di camere viaggia con il gruppo per tutto il tour: <b>6 singole e 19 doppie</b>, di cui una a occupazione singola. In totale <b>225 pernottamenti camera</b> e <b>387 notti&#8209;persona</b>.</p>
+    </div>
+
+    <div class="board">
+      <div class="stop">
+        <span class="idx">Tappa 1</span>
+        <span class="city">Roma</span>
+        <span class="dates">2 → 5 nov</span>
+        <span class="nights">3 notti</span>
+        <span class="dots"><i></i><i></i><i></i></span>
+      </div>
+      <div class="stop">
+        <span class="idx">Tappa 2</span>
+        <span class="city">Firenze</span>
+        <span class="dates">5 → 7 nov</span>
+        <span class="nights">2 notti</span>
+        <span class="dots"><i></i><i></i></span>
+      </div>
+      <div class="stop">
+        <span class="idx">Tappa 3</span>
+        <span class="city">Pisa</span>
+        <span class="dates">7 → 8 nov</span>
+        <span class="nights">1 notte</span>
+        <span class="dots"><i></i></span>
+      </div>
+      <div class="stop">
+        <span class="idx">Tappa 4</span>
+        <span class="city">Venezia</span>
+        <span class="dates">8 → 10 nov</span>
+        <span class="nights">2 notti</span>
+        <span class="dots"><i></i><i></i></span>
+      </div>
+      <div class="stop">
+        <span class="idx">Tappa 5</span>
+        <span class="city">Milano</span>
+        <span class="dates">10 → 11 nov</span>
+        <span class="nights">1 notte</span>
+        <span class="dots"><i></i></span>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:1.5rem">
+      <div class="tablewrap">
+        <table>
+          <caption>Composizione del gruppo</caption>
+          <thead><tr><th>Tipologia camera</th><th class="n">Camere</th><th class="n">Pax</th></tr></thead>
+          <tbody>
+            <tr><td>Singola</td><td class="n">6</td><td class="n">6</td></tr>
+            <tr><td>Doppia</td><td class="n">18</td><td class="n">36</td></tr>
+            <tr><td>Doppia uso singola<span class="sub">La 19ª doppia: resta un letto libero, da assegnare all'accompagnatore</span></td><td class="n">1</td><td class="n">1</td></tr>
+            <tr class="total"><td>Totale</td><td class="n">25</td><td class="n">43</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="stack">
+        <div class="note">
+          <span class="tag">Il conto dei letti</span>
+          6 singole + 19 doppie fanno <b>44 letti per 43 partecipanti</b>. Una doppia resta quindi a occupazione singola: va dichiarato all'hotel in fase di preventivo, perché il supplemento «doppia uso singola» è quasi sempre diverso da quello della singola vera.
+        </div>
+        <div class="note amber">
+          <span class="tag">Da confermare</span>
+          Se nel gruppo è previsto un <b>accompagnatore o capogruppo</b>, può occupare quel letto libero e la 19ª camera torna una doppia piena. Altrimenti il supplemento DUS resta a budget.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="budget">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">02 — Quanto costa dormire</span>
+      <h2>Il budget dell'alloggio, città per città</h2>
+      <p class="lede">Base di calcolo: <b>75,00&nbsp;€ per persona a notte</b>, categoria standard 3&nbsp;stelle, <b>prima colazione inclusa</b>, tassa di soggiorno esclusa e conteggiata a parte.</p>
+    </div>
+
+    <div class="stack">
+      <div class="switch" role="group" aria-label="Scenario tariffario">
+        <button type="button" id="btnA" aria-pressed="true">Scenario A · tariffa flat</button>
+        <button type="button" id="btnB" aria-pressed="false">Scenario B · con supplementi singola</button>
+      </div>
+
+      <div class="tablewrap">
+        <table>
+          <caption>Alloggio — 43 pax × 9 notti in BB</caption>
+          <thead>
+            <tr><th>Città</th><th class="n">Notti</th><th class="n">Pax</th><th class="n">€ p.p./notte</th><th class="n">Totale</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Roma</td><td class="n">3</td><td class="n">43</td><td class="n">75,00</td><td class="n">9.675,00</td></tr>
+            <tr><td>Firenze</td><td class="n">2</td><td class="n">43</td><td class="n">75,00</td><td class="n">6.450,00</td></tr>
+            <tr><td>Pisa</td><td class="n">1</td><td class="n">43</td><td class="n">75,00</td><td class="n">3.225,00</td></tr>
+            <tr><td>Venezia</td><td class="n">2</td><td class="n">43</td><td class="n">75,00</td><td class="n">6.450,00</td></tr>
+            <tr><td>Milano</td><td class="n">1</td><td class="n">43</td><td class="n">75,00</td><td class="n">3.225,00</td></tr>
+            <tr class="scenB" hidden><td>Supplemento singola<span class="sub">6 camere × 9 notti × 30,00 € — stima di mercato</span></td><td class="n">9</td><td class="n">6</td><td class="n">30,00</td><td class="n">1.620,00</td></tr>
+            <tr class="scenB" hidden><td>Supplemento doppia uso singola<span class="sub">1 camera × 9 notti × 40,00 € — stima di mercato</span></td><td class="n">9</td><td class="n">1</td><td class="n">40,00</td><td class="n">360,00</td></tr>
+            <tr class="total"><td>Totale alloggio</td><td class="n">9</td><td class="n">43</td><td class="n"></td><td class="n" id="totAlloggio">29.025,00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tablewrap">
+        <table>
+          <caption>Come l'hotel deve quotare — tariffe per camera</caption>
+          <thead><tr><th>Camera</th><th class="n">Tariffa/notte</th><th class="n">N.</th><th class="n">Totale/notte</th><th class="n">× 9 notti</th></tr></thead>
+          <tbody>
+            <tr><td>Doppia — 2 pax × 75,00</td><td class="n">150,00</td><td class="n">18</td><td class="n">2.700,00</td><td class="n">24.300,00</td></tr>
+            <tr><td>Doppia uso singola — 1 pax × 75,00</td><td class="n">75,00</td><td class="n">1</td><td class="n">75,00</td><td class="n">675,00</td></tr>
+            <tr><td>Singola — 1 pax × 75,00</td><td class="n">75,00</td><td class="n">6</td><td class="n">450,00</td><td class="n">4.050,00</td></tr>
+            <tr class="total"><td>Gruppo</td><td class="n"></td><td class="n">25</td><td class="n">3.225,00</td><td class="n">29.025,00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note warn">
+        <span class="tag">Il punto da negoziare</span>
+        <b>75&nbsp;€ per una singola in 3 stelle a Roma, Venezia e Milano è una tariffa aggressiva</b>, anche in bassa stagione. Gli alberghi quotano la singola tra il 65&nbsp;% e l'80&nbsp;% della doppia, non al 50&nbsp;%: è probabile che accettino 150&nbsp;€ sulla doppia ma chiedano 95–110&nbsp;€ sulla singola. Lo <b>Scenario B</b> misura esattamente quanto costerebbe.
+      </div>
+
+      <div class="totalcard">
+        <div>
+          <div class="k" id="lblScenario">Scenario A — alloggio + tassa di soggiorno</div>
+          <div class="big" id="totGrande">€ 31.067,50</div>
+        </div>
+        <div class="side">
+          <div class="k">Per persona</div>
+          <div class="pp num" id="totPP">€ 722,50</div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="k">Leva 1 — gratuità</span>
+          <span class="big">− 1.350 €</span>
+          <p>Lo standard di mercato è <b>1 gratuità ogni 20/25 paganti</b> in doppia: su 43 pax significa 2 camere gratuite per 9 notti. Va chiesta esplicitamente, non viene offerta.</p>
+        </div>
+        <div class="card">
+          <span class="k">Leva 2 — Venezia a Mestre</span>
+          <span class="big">− 550 €</span>
+          <p>Tassa di soggiorno <b>circa dimezzata</b>, niente facchinaggio acqueo e il pullman arriva davanti all'hotel. Costo: 20–30 minuti di trasferimento in più al giorno.</p>
+        </div>
+        <div class="card">
+          <span class="k">Leva 3 — bassa stagione</span>
+          <span class="big">− 3/5 %</span>
+          <p>Novembre è fuori stagione ovunque tranne che a Milano. Da dichiarare in trattativa, insieme allo sconto per pagamento anticipato con bonifico unico.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="tag">Attenzione</span>
+        La gratuità riduce la tariffa alberghiera <b>ma non la tassa di soggiorno</b>: chi pernotta la paga comunque, gratuità o meno.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tassa">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">03 — Tassa di soggiorno</span>
+      <h2>Un tributo comunale, per persona e per notte</h2>
+      <p class="lede">Non è inclusa nei 75&nbsp;€ e non la incassa l'albergo: è un tributo del Comune, che la struttura riscuote al check-out e riversa. Ogni città ha tariffa, massimali ed esenzioni proprie.</p>
+    </div>
+
+    <div class="stack">
+      <div class="tablewrap">
+        <table>
+          <caption>Calcolo su 43 pax — categoria 3 stelle</caption>
+          <thead>
+            <tr><th>Città</th><th class="n">€ p.p./notte</th><th class="n">Notti</th><th class="n">€ p.p.</th><th class="n">× 43 pax</th><th>Riferimento</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Roma</td><td class="n">6,00</td><td class="n">3</td><td class="n">18,00</td><td class="n">774,00</td><td>Contributo di soggiorno, Del. A.C. 255/2023<span class="sub">Massimo 10 notti consecutive</span></td></tr>
+            <tr><td>Firenze</td><td class="n">6,00</td><td class="n">2</td><td class="n">12,00</td><td class="n">516,00</td><td>In vigore dal 1º febbraio 2025<span class="sub">Massimo 7 notti consecutive</span></td></tr>
+            <tr><td>Pisa</td><td class="n">3,50</td><td class="n">1</td><td class="n">3,50</td><td class="n">150,50</td><td>2,50 € dal 1/3/2024 + aumento di 1,00 € deliberato per il 2026</td></tr>
+            <tr><td>Venezia</td><td class="n">3,50</td><td class="n">2</td><td class="n">7,00</td><td class="n">301,00</td><td>Centro storico, <b>bassa stagione dal 1º novembre</b><span class="sub">Massimo 5 notti consecutive · a Mestre circa la metà</span></td></tr>
+            <tr><td>Milano</td><td class="n">7,00</td><td class="n">1</td><td class="n">7,00</td><td class="n">301,00</td><td>Nuove tariffe 2026, in vigore dal 1º aprile<span class="sub">Aumentata in vista dei Giochi Milano-Cortina</span></td></tr>
+            <tr class="total"><td>Totale</td><td class="n"></td><td class="n">9</td><td class="n">47,50</td><td class="n">2.042,50</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2">
+        <div class="note">
+          <span class="tag">Nessun massimale superato</span>
+          Tutti i Comuni tassano solo un numero massimo di notti consecutive nella stessa struttura. Qui la permanenza più lunga è di <b>3 notti a Roma</b>, ben sotto ogni soglia: il gruppo paga per intero, senza sconti da massimale ma anche senza sorprese.
+        </div>
+        <div class="note amber">
+          <span class="tag">Esenzioni da richiedere</span>
+          Minori (soglia d'età <b>diversa in ogni città</b>), persone con disabilità e accompagnatore, e in molti regolamenti <b>autista del pullman e accompagnatore turistico</b>. Vanno comunicate per nome <b>prima del check-in</b>: applicate d'ufficio non lo sono mai, e il rimborso a posteriori è complicato.
+        </div>
+      </div>
+
+      <div class="note warn">
+        <span class="tag">Venezia — i due tributi da non confondere</span>
+        L'<b>imposta di soggiorno</b> si paga (3,50&nbsp;€ × 2 notti). Il <b>contributo di accesso</b>, il ticket d'ingresso alla città, <b>no</b>: chi pernotta in una struttura del Comune ed è soggetto all'imposta di soggiorno è esente. Ma l'esenzione non è automatica — l'hotel deve generare il <b>codice di esenzione</b> per ciascuno dei 43 partecipanti. Va chiesto in fase di contratto e verificato all'arrivo, altrimenti in caso di controllo la sanzione ricade sul singolo.
+      </div>
+
+      <div class="note">
+        <span class="tag">Verifica obbligatoria entro settembre 2026</span>
+        Le tariffe sono aggiornate alle delibere note ad agosto 2026 e vanno riconfermate alla firma del contratto: i Comuni possono variarle in corso d'anno — <b>Milano lo ha già fatto due volte nel 2026</b>. Il dato più incerto è <b>Roma</b>, dove alcune fonti riportano 4,00&nbsp;€ per la categoria 3 stelle e altre 6,00&nbsp;€: il calcolo adotta prudenzialmente 6,00&nbsp;€. Se fosse confermato 4,00&nbsp;€, il totale del gruppo scenderebbe di <b>258,00&nbsp;€</b>, da 2.042,50 a <b>1.784,50&nbsp;€</b>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="alberghi">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">04 — Dove dormire</span>
+      <h2>Cinque alberghi per un gruppo che viaggia in pullman</h2>
+      <p class="lede">Il pullman al seguito cambia i criteri: <b>fuori dal centro non è un ripiego, è la scelta corretta</b>. Niente ZTL, niente permessi bus, tariffe più basse — e strutture abbastanza grandi da liberare 25 camere in blocco e servire 43 colazioni a buffet in un turno solo.</p>
+    </div>
+
+    <div class="hotels">
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Roma</span><span class="cd">2 → 5 novembre · 3 notti</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Ergife Palace Hotel · 4★</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>704</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Via Aurelia — 10 min a piedi dalla metro Cornelia (A)</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio coperto 600 auto <b>+ sosta pullman turistici</b></span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">40 sale, da 20 a 2.000 persone</span></div>
+          </div>
+          <p>Con <b>704 camere</b> un blocco di 25 non è nemmeno una trattativa — ed è l'unico profilo di struttura in cui <b>6 singole vere</b> sono realistiche. La sala colazioni è dimensionata per centinaia di persone: i 43 pax fanno buffet in un turno solo, senza code. La <b>metro A a dieci minuti</b> porta il gruppo a Ottaviano per il Vaticano e a Termini anche nelle serate libere, senza muovere il pullman.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Barceló Aran Mantegna · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>323</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">EUR-Garbatella, quartiere direzionale</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio coperto, 180 posti</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">18 sale, auditorium da 450 posti</span></div>
+          </div>
+          <p>Più comodo <b>in arrivo da Fiumicino</b>: l'EUR è sulla direttrice dell'aeroporto. Capiente e abituato ai gruppi, perde qualcosa sul collegamento metropolitano rispetto all'Ergife.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Firenze</span><span class="cd">5 → 7 novembre · 2 notti</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Hotel Delta Florence · 4★ · Calenzano</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>240</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Calenzano, ~13 km dal centro</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio in struttura</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Centro congressi, 7 sale + ristorante toscano</span></div>
+          </div>
+          <p>È <b>sull'uscita A1 di Calenzano</b>: arrivando da Roma si esce dall'autostrada e si è in hotel, e la mattina del 7 si riparte verso Pisa senza attraversare Firenze. 240 camere significano disponibilità garantita e sala colazioni vera. Il <b>ristorante interno risolve anche le due cene</b> — non banale in una città dove portare 43 persone a cena in centro costa tempo e trasferimenti.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Starhotels Vespucci · 4★ · Campi Bisenzio</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>79</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Davanti a I Gigli — 25 min dal centro</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio, anche accessibile</span></div>
+            <div class="spec"><span class="sk">Nota</span><span class="sv">25 camere su 79 è un terzo dell'albergo</span></div>
+          </div>
+          <p>Struttura di catena, standard prevedibile. <b>La disponibilità va verificata per prima cosa</b>: un blocco di 25 camere su 79 è pesante.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Grand Hotel Adriatico · 4★ · centro storico</h3><span class="rank">Se cambiaste idea</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>129</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">200 m da Santa Maria Novella, 10 min dal Duomo</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio privato — ma <b>ZTL fiorentina</b></span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">7 sale meeting</span></div>
+          </div>
+          <p>L'opzione centrale migliore per capienza. Con il pullman al seguito entrano però in gioco la ZTL e il <b>contrassegno bus turistici a pagamento</b>.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Pisa</span><span class="cd">7 → 8 novembre · 1 notte</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Grand Hotel Bonanno · 4★</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>90</b>, incl. 6 junior suite e camere accessibili</span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv"><b>10 minuti a piedi da Piazza dei Miracoli</b></span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Ampio parcheggio e garage</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Sala meeting attrezzata</span></div>
+          </div>
+          <p>Il punto di equilibrio esatto tra i due vincoli: <b>il pullman parcheggia in struttura e la Torre si raggiunge a piedi</b>. Decisivo per una sola notte in cui la salita richiede 3–4 turni sfalsati e il gruppo fa la spola.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Hotel Galilei · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Vicino all'aeroporto, a pochi minuti da centro e stazione</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Ampio parcheggio <b>gratuito</b> + navetta per il centro</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Spazi congressuali fino a 530 persone</span></div>
+          </div>
+          <p>Più fuori e tipicamente più economico, con buffet dimensionato per i grandi numeri. Backup solido se il Bonanno è pieno.</p>
+        </div>
+        <div class="hotel avoid">
+          <div class="hotel-top"><h3>Grand Hotel Duomo · 4★</h3><span class="rank no">Sconsigliato col pullman</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>82</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv"><b>Letteralmente su Piazza dei Miracoli</b>, terrazza vista Torre</span></div>
+            <div class="spec"><span class="sk">Problema</span><span class="sv">Dentro la ZTL: il pullman non ci arriva</span></div>
+          </div>
+          <p>Sulla carta il sogno. Ma carico e scarico di 43 bagagli dentro la ZTL diventa un problema. Da tenere solo se il viaggio passasse al treno.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Venezia</span><span class="cd">8 → 10 novembre · 2 notti</span></div>
+        <div class="note" style="margin-bottom:.25rem">
+          <span class="tag">La decisione</span>
+          Con il pullman al seguito <b>Mestre non è un ripiego: è la scelta corretta</b>. Il bus arriva davanti all'hotel, la tassa di soggiorno è circa dimezzata e sparisce il facchinaggio acqueo dei 43 bagagli, che costa 400–700 € a tratta.
+        </div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Russott Hotel · 4★ · Mestre-San Giuliano</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>180</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Dentro il Parco San Giuliano — <b>10 minuti di bus da Venezia</b></span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio <b>gratuito</b> in struttura</span></div>
+            <div class="spec"><span class="sk">Servizi</span><span class="sv">Piscina, 2 ristoranti (uno con vista laguna)</span></div>
+          </div>
+          <p>180 camere, parcheggio gratuito e la posizione più vicina a Venezia fra gli hotel di Mestre. I due ristoranti interni coprono le cene. <b>Da sapere:</b> la struttura applica politiche e supplementi diversi oltre le 4 camere prenotate — per 25 camere non si passa dal booking online, serve il contratto con l'ufficio gruppi.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Novotel Venezia Mestre Castellana · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Zona</span><span class="sv">2 km da Venezia Mestre FS, 10 km da Marco Polo</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio privato</span></div>
+            <div class="spec"><span class="sk">Servizi</span><span class="sv">Piscina, camere ampie con divano letto</span></div>
+          </div>
+          <p>Catena Accor: standard di buffet e di servizio prevedibili — utile quando si prenota a distanza senza poter fare un sopralluogo.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Hotel Carlton on the Grand Canal · 4★</h3><span class="rank">Se volessero il centro</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>145</b> — ma <b>solo 4 singole</b> e 138 doppie</span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Sul Canal Grande, a pochi passi da Santa Lucia e <b>Piazzale Roma</b></span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Scarico a Piazzale Roma, quasi alla porta: niente barca</span></div>
+            <div class="spec"><span class="sk">Costo</span><span class="sv">Tassa di soggiorno circa doppia rispetto a Mestre</span></div>
+          </div>
+          <p>L'opzione centrale più praticabile. <b>Il problema vero sono le singole:</b> ne ha 4 su 145, il gruppo ne chiede 6 — servirebbero 2 doppie uso singola in più, con il relativo supplemento.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Milano</span><span class="cd">10 → 11 novembre · 1 notte</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Klima Hotel Milano Fiere · 4★</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>176</b>, completamente insonorizzate</span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Milano nord-ovest, 7 minuti da Fiera Milano Rho</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">6 sale modulari con luce naturale</span></div>
+            <div class="spec"><span class="sk">Nota</span><span class="sv">Verificare la classe Euro del pullman per l'<b>Area B</b></span></div>
+          </div>
+          <p>Fuori dal centro <b>sulla direttrice per Malpensa</b>: la partenza dell'11 novembre inizia già dalla parte giusta della città. Con 43 pax e un check-in di gruppo da 60 minuti, quei venti minuti risparmiati contano.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Poli Hotel · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Profilo</span><span class="sv">Si presenta esplicitamente come <b>base per gruppi e comitive</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Fuori Milano, verso la Fiera di Rho</span></div>
+          </div>
+          <p>Ancora più fuori, tariffa tipicamente più bassa. Da mettere in gara insieme al Klima.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Hotel Michelangelo · 4★</h3><span class="rank">Se preferissero la città</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>306</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">5 minuti a piedi da Milano Centrale</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Centro congressi 1.300 m², capienza 1.300 persone</span></div>
+            <div class="spec"><span class="sk">Costo</span><span class="sv">Il pullman deve entrare in <b>Area B e Area C</b></span></div>
+          </div>
+          <p>Con 306 camere la disponibilità è garantita anche prenotando tardi, e l'11 mattina il <b>Malpensa Express parte dalla porta accanto</b>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="stack" style="margin-top:2.25rem">
+      <div class="note amber">
+        <span class="tag">Perché sono tutti 4 stelle</span>
+        Non è un upgrade di lusso. Un 3★ italiano quasi mai ha contemporaneamente <b>25 camere libere in blocco, un parcheggio per il pullman e una sala colazioni che regge 43 persone in un turno</b>. In novembre, a tariffa gruppo e fuori centro, questi 4★ stanno plausibilmente dentro i 75 € p.p. — ma è esattamente ciò che il preventivo deve confermare.
+      </div>
+
+      <div class="tablewrap">
+        <table>
+          <caption>Conseguenza fiscale del 4 stelle</caption>
+          <thead><tr><th>Scenario</th><th class="n">Tassa totale</th><th class="n">p.p.</th><th class="n">Differenza</th></tr></thead>
+          <tbody>
+            <tr><td>Ipotesi originale, tutti 3★</td><td class="n">2.042,50</td><td class="n">47,50</td><td class="n">—</td></tr>
+            <tr><td><b>4★ con Venezia a Mestre</b><span class="sub">Lo scenario di questa shortlist</span></td><td class="n">2.386,50</td><td class="n">55,50</td><td class="n">+ 344,00</td></tr>
+            <tr><td>4★ con Venezia in centro storico</td><td class="n">2.580,00</td><td class="n">60,00</td><td class="n">+ 537,50</td></tr>
+            <tr class="total"><td>Nuovo totale alloggio + tassa (4★, Mestre)</td><td class="n">31.411,50</td><td class="n">730,50</td><td class="n">+ 8,00 p.p.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2">
+        <div class="note warn">
+          <span class="tag">Il punto critico: le 6 singole</span>
+          Gli alberghi italiani hanno pochissime singole vere — il Carlton ne ha <b>4 su 145 camere</b>. Solo le strutture molto grandi (Ergife, Michelangelo, Delta) ne hanno un numero decente. <b>Piano B da mettere subito a preventivo:</b> negoziare 6 <b>doppie uso singola</b> invece di 6 singole, e mettere a budget il supplemento.
+        </div>
+        <div class="note">
+          <span class="tag">La colazione a buffet va scritta nel contratto</span>
+          Non basta «colazione inclusa». Nel preventivo deve comparire: <b>buffet caldo e freddo</b>, non continentale al tavolo; <b>sala che accoglie 43 persone in un unico turno</b>; e <b>apertura anticipata alle 07:00</b> nei giorni di trasferimento — <b>5, 7, 8 e 10 novembre</b>, e soprattutto l'8, quando si parte alle 08:30 per i 340 km fino a Venezia.
+        </div>
+      </div>
+
+      <div class="note warn">
+        <span class="tag">Cosa questa lista è, e cosa non è</span>
+        Sono strutture reali, verificate per categoria, dimensione, posizione e servizi da fonti pubbliche. <b>Non è una verifica di disponibilità né di tariffa</b> per novembre 2026: quella si ottiene solo inviando la richiesta di preventivo a tutte le strutture di ogni città contemporaneamente, con scadenza di risposta fissa — <b>entro gennaio/febbraio 2026</b>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programma">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">05 — Programma</span>
+      <h2>Dieci giorni, giorno per giorno</h2>
+      <p class="lede">Tramonto alle 17:00 in tutta Italia a novembre: le visite esterne stanno al mattino e nel primo pomeriggio. Ogni cambio città costa 30–40 minuti di solo carico e scarico dei 43 bagagli.</p>
+    </div>
+
+    <div class="rail">
+
+      <article class="day arrive">
+        <div class="when"><span class="dnum">Giorno 1</span><span class="date">2 nov</span><span class="dow">lunedì</span><span class="place">Roma · notte 1</span></div>
+        <div class="what">
+          <h3>Arrivo e Roma barocca a piedi</h3>
+          <ul>
+            <li>Arrivo a Fiumicino o Termini, accoglienza, appello, verifica bagagli — <b>prevedere 90 minuti</b> tra atterraggio e partenza del bus</li>
+            <li>Transfer in hotel (FCO–centro: 45–60 min), check-in dalle 14:00 secondo rooming list</li>
+            <li>Pomeriggio a piedi: <b>Fontana di Trevi</b> → Pantheon → Piazza Navona → Campo de' Fiori</li>
+            <li>Giornata volutamente <b>senza ingressi prenotati</b>: assorbe qualsiasi ritardo del volo</li>
+          </ul>
+          <div class="chips"><span class="chip move">Transfer aeroporto</span><span class="chip">Check-in 25 camere</span><span class="chip">2 nov · Commemorazione dei defunti</span></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="when"><span class="dnum">Giorno 2</span><span class="date">3 nov</span><span class="dow">martedì</span><span class="place">Roma · notte 2</span></div>
+        <div class="what">
+          <h3>Roma antica</h3>
+          <ul>
+            <li>09:00 — <b>Colosseo, Foro Romano e Palatino</b>: ingresso contingentato con slot orario</li>
+            <li>Gruppo diviso in <b>2 sottogruppi da 21/22 pax</b>, con 2 guide abilitate e radioguide obbligatorie</li>
+            <li>Pomeriggio: Basilica di San Clemente o Terme di Caracalla; in alternativa <b>Trastevere</b> e Isola Tiberina</li>
+          </ul>
+          <div class="chips"><span class="chip book">Prenotazione gruppi</span><span class="chip">Radioguide obbligatorie</span><span class="chip">2 guide</span></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="when"><span class="dnum">Giorno 3</span><span class="date">4 nov</span><span class="dow">mercoledì</span><span class="place">Roma · notte 3</span></div>
+        <div class="what">
+          <h3>Musei Vaticani e San Pietro</h3>
+          <ul>
+            <li>09:00 — <b>Musei Vaticani e Cappella Sistina</b>, prenotazione gruppi obbligatoria con slot orario</li>
+            <li>12:30 — <b>Basilica di San Pietro</b>: ingresso gratuito ma controlli lunghi, <b>prevedere 40 minuti</b></li>
+            <li>Pomeriggio: Castel Sant'Angelo o tempo libero</li>
+            <li><b>Il 4 novembre a Roma</b> è la Giornata delle Forze Armate: cerimonia all'Altare della Patria, con chiusure a Piazza Venezia e via dei Fori Imperiali. Per questo il Colosseo è programmato il 3 e il Vaticano il 4 — invertendoli il pullman non arriverebbe ai Fori</li>
+          </ul>
+          <div class="chips"><span class="chip book">Prenotazione gruppi</span><span class="chip">Spalle e ginocchia coperte</span><span class="chip">Udienza del mercoledì</span></div>
+        </div>
+      </article>
+
+      <article class="day arrive">
+        <div class="when"><span class="dnum">Giorno 4</span><span class="date">5 nov</span><span class="dow">giovedì</span><span class="place">Roma → Firenze · notte 1</span></div>
+        <div class="what">
+          <h3>Trasferimento e primo incontro con Firenze</h3>
+          <ul>
+            <li>09:00 — partenza. <b>275 km, 3h15 di guida</b> più sosta obbligatoria dell'autista</li>
+            <li>Sosta consigliata: <b>Orvieto</b>, il Duomo — allunga di circa un'ora ed è la deviazione migliore sulla tratta</li>
+            <li>Check-in nel pomeriggio, poi <b>Duomo di Santa Maria del Fiore</b>, Battistero, Campanile → Piazza della Signoria → <b>Ponte Vecchio</b></li>
+          </ul>
+          <div class="chips"><span class="chip move">275 km · 4h00</span><span class="chip">Check-out + check-in</span></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="when"><span class="dnum">Giorno 5</span><span class="date">6 nov</span><span class="dow">venerdì</span><span class="place">Firenze · notte 2</span></div>
+        <div class="what">
+          <h3>Firenze rinascimentale</h3>
+          <ul>
+            <li>08:30 — <b>Galleria degli Uffizi</b>: <b>gruppi massimo 25 pax</b>, quindi 2 ingressi sfalsati di 15–30 minuti</li>
+            <li>Pomeriggio — <b>Galleria dell'Accademia</b> e il David, oppure Basilica di Santa Croce</li>
+            <li>17:00 — <b>Piazzale Michelangelo</b> per il tramonto</li>
+            <li><b>Vantaggio novembre</b>: dal 1º novembre Uffizi e Accademia applicano la tariffa di bassa stagione, sensibilmente più bassa</li>
+          </ul>
+          <div class="chips"><span class="chip book">Uffizi: max 25 pax</span><span class="chip">Tariffa bassa stagione</span><span class="chip">Chiusi il lunedì</span></div>
+        </div>
+      </article>
+
+      <article class="day arrive">
+        <div class="when"><span class="dnum">Giorno 6</span><span class="date">7 nov</span><span class="dow">sabato</span><span class="place">Firenze → Pisa · notte 1</span></div>
+        <div class="what">
+          <h3>Piazza dei Miracoli</h3>
+          <ul>
+            <li>Mattinata libera a Firenze, poi <b>85 km in 1h15</b> fino a Pisa</li>
+            <li>Piazza dei Miracoli: <b>Duomo, Battistero, Camposanto Monumentale</b> e Museo dell'Opera con biglietto cumulativo</li>
+            <li><b>Salita alla Torre</b>: slot rigidi a capienza ridotta, vietata ai minori di 8 anni, borse non ammesse. Per 43 pax servono <b>3–4 turni consecutivi</b>, da prenotare in blocco</li>
+            <li>I monumenti chiudono presto in novembre: anticipare l'ingresso alle 14:30</li>
+          </ul>
+          <div class="chips"><span class="chip book">Torre: 3–4 turni</span><span class="chip move">85 km · 1h15</span><span class="chip">Chiusura anticipata</span></div>
+        </div>
+      </article>
+
+      <article class="day arrive">
+        <div class="when"><span class="dnum">Giorno 7</span><span class="date">8 nov</span><span class="dow">domenica</span><span class="place">Pisa → Venezia · notte 1</span></div>
+        <div class="what">
+          <h3>Il trasferimento lungo</h3>
+          <ul>
+            <li>Partenza <b>entro le 08:30</b>: è la giornata più impegnativa del viaggio — <b>340 km, 4 ore di guida</b> più 45 minuti di sosta obbligatoria</li>
+            <li>Arrivo a <b>Tronchetto o Piazzale Roma</b>: il pullman non entra nel centro storico</li>
+            <li>Trasferimento acqueo o a piedi verso l'hotel, con <b>servizio facchinaggio bagagli</b> — a Venezia è una voce di costo autonoma e pesante</li>
+            <li>Primo orientamento: Ponte di Rialto, Riva degli Schiavoni</li>
+          </ul>
+          <div class="chips"><span class="chip move">340 km · 4h45</span><span class="chip book">Facchinaggio bagagli</span><span class="chip">Bus fermo al Tronchetto</span></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="when"><span class="dnum">Giorno 8</span><span class="date">9 nov</span><span class="dow">lunedì</span><span class="place">Venezia · notte 2</span></div>
+        <div class="what">
+          <h3>San Marco e la laguna</h3>
+          <ul>
+            <li>Mattina — <b>Basilica di San Marco</b> con ingresso riservato ai gruppi, poi <b>Palazzo Ducale</b>, Ponte dei Sospiri e Prigioni Nuove: gruppi contingentati, 2 sottogruppi</li>
+            <li>Pomeriggio, <b>opzione A</b>: vaporetto per <b>Murano</b> e <b>Burano</b>, mezza giornata piena</li>
+            <li>Pomeriggio, <b>opzione B</b>: Dorsoduro, Basilica della Salute, Gallerie dell'Accademia</li>
+            <li>Facoltativo — <b>giro in gondola</b>: 5 pax per gondola, quindi <b>9 gondole</b> da prenotare in blocco</li>
+          </ul>
+          <div class="chips"><span class="chip book">Palazzo Ducale: 2 gruppi</span><span class="chip">Vaporetto 48h</span><span class="chip">9 gondole</span></div>
+        </div>
+      </article>
+
+      <article class="day arrive">
+        <div class="when"><span class="dnum">Giorno 9</span><span class="date">10 nov</span><span class="dow">martedì</span><span class="place">Venezia → Milano · notte 1</span></div>
+        <div class="what">
+          <h3>Milano in una sera</h3>
+          <ul>
+            <li>Partenza 09:30 — <b>270 km, 3 ore</b> sulla A4</li>
+            <li>Pomeriggio: <b>Duomo di Milano e salita alle terrazze</b> con biglietto gruppo a fascia oraria</li>
+            <li>Galleria Vittorio Emanuele II, Museo Teatrale alla Scala, Castello Sforzesco</li>
+            <li>Facoltativo — <b>Cenacolo Vinciano</b>: turni di 15 minuti a capienza ridottissima. È <b>chiuso il lunedì</b>, quindi martedì è il giorno giusto: ma i biglietti si esauriscono mesi prima</li>
+            <li>Cena di arrivederci</li>
+          </ul>
+          <div class="chips"><span class="chip book">Cenacolo: critico</span><span class="chip move">270 km · 3h45</span><span class="chip">Area B / Area C</span></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="when"><span class="dnum">Giorno 10</span><span class="date">11 nov</span><span class="dow">mercoledì</span><span class="place">Partenza da Milano</span></div>
+        <div class="what">
+          <h3>Rientro</h3>
+          <ul>
+            <li>Check-out con deposito bagagli in hotel, mattinata libera: Quadrilatero della moda, Brera</li>
+            <li>Transfer aeroporto — <b>Malpensa</b> 50–60 min · <b>Linate</b> 25–35 min · <b>Bergamo</b> 60 min · Centrale 20 min</li>
+            <li>Con 43 passeggeri il <b>check-in di gruppo richiede da solo 45–60 minuti</b>: partenza dall'hotel 4 ore prima del volo da Malpensa, 3 ore da Linate</li>
+          </ul>
+          <div class="chips"><span class="chip move">Transfer aeroporto</span><span class="chip">Check-in gruppo 60 min</span></div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="note amber" style="margin-top:1.75rem">
+      <span class="tag">Un'osservazione sull'ordine delle tappe</span>
+      Così com'è, l'itinerario torna indietro: Firenze → <b>Pisa, a ovest</b> → <b>Venezia, a est</b>, con 340 km filati l'8 novembre. Invertendo Pisa e Firenze — <b>Roma → Pisa → Firenze → Venezia → Milano</b> — si risparmiano circa <b>120 km e un'ora e mezza di pullman</b>, senza cambiare nulla di notti, camere e budget. La sequenza richiesta resta perfettamente eseguibile: la variante è solo un'ottimizzazione, e la scelta è del committente.
+    </div>
+  </div>
+</section>
+
+<section id="criticita">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">06 — Criticità</span>
+      <h2>Le cinque cose che possono far saltare il viaggio</h2>
+      <p class="lede">In ordine di urgenza reale, non di importanza. Le prime tre si esauriscono, non si negoziano.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <span class="k"><span class="pri p1"></span>Priorità 1 · luglio–agosto 2026</span>
+        <h3>Cenacolo Vinciano, Milano</h3>
+        <p>Turni di 15 minuti a capienza ridottissima. Per 43 pax servono più turni consecutivi, e i biglietti si esauriscono in poche ore dall'apertura delle vendite — di norma 3–4 mesi prima. <b>È la prenotazione più difficile dell'intero viaggio, più ancora dei Musei Vaticani.</b></p>
+      </div>
+      <div class="card">
+        <span class="k"><span class="pri p1"></span>Priorità 1 · gennaio–febbraio 2026</span>
+        <h3>25 camere × 5 città</h3>
+        <p>Un blocco di 25 camere in centro non si trova sotto i sei mesi di anticipo, e la tariffa di 75&nbsp;€ è negoziabile solo con largo margine. Inviare la richiesta a <b>4–6 strutture per città contemporaneamente</b>, con scadenza di risposta fissa.</p>
+      </div>
+      <div class="card">
+        <span class="k"><span class="pri p1"></span>Priorità 1 · aprile–maggio 2026</span>
+        <h3>Torre di Pisa e Musei Vaticani</h3>
+        <p>La Torre ha slot brevi a capienza limitata: <b>3–4 turni</b> da prenotare in blocco. I Musei Vaticani hanno ingresso gruppi contingentato con diritti di prenotazione obbligatori.</p>
+      </div>
+      <div class="card">
+        <span class="k"><span class="pri p2"></span>Priorità 2 · per tutto il viaggio</span>
+        <h3>Il gruppo va spezzato in due</h3>
+        <p>Uffizi, Accademia e Palazzo Ducale impongono <b>gruppi da massimo 25 persone</b>. Servono sempre 2 sottogruppi da 21/22, 2 guide e ingressi sfalsati — il che <b>raddoppia il costo delle guide</b>, già previsto a budget. E le guide devono essere abilitate <b>per regione</b>: quattro regioni attraversate, quattro guide locali diverse.</p>
+      </div>
+      <div class="card">
+        <span class="k"><span class="pri p2"></span>Priorità 2 · dal 1º novembre</span>
+        <h3>Acqua alta a Venezia</h3>
+        <p>Novembre è il mese statisticamente più critico. Il MOSE riduce molto il rischio, ma va comunque previsto: <b>scarpe impermeabili</b>, controllo quotidiano delle previsioni del Centro Maree, e un piano B se le passerelle sono attive in Piazza San Marco.</p>
+      </div>
+      <div class="card">
+        <span class="k"><span class="pri p3"></span>Priorità 3 · entro ottobre 2026</span>
+        <h3>Permessi ZTL per il pullman</h3>
+        <p>Roma (ZTL e Fascia Verde), Firenze (contrassegno bus turistici a pagamento), Pisa (area sosta dedicata), Venezia (parcheggio Tronchetto), Milano (<b>Area B e Area C</b>). Da istruire per tempo alla società di noleggio, insieme alla verifica della classe Euro del mezzo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="accessori">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">07 — Oltre il pernottamento</span>
+      <h2>Cosa costa il resto del viaggio</h2>
+      <p class="lede">Il brief copre solo il dormire. Queste voci sono <b>stime di mercato</b>, servono a dare il quadro del costo reale e vanno confermate con preventivi.</p>
+    </div>
+
+    <div class="stack">
+      <div class="tablewrap">
+        <table>
+          <caption>Stime per persona — 43 pax</caption>
+          <thead><tr><th>Voce</th><th>Base di calcolo</th><th class="n">€ p.p.</th></tr></thead>
+          <tbody>
+            <tr><td><b>Pullman GT 50/54 posti</b><span class="sub">Consigliato: un solo mezzo per 43 persone e 43 bagagli, copre bene la Pisa–Venezia</span></td><td>10 giorni, ~1.050 km, nolo + autista + pedaggi + ZTL + parcheggi</td><td class="n">233 – 291</td></tr>
+            <tr><td>Alternativa treno<span class="sub">Competitiva solo rinunciando a Pisa o riordinando le tappe</span></td><td>AV Roma–Firenze, regionale Firenze–Pisa, Pisa–Venezia, AV Venezia–Milano</td><td class="n">110 – 160<span class="sub">+ 35–58 di transfer locali</span></td></tr>
+            <tr><td><b>Ingressi</b></td><td>Vaticani, Colosseo, Uffizi, Accademia, Torre di Pisa, Palazzo Ducale, Duomo di Milano, Cenacolo</td><td class="n">159 – 198</td></tr>
+            <tr><td><b>Guide abilitate</b></td><td>7 mezze giornate × 2 guide × 200 €</td><td class="n">65</td></tr>
+            <tr><td>Radioguide</td><td>2,50 € × 7 giornate — obbligatorie per i gruppi in quasi tutti i musei</td><td class="n">17,50</td></tr>
+            <tr><td>Vaporetto ACTV 48h</td><td>Se l'hotel è in centro storico</td><td class="n">35</td></tr>
+            <tr><td>Facchinaggio bagagli Venezia</td><td>400–700 € a carico del gruppo</td><td class="n">9 – 16</td></tr>
+            <tr><td>Assicurazione</td><td>Medico, bagaglio, annullamento</td><td class="n">25 – 60</td></tr>
+            <tr><td>Cene di gruppo <i>(opzionale)</i></td><td>9 cene × 28/35 € — menù 3 portate e bevande</td><td class="n">252 – 315</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tablewrap">
+        <table>
+          <caption>Riepilogo — dove si ferma il budget</caption>
+          <thead><tr><th>Configurazione</th><th class="n">€ p.p.</th><th class="n">Gruppo, 43 pax</th></tr></thead>
+          <tbody>
+            <tr><td><b>Solo pernottamento e tassa di soggiorno</b><span class="sub">Il perimetro del brief — l'unico dato confermato</span></td><td class="n">722,50</td><td class="n">31.067,50</td></tr>
+            <tr><td>+ pullman, ingressi, guide, radioguide, vaporetto, assicurazione</td><td class="n">1.290 – 1.400</td><td class="n">55.500 – 60.200</td></tr>
+            <tr><td>+ mezza pensione, 9 cene di gruppo</td><td class="n">1.545 – 1.715</td><td class="n">66.400 – 73.700</td></tr>
+            <tr class="total"><td>Voli o treni internazionali A/R</td><td class="n">non quotati</td><td class="n">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <span class="tag">Condizioni di pagamento da attendersi</span>
+        Opzione gratuita di 7–14 giorni alla richiesta · <b>caparra 25–30&nbsp;%</b> alla firma · secondo acconto a 60 giorni · <b>saldo a 21–30 giorni</b> · rooming list definitiva 21 giorni prima · tassa di soggiorno in loco al check-out, con fattura separata. Per un gruppo di questa dimensione è ragionevole ottenere una <b>release del 10&nbsp;% delle camere senza penale fino a 30 giorni prima</b>: va chiesta esplicitamente, non viene mai offerta.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Perimetro confermato:</b> 43 partecipanti, 25 camere, 9 notti, 75,00&nbsp;€ per persona a notte in pernottamento e prima colazione, più tassa di soggiorno per persona. <b>Totale 31.067,50&nbsp;€, pari a 722,50&nbsp;€ a testa.</b></p>
+    <p>Tutti gli altri importi sono stime di mercato, esplicitamente segnalate come tali. Le tariffe della tassa di soggiorno sono aggiornate alle delibere comunali note ad agosto 2026 e vanno riconfermate con gli alberghi prima della firma del contratto.</p>
+    <p class="mono" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)">Fonti consultate</p>
+    <ul>
+      <li><a href="https://www.comune.roma.it/web/it/scheda-servizi.page?contentId=INF41430">Roma Capitale — Contributo di soggiorno</a></li>
+      <li><a href="https://www.ttgitalia.com/incoming/tassa-di-soggiorno-firenze-2026-tariffe-esenzioni-e-come-si-paga-FN25937727">TTG Italia — Tassa di soggiorno Firenze 2026</a></li>
+      <li><a href="https://www.comune.venezia.it/it/content/tariffe-ids-dal-19052020">Comune di Venezia — Tariffe imposta di soggiorno</a></li>
+      <li><a href="https://www.comune.pisa.it/Novita/Comunicati/Turismo-il-Comune-di-Pisa-aumenta-di-1-euro-la-tassa-di-soggiorno">Comune di Pisa — Aumento dell'imposta di soggiorno</a></li>
+      <li><a href="https://www.milanotoday.it/attualita/tassa-soggiorno-12-euro.html">MilanoToday — Nuove tariffe della tassa di soggiorno a Milano</a></li>
+      <li><a href="https://www.idealista.it/news/vacanze/mete-turistiche/2026/01/23/315502-effetto-olimpiadi-gli-aumenti-della-tassa-di-soggiorno-a-milano-per-il-2026">Idealista — Aumenti della tassa di soggiorno a Milano per il 2026</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btnA=document.getElementById('btnA'),btnB=document.getElementById('btnB');
+  var rows=document.querySelectorAll('tr.scenB');
+  var totAll=document.getElementById('totAlloggio');
+  var totBig=document.getElementById('totGrande');
+  var totPP=document.getElementById('totPP');
+  var lbl=document.getElementById('lblScenario');
+  var data={
+    A:{all:'29.025,00',big:'€ 31.067,50',pp:'€ 722,50',lbl:'Scenario A — alloggio + tassa di soggiorno'},
+    B:{all:'31.005,00',big:'€ 33.047,50',pp:'€ 768,55',lbl:'Scenario B — con supplementi singola + tassa'}
+  };
+  function set(k){
+    var d=data[k],i;
+    for(i=0;i<rows.length;i++){rows[i].hidden=(k!=='B');}
+    totAll.textContent=d.all;totBig.textContent=d.big;totPP.textContent=d.pp;lbl.textContent=d.lbl;
+    btnA.setAttribute('aria-pressed',String(k==='A'));
+    btnB.setAttribute('aria-pressed',String(k==='B'));
+  }
+  btnA.addEventListener('click',function(){set('A');});
+  btnB.addEventListener('click',function(){set('B');});
+})();
+</script>

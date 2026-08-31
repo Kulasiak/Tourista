@@ -1,0 +1,40 @@
+Sezione;Voce;Citta;Notti;Pax;Prezzo_unitario_EUR;Totale_EUR;Per_persona_EUR;Note
+A_ALLOGGIO;Pernottamento BB 75 EUR pp/notte;Roma;3;43;75,00;9675,00;225,00;Come da brief - colazione inclusa
+A_ALLOGGIO;Pernottamento BB 75 EUR pp/notte;Firenze;2;43;75,00;6450,00;150,00;Come da brief - colazione inclusa
+A_ALLOGGIO;Pernottamento BB 75 EUR pp/notte;Pisa;1;43;75,00;3225,00;75,00;Come da brief - colazione inclusa
+A_ALLOGGIO;Pernottamento BB 75 EUR pp/notte;Venezia;2;43;75,00;6450,00;150,00;Come da brief - colazione inclusa
+A_ALLOGGIO;Pernottamento BB 75 EUR pp/notte;Milano;1;43;75,00;3225,00;75,00;Come da brief - colazione inclusa
+A_ALLOGGIO;SUBTOTALE ALLOGGIO;TUTTE;9;43;;29025,00;675,00;225 room-nights
+B_TASSA_SOGGIORNO;Contributo di soggiorno 3 stelle;Roma;3;43;6,00;774,00;18,00;Del. 255/2023 - da riconfermare
+B_TASSA_SOGGIORNO;Imposta di soggiorno 3 stelle;Firenze;2;43;6,00;516,00;12,00;In vigore dal 01/02/2025
+B_TASSA_SOGGIORNO;Imposta di soggiorno 2-3 stelle;Pisa;1;43;3,50;150,50;3,50;2,50 + aumento 1,00 delibera 2026
+B_TASSA_SOGGIORNO;Imposta di soggiorno 3 stelle bassa stagione;Venezia;2;43;3,50;301,00;7,00;Centro storico - bassa stagione dal 01/11
+B_TASSA_SOGGIORNO;Imposta di soggiorno 3 stelle;Milano;1;43;7,00;301,00;7,00;Nuove tariffe 2026 dal 01/04
+B_TASSA_SOGGIORNO;SUBTOTALE TASSA DI SOGGIORNO;TUTTE;9;43;;2042,50;47,50;Da pagare in loco - fattura separata
+TOTALE;TOTALE SCENARIO A (brief);TUTTE;9;43;;31067,50;722,50;Alloggio + tassa di soggiorno
+C_VARIANTE;Supplemento singola 6 camere;TUTTE;9;6;30,00;1620,00;37,67;Stima di mercato
+C_VARIANTE;Supplemento doppia uso singola 1 camera;TUTTE;9;1;40,00;360,00;8,37;Stima di mercato
+TOTALE;TOTALE SCENARIO B (con supplementi);TUTTE;9;43;;33047,50;768,55;Ipotesi realistica di quotazione
+D_LEVE;Gratuita gruppo 2 su 43 paganti;TUTTE;9;2;75,00;-1350,00;-31,40;Da negoziare - non riduce la tassa
+E_STIME_TRASPORTI;Pullman GT 50/54 posti 10 giorni (min);TUTTE;;43;;10000,00;232,56;Stima - nolo autista pedaggi ZTL parcheggi
+E_STIME_TRASPORTI;Pullman GT 50/54 posti 10 giorni (max);TUTTE;;43;;12500,00;290,70;Stima
+E_STIME_TRASPORTI;Alternativa treno tariffe gruppo (min-max);TUTTE;;43;;4730,00;110,00;Piu transfer locali 35-58 EUR pp
+F_STIME_INGRESSI;Musei Vaticani + Cappella Sistina;Roma;;43;;;21,00;Tariffa gruppo indicativa - min
+F_STIME_INGRESSI;Colosseo + Foro Romano + Palatino;Roma;;43;;;18,00;Tariffa gruppo indicativa - min
+F_STIME_INGRESSI;Galleria degli Uffizi bassa stagione;Firenze;;43;;;15,00;Tariffa gruppo indicativa - min
+F_STIME_INGRESSI;Galleria dell Accademia bassa stagione;Firenze;;43;;;14,00;Tariffa gruppo indicativa - min
+F_STIME_INGRESSI;Torre di Pisa + monumenti Piazza dei Miracoli;Pisa;;43;;;30,00;Tariffa gruppo indicativa - min
+F_STIME_INGRESSI;Palazzo Ducale + Basilica San Marco;Venezia;;43;;;31,00;Tariffa gruppo indicativa - min
+F_STIME_INGRESSI;Duomo di Milano + terrazze;Milano;;43;;;15,00;Tariffa gruppo indicativa - min
+F_STIME_INGRESSI;Cenacolo Vinciano;Milano;;43;;;15,00;Se ottenuto - prenotazione critica
+F_STIME_INGRESSI;SUBTOTALE INGRESSI (min);TUTTE;;43;;6837,00;159,00;Range 159-198 EUR pp
+G_STIME_SERVIZI;Guide abilitate 7 mezze giornate x 2 gruppi;TUTTE;;43;200,00;2800,00;65,12;Gruppo da spezzare in 2 (max 25 pax)
+G_STIME_SERVIZI;Radioguide 7 giornate;TUTTE;;43;2,50;752,50;17,50;Obbligatorie per gruppi nei musei
+G_STIME_SERVIZI;Vaporetto ACTV 48h;Venezia;;43;35,00;1505,00;35,00;Se hotel in centro storico
+G_STIME_SERVIZI;Facchinaggio bagagli Venezia;Venezia;;43;;550,00;12,79;Media 400-700 EUR
+G_STIME_SERVIZI;Assicurazione medico bagaglio annullamento;TUTTE;;43;40,00;1720,00;40,00;Range 25-60 EUR pp
+G_STIME_SERVIZI;Cene di gruppo 9 x 30 EUR (opzionale);TUTTE;9;43;30,00;11610,00;270,00;Solo se mezza pensione
+H_RIEPILOGO;Solo pernottamento + tassa (perimetro brief);TUTTE;9;43;;31067,50;722,50;Confermato
+H_RIEPILOGO;Con trasporti ingressi guide servizi;TUTTE;9;43;;55500,00;1290,70;Stima minima
+H_RIEPILOGO;Con mezza pensione (9 cene);TUTTE;9;43;;67110,00;1560,70;Stima minima
+H_RIEPILOGO;Voli internazionali A/R;TUTTE;;43;;0,00;0,00;NON QUOTATI - a carico del committente
