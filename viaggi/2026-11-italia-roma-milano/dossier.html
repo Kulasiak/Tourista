@@ -332,6 +332,26 @@ footer ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.2
   section{break-inside:auto;border-bottom:1px solid #ccc}
   .day{break-inside:avoid}
 }
+
+/* ---------- hotel shortlist ---------- */
+.hotels{display:flex;flex-direction:column;gap:2.25rem}
+.city-block{display:flex;flex-direction:column;gap:1rem}
+.city-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.85rem;border-bottom:1px solid var(--rule-strong);padding-bottom:.5rem}
+.city-head .cn{font-family:"Bodoni Moda",Georgia,serif;font-size:1.8rem;line-height:1;font-weight:500}
+.city-head .cd{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.hotel{background:var(--surface);border:1px solid var(--rule);padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:.85rem}
+.hotel.pick{border-left:3px solid var(--accent)}
+.hotel-top{display:flex;flex-wrap:wrap;gap:.6rem .9rem;align-items:baseline;justify-content:space-between}
+.hotel h3{font-size:1.12rem}
+.rank{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;padding:.2rem .48rem;border:1px solid var(--rule-strong);color:var(--ink-soft);white-space:nowrap;border-radius:2px}
+.rank.first{background:var(--accent-wash);border-color:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+.rank.no{background:var(--signal-wash);border-color:var(--signal);color:var(--signal)}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(11.5rem,1fr));gap:.7rem 1.4rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.85rem 0}
+.spec{display:flex;flex-direction:column;gap:.12rem}
+.spec .sk{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.59rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.spec .sv{font-size:.85rem;line-height:1.45}
+.hotel p{font-size:.89rem;color:var(--ink-soft);line-height:1.62}
+.hotel p b,.spec .sv b{color:var(--ink);font-weight:600}
 </style>
 
 <header class="masthead">
@@ -357,6 +377,7 @@ footer ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.2
     <a href="#tappe">Tappe</a>
     <a href="#budget">Budget</a>
     <a href="#tassa">Tassa di soggiorno</a>
+    <a href="#alberghi">Alberghi</a>
     <a href="#programma">Programma</a>
     <a href="#criticita">Criticità</a>
     <a href="#accessori">Costi accessori</a>
@@ -574,10 +595,219 @@ footer ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.2
   </div>
 </section>
 
+<section id="alberghi">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">04 — Dove dormire</span>
+      <h2>Cinque alberghi per un gruppo che viaggia in pullman</h2>
+      <p class="lede">Il pullman al seguito cambia i criteri: <b>fuori dal centro non è un ripiego, è la scelta corretta</b>. Niente ZTL, niente permessi bus, tariffe più basse — e strutture abbastanza grandi da liberare 25 camere in blocco e servire 43 colazioni a buffet in un turno solo.</p>
+    </div>
+
+    <div class="hotels">
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Roma</span><span class="cd">2 → 5 novembre · 3 notti</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Ergife Palace Hotel · 4★</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>704</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Via Aurelia — 10 min a piedi dalla metro Cornelia (A)</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio coperto 600 auto <b>+ sosta pullman turistici</b></span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">40 sale, da 20 a 2.000 persone</span></div>
+          </div>
+          <p>Con <b>704 camere</b> un blocco di 25 non è nemmeno una trattativa — ed è l'unico profilo di struttura in cui <b>6 singole vere</b> sono realistiche. La sala colazioni è dimensionata per centinaia di persone: i 43 pax fanno buffet in un turno solo, senza code. La <b>metro A a dieci minuti</b> porta il gruppo a Ottaviano per il Vaticano e a Termini anche nelle serate libere, senza muovere il pullman.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Barceló Aran Mantegna · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>323</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">EUR-Garbatella, quartiere direzionale</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio coperto, 180 posti</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">18 sale, auditorium da 450 posti</span></div>
+          </div>
+          <p>Più comodo <b>in arrivo da Fiumicino</b>: l'EUR è sulla direttrice dell'aeroporto. Capiente e abituato ai gruppi, perde qualcosa sul collegamento metropolitano rispetto all'Ergife.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Firenze</span><span class="cd">5 → 7 novembre · 2 notti</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Hotel Delta Florence · 4★ · Calenzano</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>240</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Calenzano, ~13 km dal centro</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio in struttura</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Centro congressi, 7 sale + ristorante toscano</span></div>
+          </div>
+          <p>È <b>sull'uscita A1 di Calenzano</b>: arrivando da Roma si esce dall'autostrada e si è in hotel, e la mattina del 7 si riparte verso Pisa senza attraversare Firenze. 240 camere significano disponibilità garantita e sala colazioni vera. Il <b>ristorante interno risolve anche le due cene</b> — non banale in una città dove portare 43 persone a cena in centro costa tempo e trasferimenti.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Starhotels Vespucci · 4★ · Campi Bisenzio</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>79</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Davanti a I Gigli — 25 min dal centro</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio, anche accessibile</span></div>
+            <div class="spec"><span class="sk">Nota</span><span class="sv">25 camere su 79 è un terzo dell'albergo</span></div>
+          </div>
+          <p>Struttura di catena, standard prevedibile. <b>La disponibilità va verificata per prima cosa</b>: un blocco di 25 camere su 79 è pesante.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Grand Hotel Adriatico · 4★ · centro storico</h3><span class="rank">Se cambiaste idea</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>129</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">200 m da Santa Maria Novella, 10 min dal Duomo</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio privato — ma <b>ZTL fiorentina</b></span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">7 sale meeting</span></div>
+          </div>
+          <p>L'opzione centrale migliore per capienza. Con il pullman al seguito entrano però in gioco la ZTL e il <b>contrassegno bus turistici a pagamento</b>.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Pisa</span><span class="cd">7 → 8 novembre · 1 notte</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Grand Hotel Bonanno · 4★</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>90</b>, incl. 6 junior suite e camere accessibili</span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv"><b>10 minuti a piedi da Piazza dei Miracoli</b></span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Ampio parcheggio e garage</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Sala meeting attrezzata</span></div>
+          </div>
+          <p>Il punto di equilibrio esatto tra i due vincoli: <b>il pullman parcheggia in struttura e la Torre si raggiunge a piedi</b>. Decisivo per una sola notte in cui la salita richiede 3–4 turni sfalsati e il gruppo fa la spola.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Hotel Galilei · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Vicino all'aeroporto, a pochi minuti da centro e stazione</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Ampio parcheggio <b>gratuito</b> + navetta per il centro</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Spazi congressuali fino a 530 persone</span></div>
+          </div>
+          <p>Più fuori e tipicamente più economico, con buffet dimensionato per i grandi numeri. Backup solido se il Bonanno è pieno.</p>
+        </div>
+        <div class="hotel avoid">
+          <div class="hotel-top"><h3>Grand Hotel Duomo · 4★</h3><span class="rank no">Sconsigliato col pullman</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>82</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv"><b>Letteralmente su Piazza dei Miracoli</b>, terrazza vista Torre</span></div>
+            <div class="spec"><span class="sk">Problema</span><span class="sv">Dentro la ZTL: il pullman non ci arriva</span></div>
+          </div>
+          <p>Sulla carta il sogno. Ma carico e scarico di 43 bagagli dentro la ZTL diventa un problema. Da tenere solo se il viaggio passasse al treno.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Venezia</span><span class="cd">8 → 10 novembre · 2 notti</span></div>
+        <div class="note" style="margin-bottom:.25rem">
+          <span class="tag">La decisione</span>
+          Con il pullman al seguito <b>Mestre non è un ripiego: è la scelta corretta</b>. Il bus arriva davanti all'hotel, la tassa di soggiorno è circa dimezzata e sparisce il facchinaggio acqueo dei 43 bagagli, che costa 400–700 € a tratta.
+        </div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Russott Hotel · 4★ · Mestre-San Giuliano</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>180</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Dentro il Parco San Giuliano — <b>10 minuti di bus da Venezia</b></span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio <b>gratuito</b> in struttura</span></div>
+            <div class="spec"><span class="sk">Servizi</span><span class="sv">Piscina, 2 ristoranti (uno con vista laguna)</span></div>
+          </div>
+          <p>180 camere, parcheggio gratuito e la posizione più vicina a Venezia fra gli hotel di Mestre. I due ristoranti interni coprono le cene. <b>Da sapere:</b> la struttura applica politiche e supplementi diversi oltre le 4 camere prenotate — per 25 camere non si passa dal booking online, serve il contratto con l'ufficio gruppi.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Novotel Venezia Mestre Castellana · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Zona</span><span class="sv">2 km da Venezia Mestre FS, 10 km da Marco Polo</span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Parcheggio privato</span></div>
+            <div class="spec"><span class="sk">Servizi</span><span class="sv">Piscina, camere ampie con divano letto</span></div>
+          </div>
+          <p>Catena Accor: standard di buffet e di servizio prevedibili — utile quando si prenota a distanza senza poter fare un sopralluogo.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Hotel Carlton on the Grand Canal · 4★</h3><span class="rank">Se volessero il centro</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>145</b> — ma <b>solo 4 singole</b> e 138 doppie</span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Sul Canal Grande, a pochi passi da Santa Lucia e <b>Piazzale Roma</b></span></div>
+            <div class="spec"><span class="sk">Pullman</span><span class="sv">Scarico a Piazzale Roma, quasi alla porta: niente barca</span></div>
+            <div class="spec"><span class="sk">Costo</span><span class="sv">Tassa di soggiorno circa doppia rispetto a Mestre</span></div>
+          </div>
+          <p>L'opzione centrale più praticabile. <b>Il problema vero sono le singole:</b> ne ha 4 su 145, il gruppo ne chiede 6 — servirebbero 2 doppie uso singola in più, con il relativo supplemento.</p>
+        </div>
+      </div>
+
+      <div class="city-block">
+        <div class="city-head"><span class="cn">Milano</span><span class="cd">10 → 11 novembre · 1 notte</span></div>
+        <div class="hotel pick">
+          <div class="hotel-top"><h3>Klima Hotel Milano Fiere · 4★</h3><span class="rank first">★ Prima scelta</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>176</b>, completamente insonorizzate</span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Milano nord-ovest, 7 minuti da Fiera Milano Rho</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">6 sale modulari con luce naturale</span></div>
+            <div class="spec"><span class="sk">Nota</span><span class="sv">Verificare la classe Euro del pullman per l'<b>Area B</b></span></div>
+          </div>
+          <p>Fuori dal centro <b>sulla direttrice per Malpensa</b>: la partenza dell'11 novembre inizia già dalla parte giusta della città. Con 43 pax e un check-in di gruppo da 60 minuti, quei venti minuti risparmiati contano.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Poli Hotel · 4★</h3><span class="rank">Alternativa</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Profilo</span><span class="sv">Si presenta esplicitamente come <b>base per gruppi e comitive</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">Fuori Milano, verso la Fiera di Rho</span></div>
+          </div>
+          <p>Ancora più fuori, tariffa tipicamente più bassa. Da mettere in gara insieme al Klima.</p>
+        </div>
+        <div class="hotel">
+          <div class="hotel-top"><h3>Hotel Michelangelo · 4★</h3><span class="rank">Se preferissero la città</span></div>
+          <div class="specs">
+            <div class="spec"><span class="sk">Camere</span><span class="sv"><b>306</b></span></div>
+            <div class="spec"><span class="sk">Zona</span><span class="sv">5 minuti a piedi da Milano Centrale</span></div>
+            <div class="spec"><span class="sk">Sale</span><span class="sv">Centro congressi 1.300 m², capienza 1.300 persone</span></div>
+            <div class="spec"><span class="sk">Costo</span><span class="sv">Il pullman deve entrare in <b>Area B e Area C</b></span></div>
+          </div>
+          <p>Con 306 camere la disponibilità è garantita anche prenotando tardi, e l'11 mattina il <b>Malpensa Express parte dalla porta accanto</b>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="stack" style="margin-top:2.25rem">
+      <div class="note amber">
+        <span class="tag">Perché sono tutti 4 stelle</span>
+        Non è un upgrade di lusso. Un 3★ italiano quasi mai ha contemporaneamente <b>25 camere libere in blocco, un parcheggio per il pullman e una sala colazioni che regge 43 persone in un turno</b>. In novembre, a tariffa gruppo e fuori centro, questi 4★ stanno plausibilmente dentro i 75 € p.p. — ma è esattamente ciò che il preventivo deve confermare.
+      </div>
+
+      <div class="tablewrap">
+        <table>
+          <caption>Conseguenza fiscale del 4 stelle</caption>
+          <thead><tr><th>Scenario</th><th class="n">Tassa totale</th><th class="n">p.p.</th><th class="n">Differenza</th></tr></thead>
+          <tbody>
+            <tr><td>Ipotesi originale, tutti 3★</td><td class="n">2.042,50</td><td class="n">47,50</td><td class="n">—</td></tr>
+            <tr><td><b>4★ con Venezia a Mestre</b><span class="sub">Lo scenario di questa shortlist</span></td><td class="n">2.386,50</td><td class="n">55,50</td><td class="n">+ 344,00</td></tr>
+            <tr><td>4★ con Venezia in centro storico</td><td class="n">2.580,00</td><td class="n">60,00</td><td class="n">+ 537,50</td></tr>
+            <tr class="total"><td>Nuovo totale alloggio + tassa (4★, Mestre)</td><td class="n">31.411,50</td><td class="n">730,50</td><td class="n">+ 8,00 p.p.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2">
+        <div class="note warn">
+          <span class="tag">Il punto critico: le 6 singole</span>
+          Gli alberghi italiani hanno pochissime singole vere — il Carlton ne ha <b>4 su 145 camere</b>. Solo le strutture molto grandi (Ergife, Michelangelo, Delta) ne hanno un numero decente. <b>Piano B da mettere subito a preventivo:</b> negoziare 6 <b>doppie uso singola</b> invece di 6 singole, e mettere a budget il supplemento.
+        </div>
+        <div class="note">
+          <span class="tag">La colazione a buffet va scritta nel contratto</span>
+          Non basta «colazione inclusa». Nel preventivo deve comparire: <b>buffet caldo e freddo</b>, non continentale al tavolo; <b>sala che accoglie 43 persone in un unico turno</b>; e <b>apertura anticipata alle 07:00</b> nei giorni di trasferimento — <b>5, 7, 8 e 10 novembre</b>, e soprattutto l'8, quando si parte alle 08:30 per i 340 km fino a Venezia.
+        </div>
+      </div>
+
+      <div class="note warn">
+        <span class="tag">Cosa questa lista è, e cosa non è</span>
+        Sono strutture reali, verificate per categoria, dimensione, posizione e servizi da fonti pubbliche. <b>Non è una verifica di disponibilità né di tariffa</b> per novembre 2026: quella si ottiene solo inviando la richiesta di preventivo a tutte le strutture di ogni città contemporaneamente, con scadenza di risposta fissa — <b>entro gennaio/febbraio 2026</b>.
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="programma">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">04 — Programma</span>
+      <span class="eyebrow">05 — Programma</span>
       <h2>Dieci giorni, giorno per giorno</h2>
       <p class="lede">Tramonto alle 17:00 in tutta Italia a novembre: le visite esterne stanno al mattino e nel primo pomeriggio. Ogni cambio città costa 30–40 minuti di solo carico e scarico dei 43 bagagli.</p>
     </div>
@@ -734,7 +964,7 @@ footer ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.2
 <section id="criticita">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">05 — Criticità</span>
+      <span class="eyebrow">06 — Criticità</span>
       <h2>Le cinque cose che possono far saltare il viaggio</h2>
       <p class="lede">In ordine di urgenza reale, non di importanza. Le prime tre si esauriscono, non si negoziano.</p>
     </div>
@@ -777,7 +1007,7 @@ footer ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.2
 <section id="accessori">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">06 — Oltre il pernottamento</span>
+      <span class="eyebrow">07 — Oltre il pernottamento</span>
       <h2>Cosa costa il resto del viaggio</h2>
       <p class="lede">Il brief copre solo il dormire. Queste voci sono <b>stime di mercato</b>, servono a dare il quadro del costo reale e vanno confermate con preventivi.</p>
     </div>

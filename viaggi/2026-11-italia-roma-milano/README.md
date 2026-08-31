@@ -35,9 +35,14 @@
 | [04-hotel-richiesta-preventivo.md](04-hotel-richiesta-preventivo.md) | Brief alberghi + testo e-mail pronto da inviare (IT/EN) |
 | [05-checklist-prenotazioni.md](05-checklist-prenotazioni.md) | Scadenzario prenotazioni musei, guide, trasporti, permessi |
 | [06-trasporti.md](06-trasporti.md) | Confronto pullman GT vs treno, tratte, tempi, permessi ZTL |
+| [07-hotel-shortlist.md](07-hotel-shortlist.md) | **Shortlist alberghi per le 5 città** — gruppo con pullman, fuori centro, colazione a buffet |
 | [dossier.html](dossier.html) | Dossier visuale completo in una pagina — [versione pubblicata](https://claude.ai/code/artifact/151a2e2e-301a-4fdc-8a71-28e44c0cdd5f) |
 | [rooming-list.csv](rooming-list.csv) | Modello rooming list 25 camere / 43 pax |
 | [budget-dettagliato.csv](budget-dettagliato.csv) | Budget in formato tabellare per foglio di calcolo |
+
+> **Vincoli aggiuntivi del committente.** Il gruppo viaggia con **pullman GT al seguito**, quindi si preferiscono
+> strutture **fuori dal centro** con parcheggio per il bus; la **colazione a buffet** è un requisito esplicito.
+> La shortlist alberghi in [07](07-hotel-shortlist.md) è costruita su questi criteri.
 
 > **Nota sui prezzi.** Le tariffe di alloggio (€ 75) sono quelle indicate dal brief.
 > Le tasse di soggiorno sono aggiornate alle delibere comunali note ad agosto 2026 e
