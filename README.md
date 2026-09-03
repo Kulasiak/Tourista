@@ -152,6 +152,65 @@ server. Niente abbonamenti, niente nuvola, nessuno che guarda da fuori.
 
 ---
 
+## Aggiungere una lingua
+
+Le cinque lingue stanno **dentro** il programma: da solo funziona sempre. Per
+aggiungerne un'altra — o solo per cambiare una parola che non ti piace — si mette
+un file **accanto** a `index.html`:
+
+| File | Quando | Come si scrive |
+| --- | --- | --- |
+| `lingue.js` | anche aprendo il programma col doppio clic | `window.LINGUE = { ... }` |
+| `lingue.json` | quando il programma sta su un sito o sul server | solo il pacchetto, senza involucro |
+
+Oppure, senza toccare cartelle: *Impostazioni → File delle lingue → **Carica un
+file***. Quello che carichi resta anche domani, su quel computer.
+
+### Il giro completo
+
+1. *Impostazioni → **Scarica il modello***: scegli la lingua (tedesco, arabo,
+   rumeno, russo…) e ti scarichi un file con **tutte** le frasi del programma.
+2. Lo riempi con calma. Le caselle lasciate vuote **restano in italiano**: puoi
+   anche fermarti a metà e continuare domani.
+3. Lo ricarichi da *Carica un file*, o lo metti nella cartella come `lingue.json`.
+4. *Controlla* dice quante frasi sono a posto e quante mancano, lingua per lingua.
+
+Il file è fatto così — la frase italiana fa da chiave:
+
+```json
+{
+  "lingue": [
+    { "id": "de", "nome": "Deutsch", "flag": "🇩🇪", "locale": "de-DE",
+      "mesi": ["Januar", "…"], "giorni": ["Sonntag", "…"] }
+  ],
+  "voci": {
+    "Cruscotto": { "de": "Übersicht" },
+    "Nuova partenza": { "de": "Neue Abfahrt" }
+  }
+}
+```
+
+Per le lingue che si scrivono da destra (arabo, ebraico) basta aggiungere
+`"rtl": true` e il programma gira da solo. Nel deposito c'è
+`lingue.esempio.json`: un tedesco a metà, da copiare e completare.
+
+### Se il file ha qualche problema
+
+Non succede niente di male, e il programma **non si ferma mai**:
+
+| Problema | Cosa fa |
+| --- | --- |
+| Il file non c'è | Va avanti con le cinque lingue di dentro |
+| Il file è rotto (non è JSON) | Lo ignora e lo scrive in Impostazioni |
+| Ha la forma sbagliata | Lo ignora, senza toccare quello che c'era |
+| Ha righe sporche in mezzo a righe buone | Prende le buone, salta le altre e ti dice quante |
+| Manca una frase | Quella frase resta in italiano |
+| Vuoi tornare indietro | *Impostazioni → File delle lingue → **Togli*** |
+
+L'italiano non si può sovrascrivere: è la chiave con cui si trovano le frasi.
+
+---
+
 ## Lavorare in due o in tre
 
 Da soli non serve niente: il programma funziona così com'è. Se invece in agenzia
@@ -230,6 +289,7 @@ lavori da solo.
 | --- | --- |
 | `index.html` | Tutto il gestionale: schermate, calcoli, documenti, dizionario delle cinque lingue |
 | `server.js` | Il server dell'ufficio: fa vedere le stesse pratiche a più computer e tiene le copie di ogni giorno |
+| `lingue.esempio.json` | Esempio di file delle lingue (tedesco a metà), da copiare e completare |
 | `manifest.webmanifest` | Per installarlo come applicazione su telefono e computer |
 | `sw.js` | Fa funzionare il programma anche senza linea |
 | `vercel.json` | Per pubblicarlo su Vercel |

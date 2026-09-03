@@ -482,6 +482,20 @@ input[type=checkbox],input[type=radio]{ width:17px; height:17px; accent-color:va
   .sheet{ font-size:10pt; }
 }
 
+/* lingue che si scrivono da destra a sinistra */
+[dir="rtl"] #side{ border-right:0; border-left:1px solid var(--sep); }
+[dir="rtl"] .nav-i, [dir="rtl"] .list-i, [dir="rtl"] .todo{ text-align:right; }
+[dir="rtl"] .tbl th, [dir="rtl"] .tbl td{ text-align:right; }
+[dir="rtl"] .tbl .num{ text-align:left; }
+[dir="rtl"] .right{ text-align:left; }
+[dir="rtl"] .tl{ padding-left:0; padding-right:30px; }
+[dir="rtl"] .tl:before{ left:auto; right:9px; }
+[dir="rtl"] .tl-i:before{ left:auto; right:-25px; }
+[dir="rtl"] .search svg{ left:auto; right:10px; }
+[dir="rtl"] .search input{ padding-left:11px; padding-right:32px; }
+[dir="rtl"] .mv .m-a, [dir="rtl"] .pax-chip .x{ margin-left:0; margin-right:auto; }
+@media(max-width:1000px){ [dir="rtl"] #side{ transform:translateX(100%); } body.side-open[dir] #side{ transform:none; } }
+
 /* utilita varie */
 .sep-line{ height:1px; background:var(--sep); margin:12px 0; }
 .pill-row{ display:flex; gap:6px; flex-wrap:wrap; }
@@ -635,6 +649,7 @@ function setLang(l){
   LANG = l;
   if(DB && DB.meta){ DB.meta.lingua = l; save(); }
   document.documentElement.lang = l;
+  document.documentElement.dir = (typeof LNG_RTL === "object" && LNG_RTL[l]) ? "rtl" : "ltr";
   render();
 }
 
@@ -1717,6 +1732,37 @@ Object.assign(DIZ, {
 <script>
 Object.assign(DIZ, {
 "Collegato, ma qui c'è ancora l'agenzia di prova: i dati finti non vengono mandati al server.":["Connected, but this computer still has the demo agency: the fake data is not sent to the server.","Connecté, mais cet ordinateur a encore l'agence de démonstration : les données fictives ne sont pas envoyées au serveur.","Conectado, pero este ordenador todavía tiene la agencia de prueba: los datos falsos no se envían al servidor.","Połączono, ale na tym komputerze wciąż jest biuro demonstracyjne: dane testowe nie są wysyłane na serwer."]
+});
+</script>
+<script>
+Object.assign(DIZ, {
+"File delle lingue":["Language file","Fichier de langues","Archivo de idiomas","Plik z językami"],
+"Le cinque lingue stanno dentro il programma. Per aggiungerne un'altra, o per cambiare una parola che non ti piace, metti un file lingue.json accanto a index.html oppure caricalo qui.":["The five languages live inside the program. To add another one, or to change a word you do not like, put a lingue.json file next to index.html or load it here.","Les cinq langues sont dans le programme. Pour en ajouter une autre, ou changer un mot qui ne vous plaît pas, placez un fichier lingue.json à côté d'index.html ou chargez-le ici.","Los cinco idiomas están dentro del programa. Para añadir otro, o cambiar una palabra que no te gusta, pon un archivo lingue.json junto a index.html o cárgalo aquí.","Pięć języków jest w samym programie. Aby dodać kolejny albo zmienić jakieś słowo, połóż plik lingue.json obok index.html lub wczytaj go tutaj."],
+"Carica un file":["Load a file","Charger un fichier","Cargar un archivo","Wczytaj plik"],
+"Scarica il modello":["Download the template","Télécharger le modèle","Descargar la plantilla","Pobierz szablon"],
+"Modello per una lingua nuova":["Template for a new language","Modèle pour une nouvelle langue","Plantilla para un idioma nuevo","Szablon nowego języka"],
+"Scarica un file con tutte le frasi del programma da tradurre. Quelle che lasci vuote restano in italiano, così puoi anche fermarti a metà.":["Download a file with all the program's phrases to translate. The ones you leave empty stay in Italian, so you can stop halfway.","Téléchargez un fichier avec toutes les phrases du programme à traduire. Celles laissées vides restent en italien : vous pouvez vous arrêter à mi-chemin.","Descarga un archivo con todas las frases del programa para traducir. Las que dejes vacías se quedan en italiano, así puedes parar a mitad.","Pobierz plik ze wszystkimi zdaniami programu do przetłumaczenia. Puste pozostaną po włosku, więc można przerwać w połowie."],
+"Lingua":["Language","Langue","Idioma","Język"],
+"Sigla":["Code","Code","Sigla","Kod"],
+"Nome della lingua":["Language name","Nom de la langue","Nombre del idioma","Nazwa języka"],
+"Modo di scrivere numeri e date":["How numbers and dates are written","Format des nombres et des dates","Formato de números y fechas","Format liczb i dat"],
+"La sigla va scritta con due lettere, per esempio de":["The code is two letters, for example de","Le code s'écrit en deux lettres, par exemple de","La sigla se escribe con dos letras, por ejemplo de","Kod ma dwie litery, na przykład de"],
+"Modello scaricato: riempilo e ricaricalo qui":["Template downloaded: fill it in and load it back here","Modèle téléchargé : remplissez-le et rechargez-le ici","Plantilla descargada: rellénala y vuelve a cargarla aquí","Szablon pobrany: uzupełnij go i wczytaj tutaj"],
+"Controlla":["Check","Vérifier","Comprobar","Sprawdź"],
+"Come stanno le lingue":["How the languages are doing","Où en sont les langues","Cómo van los idiomas","Stan języków"],
+"Nessuna lingua aggiunta: ci sono solo le cinque di partenza.":["No language added: only the five built-in ones.","Aucune langue ajoutée : il n'y a que les cinq de départ.","Ningún idioma añadido: solo están los cinco iniciales.","Nie dodano języków: jest tylko pięć wbudowanych."],
+"{n} da fare":["{n} to do","{n} à faire","{n} por hacer","{n} do zrobienia"],
+"completa":["complete","complète","completa","kompletny"],
+"Ultimo file: {f} — {v} frasi messe, {s} righe saltate.":["Last file: {f} — {v} phrases applied, {s} lines skipped.","Dernier fichier : {f} — {v} phrases appliquées, {s} lignes ignorées.","Último archivo: {f} — {v} frases aplicadas, {s} líneas saltadas.","Ostatni plik: {f} — zastosowano {v} zdań, pominięto {s} wierszy."],
+"Caricato: {f}":["Loaded: {f}","Chargé : {f}","Cargado: {f}","Wczytano: {f}"],
+"{n} frasi caricate":["{n} phrases loaded","{n} phrases chargées","{n} frases cargadas","Wczytano {n} zdań"],
+"Il file non ha la forma giusta":["The file has the wrong shape","Le fichier n'a pas la bonne forme","El archivo no tiene la forma correcta","Plik ma niewłaściwą postać"],
+"Il file non si legge":["The file cannot be read","Le fichier ne peut pas être lu","El archivo no se puede leer","Nie można odczytać pliku"],
+"Il file non si legge: non è né .json né .js con dentro un pacchetto di lingue":["The file cannot be read: it is neither .json nor a .js holding a language pack","Le fichier ne peut pas être lu : ce n'est ni un .json ni un .js contenant un pack de langues","El archivo no se puede leer: no es .json ni un .js con un paquete de idiomas","Nie można odczytać pliku: to ani .json, ani .js z pakietem językowym"],
+"Nel file non c'è nessuna lingua e nessuna frase":["The file holds no language and no phrase","Le fichier ne contient ni langue ni phrase","El archivo no contiene ningún idioma ni frase","Plik nie zawiera ani języka, ani zdania"],
+"Il file è troppo grande per essere tenuto qui":["The file is too big to keep here","Le fichier est trop gros pour être conservé ici","El archivo es demasiado grande para guardarlo aquí","Plik jest za duży, aby go tu przechować"],
+"Tolgo le lingue aggiunte e torno alle cinque di partenza?":["Remove the added languages and go back to the five built-in ones?","Retirer les langues ajoutées et revenir aux cinq de départ ?","¿Quito los idiomas añadidos y vuelvo a los cinco iniciales?","Usunąć dodane języki i wrócić do pięciu wbudowanych?"],
+"portato a mano":["loaded by hand","chargé à la main","cargado a mano","wczytany ręcznie"]
 });
 </script>
 <script>
@@ -4619,6 +4665,7 @@ VISTE.impostazioni = function(){
           '<button class="btn' + (LANG === l ? " pri" : "") + '" data-act="lang" data-l="' + l + '">' +
             LNG_FLAG[l] + ' ' + esc(LNG_NOME[l]) + '</button>').join("") + '</div>' +
         '<div class="small muted mt">' + esc(L("Cambia solo le scritte del programma: i tuoi testi (programmi, note, nomi) restano come li hai scritti.")) + '</div>' +
+        (typeof cartaLingue === "function" ? cartaLingue() : "") +
         '<div class="sep-line"></div>' +
         '<h3 class="mb">' + esc(L("Colore")) + '</h3>' +
         '<div class="pill-row">' + [["chiaro","Chiaro"],["notte","Notte"],["deserto","Deserto"],["mare","Mare"]].map(s=>
@@ -6478,6 +6525,267 @@ function cartaRete(){
 </script>
 <script>
 /* ============================================================
+   11. LE LINGUE IN PIÙ — un file a parte, fuori dal programma
+   Il programma ha già cinque lingue dentro di sé e funziona
+   anche da solo. Chi vuole aggiungerne un'altra (o correggere
+   una parola) mette un file accanto a index.html:
+
+       lingue.js     — window.LINGUE = { ... }   (va bene anche
+                       aprendo il programma con un doppio clic)
+       lingue.json   — lo stesso, senza involucro (quando il
+                       programma è su un sito o sul server)
+
+   oppure lo porta a mano da Impostazioni.
+
+   Se il file manca, è rotto o dice sciocchezze, non succede
+   niente di male: si tiene quello che c'era e si va avanti.
+   Le frasi senza traduzione restano in italiano.
+   ============================================================ */
+const LING_KEY = "tourista_lingue";
+const LNG_RTL = {};
+const LING = { esito:null, errore:"", dove:"", file:"" };
+
+/* --- mettere in opera un pacchetto di lingue, con prudenza --- */
+function lingueApplica(pacco, dove){
+  const esito = { lingue:[], voci:0, saltate:0, errore:"", dove:dove || "" };
+  try{
+    if(!pacco || typeof pacco !== "object" || Array.isArray(pacco)){
+      esito.errore = L("Il file non ha la forma giusta");
+      return esito;
+    }
+    const elenco = Array.isArray(pacco.lingue) ? pacco.lingue : [];
+    elenco.forEach(l => {
+      if(!l || typeof l !== "object" || typeof l.id !== "string" || !/^[a-z]{2}(-[A-Za-z]{2,4})?$/.test(l.id)){
+        esito.saltate++; return;
+      }
+      const id = l.id;
+      if(LNG.indexOf(id) < 0) LNG.push(id);
+      LNG_NOME[id] = String(l.nome || id);
+      LNG_FLAG[id] = String(l.flag || "🌐").slice(0, 8);
+      LNG_LOC[id]  = String(l.locale || id);
+      if(Array.isArray(l.mesi)    && l.mesi.length    === 12) MESI_ALL[id]    = l.mesi.map(String);
+      if(Array.isArray(l.mesi3)   && l.mesi3.length   === 12) MESI3_ALL[id]   = l.mesi3.map(String);
+      if(Array.isArray(l.giorni)  && l.giorni.length  === 7)  GIORNI_ALL[id]  = l.giorni.map(String);
+      if(Array.isArray(l.giorni2) && l.giorni2.length === 7)  GIORNI2_ALL[id] = l.giorni2.map(String);
+      if(l.rtl) LNG_RTL[id] = true;
+      if(esito.lingue.indexOf(id) < 0) esito.lingue.push(id);
+    });
+    const voci = (pacco.voci && typeof pacco.voci === "object") ? pacco.voci : {};
+    Object.keys(voci).forEach(frase => {
+      const t = voci[frase];
+      if(!t || typeof t !== "object"){ esito.saltate++; return; }
+      Object.keys(t).forEach(id => {
+        const testo = t[id];
+        if(typeof testo !== "string" || !testo.trim()) return;      /* le caselle vuote si lasciano stare */
+        const i = LNG.indexOf(id);
+        if(i < 1){ esito.saltate++; return; }                        /* l'italiano è la chiave, non si traduce */
+        if(!Array.isArray(DIZ[frase])) DIZ[frase] = [];
+        DIZ[frase][i-1] = testo;
+        esito.voci++;
+      });
+    });
+  }catch(e){
+    esito.errore = e.message;
+  }
+  return esito;
+}
+
+/* --- quante frasi copre una lingua --- */
+function copertura(id){
+  const i = LNG.indexOf(id);
+  if(i < 1) return { fatte:0, tutte:0 };
+  const chiavi = Object.keys(DIZ);
+  let fatte = 0;
+  chiavi.forEach(k => { const a = DIZ[k]; if(a && typeof a[i-1] === "string" && a[i-1]) fatte++; });
+  return { fatte:fatte, tutte:chiavi.length };
+}
+const lingueInPiu = () => LNG.slice(5);
+
+/* --- il file portato a mano, che resta anche domani --- */
+function lingueSalvate(){
+  try{ return JSON.parse(localStorage.getItem(LING_KEY)); }catch(e){ return null; }
+}
+function lingueSalva(pacco){
+  try{ localStorage.setItem(LING_KEY, JSON.stringify(pacco)); return true; }
+  catch(e){ LING.errore = L("Il file è troppo grande per essere tenuto qui"); return false; }
+}
+
+/* --- leggere un file: va bene sia .json sia .js con l'involucro --- */
+function lingueLeggiTesto(testo){
+  const s = String(testo || "").trim();
+  try{ return JSON.parse(s); }catch(e){}
+  const a = s.indexOf("{"), b = s.lastIndexOf("}");
+  if(a >= 0 && b > a){
+    try{ return JSON.parse(s.slice(a, b + 1)); }catch(e){}
+  }
+  return null;
+}
+
+/* --- all'accensione: prima il file accanto al programma, poi quello portato a mano --- */
+function lingueAvvia(){
+  const chiudi2 = () => {
+    const salvato = lingueSalvate();
+    if(salvato){
+      const e = lingueApplica(salvato, L("portato a mano"));
+      LING.esito = e; LING.errore = e.errore;
+    }
+    if(LNG_RTL[LANG]) document.documentElement.dir = "rtl";
+    if(typeof render === "function") render();
+  };
+  /* lingue.js — funziona anche col doppio clic sul file */
+  const s = document.createElement("script");
+  s.src = "./lingue.js";
+  s.onload = () => {
+    if(window.LINGUE){
+      const e = lingueApplica(window.LINGUE, "lingue.js");
+      LING.esito = e; LING.errore = e.errore; LING.file = "lingue.js";
+    }
+    chiudi2();
+  };
+  s.onerror = () => {
+    /* niente lingue.js: si prova lingue.json (quando il programma sta su un sito o sul server) */
+    if(location.protocol.indexOf("http") !== 0){ chiudi2(); return; }
+    fetch("./lingue.json").then(r => r.ok ? r.json() : null).then(p => {
+      if(p){
+        const e = lingueApplica(p, "lingue.json");
+        LING.esito = e; LING.errore = e.errore; LING.file = "lingue.json";
+      }
+      chiudi2();
+    }).catch(() => chiudi2());
+  };
+  document.head.appendChild(s);
+}
+
+/* --- il modello da riempire --- */
+function lingueModello(id, nome, flag, locale){
+  const i = LNG.indexOf(id);
+  const voci = {};
+  Object.keys(DIZ).sort((a,b) => a.localeCompare(b, "it")).forEach(k => {
+    const a = DIZ[k];
+    voci[k] = {};
+    voci[k][id] = (i > 0 && a && typeof a[i-1] === "string") ? a[i-1] : "";
+  });
+  const base = LNG.indexOf(id) > 0 ? id : "en";
+  return {
+    "come si usa": "Riempi le caselle vuote. Metti questo file accanto a index.html col nome lingue.json, oppure caricalo da Impostazioni. Le frasi lasciate vuote restano in italiano.",
+    lingue: [{
+      id: id, nome: nome, flag: flag, locale: locale, rtl: !!LNG_RTL[id],
+      mesi:    MESI_ALL[base]    || MESI_ALL.en,
+      mesi3:   MESI3_ALL[base]   || MESI3_ALL.en,
+      giorni:  GIORNI_ALL[base]  || GIORNI_ALL.en,
+      giorni2: GIORNI2_ALL[base] || GIORNI2_ALL.en
+    }],
+    voci: voci
+  };
+}
+
+/* --- i tasti --- */
+ACT["lingue-aggiungi"] = function(){
+  const inp = document.createElement("input");
+  inp.type = "file"; inp.accept = ".json,.js,application/json,text/javascript";
+  inp.onchange = () => {
+    const f = inp.files[0];
+    if(!f) return;
+    const r = new FileReader();
+    r.onload = () => {
+      const pacco = lingueLeggiTesto(r.result);
+      if(!pacco){
+        LING.errore = L("Il file non si legge: non è né .json né .js con dentro un pacchetto di lingue");
+        render(); toast(LING.errore, "err"); return;
+      }
+      const prova = lingueApplica(pacco, f.name);
+      if(prova.errore || (!prova.lingue.length && !prova.voci)){
+        LING.errore = prova.errore || L("Nel file non c'è nessuna lingua e nessuna frase");
+        render(); toast(LING.errore, "err"); return;
+      }
+      LING.errore = ""; LING.esito = prova; LING.file = f.name;
+      lingueSalva(pacco);
+      render();
+      toast(LN("{n} frasi caricate", { n: prova.voci }), "ok");
+    };
+    r.onerror = () => { LING.errore = L("Il file non si legge"); render(); };
+    r.readAsText(f);
+  };
+  inp.click();
+};
+ACT["lingue-togli"] = function(){
+  conferma(L("Tolgo le lingue aggiunte e torno alle cinque di partenza?"), () => {
+    try{ localStorage.removeItem(LING_KEY); }catch(e){}
+    location.reload();
+  }, L("Togli"));
+};
+ACT["lingue-modello"] = function(){
+  const suggerite = [
+    ["de","Deutsch","🇩🇪","de-DE"], ["ar","العربية","🇩🇿","ar-DZ"], ["ro","Română","🇷🇴","ro-RO"],
+    ["pt","Português","🇵🇹","pt-PT"], ["nl","Nederlands","🇳🇱","nl-NL"], ["ru","Русский","🇷🇺","ru-RU"],
+    ["tr","Türkçe","🇹🇷","tr-TR"], ["uk","Українська","🇺🇦","uk-UA"], ["sq","Shqip","🇦🇱","sq-AL"]
+  ];
+  M_OK = () => {
+    const id = String(V("lg-id")).trim().toLowerCase();
+    if(!/^[a-z]{2}(-[A-Za-z]{2,4})?$/.test(id)){ toast(L("La sigla va scritta con due lettere, per esempio de"), "err"); return; }
+    const p = lingueModello(id, V("lg-nome") || id, V("lg-flag") || "🌐", V("lg-loc") || id);
+    scarica("lingue-" + id + ".json", JSON.stringify(p, null, 1));
+    toast(L("Modello scaricato: riempilo e ricaricalo qui"), "ok");
+  };
+  modale(L("Modello per una lingua nuova"),
+    '<p class="small muted">' + esc(L("Scarica un file con tutte le frasi del programma da tradurre. Quelle che lasci vuote restano in italiano, così puoi anche fermarti a metà.")) + '</p>' +
+    campo("lg-scelta", L("Lingua"), "de", "select", { opts: suggerite.map(x => ({ v:x[0], l:x[2] + " " + x[1] })) }) +
+    '<div class="grid g2" style="gap:11px">' +
+      campo("lg-id", L("Sigla"), "de", "text", { hint:"de, ar, ro…" }) +
+      campo("lg-nome", L("Nome della lingua"), "Deutsch") +
+      campo("lg-flag", L("Bandiera"), "🇩🇪") +
+      campo("lg-loc", L("Modo di scrivere numeri e date"), "de-DE", "text", { hint:"de-DE, ar-DZ…" }) +
+    '</div>',
+    '<button class="btn" data-act="close">' + esc(L("Annulla")) + '</button>' +
+    '<button class="btn pri" data-act="ok">' + ico("giu") + esc(L("Scarica il modello")) + '</button>');
+  const sel = document.getElementById("lg-scelta");
+  if(sel) sel.onchange = () => {
+    const x = suggerite.find(y => y[0] === sel.value) || suggerite[0];
+    document.getElementById("lg-id").value = x[0];
+    document.getElementById("lg-nome").value = x[1];
+    document.getElementById("lg-flag").value = x[2];
+    document.getElementById("lg-loc").value = x[3];
+  };
+};
+ACT["lingue-controlla"] = function(){
+  const righe = lingueInPiu().map(id => {
+    const c = copertura(id);
+    const manca = c.tutte - c.fatte;
+    return '<div class="kv"><span>' + LNG_FLAG[id] + " " + esc(LNG_NOME[id]) + '</span>' +
+      '<b>' + c.fatte + " / " + c.tutte + (manca ? ' <span class="chip a">' + LN("{n} da fare", { n:manca }) + '</span>' : ' <span class="chip g">' + esc(L("completa")) + '</span>') + '</b></div>';
+  }).join("");
+  modale(L("Come stanno le lingue"),
+    (righe || '<div class="small muted">' + esc(L("Nessuna lingua aggiunta: ci sono solo le cinque di partenza.")) + '</div>') +
+    (LING.esito ? '<div class="sep-line"></div><div class="small muted">' +
+      esc(LN("Ultimo file: {f} — {v} frasi messe, {s} righe saltate.", {
+        f: LING.file || LING.esito.dove || "—", v: LING.esito.voci, s: LING.esito.saltate })) + '</div>' : "") +
+    (LING.errore ? '<div class="danger mt">' + esc(LING.errore) + '</div>' : ""),
+    undefined, "slim");
+};
+
+/* --- il riquadro nelle impostazioni --- */
+function cartaLingue(){
+  const extra = lingueInPiu();
+  return '<div class="sep-line"></div>' +
+    '<h3 class="mb">' + esc(L("File delle lingue")) + '</h3>' +
+    '<p class="small muted">' + esc(L("Le cinque lingue stanno dentro il programma. Per aggiungerne un'altra, o per cambiare una parola che non ti piace, metti un file lingue.json accanto a index.html oppure caricalo qui.")) + '</p>' +
+    (extra.length ? '<div class="mt">' + extra.map(id => {
+        const c = copertura(id);
+        return '<div class="kv"><span>' + LNG_FLAG[id] + " " + esc(LNG_NOME[id]) + '</span>' +
+          '<b class="small">' + c.fatte + " / " + c.tutte + '</b></div>';
+      }).join("") + '</div>' : "") +
+    (LING.errore ? '<div class="danger mt">' + esc(LING.errore) + '</div>' : "") +
+    (!LING.errore && LING.file ? '<div class="ok-box mt">' + esc(LN("Caricato: {f}", { f: LING.file })) + '</div>' : "") +
+    '<div class="row wrap mt" style="gap:7px">' +
+      '<button class="btn" data-act="lingue-aggiungi">' + ico("su") + esc(L("Carica un file")) + '</button>' +
+      '<button class="btn" data-act="lingue-modello">' + ico("giu") + esc(L("Scarica il modello")) + '</button>' +
+      '<button class="btn ghost" data-act="lingue-controlla">' + esc(L("Controlla")) + '</button>' +
+      (extra.length ? '<button class="btn dang" data-act="lingue-togli">' + esc(L("Togli")) + '</button>' : "") +
+    '</div>';
+}
+</script>
+<script>
+/* ============================================================
    9. L'AVVIO E I COLLEGAMENTI
    ============================================================ */
 document.addEventListener("click", function(e){
@@ -6540,6 +6848,7 @@ function boot(){
   document.documentElement.setAttribute("data-skin", DB.meta.skin || "chiaro");
   leggiHash();
   render();
+  if(typeof lingueAvvia === "function") lingueAvvia();
   if(typeof syncAvvia === "function") syncAvvia();
   if(conPin()) blocca();
   /* la prima volta si comincia dai primi passi */
