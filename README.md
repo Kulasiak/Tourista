@@ -11,6 +11,10 @@ Si cambia lingua con un tocco, in basso a sinistra.
 All'apertura il programma chiede il **codice di entrata**: ogni persona dell'agenzia ha
 il suo, così si sa sempre chi ha aperto una pratica e chi ha incassato.
 
+Se in ufficio siete in due o in tre, si accende il **server dell'ufficio** (`server.js`,
+un file, nessuna installazione): tutti i computer vedono le stesse pratiche e ogni
+giorno parte da sola una copia di sicurezza.
+
 > **Agenzia di prova.** Il programma parte con un'agenzia finta ma verosimile — sei
 > partenze, sessanta pratiche, centodiciotto passeggeri — per poter provare tutto
 > subito. I codici sono scritti sulla schermata di entrata (Marta 1111, Luca 2222,
@@ -137,16 +141,67 @@ un'applicazione: si apre a tutto schermo e continua a funzionare senza linea.
 
 ### Dove finiscono i dati
 
-Tutto quello che scrivi resta **su quell'apparecchio**, dentro l'archivio del
-browser. Niente server, niente abbonamenti, nessuno che guarda da fuori. Per questo:
+Tutto quello che scrivi resta **in casa tua**: nell'archivio del browser di quel
+computer, oppure — se accendi il server dell'ufficio — sul computer che fa da
+server. Niente abbonamenti, niente nuvola, nessuno che guarda da fuori.
 
 - fai ogni tanto una **copia di sicurezza** da *Impostazioni → Scarica una copia*:
   è un file `.json` che si rimette con *Ripristina da una copia*;
-- se cambi computer, porta con te quel file;
-- da *Impostazioni* si esportano anche gli elenchi in **CSV** per il commercialista.
+- da *Impostazioni* si esportano anche gli elenchi in **CSV** per il commercialista;
+- con il server acceso, la copia del giorno la fa lui da solo.
 
-Se due persone lavorano su due computer diversi, ognuno ha il suo archivio: per
-metterli insieme si usa la copia di sicurezza.
+---
+
+## Lavorare in due o in tre
+
+Da soli non serve niente: il programma funziona così com'è. Se invece in agenzia
+lavorate in due o in tre, si accende il **server dell'ufficio**.
+
+### Come si accende
+
+Su un computer che resta acceso (basta un portatile in un angolo), nella cartella
+del programma:
+
+```
+node server.js
+```
+
+Scrive lui gli indirizzi da usare:
+
+```
+  Su questo computer:   http://localhost:7070
+  Dagli altri computer: http://192.168.1.20:7070
+```
+
+Sugli altri computer si apre quell'indirizzo nel browser: **si collegano da soli**,
+non c'è niente da impostare. Chi invece apre il file `index.html` sul proprio
+computer mette l'indirizzo a mano in *Impostazioni → Lavorare in due o in tre*.
+
+Se serve una parola d'ordine: `node server.js --chiave laparola`
+(e la stessa parola si scrive nelle impostazioni di ogni computer).
+Con `--porta 7071` si cambia la porta.
+
+### Come si comporta
+
+| Situazione | Cosa succede |
+| --- | --- |
+| Scrivi una pratica | In pochi secondi la vedono anche gli altri |
+| Il server è spento | Continui a lavorare lo stesso: quello che scrivi resta qui e parte da solo appena il server torna |
+| Due persone toccano **cose diverse** | Restano tutte e due: si unisce pratica per pratica, non a blocco |
+| Due persone toccano **la stessa pratica** | Vince l'ultima che arriva al server. L'orologio buono è quello del server, così un computer con la data sbagliata non fa danni |
+| Un computer nuovo si collega | Se ha ancora l'agenzia di prova, la butta e prende l'archivio vero. I dati finti non finiscono mai nell'archivio comune |
+| Cancelli qualcosa | Sparisce anche dagli altri (il server se ne ricorda per sessanta giorni) |
+
+### Dove stanno i dati con il server acceso
+
+- `dati/archivio.json` — l'archivio dell'ufficio, scritto prima di fianco e poi
+  spostato, così se manca la luce quello buono resta intero.
+- `copie/tourista-AAAA-MM-GG.json` — **una copia al giorno**, in automatico. Restano
+  le ultime trenta. Da *Impostazioni → Copia del server* si scarica quella di adesso.
+
+Il server sta sulla **rete dell'ufficio**: non va aperto su internet. Se ti serve
+lavorare da fuori, si fa con una VPN o si pubblica il programma da solo (senza
+server) e si continua con le copie a mano.
 
 ### I codici di entrata
 
@@ -174,6 +229,7 @@ lavori da solo.
 | File | A cosa serve |
 | --- | --- |
 | `index.html` | Tutto il gestionale: schermate, calcoli, documenti, dizionario delle cinque lingue |
+| `server.js` | Il server dell'ufficio: fa vedere le stesse pratiche a più computer e tiene le copie di ogni giorno |
 | `manifest.webmanifest` | Per installarlo come applicazione su telefono e computer |
 | `sw.js` | Fa funzionare il programma anche senza linea |
 | `vercel.json` | Per pubblicarlo su Vercel |
