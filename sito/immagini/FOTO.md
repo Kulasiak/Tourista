@@ -87,3 +87,7 @@ immagine usare:
 
 Se aggiungi un viaggio nuovo, metti lì il nome di una delle 42 città
 (oppure aggiungi la città in `immagini/citta.mjs` e ridisegna).
+
+---
+
+![Le 42 città](anteprima.png)
