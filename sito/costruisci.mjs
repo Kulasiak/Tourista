@@ -1011,54 +1011,75 @@ async function costruisci(){
   }
 
   /* la pagina che fa scegliere quale delle due versioni */
-  scrivi(join(FUORI, "index.html"), sceltaVersione(lingue.it));
+  scrivi(join(FUORI, "index.html"), sceltaVersione());
   console.log("\n  Sito costruito: " + conta + " pagine · lingue: " + LING.map(l => l.id).join(", ") +
     (mancanti.length ? "  (mancano ancora: " + mancanti.join(", ") + ")" : ""));
   VERSIONI.forEach(v => console.log("  · " + v.id + " → sito/pubblica/" + v.id + "/"));
   console.log("  · la scelta fra le due → sito/pubblica/index.html\n");
 }
 
-function sceltaVersione(T){
+function sceltaVersione(){
+  const carta = (id, nome, titolo, testo, citta) => `
+    <div class="v">
+      <a class="cima" href="${id}/it/index.html">
+        <span class="foto">${citta.map(c => `<img src="${id}/immagini/citta/${c}.svg" alt="">`).join("")}</span>
+        <span class="velo"></span>
+        <b>${esc(nome)}</b>
+      </a>
+      <div class="corpo">
+        <strong>${esc(titolo)}</strong>
+        <span>${esc(testo)}</span>
+        <div class="lingue">${LINGUE.map(l =>
+          '<a href="' + id + "/" + l.id + '/index.html">' + l.flag + " " + esc(l.nome) + "</a>").join("")}</div>
+      </div>
+    </div>`;
   return `<!doctype html>
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(AGENZIA.nome)} — due versioni del sito</title><meta name="robots" content="noindex">
 <style>
+ *{box-sizing:border-box}
  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0d1512;color:#f2f5f4;
-   min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
- .box{max-width:920px;width:100%}
- h1{font-size:clamp(26px,4vw,40px);margin:0 0 6px;letter-spacing:-.02em}
- p.sotto{color:#9fb0ab;margin:0 0 34px;font-size:16px}
- .due{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
- a.v{display:block;text-decoration:none;color:inherit;border-radius:20px;overflow:hidden;border:1px solid #2a3a35;
+   min-height:100vh;display:flex;align-items:center;justify-content:center;padding:44px 20px}
+ .box{max-width:980px;width:100%}
+ h1{font-size:clamp(28px,4vw,42px);margin:0 0 6px;letter-spacing:-.02em}
+ p.sotto{color:#9fb0ab;margin:0 0 30px;font-size:16px;line-height:1.55}
+ .due{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+ .v{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #2a3a35;
    background:#131e1a;transition:transform .2s,border-color .2s}
- a.v:hover{transform:translateY(-4px);border-color:#3FB0BE}
- .cima{height:150px;display:flex;align-items:flex-end;padding:18px 20px;font-weight:800;font-size:20px}
- .uno .cima{background:linear-gradient(135deg,#0E6E7A,#17A79A);color:#fff}
- .due2 .cima{background:linear-gradient(135deg,#5B21B6,#DB2777 60%,#F59E0B);color:#fff}
+ .v:hover{transform:translateY(-4px);border-color:#3FB0BE}
+ .cima{position:relative;display:block;height:178px;text-decoration:none;color:#fff}
+ .cima .foto{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr)}
+ .cima .foto img{width:100%;height:100%;object-fit:cover;display:block}
+ .cima .velo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,16,.06),rgba(6,10,16,.78))}
+ .cima b{position:absolute;left:20px;bottom:15px;font-size:22px;letter-spacing:-.01em}
  .corpo{padding:18px 20px 22px}
- .corpo b{display:block;font-size:17px;margin-bottom:6px}
- .corpo span{color:#9fb0ab;font-size:14px;line-height:1.5;display:block}
- .lingue{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
- .lingue a{font-size:13px;color:#9fb0ab;text-decoration:none;border:1px solid #2a3a35;border-radius:99px;padding:3px 10px}
+ .corpo strong{display:block;font-size:17px;margin-bottom:6px}
+ .corpo span{color:#9fb0ab;font-size:14.5px;line-height:1.55;display:block}
+ .lingue{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}
+ .lingue a{font-size:13px;color:#9fb0ab;text-decoration:none;border:1px solid #2a3a35;border-radius:99px;padding:4px 11px}
  .lingue a:hover{color:#fff;border-color:#3FB0BE}
+ .piede{margin-top:26px;color:#6f827c;font-size:13.5px;line-height:1.6}
+ .piede b{color:#9fb0ab;font-weight:600}
 </style></head>
 <body><div class="box">
   <h1>${esc(AGENZIA.nome)}</h1>
-  <p class="sotto">Due versioni dello stesso sito, stessi testi in cinque lingue. Guarda tutte e due e scegli quella che ti piace.</p>
+  <p class="sotto">Due versioni dello stesso sito, stessi testi in cinque lingue.<br>
+  Guarda tutte e due e scegli quella che ti piace: dentro c'è già tutto.</p>
   <div class="due">
-    <a class="v uno" href="vetrina/it/index.html">
-      <div class="cima">Vetrina</div>
-      <div class="corpo"><b>Elegante, da agenzia storica</b>
-      <span>Caratteri con le grazie, spazi larghi, colori caldi. Fa pensare a un'agenzia che c'è da vent'anni.</span>
-      <div class="lingue">${LINGUE.map(l => '<a href="vetrina/' + l.id + '/index.html">' + l.flag + " " + l.nome + "</a>").join("")}</div></div>
-    </a>
-    <a class="v due2" href="moderna/it/index.html">
-      <div class="cima">Moderna</div>
-      <div class="corpo"><b>Colorata, da agenzia giovane</b>
-      <span>Sfondo scuro, colori vivi, caratteri grandi. Fa pensare a un'agenzia che si muove in fretta.</span>
-      <div class="lingue">${LINGUE.map(l => '<a href="moderna/' + l.id + '/index.html">' + l.flag + " " + l.nome + "</a>").join("")}</div></div>
-    </a>
+    ${carta("vetrina", "Vetrina", "Elegante, da agenzia storica",
+      "Caratteri con le grazie, spazi larghi, colori caldi. Fa pensare a un'agenzia che c'è da vent'anni.",
+      ["roma", "praga", "lisbona"])}
+    ${carta("moderna", "Moderna", "Colorata, da agenzia giovane",
+      "Sfondo scuro, colori vivi, caratteri grandi. Fa pensare a un'agenzia che si muove in fretta.",
+      ["tokyo", "dubai", "newyork"])}
   </div>
+  <p class="piede">
+    In ogni versione e in ogni lingua: <b>Home</b>, <b>Viaggi</b> (con la scheda di ogni viaggio),
+    <b>Destinazioni</b> (42 città), <b>Gruppi</b>, <b>Chi siamo</b>, <b>Domande</b>, <b>Blog</b>,
+    <b>Contatti</b>, <b>Privacy</b>, pagina <b>404</b>, <b>volantino A4</b> da stampare
+    e i <b>testi per la pubblicità</b> già pronti da copiare.<br>
+    Per pubblicarlo: punta il progetto alla cartella <b>vetrina</b> oppure <b>moderna</b>, il resto è già dentro.
+  </p>
 </div></body></html>`;
 }
 
