@@ -501,6 +501,28 @@ input[type=checkbox],input[type=radio]{ width:17px; height:17px; accent-color:va
 [dir="rtl"] .kv b, [dir="rtl"] .kpi .k-v{ direction:ltr; unicode-bidi:isolate; }
 @media(max-width:1000px){ [dir="rtl"] #side{ left:auto; right:0; transform:translateX(100%); } body.side-open[dir] #side{ transform:none; } }
 
+/* costo a persona → quota da chiedere, uno accanto all'altro */
+.costo-quota{ display:flex; align-items:stretch; gap:10px; }
+.costo-quota .cq{ flex:1; min-width:0; background:var(--fill-3); border:1px solid var(--sep);
+  border-radius:var(--r-m); padding:12px 14px; display:flex; flex-direction:column; gap:2px; }
+.costo-quota .cq.forte{ background:var(--brand-soft); border-color:var(--brand-soft); }
+.costo-quota .cq > span{ font-size:11.5px; font-weight:650; color:var(--txt-3); text-transform:uppercase; letter-spacing:.05em; }
+.costo-quota .cq > b{ font-size:26px; font-weight:750; letter-spacing:-.02em; font-variant-numeric:tabular-nums; line-height:1.15; }
+.costo-quota .cq.forte > b{ color:var(--brand); }
+.costo-quota .cq > small{ font-size:12px; color:var(--txt-2); }
+.costo-quota .cq-sug{ font-size:12px; font-style:normal; font-weight:600; color:var(--txt-3); }
+.costo-quota .cq-fre{ display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:3px; color:var(--txt-3); flex:0 0 auto; padding:0 2px; }
+.costo-quota .cq-fre svg{ width:20px; height:20px; }
+.costo-quota .cq-fre span{ font-size:11.5px; font-weight:700; white-space:nowrap; }
+[dir="rtl"] .costo-quota .cq-fre svg{ transform:scaleX(-1); }
+@media(max-width:560px){
+  .costo-quota{ flex-direction:column; }
+  .costo-quota .cq-fre{ flex-direction:row; padding:0; }
+  [dir="ltr"] .costo-quota .cq-fre svg, .costo-quota .cq-fre svg{ transform:rotate(90deg); }
+  [dir="rtl"] .costo-quota .cq-fre svg{ transform:rotate(90deg); }
+}
+
 /* utilita varie */
 .sep-line{ height:1px; background:var(--sep); margin:12px 0; }
 .pill-row{ display:flex; gap:6px; flex-wrap:wrap; }
@@ -776,6 +798,12 @@ function copia(txt){
    ============================================================ */
 const DIZ = {};
 Object.assign(DIZ, {
+"Ci costa, a persona":["It costs us, per person","Ça nous coûte, par personne","Nos cuesta, por persona","Kosztuje nas, na osobę","تكلفتنا للشخص"],
+"Chiediamo, a persona":["We ask, per person","On demande, par personne","Pedimos, por persona","Bierzemy, od osoby","نطلب للشخص"],
+"Metti {q} come quota":["Set {q} as the price","Fixer {q} comme prix","Poner {q} como cuota","Ustaw {q} jako cenę","اجعل {q} هو السعر"],
+"consigliata":["suggested","conseillé","recomendada","sugerowana","مقترح"],
+"margine {m} sul gruppo":["{m} margin on the group","marge de {m} sur le groupe","margen de {m} en el grupo","marża {m} na grupie","هامش {m} على المجموعة"],
+"non l'hai ancora messa":["you have not set it yet","vous ne l'avez pas encore fixé","aún no la has puesto","jeszcze jej nie ustawiłeś","لم تحدّده بعد"],
 "IVA sul margine":["VAT on the margin","TVA sur la marge","IVA sobre el margen","VAT od marży","الضريبة على الهامش"],
 "IVA 23% sul margine":["23% VAT on the margin","TVA 23 % sur la marge","IVA 23% sobre el margen","VAT 23% od marży","ضريبة 23% على الهامش"],
 "Le agenzie che vendono pacchetti propri applicano la procedura del margine (art. 119 ustawy o VAT): l'IVA non si calcola sul prezzo di vendita, ma sul margine, cioè su quello che resta dopo aver pagato i servizi comprati da altri. Qui sotto il conto, viaggio per viaggio.":["Agencies selling their own packages use the margin scheme (art. 119 of the Polish VAT act): VAT is not charged on the selling price but on the margin, i.e. what is left after paying for services bought from others. Below, trip by trip.","Les agences qui vendent leurs propres forfaits appliquent le régime de la marge (art. 119 de la loi polonaise sur la TVA) : la TVA porte non sur le prix de vente mais sur la marge, c'est-à-dire ce qui reste après avoir payé les services achetés à d'autres. Ci-dessous, voyage par voyage.","Las agencias que venden paquetes propios aplican el régimen del margen (art. 119 de la ley polaca del IVA): el IVA no se calcula sobre el precio de venta sino sobre el margen, es decir, lo que queda tras pagar los servicios comprados a otros. Abajo, viaje por viaje.","Biura sprzedające własne pakiety stosują procedurę marży (art. 119 ustawy o VAT): VAT liczy się nie od ceny sprzedaży, lecz od marży, czyli tego, co zostaje po opłaceniu usług obcych. Poniżej wyjazd po wyjeździe.","الوكالات التي تبيع برامجها الخاصة تطبّق إجراءات الهامش (المادة 119 من قانون الضريبة البولندي): الضريبة لا تُحسب على سعر البيع بل على الهامش، أي ما يتبقّى بعد دفع الخدمات المشتراة من الغير. في الأسفل الحساب، رحلة برحلة."],
@@ -7772,10 +7800,24 @@ VISTE.preventivo = function(id){
             }).join("") : '<tr><td colspan="5" class="muted center pad">' + esc(L("Nessun costo: comincia da qui.")) + '</td></tr>') +
           '</tbody></table></div>' +
           '<div class="card-b">' +
-            riga(L("Costi a gruppo"), eur(costiFissi(p))) +
-            riga(L("Costi a persona"), eur(costoPaxUnit(p, n))) +
-            riga(L("Costo totale del gruppo"), eur(costoTot(p, n))) +
-            riga(L("Costo a persona"), "<b>" + eur(costo) + "</b>", "tot") +
+            /* quello che conta davvero: quanto ci costa e quanto chiedere */
+            '<div class="costo-quota">' +
+              '<div class="cq">' +
+                '<span>' + esc(L("Ci costa, a persona")) + '</span>' +
+                '<b>' + eur(costo) + '</b>' +
+                '<small>' + esc(LN("con {n} persone", { n:n })) + '</small>' +
+              '</div>' +
+              '<div class="cq-fre">' + ico("avanti") + '<span>+' + nz(p.ricarico) + '%</span></div>' +
+              '<div class="cq forte">' +
+                '<span>' + esc(L("Chiediamo, a persona")) + '</span>' +
+                '<b>' + eur(quota || consigliata) + (quota ? "" : ' <i class="cq-sug">' + esc(L("consigliata")) + '</i>') + '</b>' +
+                '<small>' + esc(quota
+                  ? LN("margine {m} sul gruppo", { m: eur(marg, 0) })
+                  : L("non l'hai ancora messa")) + '</small>' +
+              '</div>' +
+            '</div>' +
+            (quota ? "" : '<button class="btn pri wide mt" data-act="pre-prendi" data-id="' + p.id + '">' +
+              esc(LN("Metti {q} come quota", { q: eur(consigliata, 0) })) + '</button>') +
             (gr.length ? '<div class="small muted mt">' + ico("stella") + " " +
               esc(gr.map(g=> LN("{n} gratuità su: {v}", { n:g.n, v:g.voce })).join(" · ")) + '</div>' : "") +
           '</div>' +
