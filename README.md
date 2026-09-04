@@ -283,6 +283,65 @@ lavori da solo.
 - L'interfaccia è in cinque lingue; i tuoi testi (programmi, note, nomi) restano
   come li hai scritti.
 
+---
+
+## Il sito dell'agenzia
+
+Nella cartella `sito/` c'è il sito pubblico, **in due versioni diverse fra cui
+scegliere**, ognuna completa e nelle stesse cinque lingue del gestionale.
+
+| Versione | Come si presenta |
+| --- | --- |
+| **Vetrina** | Elegante, caldo, caratteri con le grazie, spazi larghi. Fa pensare a un'agenzia che c'è da vent'anni. |
+| **Moderna** | Fondo scuro, colori vivi, caratteri grandi. Fa pensare a un'agenzia che si muove in fretta. |
+
+Aprendo `sito/pubblica/index.html` si vedono tutte e due e si sceglie.
+
+### Cosa c'è dentro (per ogni versione, per ogni lingua)
+
+- **Home** — apertura con lo slogan, perché ci scelgono, i viaggi, come funziona,
+  i gruppi con cui lavoriamo, i numeri, le voci dei clienti, il blog e la chiamata
+  all'azione.
+- **Viaggi** — catalogo con filtro bus/aereo, e **una scheda per ogni viaggio**:
+  programma giorno per giorno, cosa comprende e cosa no, quota, minimo, partenze.
+- **Gruppi** — la pagina che vende davvero: parrocchie, scuole, CRAL, associazioni,
+  con le gratuità e le garanzie scritte.
+- **Chi siamo**, **Domande** (14 con dati per Google), **Blog** (3 articoli lunghi),
+  **Contatti** con il modulo, **Privacy**, **404**.
+- **Volantino** A4 da stampare e appendere in bacheca.
+- **Pubblicità**: testi già pronti da copiare — WhatsApp, Instagram, Facebook,
+  annunci Google, email ai soci — più gli slogan.
+
+### Per i motori di ricerca
+
+Titoli e descrizioni scritti pagina per pagina, indirizzo canonico, **hreflang** fra
+tutte e cinque le lingue, Open Graph per quando si condivide, dati strutturati
+(`TravelAgency`, `TouristTrip`, `FAQPage`, `BlogPosting`), `sitemap.xml` con 85
+indirizzi e `robots.txt`. Nessuna libreria esterna: le pagine pesano poco e si
+aprono subito anche da telefono.
+
+### Come si cambia
+
+I testi stanno in `sito/contenuti/<lingua>.mjs` — uno per lingua, tutti con la
+stessa forma. I dati che non cambiano da una lingua all'altra (agenzia, viaggi,
+prezzi, colori) stanno in `sito/contenuti/comune.mjs`. La grafica sta in
+`sito/temi/vetrina.css` e `sito/temi/moderna.css`.
+
+Dopo aver modificato qualcosa:
+
+```
+cd sito
+node costruisci.mjs
+```
+
+Rigenera tutto in `sito/pubblica/` — 200 pagine in pochi secondi, nessuna
+installazione. Se manca il file di una lingua, il sito si costruisce lo stesso
+con quelle che ci sono.
+
+Per pubblicarlo su Vercel si punta il progetto alla cartella della versione
+scelta (`sito/pubblica/vetrina` oppure `sito/pubblica/moderna`): dentro c'è già
+il suo `vercel.json`.
+
 ## Cosa c'è nel deposito
 
 | File | A cosa serve |
@@ -290,6 +349,7 @@ lavori da solo.
 | `index.html` | Tutto il gestionale: schermate, calcoli, documenti, dizionario delle cinque lingue |
 | `server.js` | Il server dell'ufficio: fa vedere le stesse pratiche a più computer e tiene le copie di ogni giorno |
 | `lingue.esempio.json` | Esempio di file delle lingue (tedesco a metà), da copiare e completare |
+| `sito/` | Il sito pubblico: due versioni grafiche, cinque lingue, generatore e testi |
 | `manifest.webmanifest` | Per installarlo come applicazione su telefono e computer |
 | `sw.js` | Fa funzionare il programma anche senza linea |
 | `vercel.json` | Per pubblicarlo su Vercel |

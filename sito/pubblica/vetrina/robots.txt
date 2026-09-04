@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /*/pubblicita.html
+Disallow: /*/volantino.html
+
+Sitemap: https://www.touristaviaggi.it/sitemap.xml

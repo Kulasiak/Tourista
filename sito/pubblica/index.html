@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tourista Viaggi — due versioni del sito</title><meta name="robots" content="noindex">
+<style>
+ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0d1512;color:#f2f5f4;
+   min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
+ .box{max-width:920px;width:100%}
+ h1{font-size:clamp(26px,4vw,40px);margin:0 0 6px;letter-spacing:-.02em}
+ p.sotto{color:#9fb0ab;margin:0 0 34px;font-size:16px}
+ .due{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+ a.v{display:block;text-decoration:none;color:inherit;border-radius:20px;overflow:hidden;border:1px solid #2a3a35;
+   background:#131e1a;transition:transform .2s,border-color .2s}
+ a.v:hover{transform:translateY(-4px);border-color:#3FB0BE}
+ .cima{height:150px;display:flex;align-items:flex-end;padding:18px 20px;font-weight:800;font-size:20px}
+ .uno .cima{background:linear-gradient(135deg,#0E6E7A,#17A79A);color:#fff}
+ .due2 .cima{background:linear-gradient(135deg,#5B21B6,#DB2777 60%,#F59E0B);color:#fff}
+ .corpo{padding:18px 20px 22px}
+ .corpo b{display:block;font-size:17px;margin-bottom:6px}
+ .corpo span{color:#9fb0ab;font-size:14px;line-height:1.5;display:block}
+ .lingue{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+ .lingue a{font-size:13px;color:#9fb0ab;text-decoration:none;border:1px solid #2a3a35;border-radius:99px;padding:3px 10px}
+ .lingue a:hover{color:#fff;border-color:#3FB0BE}
+</style></head>
+<body><div class="box">
+  <h1>Tourista Viaggi</h1>
+  <p class="sotto">Due versioni dello stesso sito, stessi testi in cinque lingue. Guarda tutte e due e scegli quella che ti piace.</p>
+  <div class="due">
+    <a class="v uno" href="vetrina/it/index.html">
+      <div class="cima">Vetrina</div>
+      <div class="corpo"><b>Elegante, da agenzia storica</b>
+      <span>Caratteri con le grazie, spazi larghi, colori caldi. Fa pensare a un'agenzia che c'è da vent'anni.</span>
+      <div class="lingue"><a href="vetrina/it/index.html">🇮🇹 Italiano</a><a href="vetrina/en/index.html">🇬🇧 English</a><a href="vetrina/fr/index.html">🇫🇷 Français</a><a href="vetrina/es/index.html">🇪🇸 Español</a><a href="vetrina/pl/index.html">🇵🇱 Polski</a></div></div>
+    </a>
+    <a class="v due2" href="moderna/it/index.html">
+      <div class="cima">Moderna</div>
+      <div class="corpo"><b>Colorata, da agenzia giovane</b>
+      <span>Sfondo scuro, colori vivi, caratteri grandi. Fa pensare a un'agenzia che si muove in fretta.</span>
+      <div class="lingue"><a href="moderna/it/index.html">🇮🇹 Italiano</a><a href="moderna/en/index.html">🇬🇧 English</a><a href="moderna/fr/index.html">🇫🇷 Français</a><a href="moderna/es/index.html">🇪🇸 Español</a><a href="moderna/pl/index.html">🇵🇱 Polski</a></div></div>
+    </a>
+  </div>
+</div></body></html>
