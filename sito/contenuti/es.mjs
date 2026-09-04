@@ -419,7 +419,7 @@ footer: {
   navigazione:"La web", contatti:"Contacto", legale:"Datos de la agencia",
   diritti:"Todos los derechos reservados", fatto:"Web hecha con cuidado",
   lingueTitolo:"Idiomas"
-},
+, perIlCliente:"Para el cliente"},
 
 errore404: {
   titolo:"Página no encontrada",

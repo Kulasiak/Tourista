@@ -3,4 +3,4 @@ Allow: /
 Disallow: /*/pubblicita.html
 Disallow: /*/volantino.html
 
-Sitemap: https://www.touristaviaggi.it/sitemap.xml
+Sitemap: https://uraniatravel.pl/sitemap.xml

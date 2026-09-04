@@ -419,7 +419,7 @@ footer: {
   navigazione:"Witryna", contatti:"Kontakt", legale:"Dane biura",
   diritti:"Wszelkie prawa zastrzeżone", fatto:"Witryna zrobiona starannie",
   lingueTitolo:"Języki"
-},
+, perIlCliente:"Dla klienta"},
 
 errore404: {
   titolo:"Nie znaleziono strony",

@@ -419,7 +419,7 @@ footer: {
   navigazione:"Le site", contatti:"Contact", legale:"Données de l'agence",
   diritti:"Tous droits réservés", fatto:"Site réalisé avec soin",
   lingueTitolo:"Langues"
-},
+, perIlCliente:"Pour le client"},
 
 errore404: {
   titolo:"Page introuvable",

@@ -130,9 +130,10 @@ ${o.corpo}
       <p class="piccolo">${esc(AGENZIA.indirizzo)}<br>${esc(AGENZIA.cap)} ${esc(AGENZIA.citta)}</p>
     </div>
     <div>
-      <h3>${esc(T.footer.legale)}</h3>
-      <p class="piccolo">P.IVA ${esc(AGENZIA.piva)}<br>${esc(AGENZIA.licenza)}<br>${esc(AGENZIA.polizza)}</p>
+      <h3>${esc(T.footer.perIlCliente || T.footer.legale)}</h3>
+      ${(AGENZIA.moduli || []).map(m => '<a href="' + m.u + '" rel="noopener">' + esc(m.t) + "</a>").join("\n      ")}
       <a href="${b}privacy.html">${esc(T.privacy.h1)}</a>
+      <p class="piccolo">${esc(AGENZIA.piva)}<br>${esc(AGENZIA.licenza)}<br>${esc(AGENZIA.polizza)}</p>
     </div>
   </div>
   <div class="riga piede-sotto">

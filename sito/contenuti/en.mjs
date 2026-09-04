@@ -419,7 +419,7 @@ footer: {
   navigazione:"The site", contatti:"Contact", legale:"Agency details",
   diritti:"All rights reserved", fatto:"Site made with care",
   lingueTitolo:"Languages"
-},
+, perIlCliente:"For customers"},
 
 errore404: {
   titolo:"Page not found",

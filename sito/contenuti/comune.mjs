@@ -5,29 +5,46 @@
    ============================================================ */
 
 export const AGENZIA = {
-  nome: "Tourista Viaggi",
-  dominio: "www.touristaviaggi.it",
-  sito: "https://www.touristaviaggi.it",
-  indirizzo: "via Garibaldi 42",
-  cap: "20121",
-  citta: "Milano",
-  paese: "IT",
-  tel: "+39 02 8765 4321",
-  telScritto: "02 8765 4321",
-  cell: "+39 347 118 2299",
-  cellScritto: "347 118 2299",
-  whatsapp: "393471182299",
-  email: "gruppi@touristaviaggi.it",
-  piva: "IT09876543210",
-  licenza: "Aut. Prov. Milano n. 442 del 12/03/2016",
-  polizza: "Polizza R.C. Nobis n. 1505/2024 — Fondo di garanzia ex art. 47 Cod. Turismo",
-  orari: [["lun–ven", "9:00–13:00 · 14:30–18:30"], ["sab", "9:30–12:30"]],
+  /* ------------------------------------------------------------
+     DA COMPLETARE prima di pubblicare: qui sotto ci sono i dati
+     veri dell'agenzia, ma tre cose ancora mancano e sono segnate
+     con DA METTERE — via, CAP e città. E i numeri in fondo
+     (anni, gruppi, passeggeri) sono ancora quelli di prova:
+     vanno sostituiti con i tuoi veri, o tolti.
+     ------------------------------------------------------------ */
+  nome: "Urania",
+  motto: "Lingue, Viaggi, Libertà",
+  dominio: "uraniatravel.pl",
+  sito: "https://uraniatravel.pl",
+  indirizzo: "DA METTERE — via e numero",
+  cap: "DA METTERE",
+  citta: "DA METTERE",
+  paese: "PL",
+  tel: "+48 573 533 847",
+  telScritto: "+48 573 533 847",
+  cell: "+48 573 533 847",
+  cellScritto: "+48 573 533 847",
+  whatsapp: "48573533847",
+  email: "info@uraniatravel.pl",
+  piva: "NIP 5632464558",
+  licenza: "REGON 543565701",
+  polizza: "Garanzia assicurativa Signal Iduna",
+  iban: "PL15 1160 2202 0000 0006 9907 4199",
+  orari: [["lun–ven", "9:00–17:00"], ["sab", "su appuntamento"]],
   social: {
-    facebook: "https://facebook.com/touristaviaggi",
-    instagram: "https://instagram.com/touristaviaggi"
+    facebook: "https://uraniatravel.pl",
+    instagram: "https://uraniatravel.pl"
   },
-  fondata: 2016,
-  numeri: { anni: 10, gruppi: 640, passeggeri: 26400, destinazioni: 38 }
+  /* i moduli che il cliente scarica dal sito */
+  moduli: [
+    { t: "Garanzia assicurativa", u: "https://uraniatravel.pl/wp-content/uploads/2026/03/Signal-Iduna.pdf" },
+    { t: "Accordo per le persone fisiche", u: "https://uraniatravel.pl/wp-content/uploads/2026/03/UMOWA-ZGLOSZENIE-INDYWIDUALNA-.docx.pdf" },
+    { t: "Ordinare una gita scolastica", u: "https://uraniatravel.pl/wp-content/uploads/2026/03/ZAMOWIENIE-WYCIECZKI-SZKOLNEJ.docx.pdf" },
+    { t: "Accordo per le scuole", u: "https://uraniatravel.pl/wp-content/uploads/2026/03/UMOWA-ZGLOSZENIE-SZKOLA.docx.pdf" }
+  ],
+  fondata: 2026,
+  /* NUMERI ANCORA DI PROVA: mettici i tuoi veri o togli la fascia dalla home */
+  numeri: { anni: 1, gruppi: 0, passeggeri: 0, destinazioni: 42 }
 };
 
 export const LINGUE = [

@@ -210,6 +210,20 @@ server. Niente abbonamenti, niente nuvola, nessuno che guarda da fuori.
 
 ---
 
+## Le sei lingue
+
+Italiano, inglese, francese, spagnolo, polacco e **arabo**. Si cambia con le
+bandierine in fondo alla barra di sinistra: cambia tutto — schermate, finestre,
+messaggi e documenti da stampare — e la scelta resta anche alla riapertura.
+
+L'arabo si scrive da destra a sinistra: quando lo scegli il programma **gira
+tutto dall'altra parte** da solo (barra a destra, tabelle a destra, testo a
+destra), tranne i numeri e gli importi, che restano leggibili da sinistra.
+Nessuna schermata si rompe: sono state provate tutte.
+
+Le tue parole — programmi di viaggio, note, nomi dei clienti — restano come le
+hai scritte: il programma traduce le proprie scritte, non le tue.
+
 ## Aggiungere una lingua
 
 Le cinque lingue stanno **dentro** il programma: da solo funziona sempre. Per
@@ -346,7 +360,7 @@ lavori da solo.
 ## Il sito dell'agenzia
 
 Nella cartella `sito/` c'è il sito pubblico, **in due versioni diverse fra cui
-scegliere**, ognuna completa e nelle stesse cinque lingue del gestionale.
+scegliere**, ognuna completa e nelle stesse lingue del gestionale.
 
 | Versione | Come si presenta |
 | --- | --- |

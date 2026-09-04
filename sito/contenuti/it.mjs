@@ -419,7 +419,7 @@ footer: {
   navigazione:"Il sito", contatti:"Contatti", legale:"Dati dell'agenzia",
   diritti:"Tutti i diritti riservati", fatto:"Sito realizzato con cura",
   lingueTitolo:"Lingue"
-},
+, perIlCliente:"Per il cliente"},
 
 errore404: {
   titolo:"Pagina non trovata",
