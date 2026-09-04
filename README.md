@@ -118,6 +118,34 @@ vendita, a colonne: da preventivare, preventivo inviato, in trattativa, vinta, p
 | **Contabilità** | Sei schede: *Riepilogo* (cassa del mese e quadro dell'anno), *Conto per partenza* (ricavi, costi, margine e percentuale viaggio per viaggio), *Prima nota* (affitto, stipendi, utenze, marketing…), *IVA 74-ter* (il regime del margine delle agenzie di viaggio, calcolato per ogni partenza), *Statistiche* (destinazioni che rendono di più, chi vende, da dove arrivano i clienti, riempimento medio), *Personale* (chi lavora in agenzia, quanto ha venduto, codici di entrata). |
 | **Fornitori** | Rubrica per tipo con i debiti aperti e lo storico dei servizi. |
 
+### La fattura elettronica
+
+Per i clienti che la chiedono — parrocchie, scuole, CRAL, aziende — il
+programma scrive il file **XML in formato FatturaPA 1.2.2**, quello che vuole
+l'Agenzia delle Entrate.
+
+Si parte da una pratica già confermata: viaggio, importo e scadenza li mette
+lui. Tu controlli i dati del cliente (partita IVA o codice fiscale, indirizzo,
+codice destinatario o PEC) e scarichi il file, già col nome giusto
+(`IT<partita iva>_00001.xml`).
+
+**Prima di dartelo, controlla.** Se manca qualcosa te lo dice in italiano
+chiaro, riga per riga: «Manca il CAP del cliente, cinque cifre», «Senza codice
+destinatario serve la PEC». Così non ti arriva lo scarto dopo tre giorni.
+
+Per i pacchetti dell'agenzia usa da solo il **regime del margine**
+(natura `N5`, art. 74-ter D.P.R. 633/72) e mette la **marca da bollo virtuale**
+da 2 € quando l'importo senza IVA supera 77,47 €. Le aliquote normali
+(4, 5, 10, 22%) ci sono per le provvigioni e i servizi a parte.
+
+C'è anche la **nota di credito** (TD04) che storna una fattura già mandata, e
+una copia di cortesia da stampare per il cliente.
+
+**Il programma non manda niente da solo.** Il file lo scarichi tu e lo carichi
+tu sul portale Fatture e Corrispettivi, oppure lo giri al commercialista. Poi
+segni qui se lo Sdi l'ha accettata o scartata, e se è scartata ci scrivi
+l'errore così te lo ricordi.
+
 ### I documenti che si stampano
 
 Dalla partenza: **foglio di viaggio dell'accompagnatore** (programma, contatti,
