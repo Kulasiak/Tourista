@@ -102,6 +102,36 @@ Dentro ogni partenza ci sono otto schede:
 - **Fornitori** — servizi prenotati, acconti, scadenze, e la cassa della partenza
   (quanto hai incassato meno quanto hai già pagato).
 
+### I preventivi per le comitive
+
+Quando una parrocchia o un CRAL chiede «quanto ci costa?», il viaggio non
+esiste ancora. Il preventivo si fa prima: si mettono i costi che danno i
+fornitori (bus, hotel, guide, ingressi), si dice quanto si vuole guadagnare, e
+il programma dice **la quota da chiedere a testa**.
+
+Poi risponde alle tre domande che contano:
+
+- **quante persone servono per non rimetterci** (il punto di pareggio);
+- **come cambia il prezzo** se il gruppo cresce o cala — una tabella da 10 in
+  meno a 10 in più, con costo a testa e margine;
+- **quanto ci guadagniamo** in euro e in percentuale.
+
+Le **gratuità** («una ogni venticinque») le conta lui e le mostra: sono soldi
+che altrimenti si regalano senza accorgersene.
+
+Si parte da una richiesta (nome, destinazione e numero di persone si portano
+dietro da soli) oppure da un viaggio del catalogo. Si può **duplicare** un
+preventivo per fare la variante 3 stelle e la variante 4 stelle e metterle a
+confronto.
+
+Ne esce un **foglio da mandare al gruppo**: viaggio, quota, cosa comprende,
+cosa non comprende, fino a quando è valido.
+
+Quando il gruppo dice di sì, il preventivo **diventa una partenza vera con un
+clic**: costi, quota e prestazioni passano dentro, e da lì si vendono i posti.
+Se invece si perde, ci si scrive perché — così l'anno dopo si sa contro chi e
+per quanto.
+
 ### Le persone
 
 **Pratiche** (il fascicolo: passeggeri, camere, extra, sconti, pagamenti, stato,
