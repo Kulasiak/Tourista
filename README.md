@@ -373,6 +373,19 @@ Per pubblicarlo su Vercel si punta il progetto alla cartella della versione
 scelta (`sito/pubblica/vetrina` oppure `sito/pubblica/moderna`): dentro c'è già
 il suo `vercel.json`.
 
+### Farlo vedere a qualcuno prima di pubblicarlo
+
+```
+cd sito
+node anteprima.mjs
+```
+
+Fa un solo file, `sito/anteprima.html`, con **dentro tutto**: le due grafiche,
+le cinque lingue, tutte le pagine e tutte le immagini. Si apre con un doppio
+clic e si può mandare per email o su WhatsApp a chi deve dare un'occhiata:
+non serve un server e non serve internet. In fondo c'è un bottone per passare
+da **Vetrina** a **Moderna** e vedere la differenza.
+
 ## Cosa c'è nel deposito
 
 | File | A cosa serve |
@@ -382,6 +395,7 @@ il suo `vercel.json`.
 | `lingue.esempio.json` | Esempio di file delle lingue (tedesco a metà), da copiare e completare |
 | `sito/` | Il sito pubblico: due versioni grafiche, cinque lingue, generatore e testi |
 | `sito/immagini/` | Le 42 illustrazioni delle città, il motore che le disegna e la guida alle foto |
+| `sito/anteprima.mjs` | Mette tutto il sito in un file solo, da far vedere prima di pubblicarlo |
 | `manifest.webmanifest` | Per installarlo come applicazione su telefono e computer |
 | `sw.js` | Fa funzionare il programma anche senza linea |
 | `vercel.json` | Per pubblicarlo su Vercel |
