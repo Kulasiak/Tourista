@@ -776,6 +776,63 @@ function copia(txt){
    ============================================================ */
 const DIZ = {};
 Object.assign(DIZ, {
+"IVA sul margine":["VAT on the margin","TVA sur la marge","IVA sobre el margen","VAT od marży","الضريبة على الهامش"],
+"IVA 23% sul margine":["23% VAT on the margin","TVA 23 % sur la marge","IVA 23% sobre el margen","VAT 23% od marży","ضريبة 23% على الهامش"],
+"Le agenzie che vendono pacchetti propri applicano la procedura del margine (art. 119 ustawy o VAT): l'IVA non si calcola sul prezzo di vendita, ma sul margine, cioè su quello che resta dopo aver pagato i servizi comprati da altri. Qui sotto il conto, viaggio per viaggio.":["Agencies selling their own packages use the margin scheme (art. 119 of the Polish VAT act): VAT is not charged on the selling price but on the margin, i.e. what is left after paying for services bought from others. Below, trip by trip.","Les agences qui vendent leurs propres forfaits appliquent le régime de la marge (art. 119 de la loi polonaise sur la TVA) : la TVA porte non sur le prix de vente mais sur la marge, c'est-à-dire ce qui reste après avoir payé les services achetés à d'autres. Ci-dessous, voyage par voyage.","Las agencias que venden paquetes propios aplican el régimen del margen (art. 119 de la ley polaca del IVA): el IVA no se calcula sobre el precio de venta sino sobre el margen, es decir, lo que queda tras pagar los servicios comprados a otros. Abajo, viaje por viaje.","Biura sprzedające własne pakiety stosują procedurę marży (art. 119 ustawy o VAT): VAT liczy się nie od ceny sprzedaży, lecz od marży, czyli tego, co zostaje po opłaceniu usług obcych. Poniżej wyjazd po wyjeździe.","الوكالات التي تبيع برامجها الخاصة تطبّق إجراءات الهامش (المادة 119 من قانون الضريبة البولندي): الضريبة لا تُحسب على سعر البيع بل على الهامش، أي ما يتبقّى بعد دفع الخدمات المشتراة من الغير. في الأسفل الحساب، رحلة برحلة."],
+"Documento non fiscale, rilasciato ai soli fini di quietanza. Operazione in procedura del margine, art. 119 ustawy o VAT.":["Non-fiscal document, issued as a receipt only. Transaction under the margin scheme, art. 119 of the Polish VAT act.","Document non fiscal, délivré à titre de quittance. Opération sous le régime de la marge, art. 119 de la loi polonaise sur la TVA.","Documento no fiscal, emitido solo como recibo. Operación en régimen del margen, art. 119 de la ley polaca del IVA.","Dokument niefiskalny, wydany wyłącznie jako pokwitowanie. Transakcja w procedurze marży, art. 119 ustawy o VAT.","مستند غير ضريبي، صادر كإيصال فقط. عملية ضمن إجراءات الهامش، المادة 119 من قانون الضريبة البولندي."],
+"emessa":["issued","établie","emitida","wystawiona","محرَّرة"],
+"pagata":["paid","payée","pagada","zapłacona","مدفوعة"],
+"stornata":["cancelled","annulée","anulada","anulowana","ملغاة"],
+/* --- la fattura polacca --- */
+"0%":["0%","0 %","0%","0%","0%"],
+"23%":["23%","23 %","23%","23%","23%"],
+"5%":["5%","5 %","5%","5%","5%"],
+"8%":["8%","8 %","8%","8%","8%"],
+"Acquirente":["Buyer","Acheteur","Comprador","Nabywca","المشتري"],
+"Alla consegna":["Cash on delivery","À la livraison","Contra reembolso","Za pobraniem","عند التسليم"],
+"BLIK":["BLIK","BLIK","BLIK","BLIK","BLIK"],
+"Bozze":["Drafts","Brouillons","Borradores","Szkice","مسودات"],
+"Carta":["Card","Carte","Tarjeta","Karta","بطاقة"],
+"Chi ha emesso":["Issued by","Établi par","Emitida por","Wystawił","حرّرها"],
+"Chi ha ricevuto":["Received by","Reçu par","Recibida por","Odebrał","استلمها"],
+"Conto":["Account","Compte","Cuenta","Konto","الحساب"],
+"Controlla i dati del cliente: nome, indirizzo e NIP se è un'azienda.":["Check the customer's details: name, address, and tax number if it is a company.","Vérifiez les données du client : nom, adresse et numéro fiscal s'il s'agit d'une entreprise.","Comprueba los datos del cliente: nombre, dirección y número fiscal si es una empresa.","Sprawdź dane klienta: nazwę, adres i NIP, jeśli to firma.","تحقّق من بيانات الزبون: الاسم والعنوان والرقم الضريبي إن كان شركة."],
+"Data della fattura":["Invoice date","Date de la facture","Fecha de la factura","Data wystawienia","تاريخ الفاتورة"],
+"Data della prestazione":["Date of service","Date de la prestation","Fecha del servicio","Data sprzedaży","تاريخ الخدمة"],
+"Documento per uso interno dell'agenzia e per il cliente.":["Document for the agency's own use and for the customer.","Document à usage interne de l'agence et pour le client.","Documento para uso interno de la agencia y para el cliente.","Dokument na użytek biura i dla klienta.","مستند للاستعمال الداخلي للوكالة وللزبون."],
+"Faccio la fattura di rettifica per la fattura {n}?":["Shall I create the correcting invoice for invoice {n}?","Je crée la facture rectificative pour la facture {n} ?","¿Creo la factura rectificativa para la factura {n}?","Utworzyć fakturę korygującą do faktury {n}?","هل أنشئ الفاتورة التصحيحية للفاتورة {n}؟"],
+"Fai la fattura di rettifica":["Create the correcting invoice","Créer la facture rectificative","Crear la factura rectificativa","Utwórz fakturę korygującą","أنشئ الفاتورة التصحيحية"],
+"Fattura di rettifica":["Correcting invoice","Facture rectificative","Factura rectificativa","Faktura korygująca","فاتورة تصحيحية"],
+"Fattura di rettifica creata":["Correcting invoice created","Facture rectificative créée","Factura rectificativa creada","Utworzono fakturę korygującą","تمّ إنشاء الفاتورة التصحيحية"],
+"Il NIP dell'agenzia deve avere dieci cifre (Impostazioni)":["The agency's tax number must have ten digits (Settings)","Le numéro fiscal de l'agence doit avoir dix chiffres (Réglages)","El número fiscal de la agencia debe tener diez cifras (Ajustes)","NIP biura musi mieć dziesięć cyfr (Ustawienia)","الرقم الضريبي للوكالة يجب أن يتكوّن من عشرة أرقام (الإعدادات)"],
+"In lettere":["In words","En toutes lettres","En letras","Słownie","بالحروف"],
+"Lordo":["Gross","TTC","Bruto","Brutto","الإجمالي"],
+"Manca la data della prestazione":["The date of service is missing","La date de la prestation manque","Falta la fecha del servicio","Brakuje daty sprzedaży","ينقص تاريخ الخدمة"],
+"Modo di pagamento":["Payment method","Mode de paiement","Forma de pago","Sposób płatności","طريقة الدفع"],
+"Netto":["Net","HT","Neto","Netto","الصافي"],
+"Netto {a}":["Net {a}","HT {a}","Neto {a}","Netto {a}","الصافي {a}"],
+"Per i viaggi dell'agenzia è la procedura del margine: la fattura non espone l'IVA.":["For the agency's own trips it is the margin scheme: the invoice does not show VAT.","Pour les voyages de l'agence c'est le régime de la marge : la facture n'affiche pas la TVA.","Para los viajes propios de la agencia es el régimen del margen: la factura no desglosa el IVA.","Dla wyjazdów biura to procedura marży: faktura nie wykazuje VAT.","لرحلات الوكالة تُطبَّق إجراءات الهامش: الفاتورة لا تُظهر الضريبة."],
+"Per un'azienda serve il NIP di dieci cifre":["A company needs a ten-digit tax number","Une entreprise a besoin d'un numéro fiscal à dix chiffres","Una empresa necesita un número fiscal de diez cifras","Firma potrzebuje dziesięciocyfrowego NIP-u","الشركة تحتاج رقماً ضريبياً من عشرة أرقام"],
+"Perché è stata stornata":["Why it was cancelled","Pourquoi elle a été annulée","Por qué se anuló","Dlaczego anulowano","لماذا أُلغيت"],
+"Proforma":["Pro forma","Pro forma","Proforma","Proforma","مبدئية"],
+"Puoi stamparla e darla al cliente.":["You can print it and hand it to the customer.","Vous pouvez l'imprimer et la remettre au client.","Puedes imprimirla y dársela al cliente.","Możesz ją wydrukować i dać klientowi.","يمكنك طباعتها وتسليمها للزبون."],
+"Quando il cliente paga, segna la fattura come pagata.":["When the customer pays, mark the invoice as paid.","Quand le client paie, marquez la facture comme payée.","Cuando el cliente pague, marca la factura como pagada.","Gdy klient zapłaci, oznacz fakturę jako zapłaconą.","عندما يدفع الزبون، سجّل الفاتورة كمدفوعة."],
+"Questa fattura è già stata data al cliente: di solito non si cancella, si fa una rettifica. La tolgo lo stesso dall'archivio?":["This invoice has already been given to the customer: normally you do not delete it, you issue a correction. Remove it from the archive anyway?","Cette facture a déjà été remise au client : normalement on ne la supprime pas, on fait une rectification. La retirer quand même de l'archive ?","Esta factura ya se entregó al cliente: normalmente no se borra, se hace una rectificativa. ¿La quito igualmente del archivo?","Ta faktura trafiła już do klienta: zwykle się jej nie kasuje, tylko wystawia korektę. Usunąć ją mimo to z archiwum?","هذه الفاتورة سُلِّمت للزبون: عادةً لا تُحذف بل تُصحَّح. هل أحذفها من الأرشيف رغم ذلك؟"],
+"Rettifica della fattura {n}":["Correction of invoice {n}","Rectification de la facture {n}","Rectificación de la factura {n}","Korekta faktury {n}","تصحيح الفاتورة {n}"],
+"Segnata come stornata":["Marked as cancelled","Marquée comme annulée","Marcada como anulada","Oznaczona jako anulowana","سُجِّلت كملغاة"],
+"Stampa la fattura e dalla al cliente. Una copia resta qui in archivio.":["Print the invoice and give it to the customer. A copy stays here in the archive.","Imprimez la facture et remettez-la au client. Une copie reste ici dans l'archive.","Imprime la factura y dásela al cliente. Una copia queda aquí en el archivo.","Wydrukuj fakturę i daj ją klientowi. Kopia zostaje tutaj w archiwum.","اطبع الفاتورة وسلّمها للزبون. تبقى نسخة هنا في الأرشيف."],
+"Totale da pagare":["Total to pay","Total à payer","Total a pagar","Do zapłaty","المجموع المستحق"],
+"Totale netto":["Total net","Total HT","Total neto","Razem netto","مجموع الصافي"],
+"ancora da emettere":["still to be issued","encore à établir","aún por emitir","jeszcze do wystawienia","لم تُحرَّر بعد"],
+"di solito il giorno del rientro":["usually the day the group comes back","en général le jour du retour","normalmente el día del regreso","zwykle dzień powrotu","عادةً يوم العودة"],
+"dieci cifre: serve se il cliente è un'azienda":["ten digits: needed if the customer is a company","dix chiffres : nécessaire si le client est une entreprise","diez cifras: hace falta si el cliente es una empresa","dziesięć cyfr: potrzebny, gdy klient to firma","عشرة أرقام: يلزم إذا كان الزبون شركة"],
+"esente (zw.)":["exempt","exonéré","exento","zw.","معفى"],
+"fuori campo (np.)":["out of scope","hors champ","no sujeto","np.","خارج النطاق"],
+"n.":["no.","n°","n.º","nr","رقم"],
+"per esempio: importo sbagliato, rifatta col numero 12/2026":["for example: wrong amount, reissued as 12/2026","par exemple : montant erroné, refaite sous le n° 12/2026","por ejemplo: importe equivocado, rehecha con el número 12/2026","na przykład: błędna kwota, wystawiona ponownie jako 12/2026","مثال: مبلغ خاطئ، أُعيد إصدارها برقم 12/2026"],
+"procedura del margine (art. 119)":["margin scheme (art. 119)","régime de la marge (art. 119)","régimen del margen (art. 119)","procedura marży (art. 119)","إجراءات الهامش (المادة 119)"],
+"È un'azienda, una scuola o un ente":["It is a company, a school or an institution","C'est une entreprise, une école ou un organisme","Es una empresa, un colegio o un organismo","To firma, szkoła lub instytucja","إنها شركة أو مدرسة أو مؤسسة"],
+"È una fattura per uso interno: il programma non la manda a nessun ufficio. Quando servirà il KSeF si aggiunge.":["This invoice is for your own use: the program does not send it to any authority. KSeF can be added when it is needed.","Cette facture est à usage interne : le programme ne l'envoie à aucune administration. Le KSeF sera ajouté quand il faudra.","Esta factura es de uso interno: el programa no la envía a ninguna administración. El KSeF se añade cuando haga falta.","To faktura na własny użytek: program nie wysyła jej do żadnego urzędu. KSeF dojdzie, kiedy będzie potrzebny.","هذه فاتورة للاستعمال الداخلي: البرنامج لا يرسلها إلى أي إدارة. يمكن إضافة نظام KSeF عند الحاجة."],
 "Lingue, Viaggi, Libertà":["Languages, Travel, Freedom","Langues, Voyages, Liberté","Idiomas, Viajes, Libertad","Języki, Podróże, Wolność","لغات، أسفار، حرية"],
 "gestione viaggi di gruppo":["group travel management","gestion des voyages de groupe","gestión de viajes de grupo","zarządzanie wyjazdami grupowymi","إدارة الرحلات الجماعية"],
 "a gruppo":["for the group","pour le groupe","por grupo","na grupę","للمجموعة"],
@@ -885,158 +942,74 @@ Object.assign(DIZ, {
 "inviato":["sent","envoyé","enviado","wysłana","مُرسَل"],
 "accettato":["accepted","accepté","aceptado","przyjęta","مقبول"],
 "perso":["lost","perdu","perdido","przegrana","خسارة"],
-"solo se non è già nell'indirizzo":["only if it is not already in the address","seulement s'il n'est pas déjà dans l'adresse","solo si no está ya en la dirección","tylko jeśli nie ma go już w adresie","فقط إذا لم يكن موجوداً في العنوان"],
-"Regime fiscale":["Tax regime","Régime fiscal","Régimen fiscal","Reżim podatkowy","النظام الضريبي"],
-"serve per la fattura elettronica":["needed for the electronic invoice","nécessaire pour la facture électronique","hace falta para la factura electrónica","potrzebne do faktury elektronicznej","يلزم للفاتورة الإلكترونية"],
 "Stampa":["Print","Imprimer","Imprimir","Drukuj","طباعة"],
 /* --- la fattura elettronica --- */
 "A che punto è":["Where it stands","Où en est-elle","En qué punto está","Na jakim jest etapie","إلى أين وصلت"],
-"Addebitala al cliente":["Charge it to the customer","La facturer au client","Cárgala al cliente","Obciąż nią klienta","احتسبها على الزبون"],
 "Aggiungi riga":["Add a line","Ajouter une ligne","Añadir línea","Dodaj wiersz","أضف سطراً"],
-"Aliquota IVA":["VAT rate","Taux de TVA","Tipo de IVA","Stawka VAT","نسبة الضريبة"],
-"Anticipo":["Down payment","Acompte","Anticipo","Zaliczka","دفعة مقدَّمة"],
-"Assegno":["Cheque","Chèque","Cheque","Czek","شيك"],
 "Bonifico":["Bank transfer","Virement","Transferencia","Przelew","تحويل بنكي"],
 "CAP":["Postcode","Code postal","Código postal","Kod pocztowy","الرمز البريدي"],
-"Carta di pagamento":["Payment card","Carte de paiement","Tarjeta de pago","Karta płatnicza","بطاقة دفع"],
-"Che cosa dice l'errore":["What the error says","Ce que dit l'erreur","Qué dice el error","Co mówi błąd","ماذا يقول الخطأ"],
-"Codice destinatario":["Recipient code","Code destinataire","Código de destinatario","Kod odbiorcy","رمز المرسَل إليه"],
 "Comune":["Town","Commune","Municipio","Miejscowość","البلدية"],
-"Condizioni":["Terms","Conditions","Condiciones","Warunki","الشروط"],
 "Contanti":["Cash","Espèces","Efectivo","Gotówka","نقداً"],
-"Controlla i dati del cliente: partita IVA o codice fiscale, indirizzo, codice destinatario o PEC.":["Check the customer's details: VAT number or tax code, address, recipient code or certified email.","Vérifiez les données du client : numéro de TVA ou code fiscal, adresse, code destinataire ou courriel certifié.","Comprueba los datos del cliente: NIF o código fiscal, dirección, código de destinatario o correo certificado.","Sprawdź dane klienta: NIP lub kod podatkowy, adres, kod odbiorcy lub e-mail certyfikowany.","تحقّق من بيانات الزبون: الرقم الضريبي أو الرمز الجبائي، العنوان، رمز المرسَل إليه أو البريد المعتمد."],
-"Copia di cortesia: l'originale è il file elettronico mandato allo Sdi.":["Courtesy copy: the original is the electronic file sent to the tax authority.","Copie de courtoisie : l'original est le fichier électronique envoyé à l'administration fiscale.","Copia de cortesía: el original es el archivo electrónico enviado a la Agencia Tributaria.","Kopia informacyjna: oryginałem jest plik elektroniczny wysłany do urzędu skarbowego.","نسخة للاطلاع: الأصل هو الملف الإلكتروني المرسَل إلى الإدارة الضريبية."],
-"Da inviare":["To send","À envoyer","Por enviar","Do wysłania","للإرسال"],
 "Da quale pratica?":["From which booking?","À partir de quel dossier ?","¿De qué expediente?","Z której rezerwacji?","من أي ملف حجز؟"],
 "Dati del cliente salvati":["Customer details saved","Données du client enregistrées","Datos del cliente guardados","Dane klienta zapisane","تمّ حفظ بيانات الزبون"],
 "Elimino questa fattura?":["Delete this invoice?","Supprimer cette facture ?","¿Elimino esta factura?","Usunąć tę fakturę?","هل أحذف هذه الفاتورة؟"],
-"Faccio la nota di credito che annulla la fattura {n}?":["Shall I create the credit note cancelling invoice {n}?","Je crée l'avoir qui annule la facture {n} ?","¿Creo el abono que anula la factura {n}?","Utworzyć notę korygującą anulującą fakturę {n}?","هل أنشئ إشعار الدائن الذي يلغي الفاتورة {n}؟"],
-"Fai la nota di credito":["Create the credit note","Créer l'avoir","Crear el abono","Utwórz notę korygującą","أنشئ إشعار الدائن"],
 "Fai la prima fattura":["Create the first invoice","Créer la première facture","Crea la primera factura","Wystaw pierwszą fakturę","أنشئ أول فاتورة"],
 "Fattura":["Invoice","Facture","Factura","Faktura","فاتورة"],
 "Fattura creata":["Invoice created","Facture créée","Factura creada","Faktura utworzona","تمّ إنشاء الفاتورة"],
 "Fattura creata dalla pratica":["Invoice created from the booking","Facture créée à partir du dossier","Factura creada desde el expediente","Faktura utworzona z rezerwacji","تمّ إنشاء الفاتورة من ملف الحجز"],
-"Fattura elettronica":["Electronic invoice","Facture électronique","Factura electrónica","Faktura elektroniczna","فاتورة إلكترونية"],
 "Fattura eliminata":["Invoice deleted","Facture supprimée","Factura eliminada","Faktura usunięta","تمّ حذف الفاتورة"],
 "Fatturato":["Invoiced","Chiffre d'affaires","Facturado","Obrót","رقم المعاملات"],
 "Fatture":["Invoices","Factures","Facturas","Faktury","الفواتير"],
 "File":["File","Fichier","Archivo","Plik","الملف"],
-"File scaricato: adesso caricalo sul portale":["File downloaded: now upload it to the portal","Fichier téléchargé : chargez-le maintenant sur le portail","Archivo descargado: ahora súbelo al portal","Plik pobrany: teraz wgraj go na portal","تمّ تنزيل الملف: ارفعه الآن على البوابة"],
-"Finché c'è un problema il file esce lo stesso, ma lo Sdi lo scarta. Meglio sistemare prima.":["The file will still be produced, but the tax authority will reject it. Better to fix this first.","Le fichier sortira quand même, mais l'administration le rejettera. Mieux vaut corriger d'abord.","El archivo se genera igualmente, pero la Agencia lo rechazará. Mejor arreglarlo antes.","Plik i tak powstanie, ale urząd go odrzuci. Lepiej najpierw poprawić.","سيخرج الملف رغم ذلك، لكن الإدارة سترفضه. الأفضل إصلاحه أولاً."],
 "I dati per la fattura":["The details for the invoice","Les données pour la facture","Los datos para la factura","Dane do faktury","بيانات الفاتورة"],
 "IVA":["VAT","TVA","IVA","VAT","الضريبة"],
-"IVA {a}%":["VAT {a}%","TVA {a} %","IVA {a}%","VAT {a}%","ضريبة {a}%"],
 "Il cliente":["The customer","Le client","El cliente","Klient","الزبون"],
-"Il cliente deve avere la partita IVA oppure il codice fiscale":["The customer needs either a VAT number or a tax code","Le client doit avoir un numéro de TVA ou un code fiscal","El cliente debe tener NIF o código fiscal","Klient musi mieć NIP albo kod podatkowy","يجب أن يكون للزبون رقم ضريبي أو رمز جبائي"],
-"Il codice destinatario è di sette caratteri (sei per la pubblica amministrazione)":["The recipient code is seven characters (six for public bodies)","Le code destinataire compte sept caractères (six pour le secteur public)","El código de destinatario tiene siete caracteres (seis para la administración pública)","Kod odbiorcy ma siedem znaków (sześć dla instytucji publicznych)","رمز المرسَل إليه من سبعة رموز (ستة للإدارات العمومية)"],
-"Il codice fiscale del cliente non ha la forma giusta":["The customer's tax code is not in the right format","Le code fiscal du client n'a pas le bon format","El código fiscal del cliente no tiene el formato correcto","Kod podatkowy klienta ma zły format","الرمز الجبائي للزبون بصيغة غير صحيحة"],
 "Il documento":["The document","Le document","El documento","Dokument","المستند"],
 "Il pagamento":["The payment","Le paiement","El pago","Płatność","الدفع"],
-"Il programma non manda niente da solo: il file lo scarichi tu e lo mandi tu.":["The program sends nothing by itself: you download the file and you send it.","Le programme n'envoie rien tout seul : c'est vous qui téléchargez le fichier et qui l'envoyez.","El programa no envía nada por su cuenta: tú descargas el archivo y tú lo envías.","Program niczego nie wysyła sam: plik pobierasz i wysyłasz ty.","البرنامج لا يرسل شيئاً من تلقاء نفسه: أنت تنزّل الملف وأنت ترسله."],
 "Il totale della fattura è zero":["The invoice total is zero","Le total de la facture est zéro","El total de la factura es cero","Suma faktury wynosi zero","مجموع الفاتورة صفر"],
-"Imponibile IVA {a}%":["Net at {a}% VAT","Base TVA {a} %","Base imponible IVA {a}%","Podstawa VAT {a}%","الوعاء الخاضع لضريبة {a}%"],
-"Imponibile senza IVA ({n})":["Net without VAT ({n})","Base hors TVA ({n})","Base sin IVA ({n})","Podstawa bez VAT ({n})","الوعاء بدون ضريبة ({n})"],
 "La fattura non ha nessuna riga":["The invoice has no lines","La facture n'a aucune ligne","La factura no tiene ninguna línea","Faktura nie ma żadnej pozycji","الفاتورة بلا أي سطر"],
 "La fattura è a posto":["The invoice is in order","La facture est en règle","La factura está en orden","Faktura jest w porządku","الفاتورة سليمة"],
-"La partita IVA del cliente deve avere undici cifre":["The customer's VAT number must have eleven digits","Le numéro de TVA du client doit avoir onze chiffres","El NIF del cliente debe tener once cifras","NIP klienta musi mieć jedenaście cyfr","الرقم الضريبي للزبون يجب أن يتكوّن من أحد عشر رقماً"],
-"La partita IVA dell'agenzia deve avere undici cifre (Impostazioni)":["The agency's VAT number must have eleven digits (Settings)","Le numéro de TVA de l'agence doit avoir onze chiffres (Réglages)","El NIF de la agencia debe tener once cifras (Ajustes)","NIP biura musi mieć jedenaście cyfr (Ustawienia)","الرقم الضريبي للوكالة يجب أن يتكوّن من أحد عشر رقماً (الإعدادات)"],
 "La riga {n} non ha la descrizione":["Line {n} has no description","La ligne {n} n'a pas de description","La línea {n} no tiene descripción","Pozycja {n} nie ma opisu","السطر {n} بلا وصف"],
-"La riga {n} è senza IVA: bisogna dire perché (natura)":["Line {n} has no VAT: you must say why (nature code)","La ligne {n} est sans TVA : il faut dire pourquoi (nature)","La línea {n} va sin IVA: hay que decir por qué (naturaleza)","Pozycja {n} jest bez VAT: trzeba podać powód (kod natury)","السطر {n} بدون ضريبة: يجب بيان السبب (رمز الطبيعة)"],
 "Le righe":["The lines","Les lignes","Las líneas","Pozycje","السطور"],
-"Lo Sdi con ogni probabilità la scarta. Vuoi il file lo stesso?":["The tax authority will most likely reject it. Do you want the file anyway?","L'administration va très probablement la rejeter. Voulez-vous quand même le fichier ?","La Agencia lo rechazará con toda probabilidad. ¿Quieres el archivo igualmente?","Urząd najprawdopodobniej ją odrzuci. Chcesz mimo to pobrać plik?","الإدارة سترفضها على الأرجح. هل تريد الملف رغم ذلك؟"],
 "Manca ancora qualcosa ({n})":["Something is still missing ({n})","Il manque encore quelque chose ({n})","Todavía falta algo ({n})","Czegoś jeszcze brakuje ({n})","لا يزال ينقص شيء ({n})"],
-"Manca il CAP del cliente, cinque cifre":["The customer's postcode is missing, five digits","Le code postal du client manque, cinq chiffres","Falta el código postal del cliente, cinco cifras","Brakuje kodu pocztowego klienta, pięć cyfr","ينقص الرمز البريدي للزبون، خمسة أرقام"],
-"Manca il CAP dell'agenzia, cinque cifre (Impostazioni)":["The agency's postcode is missing, five digits (Settings)","Le code postal de l'agence manque, cinq chiffres (Réglages)","Falta el código postal de la agencia, cinco cifras (Ajustes)","Brakuje kodu pocztowego biura, pięć cyfr (Ustawienia)","ينقص الرمز البريدي للوكالة، خمسة أرقام (الإعدادات)"],
 "Manca il comune del cliente":["The customer's town is missing","La commune du client manque","Falta el municipio del cliente","Brakuje miejscowości klienta","تنقص بلدية الزبون"],
 "Manca il comune dell'agenzia (Impostazioni)":["The agency's town is missing (Settings)","La commune de l'agence manque (Réglages)","Falta el municipio de la agencia (Ajustes)","Brakuje miejscowości biura (Ustawienia)","تنقص بلدية الوكالة (الإعدادات)"],
 "Manca il nome dell'agenzia (Impostazioni)":["The agency name is missing (Settings)","Le nom de l'agence manque (Réglages)","Falta el nombre de la agencia (Ajustes)","Brakuje nazwy biura (Ustawienia)","ينقص اسم الوكالة (الإعدادات)"],
 "Manca il nome o la ragione sociale del cliente":["The customer's name or company name is missing","Le nom ou la raison sociale du client manque","Falta el nombre o la razón social del cliente","Brakuje imienia lub nazwy firmy klienta","ينقص اسم الزبون أو اسم الشركة"],
 "Manca il numero della fattura":["The invoice number is missing","Le numéro de la facture manque","Falta el número de la factura","Brakuje numeru faktury","ينقص رقم الفاتورة"],
-"Manca il regime fiscale dell'agenzia (Impostazioni)":["The agency's tax regime is missing (Settings)","Le régime fiscal de l'agence manque (Réglages)","Falta el régimen fiscal de la agencia (Ajustes)","Brakuje reżimu podatkowego biura (Ustawienia)","ينقص النظام الضريبي للوكالة (الإعدادات)"],
 "Manca l'indirizzo del cliente":["The customer's address is missing","L'adresse du client manque","Falta la dirección del cliente","Brakuje adresu klienta","ينقص عنوان الزبون"],
 "Manca l'indirizzo dell'agenzia (Impostazioni)":["The agency's address is missing (Settings)","L'adresse de l'agence manque (Réglages)","Falta la dirección de la agencia (Ajustes)","Brakuje adresu biura (Ustawienia)","ينقص عنوان الوكالة (الإعدادات)"],
 "Manca la data della fattura":["The invoice date is missing","La date de la facture manque","Falta la fecha de la factura","Brakuje daty faktury","ينقص تاريخ الفاتورة"],
-"Manca qualcosa":["Something is missing","Il manque quelque chose","Falta algo","Czegoś brakuje","ينقص شيء"],
-"Marca da bollo virtuale":["Virtual duty stamp","Timbre fiscal virtuel","Timbre virtual","Wirtualny znaczek skarbowy","طابع جبائي افتراضي"],
-"Marca da bollo virtuale da 2 € quando serve":["Virtual €2 duty stamp when required","Timbre fiscal virtuel de 2 € si nécessaire","Timbre virtual de 2 € cuando haga falta","Wirtualny znaczek 2 € gdy jest wymagany","طابع جبائي افتراضي بـ 2 € عند الحاجة"],
 "Modifica la riga":["Edit the line","Modifier la ligne","Modificar la línea","Zmień pozycję","تعديل السطر"],
 "Modo":["Method","Moyen","Forma","Sposób","الطريقة"],
-"N1 — escluse ex art. 15":["N1 — excluded under art. 15","N1 — exclues (art. 15)","N1 — excluidas art. 15","N1 — wyłączone (art. 15)","N1 — مستثناة حسب المادة 15"],
-"N2.2 — non soggette, altri casi":["N2.2 — out of scope, other cases","N2.2 — non soumises, autres cas","N2.2 — no sujetas, otros casos","N2.2 — niepodlegające, inne przypadki","N2.2 — غير خاضعة، حالات أخرى"],
-"N3.1 — non imponibili, esportazioni":["N3.1 — zero-rated, exports","N3.1 — non imposables, exportations","N3.1 — no sujetas, exportaciones","N3.1 — nieopodatkowane, eksport","N3.1 — غير خاضعة، تصدير"],
-"N4 — esenti":["N4 — exempt","N4 — exonérées","N4 — exentas","N4 — zwolnione","N4 — معفاة"],
-"N5 — regime del margine, IVA non esposta (art. 74-ter)":["N5 — margin scheme, VAT not shown (art. 74-ter)","N5 — régime de la marge, TVA non apparente (art. 74-ter)","N5 — régimen del margen, IVA no desglosado (art. 74-ter)","N5 — procedura marży, VAT niewykazany (art. 74-ter)","N5 — نظام الهامش، الضريبة غير مبيّنة (المادة 74-ثالثاً)"],
-"N6.9 — inversione contabile, altri casi":["N6.9 — reverse charge, other cases","N6.9 — autoliquidation, autres cas","N6.9 — inversión del sujeto pasivo, otros casos","N6.9 — odwrotne obciążenie, inne przypadki","N6.9 — الاحتساب العكسي، حالات أخرى"],
 "Nazione":["Country","Pays","País","Kraj","البلد"],
 "Nessuna fattura, per ora":["No invoices yet","Aucune facture pour l'instant","Ninguna factura por ahora","Na razie brak faktur","لا توجد فواتير بعد"],
 "Niente con questo filtro":["Nothing with this filter","Rien avec ce filtre","Nada con este filtro","Nic przy tym filtrze","لا شيء بهذا المرشِّح"],
-"No, prima sistemo":["No, I will fix it first","Non, je corrige d'abord","No, primero lo arreglo","Nie, najpierw poprawię","لا، سأصلح أولاً"],
 "Nome o ragione sociale":["Name or company name","Nom ou raison sociale","Nombre o razón social","Imię lub nazwa firmy","الاسم أو اسم الشركة"],
-"Nota di credito":["Credit note","Avoir","Abono","Nota korygująca","إشعار دائن"],
-"Nota di credito creata":["Credit note created","Avoir créé","Abono creado","Nota korygująca utworzona","تمّ إنشاء إشعار الدائن"],
-"Numero civico":["Street number","Numéro de rue","Número","Numer domu","رقم المنزل"],
 "Nuova fattura":["New invoice","Nouvelle facture","Nueva factura","Nowa faktura","فاتورة جديدة"],
 "Nuova riga":["New line","Nouvelle ligne","Nueva línea","Nowa pozycja","سطر جديد"],
-"PEC":["Certified email","Courriel certifié","Correo certificado","E-mail certyfikowany","بريد إلكتروني معتمد"],
-"Pagamento a rate":["Payment in instalments","Paiement échelonné","Pago a plazos","Płatność w ratach","دفع بالتقسيط"],
-"Pagamento completo":["Payment in full","Paiement intégral","Pago completo","Płatność w całości","دفع كامل"],
-"Pagamento con bonifico su":["Pay by bank transfer to","Paiement par virement sur","Pago por transferencia a","Płatność przelewem na","الدفع بتحويل بنكي إلى"],
 "Partendo da una pratica, importo e descrizione li scrive lui.":["Start from a booking and it writes the amount and the description for you.","À partir d'un dossier, il écrit le montant et la description pour vous.","Partiendo de un expediente, escribe él el importe y la descripción.","Zaczynając od rezerwacji, kwotę i opis wpisze sam.","إذا انطلقت من ملف حجز فسيكتب المبلغ والوصف بنفسه."],
 "Parti da una pratica già confermata: i dati del viaggio e l'importo li mette lui.":["Start from a confirmed booking: it fills in the trip details and the amount.","Partez d'un dossier déjà confirmé : il remplit les données du voyage et le montant.","Parte de un expediente ya confirmado: él pone los datos del viaje y el importe.","Zacznij od potwierdzonej rezerwacji: dane wyjazdu i kwotę wpisze sam.","ابدأ من ملف حجز مؤكَّد: بيانات الرحلة والمبلغ يضعها بنفسه."],
-"Per i pacchetti dell'agenzia è N5: regime del margine, art. 74-ter.":["For the agency's own packages it is N5: margin scheme, art. 74-ter.","Pour les forfaits de l'agence c'est N5 : régime de la marge, art. 74-ter.","Para los paquetes propios de la agencia es N5: régimen del margen, art. 74-ter.","Dla własnych pakietów biura to N5: procedura marży, art. 74-ter.","لبرامج الوكالة الرمز هو N5: نظام الهامش، المادة 74-ثالثاً."],
 "Prezzo":["Price","Prix","Precio","Cena","السعر"],
 "Prezzo unitario":["Unit price","Prix unitaire","Precio unitario","Cena jednostkowa","سعر الوحدة"],
-"Provincia":["Province","Province","Provincia","Prowincja","الإقليم"],
-"Puoi scaricare il file XML e caricarlo sul portale.":["You can download the XML file and upload it to the portal.","Vous pouvez télécharger le fichier XML et le charger sur le portail.","Puedes descargar el archivo XML y subirlo al portal.","Możesz pobrać plik XML i wgrać go na portal.","يمكنك تنزيل ملف XML ورفعه على البوابة."],
 "Qtà":["Qty","Qté","Cant.","Ilość","الكمية"],
-"Quando lo Sdi risponde, segna qui se è stata accettata o scartata.":["When the tax authority answers, mark here whether it was accepted or rejected.","Quand l'administration répond, notez ici si elle a été acceptée ou rejetée.","Cuando la Agencia responda, marca aquí si fue aceptada o rechazada.","Gdy urząd odpowie, zaznacz tu, czy została przyjęta czy odrzucona.","عندما تردّ الإدارة سجّل هنا إن قُبلت أو رُفضت."],
 "Questa fattura non c'è più":["This invoice is gone","Cette facture n'existe plus","Esta factura ya no existe","Tej faktury już nie ma","هذه الفاتورة لم تعد موجودة"],
-"Questa fattura risulta già mandata allo Sdi: una volta accettata non si cancella, si storna con una nota di credito. La tolgo lo stesso dall'archivio?":["This invoice has already gone to the tax authority: once accepted it cannot be deleted, only reversed with a credit note. Remove it from the archive anyway?","Cette facture est déjà partie à l'administration : une fois acceptée, elle ne s'efface pas, elle s'annule par un avoir. La retirer quand même de l'archive ?","Esta factura ya se envió a la Agencia: una vez aceptada no se borra, se anula con un abono. ¿La quito igualmente del archivo?","Ta faktura już trafiła do urzędu: po przyjęciu nie kasuje się jej, tylko koryguje notą. Usunąć ją mimo to z archiwum?","هذه الفاتورة أُرسلت إلى الإدارة: بعد قبولها لا تُحذف بل تُلغى بإشعار دائن. هل أحذفها من الأرشيف رغم ذلك؟"],
-"RF01 — ordinario":["RF01 — standard","RF01 — ordinaire","RF01 — ordinario","RF01 — zwykły","RF01 — النظام العادي"],
-"RF02 — minimi":["RF02 — minimum taxpayers","RF02 — régime des minimes","RF02 — mínimos","RF02 — mali podatnicy","RF02 — الصغار"],
-"RF04 — agricoltura e pesca":["RF04 — farming and fishing","RF04 — agriculture et pêche","RF04 — agricultura y pesca","RF04 — rolnictwo i rybołówstwo","RF04 — الفلاحة والصيد"],
-"RF19 — forfettario":["RF19 — flat rate","RF19 — forfaitaire","RF19 — tanto alzado","RF19 — ryczałt","RF19 — النظام الجزافي"],
-"RIBA":["Bank collection","Recouvrement bancaire","Recibo bancario","Inkaso bankowe","تحصيل بنكي"],
 "Riga salvata":["Line saved","Ligne enregistrée","Línea guardada","Pozycja zapisana","تمّ حفظ السطر"],
 "Riga tolta":["Line removed","Ligne supprimée","Línea eliminada","Pozycja usunięta","تمّ حذف السطر"],
-"SEPA Direct Debit":["SEPA Direct Debit","Prélèvement SEPA","Domiciliación SEPA","Polecenie zapłaty SEPA","اقتطاع مباشر SEPA"],
-"Scarica XML":["Download XML","Télécharger le XML","Descargar XML","Pobierz XML","نزّل ملف XML"],
-"Scarica il file XML e caricalo sul portale Fatture e Corrispettivi, o mandalo al commercialista.":["Download the XML file and upload it to the tax portal, or send it to your accountant.","Téléchargez le fichier XML et chargez-le sur le portail fiscal, ou envoyez-le au comptable.","Descarga el archivo XML y súbelo al portal fiscal, o mándalo al asesor.","Pobierz plik XML i wgraj go na portal skarbowy albo wyślij księgowemu.","نزّل ملف XML وارفعه على البوابة الضريبية أو أرسله إلى المحاسب."],
-"Scaricalo lo stesso":["Download it anyway","Le télécharger quand même","Descargarlo igualmente","Pobierz mimo to","نزّله رغم ذلك"],
-"Scartata dallo Sdi":["Rejected by the tax authority","Rejetée par l'administration","Rechazada por la Agencia","Odrzucona przez urząd","مرفوضة من الإدارة"],
-"Scartate":["Rejected","Rejetées","Rechazadas","Odrzucone","مرفوضة"],
-"Se è senza IVA, perché":["If there is no VAT, why","Si elle est sans TVA, pourquoi","Si va sin IVA, por qué","Jeśli bez VAT, dlaczego","إذا كان بدون ضريبة، لماذا"],
-"Segnata come scartata":["Marked as rejected","Marquée comme rejetée","Marcada como rechazada","Oznaczona jako odrzucona","سُجِّلت كمرفوضة"],
-"Senza codice destinatario serve la PEC del cliente":["Without a recipient code the customer's certified email is required","Sans code destinataire, le courriel certifié du client est nécessaire","Sin código de destinatario hace falta el correo certificado del cliente","Bez kodu odbiorcy potrzebny jest certyfikowany e-mail klienta","بدون رمز المرسَل إليه يلزم البريد المعتمد للزبون"],
 "Serve almeno la descrizione":["The description is required","La description est nécessaire","Hace falta al menos la descripción","Potrzebny jest przynajmniej opis","يلزم على الأقل الوصف"],
-"Storno della fattura {n}":["Reversal of invoice {n}","Annulation de la facture {n}","Anulación de la factura {n}","Korekta faktury {n}","إلغاء الفاتورة {n}"],
 "Tolgo questa riga dalla fattura?":["Remove this line from the invoice?","Retirer cette ligne de la facture ?","¿Quito esta línea de la factura?","Usunąć tę pozycję z faktury?","هل أحذف هذا السطر من الفاتورة؟"],
 "Torna alle fatture":["Back to the invoices","Retour aux factures","Volver a las facturas","Wróć do faktur","عُد إلى الفواتير"],
-"Totale documento":["Document total","Total du document","Total del documento","Suma dokumentu","مجموع المستند"],
 "Viaggio di gruppo":["Group trip","Voyage de groupe","Viaje de grupo","Wyjazd grupowy","رحلة جماعية"],
-"addebitata al cliente":["charged to the customer","facturé au client","cargado al cliente","obciążony klient","محتسبة على الزبون"],
-"non addebitata al cliente":["not charged to the customer","non facturé au client","no cargado al cliente","klient nieobciążony","غير محتسبة على الزبون"],
 "di IVA":["of VAT","de TVA","de IVA","VAT","ضريبة"],
 "entro il":["by","avant le","antes del","do dnia","في موعد أقصاه"],
-"nota di credito":["credit note","avoir","abono","nota korygująca","إشعار دائن"],
 "partenza":["departure","départ","salida","wyjazd","انطلاق"],
-"per esempio: 00311 codice destinatario non valido":["for example: 00311 invalid recipient code","par exemple : 00311 code destinataire non valide","por ejemplo: 00311 código de destinatario no válido","na przykład: 00311 nieprawidłowy kod odbiorcy","مثال: 00311 رمز المرسَل إليه غير صالح"],
 "per esempio: pratica 2026-118":["for example: booking 2026-118","par exemple : dossier 2026-118","por ejemplo: expediente 2026-118","na przykład: rezerwacja 2026-118","مثال: ملف حجز 2026-118"],
-"per i privati":["for private individuals","pour les particuliers","para particulares","dla osób prywatnych","للأفراد"],
 "senza IVA":["no VAT","sans TVA","sin IVA","bez VAT","بدون ضريبة"],
-"serve se non c'è il codice destinatario":["needed if there is no recipient code","nécessaire s'il n'y a pas de code destinataire","hace falta si no hay código de destinatario","potrzebny, gdy nie ma kodu odbiorcy","يلزم إذا لم يوجد رمز المرسَل إليه"],
-"sette caratteri: te lo dà il cliente":["seven characters: the customer gives it to you","sept caractères : le client vous le donne","siete caracteres: te lo da el cliente","siedem znaków: poda ci go klient","سبعة رموز: يعطيك إياها الزبون"],
-"undici cifre, senza IT":["eleven digits, without IT","onze chiffres, sans IT","once cifras, sin IT","jedenaście cyfr, bez IT","أحد عشر رقماً، بدون IT"],
 "{n} documenti":["{n} documents","{n} documents","{n} documentos","{n} dokumentów","{n} مستندات"],
 "{n} nel {anno}":["{n} in {anno}","{n} en {anno}","{n} en {anno}","{n} w {anno}","{n} في {anno}"],
 "{n} persone":["{n} people","{n} personnes","{n} personas","{n} osób","{n} أشخاص"],
 "— nessuna, la scrivo a mano —":["— none, I will write it by hand —","— aucun, je l'écris à la main —","— ninguno, la escribo a mano —","— żadnej, wpiszę ręcznie —","— لا شيء، سأكتبها يدوياً —"],
 "bozza":["draft","brouillon","borrador","szkic","مسودة"],
-"da inviare":["to send","à envoyer","por enviar","do wysłania","للإرسال"],
-"inviata":["sent","envoyée","enviada","wysłana","مُرسَلة"],
-"accettata":["accepted","acceptée","aceptada","przyjęta","مقبولة"],
-"scartata":["rejected","rejetée","rechazada","odrzucona","مرفوضة"],
-"Se un giorno vuoi le foto vere":["If one day you want real photos","Si un jour vous voulez de vraies photos","Si algún día quieres fotos reales","Jeśli kiedyś zechcesz prawdziwe zdjęcia","إذا أردت يوماً صوراً حقيقية"],
 "1 gratuità ogni {n}":["1 free place every {n}","1 gratuité toutes les {n}","1 gratuidad cada {n}","1 gratis co {n}","مجانية واحدة لكل {n}"],
 "3 notti mezza pensione":["3 nights half board","3 nuits demi-pension","3 noches media pensión","3 noce ze śniadaniem i obiadokolacją","3 ليالٍ بنصف إقامة"],
 "A che punto siamo":["Where we stand","Où en sommes-nous","En qué punto estamos","Na jakim etapie","أين وصلنا"],
@@ -2083,14 +2056,14 @@ function buildSeed(){
         nome: "Urania", motto: "Lingue, Viaggi, Libertà",
         indirizzo: "", citta: "", paese: "Polonia",
         tel: "+48 573 533 847", cell: "+48 573 533 847", email: "info@uraniatravel.pl",
-        web: "uraniatravel.pl", piva: "5632464558", cf: "",
-        civico: "", cap: "", comune: "", prov: "", regime: "RF01",
+        web: "uraniatravel.pl", piva: "5632464558",
+        cap: "", comune: "",
         licenza: "REGON 543565701",
         polizza: "Garanzia assicurativa Signal Iduna",
         iban: "PL15 1160 2202 0000 0006 9907 4199", banca: "Bank Millennium"
       },
-      demo:true, valuta: "EUR", skin: "chiaro", ricarico: 28, accontoPct: 25, giorniOpzione: 7,
-      saldoGiorni: 30, ivaModo: "74ter", quotaIscrizione: 25, assicurazione: 0, fatturaProg: 0,
+      demo:true, valuta: "PLN", skin: "chiaro", ricarico: 28, accontoPct: 25, giorniOpzione: 7,
+      saldoGiorni: 30, ivaModo: "margine", quotaIscrizione: 25, assicurazione: 0,
       creato: T, ver: 1
     },
     staff: [
@@ -4102,7 +4075,7 @@ VISTE.pratica = function(id){
           '<button class="btn wide" data-act="stampa" data-doc="ricevuta" data-id="' + p.id + '">' + ico("stampa") + esc(L("Ricevuta di pagamento")) + '</button>' +
           '<button class="btn wide" data-act="stampa" data-doc="estratto" data-id="' + p.id + '">' + ico("soldi") + esc(L("Estratto conto")) + '</button>' +
           '<button class="btn wide" data-act="promemoria" data-id="' + p.id + '">' + ico("copia") + esc(L("Messaggio al cliente")) + '</button>' +
-          (puo("fatture") ? '<button class="btn wide" data-act="fat-da-pratica" data-id="' + p.id + '">' + ico("tessera") + esc(L("Fattura elettronica")) + '</button>' : "") +
+          (puo("fatture") ? '<button class="btn wide" data-act="fat-da-pratica" data-id="' + p.id + '">' + ico("tessera") + esc(L("Fattura")) + '</button>' : "") +
         '</div>' +
         '<div class="sep-line"></div>' +
         '<button class="btn wide dang" data-act="del-pratica" data-id="' + p.id + '">' + ico("cestino") + esc(L("Elimina la pratica")) + '</button>' +
@@ -4401,7 +4374,7 @@ VISTE.contabilita = function(id, scheda){
     { v:"riepilogo",  lab:"Riepilogo" },
     { v:"partenze",   lab:"Conto per partenza" },
     { v:"prima",      lab:"Prima nota" },
-    { v:"iva",        lab:"IVA 74-ter" },
+    { v:"iva",        lab:"IVA sul margine" },
     { v:"statistiche",lab:"Statistiche" },
     { v:"personale",  lab:"Personale" }
   ];
@@ -4537,16 +4510,16 @@ CONTI.iva = function(){
   const D = DB.partenze.filter(d=> depStato(d) === "conclusa" || depStato(d) === "viaggio" || depVenduti(d) > 0);
   const ric = sum(D.map(depRicavi)), cos = sum(D.map(depCosti));
   const margine = Math.max(0, ric - cos);
-  const iva = margine * 22 / 122;
+  const iva = margine * 23 / 123;   /* aliquota polacca sul margine */
   return '<div class="grid" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:start">' +
     '<div class="card">' +
       '<div class="card-h">' + ico("soldi") + '<h3>' + esc(L("Regime speciale delle agenzie di viaggio")) + '</h3></div>' +
       '<div class="card-b">' +
-        '<p class="small muted">' + esc(L("In Italia le agenzie che vendono pacchetti propri applicano l'art. 74-ter: l'IVA non si calcola sul prezzo di vendita, ma sul margine, cioè su quello che resta dopo aver pagato i servizi acquistati da terzi. Qui sotto il conto, viaggio per viaggio.")) + '</p>' +
+        '<p class="small muted">' + esc(L("Le agenzie che vendono pacchetti propri applicano la procedura del margine (art. 119 ustawy o VAT): l'IVA non si calcola sul prezzo di vendita, ma sul margine, cioè su quello che resta dopo aver pagato i servizi comprati da altri. Qui sotto il conto, viaggio per viaggio.")) + '</p>' +
         '<div class="scroll-x mt"><table class="tbl"><thead><tr>' +
           '<th>' + esc(L("Partenza")) + '</th><th class="num">' + esc(L("Venduto")) + '</th>' +
           '<th class="num">' + esc(L("Costi da terzi")) + '</th><th class="num">' + esc(L("Margine lordo")) + '</th>' +
-          '<th class="num">' + esc(L("IVA 22% sul margine")) + '</th><th class="num">' + esc(L("Margine netto")) + '</th></tr></thead><tbody>' +
+          '<th class="num">' + esc(L("IVA 23% sul margine")) + '</th><th class="num">' + esc(L("Margine netto")) + '</th></tr></thead><tbody>' +
           D.map(d=>{
             const r = depRicavi(d), c = depCosti(d), mg = Math.max(0, r - c), i = mg * 22/122;
             return '<tr class="clickable" data-go="partenza/' + d.id + '">' +
@@ -4912,14 +4885,10 @@ VISTE.impostazioni = function(){
           campo("ag-cell", L("Cellulare"), a.cell) +
           campo("ag-mail", L("Email"), a.email, "email") +
           campo("ag-web", L("Sito"), a.web) +
-          campo("ag-piva", L("Partita IVA"), a.piva) +
-          campo("ag-cf", L("Codice fiscale"), a.cf || "") +
-          campo("ag-civ", L("Numero civico"), a.civico || "", "text", { hint: L("solo se non è già nell'indirizzo") }) +
-          campo("ag-cap", L("CAP"), a.cap || "") +
+          campo("ag-piva", "NIP", a.piva) +
+          campo("ag-cap", L("CAP"), a.cap || "", "text", { ph:"00-000" }) +
           campo("ag-com", L("Comune"), a.comune || "") +
-          campo("ag-prov", L("Provincia"), a.prov || "", "text", { ph:"MI" }) +
-          campo("ag-reg", L("Regime fiscale"), a.regime || "RF01", "select", { opts: FAT_REGIMI.map(r=> ({ v:r.v, l:L(r.l) })), hint: L("serve per la fattura elettronica") }) +
-          campo("ag-lic", L("Licenza"), a.licenza) +
+          campo("ag-lic", "REGON", a.licenza) +
           campo("ag-pol", L("Polizza e fondo di garanzia"), a.polizza) +
           campo("ag-iban", "IBAN", a.iban) +
         '</div>' +
@@ -5935,8 +5904,7 @@ ACT["salva-agenzia"] = function(){
   a.nome = V("ag-nome"); a.motto = V("ag-motto"); a.indirizzo = V("ag-ind"); a.citta = V("ag-citta");
   a.tel = V("ag-tel"); a.cell = V("ag-cell"); a.email = V("ag-mail"); a.web = V("ag-web");
   a.piva = V("ag-piva"); a.licenza = V("ag-lic"); a.polizza = V("ag-pol"); a.iban = V("ag-iban");
-  a.cf = V("ag-cf"); a.civico = V("ag-civ"); a.cap = V("ag-cap");
-  a.comune = V("ag-com"); a.prov = String(V("ag-prov")).toUpperCase(); a.regime = V("ag-reg");
+  a.cap = V("ag-cap"); a.comune = V("ag-com");
   save(); render(); toast(L("Dati salvati"), "ok");
 };
 ACT["salva-regole"] = function(){
@@ -6171,8 +6139,8 @@ function testa(titolo, sotto){
       (sotto ? '<div style="font-size:10pt;color:#444">' + esc(sotto) + '</div>' : "") + '</div>' +
     '<div class="p-ag"><b style="font-size:11pt">' + esc(a.nome) + '</b><br>' +
       esc(a.indirizzo) + '<br>' + esc(a.citta) + '<br>' +
-      esc(a.tel) + (a.cell ? " · " + esc(a.cell) : "") + '<br>' + esc(a.email) + '<br>' +
-      (a.piva ? "P.IVA " + esc(a.piva) : "") + '</div>' +
+      esc(a.tel) + (a.cell && a.cell !== a.tel ? " · " + esc(a.cell) : "") + '<br>' + esc(a.email) + '<br>' +
+      (a.piva ? "NIP " + esc(a.piva) : "") + '</div>' +
   '</div>';
 }
 function coda(nota){
@@ -6258,7 +6226,7 @@ DOC.ricevuta = function(id){
     '</table>' +
     '<div style="margin-top:10pt;font-size:9pt">' + esc(dLong(ult.data)) + '</div>' +
     '<div class="sign"><div>' + esc(L("Firma dell'agenzia")) + '</div><div></div></div>' +
-    coda(L("Documento non fiscale, rilasciato ai soli fini di quietanza. Operazione in regime speciale art. 74-ter D.P.R. 633/72."));
+    coda(L("Documento non fiscale, rilasciato ai soli fini di quietanza. Operazione in procedura del margine, art. 119 ustawy o VAT."));
 };
 
 /* --- estratto conto --- */
@@ -7071,289 +7039,165 @@ function cartaLingue(){
 </script>
 <script>
 /* ============================================================
-   11. LA FATTURA ELETTRONICA
-   Il file XML che vuole l'Agenzia delle Entrate (FatturaPA 1.2.2).
-   Il programma lo scrive, controlla che non manchi niente e te lo
-   fa scaricare: poi lo carichi sul portale o lo dai al
-   commercialista. Non manda niente da solo: quello lo decidi tu.
+   11. LA FATTURA — polacca, per uso interno
+   Non manda niente a nessuno: fa il documento, lo stampa e lo
+   tiene in archivio. Serve per dare la fattura al cliente e per
+   passare i conti al commercialista.
+   Per i pacchetti dell'agenzia usa la procedura del margine
+   (art. 119 ustawy o VAT): la fattura non espone l'IVA e porta
+   scritta la dicitura, come vuole la legge polacca.
    ============================================================ */
-
-/* --- le tabelle dell'Agenzia delle Entrate --- */
 const FAT_TIPI = [
-  { v:"TD01", l:"Fattura" },
-  { v:"TD04", l:"Nota di credito" }
+  { v:"faktura", l:"Fattura" },
+  { v:"korekta", l:"Fattura di rettifica" },
+  { v:"proforma", l:"Proforma" }
 ];
-const FAT_NATURE = [
-  { v:"N5",  l:"N5 — regime del margine, IVA non esposta (art. 74-ter)" },
-  { v:"N1",  l:"N1 — escluse ex art. 15" },
-  { v:"N2.2",l:"N2.2 — non soggette, altri casi" },
-  { v:"N3.1",l:"N3.1 — non imponibili, esportazioni" },
-  { v:"N4",  l:"N4 — esenti" },
-  { v:"N6.9",l:"N6.9 — inversione contabile, altri casi" }
+/* le aliquote polacche, più i casi senza IVA */
+const FAT_ALIQUOTE = [
+  { v:"marza", l:"procedura del margine (art. 119)", n:0 },
+  { v:"23",    l:"23%", n:23 },
+  { v:"8",     l:"8%",  n:8 },
+  { v:"5",     l:"5%",  n:5 },
+  { v:"0",     l:"0%",  n:0 },
+  { v:"zw",    l:"esente (zw.)", n:0 },
+  { v:"np",    l:"fuori campo (np.)", n:0 }
 ];
-const FAT_ALIQUOTE = [0, 4, 5, 10, 22];
 const FAT_PAG = [
-  { v:"MP05", l:"Bonifico" }, { v:"MP01", l:"Contanti" }, { v:"MP08", l:"Carta di pagamento" },
-  { v:"MP02", l:"Assegno" }, { v:"MP12", l:"RIBA" }, { v:"MP19", l:"SEPA Direct Debit" }
+  { v:"przelew",  l:"Bonifico" },
+  { v:"gotowka",  l:"Contanti" },
+  { v:"karta",    l:"Carta" },
+  { v:"blik",     l:"BLIK" },
+  { v:"pobranie", l:"Alla consegna" }
 ];
-const FAT_COND = [
-  { v:"TP02", l:"Pagamento completo" }, { v:"TP01", l:"Pagamento a rate" }, { v:"TP03", l:"Anticipo" }
-];
-const FAT_REGIMI = [
-  { v:"RF01", l:"RF01 — ordinario" }, { v:"RF02", l:"RF02 — minimi" },
-  { v:"RF19", l:"RF19 — forfettario" }, { v:"RF04", l:"RF04 — agricoltura e pesca" }
-];
-const FAT_STATI = ["bozza","da inviare","inviata","accettata","scartata"];
-const RIF_74TER = "Regime speciale delle agenzie di viaggio — art. 74-ter D.P.R. 633/72";
+const FAT_STATI = ["bozza","emessa","pagata","stornata"];
+const RIF_MARGINE = "Procedura marży dla biur podróży — art. 119 ustawy o VAT";
 
 /* --- numeri --- */
 const d2 = n => Math.round((Number(n) || 0) * 100) / 100;
 const x2 = n => d2(n).toFixed(2);
-const x8 = n => (Number(n) || 0).toFixed(2);
+const aliqN = v => { const a = FAT_ALIQUOTE.find(x=> x.v === String(v)); return a ? a.n : 0; };
+const aliqLab = v => { const a = FAT_ALIQUOTE.find(x=> x.v === String(v)); return a ? L(a.l) : String(v); };
+const senzaIva = v => ["marza","zw","np","0"].indexOf(String(v)) >= 0;
 
 /* --- l'elenco --- */
 function fatture(){ return (DB.fatture = DB.fatture || []); }
 const fatById = id => byId(fatture(), id);
-
 function fatAnno(f){ return String(f.data || today()).slice(0, 4); }
 function fatNumeroNuovo(anno){
   const n = fatture().filter(f=> fatAnno(f) === String(anno))
     .map(f=> parseInt(String(f.numero).replace(/\D.*$/, ""), 10) || 0);
   return (n.length ? Math.max.apply(null, n) : 0) + 1;
 }
+const fatCodice = f => f.numero + "/" + fatAnno(f);
 
 /* --- i conti --- */
-function fatRigaTot(r){ return d2(nz(r.qta || 1) * nz(r.prezzo)); }
+function fatRigaNetto(r){ return d2(nz(r.qta || 1) * nz(r.prezzo)); }
+function fatRigaIva(r){ return d2(fatRigaNetto(r) * aliqN(r.aliquota) / 100); }
 function fatRiepiloghi(f){
   const m = {};
   (f.righe || []).forEach(r=>{
-    const al = nz(r.aliquota);
-    const na = al > 0 ? "" : (r.natura || "N5");
-    const k = al + "|" + na;
-    if(!m[k]) m[k] = { aliquota: al, natura: na, imponibile: 0 };
-    m[k].imponibile = d2(m[k].imponibile + fatRigaTot(r));
+    const k = String(r.aliquota || "marza");
+    if(!m[k]) m[k] = { aliquota: k, netto: 0, iva: 0 };
+    m[k].netto = d2(m[k].netto + fatRigaNetto(r));
+    m[k].iva   = d2(m[k].iva + fatRigaIva(r));
   });
-  return Object.keys(m).map(k=>{
-    const x = m[k];
-    x.imposta = d2(x.imponibile * x.aliquota / 100);
-    return x;
-  }).sort((a,b)=> a.aliquota - b.aliquota);
+  return Object.keys(m).map(k=> m[k]).sort((a,b)=> aliqN(a.aliquota) - aliqN(b.aliquota));
 }
-function fatImponibile(f){ return d2(sum(fatRiepiloghi(f).map(r=> r.imponibile))); }
-function fatImposta(f){ return d2(sum(fatRiepiloghi(f).map(r=> r.imposta))); }
-function fatTotale(f){ return d2(fatImponibile(f) + fatImposta(f) + (f.bolloAddebitato ? nz(f.bolloImporto || 2) : 0)); }
-/* la marca da bollo serve sopra i 77,47 € di importi senza IVA */
-function fatBolloDovuto(f){
-  const senzaIva = d2(sum(fatRiepiloghi(f).filter(r=> r.aliquota === 0).map(r=> r.imponibile)));
-  return senzaIva > 77.47;
+function fatNetto(f){ return d2(sum(fatRiepiloghi(f).map(r=> r.netto))); }
+function fatIva(f){ return d2(sum(fatRiepiloghi(f).map(r=> r.iva))); }
+function fatTotale(f){ return d2(fatNetto(f) + fatIva(f)); }
+function fatConMargine(f){ return (f.righe || []).some(r=> String(r.aliquota) === "marza"); }
+
+/* --- l'importo scritto in lettere, come si usa in Polonia --- */
+const PL_U = ["zero","jeden","dwa","trzy","cztery","pięć","sześć","siedem","osiem","dziewięć",
+  "dziesięć","jedenaście","dwanaście","trzynaście","czternaście","piętnaście","szesnaście","siedemnaście","osiemnaście","dziewiętnaście"];
+const PL_D = ["","","dwadzieścia","trzydzieści","czterdzieści","pięćdziesiąt","sześćdziesiąt","siedemdziesiąt","osiemdziesiąt","dziewięćdziesiąt"];
+const PL_S = ["","sto","dwieście","trzysta","czterysta","pięćset","sześćset","siedemset","osiemset","dziewięćset"];
+function plTre(n){
+  if(!n) return "";
+  const s = Math.floor(n / 100), r = n % 100, d = Math.floor(r / 10), u = r % 10;
+  let out = [];
+  if(s) out.push(PL_S[s]);
+  if(r < 20 && r) out.push(PL_U[r]);
+  else { if(d) out.push(PL_D[d]); if(u) out.push(PL_U[u]); }
+  return out.join(" ");
+}
+/* forma giusta di "tysiąc" e "złoty": in polacco cambia col numero */
+function plForma(n, a, b, c){
+  const u = n % 10, d = n % 100;
+  if(n === 1) return a;
+  if(u >= 2 && u <= 4 && !(d >= 12 && d <= 14)) return b;
+  return c;
+}
+function plSlownie(v){
+  const tot = Math.round(nz(v) * 100);
+  let zl = Math.floor(tot / 100), gr = tot % 100;
+  if(zl === 0) return "zero złotych " + String(gr).padStart(2,"0") + "/100";
+  const parti = [];
+  const mln = Math.floor(zl / 1000000), tys = Math.floor((zl % 1000000) / 1000), res = zl % 1000;
+  /* in polacco non si dice "jeden tysiąc": si dice "tysiąc" e basta */
+  if(mln) parti.push((mln === 1 ? "" : plTre(mln) + " ") + plForma(mln, "milion", "miliony", "milionów"));
+  if(tys) parti.push((tys === 1 ? "" : plTre(tys) + " ") + plForma(tys, "tysiąc", "tysiące", "tysięcy"));
+  if(res) parti.push(plTre(res));
+  return parti.join(" ") + " " + plForma(zl, "złoty", "złote", "złotych") + " " + String(gr).padStart(2,"0") + "/100";
 }
 
-/* --- il controllo prima di mandarla --- */
+/* --- il controllo prima di stampare --- */
 function fatProblemi(f){
   const p = [], a = DB.meta.agenzia || {};
-  const cap = s => /^\d{5}$/.test(String(s || "").trim());
-  const piva = s => /^\d{11}$/.test(String(s || "").replace(/^IT/i, "").trim());
-  const cf = s => /^[A-Za-z0-9]{11,16}$/.test(String(s || "").trim());
-
+  const nip = s => /^\d{10}$/.test(String(s || "").replace(/[^0-9]/g, ""));
   if(!a.nome) p.push(L("Manca il nome dell'agenzia (Impostazioni)"));
-  if(!piva(a.piva)) p.push(L("La partita IVA dell'agenzia deve avere undici cifre (Impostazioni)"));
+  if(!nip(a.piva)) p.push(L("Il NIP dell'agenzia deve avere dieci cifre (Impostazioni)"));
   if(!a.indirizzo) p.push(L("Manca l'indirizzo dell'agenzia (Impostazioni)"));
-  if(!cap(a.cap)) p.push(L("Manca il CAP dell'agenzia, cinque cifre (Impostazioni)"));
   if(!a.comune) p.push(L("Manca il comune dell'agenzia (Impostazioni)"));
-  if(!a.regime) p.push(L("Manca il regime fiscale dell'agenzia (Impostazioni)"));
 
   const c = f.cliente || {};
   if(!c.nome) p.push(L("Manca il nome o la ragione sociale del cliente"));
-  if(!c.piva && !c.cf) p.push(L("Il cliente deve avere la partita IVA oppure il codice fiscale"));
-  if(c.piva && !piva(c.piva)) p.push(L("La partita IVA del cliente deve avere undici cifre"));
-  if(!c.piva && c.cf && !cf(c.cf)) p.push(L("Il codice fiscale del cliente non ha la forma giusta"));
   if(!c.indirizzo) p.push(L("Manca l'indirizzo del cliente"));
-  if(!cap(c.cap) && (c.nazione || "IT") === "IT") p.push(L("Manca il CAP del cliente, cinque cifre"));
   if(!c.comune) p.push(L("Manca il comune del cliente"));
-
-  const sdi = String(c.sdi || "").trim().toUpperCase();
-  if(sdi && !/^[A-Z0-9]{6,7}$/.test(sdi)) p.push(L("Il codice destinatario è di sette caratteri (sei per la pubblica amministrazione)"));
-  if(!sdi && !c.pec) p.push(L("Senza codice destinatario serve la PEC del cliente"));
+  if(c.azienda && !nip(c.nip)) p.push(L("Per un'azienda serve il NIP di dieci cifre"));
 
   if(!f.numero) p.push(L("Manca il numero della fattura"));
   if(!f.data) p.push(L("Manca la data della fattura"));
+  if(!f.dataVendita) p.push(L("Manca la data della prestazione"));
   if(!(f.righe || []).length) p.push(L("La fattura non ha nessuna riga"));
   (f.righe || []).forEach((r, i)=>{
     if(!String(r.desc || "").trim()) p.push(LN("La riga {n} non ha la descrizione", { n: i + 1 }));
-    if(nz(r.aliquota) === 0 && !r.natura) p.push(LN("La riga {n} è senza IVA: bisogna dire perché (natura)", { n: i + 1 }));
   });
-  if(fatTotale(f) <= 0 && f.tipo !== "TD04") p.push(L("Il totale della fattura è zero"));
+  if(fatTotale(f) <= 0 && f.tipo !== "korekta") p.push(L("Il totale della fattura è zero"));
   return p;
-}
-
-/* --- il file XML --- */
-function xEsc(s){
-  return String(s == null ? "" : s)
-    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;").replace(/'/g, "&apos;");
-}
-/* l'Agenzia accetta solo un certo alfabeto: niente accenti strani */
-function xTesto(s, max){
-  let t = String(s == null ? "" : s)
-    .replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-")
-    .replace(/€/g, "EUR").replace(/\s+/g, " ").trim();
-  if(max) t = t.slice(0, max);
-  return xEsc(t);
-}
-const xT = (nome, val) => "<" + nome + ">" + val + "</" + nome + ">";
-
-function fatSede(o){
-  return "<Sede>" +
-    xT("Indirizzo", xTesto(o.indirizzo, 60)) +
-    (o.civico ? xT("NumeroCivico", xTesto(o.civico, 8)) : "") +
-    xT("CAP", xTesto(String(o.cap || "").replace(/\D/g, "").slice(0, 5))) +
-    xT("Comune", xTesto(o.comune, 60)) +
-    (o.prov ? xT("Provincia", xTesto(String(o.prov).toUpperCase().slice(0, 2))) : "") +
-    xT("Nazione", xTesto((o.nazione || "IT").toUpperCase().slice(0, 2))) +
-    "</Sede>";
-}
-function fatAnagrafica(o){
-  if(o.cognome && !o.ragione) return "<Anagrafica>" + xT("Nome", xTesto(o.nome, 60)) + xT("Cognome", xTesto(o.cognome, 60)) + "</Anagrafica>";
-  return "<Anagrafica>" + xT("Denominazione", xTesto(o.nome, 80)) + "</Anagrafica>";
-}
-
-function fatXml(f){
-  const a = DB.meta.agenzia || {};
-  const c = f.cliente || {};
-  const pivaA = String(a.piva || "").replace(/^IT/i, "").replace(/\D/g, "");
-  const pivaC = String(c.piva || "").replace(/^[A-Za-z]{2}/, "").replace(/\D/g, "");
-  const sdi = String(c.sdi || "").trim().toUpperCase() || "0000000";
-  const formato = sdi.length === 6 ? "FPA12" : "FPR12";
-  const riep = fatRiepiloghi(f);
-  const bollo = f.bollo && fatBolloDovuto(f);
-
-  let s = '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    '<p:FatturaElettronica versione="' + formato + '"' +
-    ' xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2"' +
-    ' xmlns:ds="http://www.w3.org/2000/09/xmldsig#"' +
-    ' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"' +
-    ' xsi:schemaLocation="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2' +
-    ' http://www.fatturapa.gov.it/export/fatturazione/sdi/fatturapa/v1.2.2/Schema_del_file_xml_FatturaPA_v1.2.2.xsd">\n';
-
-  /* --- chi la manda e a chi arriva --- */
-  s += "<FatturaElettronicaHeader>";
-  s += "<DatiTrasmissione>" +
-    "<IdTrasmittente>" + xT("IdPaese", "IT") + xT("IdCodice", xTesto(pivaA)) + "</IdTrasmittente>" +
-    xT("ProgressivoInvio", xTesto(f.progressivo || "00001")) +
-    xT("FormatoTrasmissione", formato) +
-    xT("CodiceDestinatario", xTesto(sdi)) +
-    (c.pec && sdi === "0000000" ? xT("PECDestinatario", xTesto(c.pec, 256)) : "") +
-    "</DatiTrasmissione>";
-
-  s += "<CedentePrestatore><DatiAnagrafici>" +
-    "<IdFiscaleIVA>" + xT("IdPaese", "IT") + xT("IdCodice", xTesto(pivaA)) + "</IdFiscaleIVA>" +
-    (a.cf ? xT("CodiceFiscale", xTesto(String(a.cf).toUpperCase(), 16)) : "") +
-    fatAnagrafica({ nome: a.nome }) +
-    xT("RegimeFiscale", xTesto(a.regime || "RF01")) +
-    "</DatiAnagrafici>" +
-    fatSede({ indirizzo: a.indirizzo, civico: a.civico, cap: a.cap, comune: a.comune, prov: a.prov, nazione: "IT" }) +
-    "</CedentePrestatore>";
-
-  s += "<CessionarioCommittente><DatiAnagrafici>" +
-    (pivaC ? "<IdFiscaleIVA>" + xT("IdPaese", xTesto((c.nazione || "IT").toUpperCase().slice(0,2))) + xT("IdCodice", xTesto(pivaC)) + "</IdFiscaleIVA>" : "") +
-    (c.cf ? xT("CodiceFiscale", xTesto(String(c.cf).toUpperCase(), 16)) : "") +
-    fatAnagrafica(c) +
-    "</DatiAnagrafici>" +
-    fatSede(c) +
-    "</CessionarioCommittente>";
-  s += "</FatturaElettronicaHeader>";
-
-  /* --- il corpo --- */
-  s += "<FatturaElettronicaBody><DatiGenerali><DatiGeneraliDocumento>" +
-    xT("TipoDocumento", f.tipo || "TD01") +
-    xT("Divisa", "EUR") +
-    xT("Data", xTesto(f.data)) +
-    xT("Numero", xTesto(String(f.numero) + "/" + fatAnno(f), 20)) +
-    (bollo ? "<DatiBollo>" + xT("BolloVirtuale", "SI") + xT("ImportoBollo", x2(f.bolloImporto || 2)) + "</DatiBollo>" : "") +
-    xT("ImportoTotaleDocumento", x2(fatTotale(f))) +
-    (f.causale ? xT("Causale", xTesto(f.causale, 200)) : "") +
-    "</DatiGeneraliDocumento></DatiGenerali>";
-
-  s += "<DatiBeniServizi>";
-  (f.righe || []).forEach((r, i)=>{
-    const al = nz(r.aliquota);
-    s += "<DettaglioLinee>" +
-      xT("NumeroLinea", String(i + 1)) +
-      xT("Descrizione", xTesto(r.desc, 1000)) +
-      xT("Quantita", x8(r.qta || 1)) +
-      xT("PrezzoUnitario", x8(r.prezzo)) +
-      xT("PrezzoTotale", x2(fatRigaTot(r))) +
-      xT("AliquotaIVA", x2(al)) +
-      (al === 0 ? xT("Natura", xTesto(r.natura || "N5")) : "") +
-      "</DettaglioLinee>";
-  });
-  riep.forEach(r=>{
-    s += "<DatiRiepilogo>" +
-      xT("AliquotaIVA", x2(r.aliquota)) +
-      (r.natura ? xT("Natura", xTesto(r.natura)) : "") +
-      xT("ImponibileImporto", x2(r.imponibile)) +
-      xT("Imposta", x2(r.imposta)) +
-      (r.natura ? xT("RiferimentoNormativo", xTesto(r.natura === "N5" ? RIF_74TER : (f.riferimento || ""), 100)) : "") +
-      "</DatiRiepilogo>";
-  });
-  s += "</DatiBeniServizi>";
-
-  const pg = f.pagamento || {};
-  s += "<DatiPagamento>" +
-    xT("CondizioniPagamento", pg.condizioni || "TP02") +
-    "<DettaglioPagamento>" +
-      xT("ModalitaPagamento", pg.modo || "MP05") +
-      (pg.scadenza ? xT("DataScadenzaPagamento", xTesto(pg.scadenza)) : "") +
-      xT("ImportoPagamento", x2(pg.importo !== undefined && pg.importo !== "" ? pg.importo : fatTotale(f))) +
-      (pg.iban ? xT("IBAN", xTesto(String(pg.iban).replace(/\s/g, "").toUpperCase(), 34)) : "") +
-    "</DettaglioPagamento></DatiPagamento>";
-
-  s += "</FatturaElettronicaBody></p:FatturaElettronica>\n";
-  return s;
-}
-
-/* il nome del file lo decide l'Agenzia: IT<partita iva>_<cinque caratteri>.xml */
-function fatNomeFile(f){
-  const piva = String((DB.meta.agenzia || {}).piva || "").replace(/^IT/i, "").replace(/\D/g, "") || "00000000000";
-  return "IT" + piva + "_" + String(f.progressivo || "00001").toUpperCase() + ".xml";
-}
-function fatProgressivoNuovo(){
-  const n = (DB.meta.fatturaProg = nz(DB.meta.fatturaProg) + 1);
-  return n.toString(36).toUpperCase().padStart(5, "0").slice(-5);
 }
 
 /* --- fare una fattura --- */
 function fatDaCliente(c){
-  if(!c) return { nome:"", nazione:"IT" };
+  if(!c) return { nome:"", nazione:"PL" };
   return {
-    nome: c.nome || "", cognome: "", ragione: c.tipo !== "privato",
-    piva: c.piva || "", cf: c.cf || "",
-    indirizzo: c.indirizzo || "", civico: c.civico || "",
-    cap: c.cap || "", comune: c.comune || c.citta || "", prov: c.prov || "",
-    nazione: c.nazione || "IT", sdi: c.sdi || "", pec: c.pec || ""
+    nome: c.nome || "", azienda: c.tipo !== "privato",
+    nip: c.nip || c.piva || "", indirizzo: c.indirizzo || "",
+    cap: c.cap || "", comune: c.comune || c.citta || "",
+    nazione: c.nazione || "PL", email: c.email || ""
   };
 }
 function fatNuovaDaPratica(pr){
   const dep = depById(pr.depId), cli = cliById(pr.clienteId);
   const anno = String(today()).slice(0, 4);
   const quanti = (pr.pax || []).length;
-  const f = {
-    id: uid("fa"), numero: fatNumeroNuovo(anno), data: today(), tipo: "TD01",
+  return {
+    id: uid("fa"), numero: fatNumeroNuovo(anno), data: today(),
+    dataVendita: dep ? dep.fine : today(), tipo: "faktura",
     clienteId: pr.clienteId, praticaId: pr.id,
     cliente: fatDaCliente(cli),
     righe: [{
       id: uid("fr"),
       desc: (dep ? dep.titolo + " — " + L("partenza") + " " + dLong(dep.inizio) : L("Viaggio di gruppo")) +
         (quanti ? " — " + LN("{n} persone", { n: quanti }) : ""),
-      qta: 1, prezzo: d2(pratTotale(pr, dep)), aliquota: 0, natura: "N5"
+      qta: 1, prezzo: d2(pratTotale(pr, dep)), aliquota: "marza"
     }],
-    bollo: true, bolloImporto: 2, bolloAddebitato: false,
-    causale: L("Pratica") + " " + pr.codice,
-    pagamento: { condizioni:"TP02", modo:"MP05", scadenza: pratScadenzaSaldo(pr, dep) || "",
-                 iban: (DB.meta.agenzia || {}).iban || "", importo: "" },
-    stato: "bozza", progressivo: "", nota: "", creata: today()
+    nota: "", causale: L("Pratica") + " " + pr.codice,
+    pagamento: { modo:"przelew", scadenza: pratScadenzaSaldo(pr, dep) || "",
+                 iban: (DB.meta.agenzia || {}).iban || "" },
+    stato: "bozza", perche: "", creata: today()
   };
-  return f;
 }
 
 /* --- la schermata: l'elenco --- */
@@ -7362,9 +7206,10 @@ VISTE.fatture = function(){
   const tutte = fatture().slice().sort((a,b)=> (b.data + String(b.numero).padStart(6,"0")).localeCompare(a.data + String(a.numero).padStart(6,"0")));
   const F = F_FAT === "tutte" ? tutte : tutte.filter(f=> f.stato === F_FAT);
   const anno = String(today()).slice(0, 4);
-  const diQuestAnno = tutte.filter(f=> fatAnno(f) === anno);
-  const incassato = d2(sum(diQuestAnno.filter(f=> f.tipo === "TD01").map(f=> fatTotale(f)))) -
-                    d2(sum(diQuestAnno.filter(f=> f.tipo === "TD04").map(f=> fatTotale(f))));
+  const diQuestAnno = tutte.filter(f=> fatAnno(f) === anno && f.tipo !== "proforma");
+  const giro = d2(sum(diQuestAnno.filter(f=> f.tipo === "faktura").map(f=> fatTotale(f)))) -
+               d2(sum(diQuestAnno.filter(f=> f.tipo === "korekta").map(f=> fatTotale(f))));
+  const daPagare = d2(sum(tutte.filter(f=> f.stato === "emessa").map(f=> fatTotale(f))));
 
   intesta(L("Fatture"), LN("{n} nel {anno}", { n: diQuestAnno.length, anno: anno }),
     '<button class="btn pri" data-act="fat-nuova">' + ico("piu") + '<span class="nowrap">' + esc(L("Nuova fattura")) + '</span></button>');
@@ -7375,18 +7220,18 @@ VISTE.fatture = function(){
     '<div class="card pad"><h3>' + esc(L("Come funziona")) + '</h3>' +
       '<ol class="small" style="padding-left:18px;line-height:1.7">' +
         '<li>' + esc(L("Parti da una pratica già confermata: i dati del viaggio e l'importo li mette lui.")) + '</li>' +
-        '<li>' + esc(L("Controlla i dati del cliente: partita IVA o codice fiscale, indirizzo, codice destinatario o PEC.")) + '</li>' +
-        '<li>' + esc(L("Scarica il file XML e caricalo sul portale Fatture e Corrispettivi, o mandalo al commercialista.")) + '</li>' +
-        '<li>' + esc(L("Quando lo Sdi risponde, segna qui se è stata accettata o scartata.")) + '</li>' +
+        '<li>' + esc(L("Controlla i dati del cliente: nome, indirizzo e NIP se è un'azienda.")) + '</li>' +
+        '<li>' + esc(L("Stampa la fattura e dalla al cliente. Una copia resta qui in archivio.")) + '</li>' +
+        '<li>' + esc(L("Quando il cliente paga, segna la fattura come pagata.")) + '</li>' +
       '</ol>' +
-      '<p class="small muted mt">' + esc(L("Il programma non manda niente da solo: il file lo scarichi tu e lo mandi tu.")) + '</p>' +
+      '<p class="small muted mt">' + esc(L("È una fattura per uso interno: il programma non la manda a nessun ufficio. Quando servirà il KSeF si aggiunge.")) + '</p>' +
     '</div></div>';
 
   return '<div class="stack">' +
     '<div class="grid g3">' +
-      kpi(L("Fatturato") + " " + anno, eur(incassato, 0), esc(LN("{n} documenti", { n: diQuestAnno.length }))) +
-      kpi(L("Da inviare"), String(tutte.filter(f=> f.stato === "bozza" || f.stato === "da inviare").length), "") +
-      kpi(L("Scartate"), String(tutte.filter(f=> f.stato === "scartata").length), "") +
+      kpi(L("Fatturato") + " " + anno, eur(giro, 0), esc(LN("{n} documenti", { n: diQuestAnno.length }))) +
+      kpi(L("Da incassare"), eur(daPagare, 0), esc(LN("{n} fatture aperte", { n: tutte.filter(f=> f.stato === "emessa").length }))) +
+      kpi(L("Bozze"), String(tutte.filter(f=> f.stato === "bozza").length), esc(L("ancora da emettere"))) +
     '</div>' +
     '<div class="row wrap"><div class="btn-group">' +
       ["tutte"].concat(FAT_STATI).map(s=>
@@ -7397,12 +7242,12 @@ VISTE.fatture = function(){
       '<th class="num">' + esc(L("Totale")) + '</th><th>' + esc(L("Stato")) + '</th></tr></thead><tbody>' +
       (F.length ? F.map(f=>
         '<tr data-go="fattura/' + f.id + '" style="cursor:pointer">' +
-          '<td><b>' + esc(f.numero + "/" + fatAnno(f)) + '</b>' +
-            (f.tipo === "TD04" ? ' <span class="chip r">' + esc(L("nota di credito")) + '</span>' : "") + '</td>' +
+          '<td><b>' + esc(fatCodice(f)) + '</b>' +
+            (f.tipo !== "faktura" ? ' <span class="chip ' + (f.tipo === "korekta" ? "r" : "") + '">' + esc(L((FAT_TIPI.find(t=> t.v === f.tipo) || {}).l || f.tipo)) + '</span>' : "") + '</td>' +
           '<td class="nowrap">' + esc(dShort(f.data)) + "/" + esc(fatAnno(f)) + '</td>' +
           '<td class="trunc">' + esc((f.cliente || {}).nome || "—") + '</td>' +
           '<td class="num">' + eur(fatTotale(f)) + '</td>' +
-          '<td><span class="chip ' + (f.stato === "accettata" ? "g" : f.stato === "scartata" ? "r" : f.stato === "inviata" ? "b" : "") + '">' +
+          '<td><span class="chip ' + (f.stato === "pagata" ? "g" : f.stato === "stornata" ? "r" : f.stato === "emessa" ? "b" : "") + '">' +
             esc(L(f.stato)) + '</span></td>' +
         '</tr>').join("")
         : '<tr><td colspan="5" class="muted center pad">' + esc(L("Niente con questo filtro")) + '</td></tr>') +
@@ -7419,65 +7264,64 @@ VISTE.fattura = function(id){
   const c = f.cliente || {};
   const pronta = !problemi.length;
 
-  intesta(esc(L("Fattura")) + " " + f.numero + "/" + fatAnno(f), (c.nome || ""),
-    '<button class="btn" data-act="fat-stampa" data-id="' + f.id + '">' + ico("stampa") + '<span class="nowrap">' + esc(L("Stampa")) + '</span></button>' +
-    '<button class="btn ' + (pronta ? "pri" : "") + '" data-act="fat-xml" data-id="' + f.id + '">' + ico("giu") + '<span class="nowrap">' + esc(L("Scarica XML")) + '</span></button>');
+  intesta(esc(L("Fattura")) + " " + fatCodice(f), (c.nome || ""),
+    '<button class="btn ' + (pronta ? "pri" : "") + '" data-act="stampa" data-doc="fattura" data-id="' + f.id + '">' + ico("stampa") + '<span class="nowrap">' + esc(L("Stampa")) + '</span></button>');
 
   return '<div class="stack">' +
     (problemi.length
-      ? '<div class="card pad"><div class="danger"><b>' + esc(LN("Manca ancora qualcosa ({n})", { n: problemi.length })) + '</b>' +
-        '<ul class="small mt">' + problemi.map(p=> "<li>" + esc(p) + "</li>").join("") + '</ul>' +
-        '<p class="tiny mt">' + esc(L("Finché c'è un problema il file esce lo stesso, ma lo Sdi lo scarta. Meglio sistemare prima.")) + '</p></div></div>'
+      ? '<div class="card pad"><div class="danger">' + esc(LN("Manca ancora qualcosa ({n})", { n: problemi.length })) + '</div>' +
+        '<ul class="small mt">' + problemi.map(p=> "<li>" + esc(p) + "</li>").join("") + '</ul></div>'
       : '<div class="card pad"><div class="ok-box">' + esc(L("La fattura è a posto")) + '</div>' +
-        '<div class="small muted mt">' + esc(L("Puoi scaricare il file XML e caricarlo sul portale.")) + '</div></div>') +
+        '<div class="small muted mt">' + esc(L("Puoi stamparla e darla al cliente.")) + '</div></div>') +
 
     '<div class="grid g2">' +
       '<div class="card pad">' +
         '<div class="row mb"><h3 style="flex:1">' + esc(L("Il documento")) + '</h3>' +
           '<button class="btn ghost sm" data-act="fat-testa" data-id="' + f.id + '">' + esc(L("Modifica")) + '</button></div>' +
         riga(L("Tipo"), esc(L((FAT_TIPI.find(t=> t.v === f.tipo) || FAT_TIPI[0]).l))) +
-        riga(L("Numero"), esc(f.numero + "/" + fatAnno(f))) +
-        riga(L("Data"), esc(dLong(f.data))) +
-        riga(L("Stato"), '<span class="chip ' + (f.stato === "accettata" ? "g" : f.stato === "scartata" ? "r" : "") + '">' + esc(L(f.stato)) + '</span>') +
+        riga(L("Numero"), esc(fatCodice(f))) +
+        riga(L("Data della fattura"), esc(dLong(f.data))) +
+        riga(L("Data della prestazione"), esc(f.dataVendita ? dLong(f.dataVendita) : "—")) +
+        riga(L("Stato"), '<span class="chip ' + (f.stato === "pagata" ? "g" : f.stato === "stornata" ? "r" : "") + '">' + esc(L(f.stato)) + '</span>') +
         (f.causale ? riga(L("Causale"), esc(f.causale)) : "") +
-        (f.progressivo ? riga(L("File"), '<span class="mono tiny">' + esc(fatNomeFile(f)) + '</span>') : "") +
       '</div>' +
       '<div class="card pad">' +
         '<div class="row mb"><h3 style="flex:1">' + esc(L("Il cliente")) + '</h3>' +
           '<button class="btn ghost sm" data-act="fat-cliente" data-id="' + f.id + '">' + esc(L("Modifica")) + '</button></div>' +
         riga(L("Nome"), esc(c.nome || "—")) +
-        (c.piva ? riga(L("Partita IVA"), esc(c.piva)) : "") +
-        (c.cf ? riga(L("Codice fiscale"), esc(c.cf)) : "") +
-        riga(L("Indirizzo"), esc([c.indirizzo, c.civico].filter(Boolean).join(" ") + ", " + [c.cap, c.comune, c.prov].filter(Boolean).join(" "))) +
-        riga(L("Codice destinatario"), esc(c.sdi || (c.pec ? "0000000" : "—"))) +
-        (c.pec ? riga("PEC", esc(c.pec)) : "") +
+        (c.nip ? riga("NIP", esc(c.nip)) : "") +
+        riga(L("Indirizzo"), esc(c.indirizzo || "—")) +
+        riga(L("Comune"), esc([c.cap, c.comune].filter(Boolean).join(" ") || "—")) +
+        (c.nazione && c.nazione !== "PL" ? riga(L("Nazione"), esc(c.nazione)) : "") +
+        (c.email ? riga("Email", esc(c.email)) : "") +
       '</div>' +
     '</div>' +
 
     '<div class="card">' +
       '<div class="row pad" style="padding-bottom:0"><h3 style="flex:1">' + esc(L("Le righe")) + '</h3>' +
         '<button class="btn sm" data-act="fat-riga" data-id="' + f.id + '">' + ico("piu") + esc(L("Aggiungi riga")) + '</button></div>' +
-      '<table class="tbl"><thead><tr><th>' + esc(L("Descrizione")) + '</th>' +
+      '<div class="scroll-x"><table class="tbl"><thead><tr><th>' + esc(L("Descrizione")) + '</th>' +
         '<th class="num">' + esc(L("Qtà")) + '</th><th class="num">' + esc(L("Prezzo")) + '</th>' +
-        '<th class="num">' + esc(L("IVA")) + '</th><th class="num">' + esc(L("Totale")) + '</th><th></th></tr></thead><tbody>' +
+        '<th class="num">' + esc(L("Netto")) + '</th><th>' + esc(L("IVA")) + '</th>' +
+        '<th class="num">' + esc(L("Lordo")) + '</th><th></th></tr></thead><tbody>' +
         (f.righe || []).map(r=>
-          '<tr><td>' + esc(r.desc) + (nz(r.aliquota) === 0 ? '<div class="tiny dim">' + esc(r.natura || "N5") + '</div>' : "") + '</td>' +
+          '<tr><td>' + esc(r.desc) + '</td>' +
             '<td class="num">' + esc(String(r.qta || 1)) + '</td>' +
             '<td class="num">' + eur(r.prezzo) + '</td>' +
-            '<td class="num">' + (nz(r.aliquota) ? nz(r.aliquota) + "%" : "—") + '</td>' +
-            '<td class="num"><b>' + eur(fatRigaTot(r)) + '</b></td>' +
+            '<td class="num">' + eur(fatRigaNetto(r)) + '</td>' +
+            '<td><span class="chip">' + esc(aliqLab(r.aliquota)) + '</span></td>' +
+            '<td class="num"><b>' + eur(fatRigaNetto(r) + fatRigaIva(r)) + '</b></td>' +
             '<td class="num nowrap">' +
               '<button class="btn ghost sm" data-act="fat-riga" data-id="' + f.id + '" data-r="' + r.id + '">' + ico("matita") + '</button>' +
               '<button class="btn ghost sm" data-act="fat-riga-via" data-id="' + f.id + '" data-r="' + r.id + '">' + ico("cestino") + '</button>' +
             '</td></tr>').join("") +
-      '</tbody></table>' +
+      '</tbody></table></div>' +
       '<div class="pad">' +
-        riep.map(r=> riga(
-          r.aliquota ? LN("Imponibile IVA {a}%", { a: r.aliquota }) : LN("Imponibile senza IVA ({n})", { n: r.natura }),
-          eur(r.imponibile) + (r.imposta ? '  <span class="muted">+ ' + eur(r.imposta) + " " + esc(L("di IVA")) + '</span>' : ""))).join("") +
-        (f.bollo && fatBolloDovuto(f) ? riga(L("Marca da bollo virtuale"), eur(f.bolloImporto || 2) +
-          " (" + esc(f.bolloAddebitato ? L("addebitata al cliente") : L("non addebitata al cliente")) + ")") : "") +
-        riga(L("Totale documento"), "<b>" + eur(fatTotale(f)) + "</b>", "tot") +
+        riep.map(r=> riga(LN("Netto {a}", { a: aliqLab(r.aliquota) }),
+          eur(r.netto) + (r.iva ? '  <span class="muted">+ ' + eur(r.iva) + " " + esc(L("di IVA")) + '</span>' : ""))).join("") +
+        riga(L("Totale da pagare"), "<b>" + eur(fatTotale(f)) + "</b>", "tot") +
+        '<div class="small muted mt">' + esc(L("In lettere")) + ': ' + esc(plSlownie(fatTotale(f))) + '</div>' +
+        (fatConMargine(f) ? '<div class="small muted mt">' + esc(RIF_MARGINE) + '</div>' : "") +
       '</div>' +
     '</div>' +
 
@@ -7486,16 +7330,16 @@ VISTE.fattura = function(id){
         '<button class="btn ghost sm" data-act="fat-pag" data-id="' + f.id + '">' + esc(L("Modifica")) + '</button></div>' +
       riga(L("Modo"), esc(L((FAT_PAG.find(x=> x.v === (f.pagamento || {}).modo) || FAT_PAG[0]).l))) +
       ((f.pagamento || {}).scadenza ? riga(L("Scadenza"), esc(dLong(f.pagamento.scadenza))) : "") +
-      ((f.pagamento || {}).iban ? riga("IBAN", '<span class="mono tiny">' + esc(f.pagamento.iban) + '</span>') : "") +
+      ((f.pagamento || {}).iban ? riga(L("Conto"), '<span class="mono tiny">' + esc(f.pagamento.iban) + '</span>') : "") +
     '</div>' +
 
     '<div class="card pad">' +
       '<h3>' + esc(L("A che punto è")) + '</h3>' +
       '<div class="btn-group mt">' + FAT_STATI.map(s=>
         '<button class="' + (f.stato === s ? "on" : "") + '" data-act="fat-stato" data-id="' + f.id + '" data-v="' + esc(s) + '">' + esc(L(s)) + '</button>').join("") + '</div>' +
-      (f.nota ? '<div class="small muted mt">' + esc(f.nota) + '</div>' : "") +
+      (f.perche ? '<div class="small muted mt">' + esc(f.perche) + '</div>' : "") +
       '<div class="row mt">' +
-        (f.tipo === "TD01" ? '<button class="btn sm" data-act="fat-nota" data-id="' + f.id + '">' + esc(L("Fai la nota di credito")) + '</button>' : "") +
+        (f.tipo === "faktura" ? '<button class="btn sm" data-act="fat-nota" data-id="' + f.id + '">' + esc(L("Fai la fattura di rettifica")) + '</button>' : "") +
         '<div class="sp"></div>' +
         '<button class="btn ghost sm" data-act="fat-via" data-id="' + f.id + '">' + esc(L("Elimina")) + '</button>' +
       '</div>' +
@@ -7515,11 +7359,11 @@ ACT["fat-nuova"] = function(){
       f = fatNuovaDaPratica(pr);
     } else {
       const anno = String(today()).slice(0, 4);
-      f = { id: uid("fa"), numero: fatNumeroNuovo(anno), data: today(), tipo:"TD01",
-        clienteId:"", praticaId:"", cliente: { nome:"", nazione:"IT" },
-        righe: [], bollo:true, bolloImporto:2, bolloAddebitato:false, causale:"",
-        pagamento: { condizioni:"TP02", modo:"MP05", scadenza:"", iban:(DB.meta.agenzia||{}).iban || "", importo:"" },
-        stato:"bozza", progressivo:"", nota:"", creata: today() };
+      f = { id: uid("fa"), numero: fatNumeroNuovo(anno), data: today(), dataVendita: today(), tipo:"faktura",
+        clienteId:"", praticaId:"", cliente: { nome:"", nazione:"PL" },
+        righe: [], nota:"", causale:"",
+        pagamento: { modo:"przelew", scadenza:"", iban:(DB.meta.agenzia||{}).iban || "" },
+        stato:"bozza", perche:"", creata: today() };
     }
     fatture().push(f); save(); vai("fattura", f.id);
     toast(L("Fattura creata"), "ok");
@@ -7538,56 +7382,47 @@ ACT["fat-nuova"] = function(){
 ACT["fat-testa"] = function(e, el){
   const f = fatById(el.dataset.id);
   M_OK = ()=>{
-    f.tipo = V("ft-tipo"); f.numero = V("ft-num"); f.data = V("ft-data");
-    f.causale = V("ft-cau"); f.bollo = V("ft-bollo"); f.bolloAddebitato = V("ft-bolload");
+    f.tipo = V("ft-tipo"); f.numero = V("ft-num");
+    f.data = V("ft-data"); f.dataVendita = V("ft-datav");
+    f.causale = V("ft-cau");
     save(); render(); toast(L("Salvato"), "ok");
   };
   modale(L("Il documento"),
     campo("ft-tipo", L("Tipo"), f.tipo, "select", { opts: FAT_TIPI.map(t=> ({ v:t.v, l:L(t.l) })) }) +
-    '<div class="grid g2">' +
-      campo("ft-num", L("Numero"), f.numero) +
-      campo("ft-data", L("Data"), f.data, "date") +
+    campo("ft-num", L("Numero"), f.numero) +
+    '<div class="grid g2" style="gap:11px">' +
+      campo("ft-data", L("Data della fattura"), f.data, "date") +
+      campo("ft-datav", L("Data della prestazione"), f.dataVendita || "", "date", { hint: L("di solito il giorno del rientro") }) +
     '</div>' +
-    campo("ft-cau", L("Causale"), f.causale || "", "text", { ph: L("per esempio: pratica 2026-118") }) +
-    campo("ft-bollo", L("Marca da bollo virtuale da 2 € quando serve"), f.bollo, "check") +
-    campo("ft-bolload", L("Addebitala al cliente"), f.bolloAddebitato, "check"),
+    campo("ft-cau", L("Causale"), f.causale || "", "text", { ph: L("per esempio: pratica 2026-118") }),
     '<button class="btn" data-act="close">' + esc(L("Annulla")) + '</button>' +
     '<button class="btn pri" data-act="ok">' + esc(L("Salva")) + '</button>');
 };
 
 ACT["fat-cliente"] = function(e, el){
   const f = fatById(el.dataset.id);
-  const c = f.cliente || (f.cliente = { nazione:"IT" });
+  const c = f.cliente || (f.cliente = { nazione:"PL" });
   M_OK = ()=>{
-    c.nome = V("fc-nome"); c.piva = V("fc-piva").replace(/\s/g, ""); c.cf = V("fc-cf").toUpperCase().replace(/\s/g, "");
-    c.indirizzo = V("fc-ind"); c.civico = V("fc-civ"); c.cap = V("fc-cap");
-    c.comune = V("fc-com"); c.prov = V("fc-prov").toUpperCase(); c.nazione = (V("fc-naz") || "IT").toUpperCase();
-    c.sdi = V("fc-sdi").toUpperCase().replace(/\s/g, ""); c.pec = V("fc-pec");
-    /* i dati buoni restano anche in rubrica, così la prossima volta ci sono già */
+    c.nome = V("fc-nome"); c.azienda = V("fc-az"); c.nip = V("fc-nip").replace(/\s/g, "");
+    c.indirizzo = V("fc-ind"); c.cap = V("fc-cap"); c.comune = V("fc-com");
+    c.nazione = (V("fc-naz") || "PL").toUpperCase(); c.email = V("fc-mail");
     const reg = cliById(f.clienteId);
-    if(reg){ ["piva","cf","indirizzo","civico","cap","comune","prov","nazione","sdi","pec"].forEach(k=> reg[k] = c[k]); }
+    if(reg){ ["nip","indirizzo","cap","comune","nazione"].forEach(k=> reg[k] = c[k]); }
     save(); render(); toast(L("Dati del cliente salvati"), "ok");
   };
   modale(L("I dati per la fattura"),
     campo("fc-nome", L("Nome o ragione sociale"), c.nome || "") +
-    '<div class="grid g2">' +
-      campo("fc-piva", L("Partita IVA"), c.piva || "", "text", { ph:"01234567890", hint: L("undici cifre, senza IT") }) +
-      campo("fc-cf", L("Codice fiscale"), c.cf || "", "text", { hint: L("per i privati") }) +
-    '</div>' +
-    '<div class="grid g2">' +
-      campo("fc-ind", L("Indirizzo"), c.indirizzo || "") +
-      campo("fc-civ", L("Numero civico"), c.civico || "") +
-    '</div>' +
-    '<div class="grid g3">' +
-      campo("fc-cap", L("CAP"), c.cap || "") +
+    campo("fc-az", L("È un'azienda, una scuola o un ente"), c.azienda, "check") +
+    campo("fc-nip", "NIP", c.nip || "", "text", { ph:"1234567890", hint: L("dieci cifre: serve se il cliente è un'azienda") }) +
+    campo("fc-ind", L("Indirizzo"), c.indirizzo || "") +
+    '<div class="grid g2" style="gap:11px">' +
+      campo("fc-cap", L("CAP"), c.cap || "", "text", { ph:"00-000" }) +
       campo("fc-com", L("Comune"), c.comune || "") +
-      campo("fc-prov", L("Provincia"), c.prov || "", "text", { ph:"MI" }) +
     '</div>' +
-    '<div class="grid g2">' +
-      campo("fc-sdi", L("Codice destinatario"), c.sdi || "", "text", { ph:"0000000", hint: L("sette caratteri: te lo dà il cliente") }) +
-      campo("fc-pec", L("PEC"), c.pec || "", "text", { hint: L("serve se non c'è il codice destinatario") }) +
-    '</div>' +
-    campo("fc-naz", L("Nazione"), c.nazione || "IT", "text", { ph:"IT" }),
+    '<div class="grid g2" style="gap:11px">' +
+      campo("fc-naz", L("Nazione"), c.nazione || "PL", "text", { ph:"PL" }) +
+      campo("fc-mail", "Email", c.email || "", "email") +
+    '</div>',
     '<button class="btn" data-act="close">' + esc(L("Annulla")) + '</button>' +
     '<button class="btn pri" data-act="ok">' + esc(L("Salva")) + '</button>', "wide");
 };
@@ -7596,8 +7431,7 @@ ACT["fat-riga"] = function(e, el){
   const f = fatById(el.dataset.id);
   const r = el.dataset.r ? (f.righe || []).find(x=> x.id === el.dataset.r) : null;
   M_OK = ()=>{
-    const dati = { desc: V("fr-desc"), qta: VN("fr-qta") || 1, prezzo: VN("fr-pre"),
-                   aliquota: VN("fr-ali"), natura: V("fr-nat") };
+    const dati = { desc: V("fr-desc"), qta: VN("fr-qta") || 1, prezzo: VN("fr-pre"), aliquota: V("fr-ali") };
     if(!dati.desc){ toast(L("Serve almeno la descrizione"), "err"); return; }
     if(r) Object.assign(r, dati);
     else (f.righe = f.righe || []).push(Object.assign({ id: uid("fr") }, dati));
@@ -7605,13 +7439,12 @@ ACT["fat-riga"] = function(e, el){
   };
   modale(r ? L("Modifica la riga") : L("Nuova riga"),
     campo("fr-desc", L("Descrizione"), r ? r.desc : "", "textarea", { rows:2 }) +
-    '<div class="grid g3">' +
+    '<div class="grid g2" style="gap:11px">' +
       campo("fr-qta", L("Quantità"), r ? r.qta : 1, "number", { step:"0.01" }) +
       campo("fr-pre", L("Prezzo unitario"), r ? r.prezzo : "", "number", { step:"0.01" }) +
-      campo("fr-ali", L("Aliquota IVA"), r ? r.aliquota : 0, "select", { opts: FAT_ALIQUOTE.map(a=> ({ v:a, l: a ? a + "%" : L("senza IVA") })) }) +
     '</div>' +
-    campo("fr-nat", L("Se è senza IVA, perché"), r ? (r.natura || "N5") : "N5", "select", { opts: FAT_NATURE.map(n=> ({ v:n.v, l:L(n.l) })),
-      hint: L("Per i pacchetti dell'agenzia è N5: regime del margine, art. 74-ter.") }),
+    campo("fr-ali", L("IVA"), r ? r.aliquota : "marza", "select", { opts: FAT_ALIQUOTE.map(a=> ({ v:a.v, l:L(a.l) })),
+      hint: L("Per i viaggi dell'agenzia è la procedura del margine: la fattura non espone l'IVA.") }),
     '<button class="btn" data-act="close">' + esc(L("Annulla")) + '</button>' +
     '<button class="btn pri" data-act="ok">' + esc(L("Salva")) + '</button>');
 };
@@ -7628,16 +7461,13 @@ ACT["fat-pag"] = function(e, el){
   const f = fatById(el.dataset.id);
   const p = f.pagamento || (f.pagamento = {});
   M_OK = ()=>{
-    p.condizioni = V("fp-cond"); p.modo = V("fp-modo"); p.scadenza = V("fp-scad"); p.iban = V("fp-iban");
+    p.modo = V("fp-modo"); p.scadenza = V("fp-scad"); p.iban = V("fp-iban");
     save(); render(); toast(L("Salvato"), "ok");
   };
   modale(L("Il pagamento"),
-    '<div class="grid g2">' +
-      campo("fp-cond", L("Condizioni"), p.condizioni || "TP02", "select", { opts: FAT_COND.map(x=> ({ v:x.v, l:L(x.l) })) }) +
-      campo("fp-modo", L("Modo"), p.modo || "MP05", "select", { opts: FAT_PAG.map(x=> ({ v:x.v, l:L(x.l) })) }) +
-    '</div>' +
+    campo("fp-modo", L("Modo"), p.modo || "przelew", "select", { opts: FAT_PAG.map(x=> ({ v:x.v, l:L(x.l) })) }) +
     campo("fp-scad", L("Scadenza"), p.scadenza || "", "date") +
-    campo("fp-iban", "IBAN", p.iban || "", "text", { ph:"IT60X0542811101000000123456" }),
+    campo("fp-iban", L("Conto"), p.iban || "", "text", { ph:"PL00 0000 0000 0000 0000 0000 0000" }),
     '<button class="btn" data-act="close">' + esc(L("Annulla")) + '</button>' +
     '<button class="btn pri" data-act="ok">' + esc(L("Salva")) + '</button>');
 };
@@ -7645,62 +7475,39 @@ ACT["fat-pag"] = function(e, el){
 ACT["fat-stato"] = function(e, el){
   const f = fatById(el.dataset.id);
   const s = el.dataset.v;
-  if(s === "scartata"){
-    M_OK = ()=>{ f.stato = "scartata"; f.nota = V("fs-nota"); save(); render(); toast(L("Segnata come scartata"), "ok"); };
-    modale(L("Scartata dallo Sdi"),
-      campo("fs-nota", L("Che cosa dice l'errore"), f.nota || "", "textarea", { rows:3,
-        ph: L("per esempio: 00311 codice destinatario non valido") }),
+  if(s === "stornata"){
+    M_OK = ()=>{ f.stato = "stornata"; f.perche = V("fs-nota"); save(); render(); toast(L("Segnata come stornata"), "ok"); };
+    modale(L("Perché è stata stornata"),
+      campo("fs-nota", L("Che cosa è successo"), f.perche || "", "textarea", { rows:3,
+        ph: L("per esempio: importo sbagliato, rifatta col numero 12/2026") }),
       '<button class="btn" data-act="close">' + esc(L("Annulla")) + '</button>' +
       '<button class="btn pri" data-act="ok">' + esc(L("Salva")) + '</button>', "slim");
     return;
   }
   f.stato = s;
-  if(s !== "bozza") f.nota = "";
+  if(s !== "stornata") f.perche = "";
   save(); render();
 };
 
-ACT["fat-xml"] = function(e, el){
-  const f = fatById(el.dataset.id);
-  const problemi = fatProblemi(f);
-  const scaricaOra = ()=>{
-    if(!f.progressivo) f.progressivo = fatProgressivoNuovo();
-    scarica(fatNomeFile(f), fatXml(f), "application/xml;charset=utf-8");
-    if(f.stato === "bozza") f.stato = "da inviare";
-    save(); render();
-    toast(L("File scaricato: adesso caricalo sul portale"), "ok");
-  };
-  if(problemi.length){
-    M_OK = scaricaOra;
-    modale(L("Manca qualcosa"),
-      '<p>' + esc(L("Lo Sdi con ogni probabilità la scarta. Vuoi il file lo stesso?")) + '</p>' +
-      '<ul class="small">' + problemi.map(p=> "<li>" + esc(p) + "</li>").join("") + '</ul>',
-      '<button class="btn" data-act="close">' + esc(L("No, prima sistemo")) + '</button>' +
-      '<button class="btn pri" data-act="ok">' + esc(L("Scaricalo lo stesso")) + '</button>');
-    return;
-  }
-  scaricaOra();
-};
-
-ACT["fat-stampa"] = function(e, el){ stampaFoglio(DOC.fattura(el.dataset.id)); };
-
 ACT["fat-nota"] = function(e, el){
   const f = fatById(el.dataset.id);
-  conferma(LN("Faccio la nota di credito che annulla la fattura {n}?", { n: f.numero + "/" + fatAnno(f) }), ()=>{
+  conferma(LN("Faccio la fattura di rettifica per la fattura {n}?", { n: fatCodice(f) }), ()=>{
     const anno = String(today()).slice(0, 4);
     const nc = JSON.parse(JSON.stringify(f));
-    nc.id = uid("fa"); nc.tipo = "TD04"; nc.numero = fatNumeroNuovo(anno); nc.data = today();
-    nc.stato = "bozza"; nc.progressivo = ""; nc.nota = "";
-    nc.causale = LN("Storno della fattura {n}", { n: f.numero + "/" + fatAnno(f) });
+    nc.id = uid("fa"); nc.tipo = "korekta"; nc.numero = fatNumeroNuovo(anno);
+    nc.data = today(); nc.dataVendita = f.dataVendita;
+    nc.stato = "bozza"; nc.perche = "";
+    nc.causale = LN("Rettifica della fattura {n}", { n: fatCodice(f) });
     fatture().push(nc); save(); vai("fattura", nc.id);
-    toast(L("Nota di credito creata"), "ok");
+    toast(L("Fattura di rettifica creata"), "ok");
   });
 };
 
 ACT["fat-via"] = function(e, el){
   const f = fatById(el.dataset.id);
-  conferma(f.stato === "bozza" || f.stato === "da inviare"
+  conferma(f.stato === "bozza"
     ? L("Elimino questa fattura?")
-    : L("Questa fattura risulta già mandata allo Sdi: una volta accettata non si cancella, si storna con una nota di credito. La tolgo lo stesso dall'archivio?"), ()=>{
+    : L("Questa fattura è già stata data al cliente: di solito non si cancella, si fa una rettifica. La tolgo lo stesso dall'archivio?"), ()=>{
     DB.fatture = fatture().filter(x=> x.id !== f.id);
     if(!DB._del) DB._del = {};
     DB._del[f.id] = Date.now();
@@ -7708,51 +7515,64 @@ ACT["fat-via"] = function(e, el){
   });
 };
 
-/* --- la copia da stampare --- */
-DOC.fattura = function(id){
-  const f = fatById(id), c = f.cliente || {}, a = DB.meta.agenzia || {};
-  const riep = fatRiepiloghi(f);
-  return testa(L((FAT_TIPI.find(t=> t.v === f.tipo) || FAT_TIPI[0]).l) + " " + f.numero + "/" + fatAnno(f), dLong(f.data)) +
-    '<div class="box"><b>' + esc(c.nome || "") + '</b><br>' +
-      esc([c.indirizzo, c.civico].filter(Boolean).join(" ")) + '<br>' +
-      esc([c.cap, c.comune, c.prov].filter(Boolean).join(" ")) + '<br>' +
-      (c.piva ? esc(L("Partita IVA")) + " " + esc(c.piva) + "<br>" : "") +
-      (c.cf ? esc(L("Codice fiscale")) + " " + esc(c.cf) + "<br>" : "") +
-      (c.sdi ? esc(L("Codice destinatario")) + " " + esc(c.sdi) : (c.pec ? "PEC " + esc(c.pec) : "")) +
-    '</div>' +
-    (f.causale ? '<p>' + esc(f.causale) + '</p>' : "") +
-    '<table><tr><th>' + esc(L("Descrizione")) + '</th><th style="text-align:right">' + esc(L("Qtà")) + '</th>' +
-      '<th style="text-align:right">' + esc(L("Prezzo")) + '</th><th style="text-align:right">' + esc(L("IVA")) + '</th>' +
-      '<th style="text-align:right">' + esc(L("Totale")) + '</th></tr>' +
-      (f.righe || []).map(r=>
-        '<tr><td>' + esc(r.desc) + '</td><td style="text-align:right">' + esc(String(r.qta || 1)) + '</td>' +
-        '<td style="text-align:right">' + eur(r.prezzo) + '</td>' +
-        '<td style="text-align:right">' + (nz(r.aliquota) ? nz(r.aliquota) + "%" : esc(r.natura || "N5")) + '</td>' +
-        '<td style="text-align:right">' + eur(fatRigaTot(r)) + '</td></tr>').join("") +
-    '</table>' +
-    '<div class="cols2"><div></div><div>' +
-      riep.map(r=> '<div class="kv"><span>' +
-        (r.aliquota ? esc(LN("Imponibile IVA {a}%", { a: r.aliquota })) : esc(LN("Imponibile senza IVA ({n})", { n: r.natura }))) +
-        '</span><b>' + eur(r.imponibile) + '</b></div>' +
-        (r.imposta ? '<div class="kv"><span>' + esc(LN("IVA {a}%", { a: r.aliquota })) + '</span><b>' + eur(r.imposta) + '</b></div>' : "")).join("") +
-      (f.bollo && fatBolloDovuto(f) ? '<div class="kv"><span>' + esc(L("Marca da bollo virtuale")) + '</span><b>' + eur(f.bolloImporto || 2) + '</b></div>' : "") +
-      '<div class="kv tot"><span>' + esc(L("Totale documento")) + '</span><b>' + eur(fatTotale(f)) + '</b></div>' +
-    '</div></div>' +
-    (riep.some(r=> r.natura === "N5") ? '<p class="small">' + esc(RIF_74TER) + '</p>' : "") +
-    ((f.pagamento || {}).iban ? '<p class="small">' + esc(L("Pagamento con bonifico su")) + ' ' + esc(f.pagamento.iban) +
-      (f.pagamento.scadenza ? " — " + esc(L("entro il")) + " " + esc(dLong(f.pagamento.scadenza)) : "") + '</p>' : "") +
-    coda(L("Copia di cortesia: l'originale è il file elettronico mandato allo Sdi."));
-};
 /* dalla pratica: se la fattura c'è già la apre, se no la fa */
 ACT["fat-da-pratica"] = function(e, el){
   const pr = praById(el.dataset.id);
-  const gia = fatture().find(f=> f.praticaId === pr.id && f.tipo === "TD01");
+  const gia = fatture().find(f=> f.praticaId === pr.id && f.tipo === "faktura");
   if(gia) return vai("fattura", gia.id);
   const f = fatNuovaDaPratica(pr);
   fatture().push(f); save(); vai("fattura", f.id);
   toast(L("Fattura creata dalla pratica"), "ok");
 };
 
+/* --- la fattura da stampare --- */
+DOC.fattura = function(id){
+  const f = fatById(id), c = f.cliente || {}, a = DB.meta.agenzia || {};
+  const riep = fatRiepiloghi(f);
+  const conIva = riep.some(r=> r.iva > 0);
+  return testa(L((FAT_TIPI.find(t=> t.v === f.tipo) || FAT_TIPI[0]).l) + " " + L("n.") + " " + fatCodice(f),
+      L("Data della fattura") + ": " + dLong(f.data) +
+      (f.dataVendita ? " · " + L("Data della prestazione") + ": " + dLong(f.dataVendita) : "")) +
+    '<div class="cols2">' +
+      '<div><b>' + esc(L("Venditore")) + '</b><br>' + esc(a.nome) + '<br>' +
+        esc(a.indirizzo) + '<br>' + esc([a.cap, a.comune].filter(Boolean).join(" ")) + '<br>' +
+        (a.piva ? "NIP " + esc(a.piva) : "") + (a.licenza ? "<br>" + esc(a.licenza) : "") + '</div>' +
+      '<div><b>' + esc(L("Acquirente")) + '</b><br>' + esc(c.nome || "") + '<br>' +
+        esc(c.indirizzo || "") + '<br>' + esc([c.cap, c.comune].filter(Boolean).join(" ")) + '<br>' +
+        (c.nip ? "NIP " + esc(c.nip) : "") + '</div>' +
+    '</div>' +
+    (f.causale ? '<p>' + esc(f.causale) + '</p>' : "") +
+    '<table><tr><th>#</th><th>' + esc(L("Descrizione")) + '</th>' +
+      '<th style="text-align:right">' + esc(L("Qtà")) + '</th>' +
+      '<th style="text-align:right">' + esc(L("Prezzo")) + '</th>' +
+      '<th style="text-align:right">' + esc(L("Netto")) + '</th>' +
+      '<th>' + esc(L("IVA")) + '</th>' +
+      '<th style="text-align:right">' + esc(L("Lordo")) + '</th></tr>' +
+      (f.righe || []).map((r, i)=>
+        '<tr><td>' + (i + 1) + '</td><td>' + esc(r.desc) + '</td>' +
+        '<td style="text-align:right">' + esc(String(r.qta || 1)) + '</td>' +
+        '<td style="text-align:right">' + eur(r.prezzo) + '</td>' +
+        '<td style="text-align:right">' + eur(fatRigaNetto(r)) + '</td>' +
+        '<td>' + esc(aliqLab(r.aliquota)) + '</td>' +
+        '<td style="text-align:right">' + eur(fatRigaNetto(r) + fatRigaIva(r)) + '</td></tr>').join("") +
+    '</table>' +
+    '<div class="cols2"><div></div><div>' +
+      riep.map(r=> '<div class="kv"><span>' + esc(LN("Netto {a}", { a: aliqLab(r.aliquota) })) + '</span><b>' + eur(r.netto) + '</b></div>' +
+        (r.iva ? '<div class="kv"><span>' + esc(L("IVA")) + " " + esc(aliqLab(r.aliquota)) + '</span><b>' + eur(r.iva) + '</b></div>' : "")).join("") +
+      (conIva ? '<div class="kv"><span>' + esc(L("Totale netto")) + '</span><b>' + eur(fatNetto(f)) + '</b></div>' : "") +
+      '<div class="kv tot"><span>' + esc(L("Totale da pagare")) + '</span><b>' + eur(fatTotale(f)) + '</b></div>' +
+    '</div></div>' +
+    '<p class="small"><b>' + esc(L("In lettere")) + ':</b> ' + esc(plSlownie(fatTotale(f))) + '</p>' +
+    (fatConMargine(f) ? '<p class="small"><b>' + esc(RIF_MARGINE) + '</b></p>' : "") +
+    '<p class="small">' + esc(L("Modo di pagamento")) + ': ' + esc(L((FAT_PAG.find(x=> x.v === (f.pagamento || {}).modo) || FAT_PAG[0]).l)) +
+      ((f.pagamento || {}).scadenza ? ' · ' + esc(L("entro il")) + " " + esc(dLong(f.pagamento.scadenza)) : "") +
+      ((f.pagamento || {}).iban ? '<br>' + esc(L("Conto")) + ": " + esc(f.pagamento.iban) : "") + '</p>' +
+    '<div class="cols2" style="margin-top:26pt">' +
+      '<div>' + esc(L("Chi ha emesso")) + '<br><br>______________________</div>' +
+      '<div>' + esc(L("Chi ha ricevuto")) + '<br><br>______________________</div>' +
+    '</div>' +
+    coda(L("Documento per uso interno dell'agenzia e per il cliente."));
+};
 </script>
 <script>
 /* ============================================================
