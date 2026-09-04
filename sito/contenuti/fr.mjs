@@ -2,7 +2,17 @@ export default {
 lingua: "fr",
 dir: "ltr",
 
-nav: { home:"Accueil", viaggi:"Voyages", gruppi:"Groupes", chi:"Qui sommes-nous", faq:"Questions", blog:"Blog", contatti:"Contact", preventivo:"Demander un devis" },
+nav: { home:"Accueil", viaggi:"Voyages", gruppi:"Groupes", chi:"Qui sommes-nous", faq:"Questions", blog:"Blog", contatti:"Contact", preventivo:"Demander un devis" , destinazioni:"Destinations"},
+
+destinazioni: {
+  titolo:"Destinations — les plus belles villes du monde",
+  descrizione:"Les plus belles villes du monde, continent par continent : Europe, Asie, Moyen-Orient, Afrique, Afrique du Nord, Amériques et Océanie. Choisissez où partir avec votre groupe.",
+  h1:"Les plus belles villes du monde",
+  intro:"Quarante-deux destinations, huit coins du monde. Voyez où nous pouvons vous emmener : pour chacune, nous préparons le voyage de groupe sur mesure, de l'autocar devant chez vous au vol du retour.",
+  quante:"destinations",
+  vaiA:"Aller à",
+  nota:"Votre ville n'y est pas ? Demandez-la : en dix ans nous en avons organisé bien d'autres."
+},
 
 comune: {
   da:"à partir de", persona:"par personne", giorni:"jours", notti:"nuits", posti:"places", minimo:"minimum",

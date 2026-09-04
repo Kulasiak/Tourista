@@ -45,12 +45,12 @@ export const VERSIONI = [
 
 /* I viaggi: prezzi, durate e colori stanno qui, i testi nelle lingue */
 export const VIAGGI = [
-  { slug:"sicilia",  flag:"🇮🇹", giorni:8, notti:7, da:890,  mezzo:"bus",  grad:["#B3325F","#E0723F"], tag:["classico","best"], mesi:["04","05","09","10"], min:30, posti:48 },
-  { slug:"marocco",  flag:"🇲🇦", giorni:8, notti:7, da:1090, mezzo:"volo", grad:["#C2600F","#E3A93A"], tag:["culturale"],       mesi:["03","06","10","11"], min:25, posti:40 },
-  { slug:"praga",    flag:"🇨🇿", giorni:5, notti:4, da:690,  mezzo:"bus",  grad:["#15588F","#3196D6"], tag:["capodanno"],       mesi:["12"],               min:30, posti:50 },
-  { slug:"lourdes",  flag:"🇫🇷", giorni:5, notti:4, da:520,  mezzo:"bus",  grad:["#2F6B57","#6FAE86"], tag:["religioso"],       mesi:["05","09"],          min:35, posti:54 },
-  { slug:"grecia",   flag:"🇬🇷", giorni:7, notti:6, da:1180, mezzo:"volo", grad:["#0E6E7A","#17A79A"], tag:["culturale"],       mesi:["04","07","09"],     min:22, posti:35 },
-  { slug:"puglia",   flag:"🇮🇹", giorni:6, notti:5, da:740,  mezzo:"bus",  grad:["#7A2E5C","#C05B96"], tag:["classico"],        mesi:["05","06","09"],     min:30, posti:48 }
+  { slug:"sicilia", citta:"palermo",  flag:"🇮🇹", giorni:8, notti:7, da:890,  mezzo:"bus",  grad:["#B3325F","#E0723F"], tag:["classico","best"], mesi:["04","05","09","10"], min:30, posti:48 },
+  { slug:"marocco", citta:"marrakech",  flag:"🇲🇦", giorni:8, notti:7, da:1090, mezzo:"volo", grad:["#C2600F","#E3A93A"], tag:["culturale"],       mesi:["03","06","10","11"], min:25, posti:40 },
+  { slug:"praga", citta:"praga",    flag:"🇨🇿", giorni:5, notti:4, da:690,  mezzo:"bus",  grad:["#15588F","#3196D6"], tag:["capodanno"],       mesi:["12"],               min:30, posti:50 },
+  { slug:"lourdes", citta:"lourdes",  flag:"🇫🇷", giorni:5, notti:4, da:520,  mezzo:"bus",  grad:["#2F6B57","#6FAE86"], tag:["religioso"],       mesi:["05","09"],          min:35, posti:54 },
+  { slug:"grecia", citta:"atene",   flag:"🇬🇷", giorni:7, notti:6, da:1180, mezzo:"volo", grad:["#0E6E7A","#17A79A"], tag:["culturale"],       mesi:["04","07","09"],     min:22, posti:35 },
+  { slug:"puglia", citta:"alberobello",   flag:"🇮🇹", giorni:6, notti:5, da:740,  mezzo:"bus",  grad:["#7A2E5C","#C05B96"], tag:["classico"],        mesi:["05","06","09"],     min:30, posti:48 }
 ];
 
 export const ARTICOLI = [
@@ -63,6 +63,7 @@ export const ARTICOLI = [
 export const PAGINE = [
   { id:"home",     file:"index.html",        priorita:"1.0",  cambia:"weekly" },
   { id:"viaggi",   file:"viaggi/index.html", priorita:"0.9",  cambia:"weekly" },
+  { id:"destinazioni", file:"destinazioni.html", priorita:"0.8", cambia:"monthly" },
   { id:"gruppi",   file:"gruppi.html",       priorita:"0.9",  cambia:"monthly" },
   { id:"chi",      file:"chi-siamo.html",    priorita:"0.6",  cambia:"yearly" },
   { id:"faq",      file:"faq.html",          priorita:"0.7",  cambia:"monthly" },

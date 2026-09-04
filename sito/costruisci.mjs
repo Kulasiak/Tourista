@@ -8,10 +8,11 @@
 
    Non serve installare niente.
    ============================================================ */
-import { mkdirSync, writeFileSync, readFileSync, rmSync, cpSync, existsSync } from "node:fs";
+import { mkdirSync, writeFileSync, readFileSync, readdirSync, rmSync, cpSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { AGENZIA, LINGUE, VERSIONI, VIAGGI, ARTICOLI, PAGINE } from "./contenuti/comune.mjs";
+import { CITTA, GRUPPI, perGruppo } from "./immagini/citta.mjs";
 
 const QUI = dirname(fileURLToPath(import.meta.url));
 const FUORI = join(QUI, "pubblica");
@@ -43,6 +44,7 @@ function pagina(o){
   const menu = [
     ["home", "index.html", T.nav.home],
     ["viaggi", "viaggi/index.html", T.nav.viaggi],
+    ["destinazioni", "destinazioni.html", T.nav.destinazioni],
     ["gruppi", "gruppi.html", T.nav.gruppi],
     ["chi", "chi-siamo.html", T.nav.chi],
     ["faq", "faq.html", T.nav.faq],
@@ -147,10 +149,21 @@ ${o.corpo}
    ============================================================ */
 const gradiente = g => "linear-gradient(135deg," + g[0] + " 0%," + g[1] + " 100%)";
 
+/* le immagini stanno una volta sola nella radice della versione, non in ogni lingua.
+   Se un giorno metti una foto vera in immagini/foto/, il costruttore usa quella. */
+const FOTO = existsSync(join(QUI, "immagini", "foto"))
+  ? Object.fromEntries(readdirSync(join(QUI, "immagini", "foto"))
+      .filter(f => /\.(jpe?g|png|webp|avif)$/i.test(f)).map(f => [f.replace(/\.[^.]+$/, ""), f]))
+  : {};
+const IMG = (b, slug) => b + "../immagini/" + (FOTO[slug] ? "foto/" + FOTO[slug] : "citta/" + slug + ".svg");
+const NOMI = i => c => c.n[i] || c.n[0];
+
+
 function scheda(v, T, b, tema){
   const t = T.trips[v.slug];
   return `<a class="scheda" href="${b}viaggi/${v.slug}.html">
   <div class="scheda-cima" style="background:${gradiente(v.grad)}">
+    ${v.citta ? `<img class="scheda-foto" src="${IMG(b, v.citta)}" alt="" loading="lazy" width="1600" height="1000">` : ""}
     <span class="scheda-flag">${v.flag}</span>
     <span class="scheda-etichetta">${v.giorni} ${esc(T.comune.giorni)}</span>
   </div>
@@ -188,7 +201,7 @@ function briciole(T, b, voci){
 /* ============================================================
    LE PAGINE
    ============================================================ */
-function paginaHome(T, v, b, tema){
+function paginaHome(T, v, b, tema, lingua){
   const H = T.home;
   return `
 <section class="eroe">
@@ -297,8 +310,32 @@ function paginaHome(T, v, b, tema){
   </div>
 </section>
 
+<section class="sezione chiara">
+  <div class="riga">
+    <div class="testa-sezione">
+      <div>
+        <h2 class="titolo-sezione">${esc(T.destinazioni.h1)}</h2>
+        <p class="sotto-sezione">${esc(T.destinazioni.intro)}</p>
+      </div>
+      <a class="collegamento" href="${b}destinazioni.html">${esc(T.nav.destinazioni)} →</a>
+    </div>
+    <div class="nastro-citta">
+      ${VETRINA_CITTA.map(s2 => {
+        const c = CITTA.find(x => x.slug === s2);
+        const i = LINGUE.findIndex(x => x.id === lingua);
+        return `<a class="citta piccola" href="${b}destinazioni.html#${c.gruppo}">
+        <img src="${IMG(b, c.slug)}" alt="${esc(c.n[i] || c.n[0])}" loading="lazy" width="1600" height="1000">
+        <figcaption><b>${esc(c.n[i] || c.n[0])}</b></figcaption></a>`;
+      }).join("\n      ")}
+    </div>
+  </div>
+</section>
+
 ${ctaFinale(T, b)}`;
 }
+
+/* le otto città che finiscono in prima pagina, una per continente */
+const VETRINA_CITTA = ["parigi", "tokyo", "istanbul", "marrakech", "cittadelcapo", "newyork", "riodejaneiro", "sydney"];
 
 function paginaViaggi(T, b, tema){
   const V = T.viaggi;
@@ -349,6 +386,7 @@ function paginaViaggio(T, v, b, tema){
   return `
 ${briciole(T, b, [{ t: T.nav.viaggi, href: b + "viaggi/index.html" }, { t: t.nome }])}
 <section class="eroe-viaggio" style="background:${gradiente(v.grad)}">
+  ${v.citta ? `<img class="eroe-foto" src="${IMG(b, v.citta)}" alt="" width="1600" height="1000">` : ""}
   <div class="riga">
     <span class="eroe-flag">${v.flag}</span>
     <p class="occhiello chiaro">${esc(t.occhiello)}</p>
@@ -415,6 +453,52 @@ ${briciole(T, b, [{ t: T.nav.viaggi, href: b + "viaggi/index.html" }, { t: t.nom
     <div class="griglia tre">
       ${VIAGGI.filter(x => x.slug !== v.slug).slice(0, 3).map(x => scheda(x, T, b, tema)).join("\n      ")}
     </div>
+  </div>
+</section>
+${ctaFinale(T, b)}`;
+}
+
+function paginaDestinazioni(T, b, lingua){
+  const D = T.destinazioni;
+  const i = LINGUE.findIndex(x => x.id === lingua);
+  const nome  = c => c.n[i] || c.n[0];
+  const frase = c => c.f[i] || c.f[0];
+  const nomeG = gr => gr.nomi[i] || gr.nomi[0];
+  return `
+${briciole(T, b, [{ t: T.nav.destinazioni }])}
+<section class="testata">
+  <div class="riga stretta">
+    <h1>${esc(D.h1)}</h1>
+    <p class="grande">${esc(D.intro)}</p>
+    <nav class="salti" aria-label="${esc(D.vaiA)}">
+      <span>${esc(D.vaiA)}:</span>
+      ${GRUPPI.map(gr => `<a href="#${gr.id}">${esc(nomeG(gr))}</a>`).join("\n      ")}
+    </nav>
+  </div>
+</section>
+${GRUPPI.map((gr, n) => `
+<section class="sezione${n % 2 ? " chiara" : ""}" id="${gr.id}">
+  <div class="riga">
+    <div class="testa-sezione">
+      <div>
+        <h2 class="titolo-sezione">${esc(nomeG(gr))}</h2>
+        <p class="sotto-sezione">${perGruppo(gr.id).length} ${esc(D.quante)}</p>
+      </div>
+    </div>
+    <div class="griglia-citta">
+      ${perGruppo(gr.id).map(c => `<figure class="citta">
+        <img src="${IMG(b, c.slug)}" alt="${esc(nome(c))}" loading="lazy" width="1600" height="1000">
+        <figcaption><b>${esc(nome(c))}</b><span>${esc(frase(c))}</span></figcaption>
+      </figure>`).join("\n      ")}
+    </div>
+  </div>
+</section>`).join("")}
+<section class="sezione">
+  <div class="riga stretta centro">
+    <p class="grande">${esc(D.nota)}</p>
+    ${existsSync(join(QUI, "immagini", "foto", "crediti.txt"))
+      ? `<p class="piccolo"><a href="${b}../immagini/foto/crediti.txt" rel="nofollow">Photo credits</a></p>` : ""}
+    <div class="bottoni centro"><a class="bottone" href="${b}contatti.html">${esc(T.nav.preventivo)}</a></div>
   </div>
 </section>
 ${ctaFinale(T, b)}`;
@@ -840,6 +924,9 @@ async function costruisci(){
     const radice = join(FUORI, V.id);
     /* il tema */
     cpSync(join(QUI, "temi", V.tema + ".css"), join(radice, "tema.css"));
+    cpSync(join(QUI, "immagini", "citta"), join(radice, "immagini", "citta"), { recursive:true });
+    if(existsSync(join(QUI, "immagini", "foto")))
+      cpSync(join(QUI, "immagini", "foto"), join(radice, "immagini", "foto"), { recursive:true });
     if(existsSync(join(QUI, "temi", "icona.png"))) cpSync(join(QUI, "temi", "icona.png"), join(radice, "icona.png"));
     if(existsSync(join(QUI, "temi", "social.png"))) cpSync(join(QUI, "temi", "social.png"), join(radice, "social.png"));
 
@@ -853,7 +940,7 @@ async function costruisci(){
       };
 
       dentro("index.html", 0, { id:"home", titolo:T.home.titolo, descrizione:T.home.descrizione,
-        corpo: paginaHome(T, V, "", V.tema), schema: schemaAgenzia(T, L.id) });
+        corpo: paginaHome(T, V, "", V.tema, L.id), schema: schemaAgenzia(T, L.id) });
 
       dentro("viaggi/index.html", 1, { id:"viaggi", titolo:T.viaggi.titolo, descrizione:T.viaggi.descrizione,
         corpo: paginaViaggi(T, "../", V.tema) });
@@ -864,6 +951,9 @@ async function costruisci(){
           titolo: t.nome + " — " + T.comune.da + " " + eur(v.da) + " | " + AGENZIA.nome,
           descrizione: t.sommario, corpo: paginaViaggio(T, v, "../", V.tema), schema: schemaViaggio(T, v, L.id) });
       }
+
+      dentro("destinazioni.html", 0, { id:"destinazioni", titolo:T.destinazioni.titolo + " | " + AGENZIA.nome,
+        descrizione:T.destinazioni.descrizione, corpo: paginaDestinazioni(T, "", L.id) });
 
       dentro("gruppi.html", 0, { id:"gruppi", titolo:T.gruppi.titolo, descrizione:T.gruppi.descrizione,
         corpo: paginaGruppi(T, "") });

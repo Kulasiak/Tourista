@@ -2,7 +2,17 @@ export default {
 lingua: "pl",
 dir: "ltr",
 
-nav: { home:"Start", viaggi:"Wyjazdy", gruppi:"Grupy", chi:"O nas", faq:"Pytania", blog:"Blog", contatti:"Kontakt", preventivo:"Poproś o wycenę" },
+nav: { home:"Start", viaggi:"Wyjazdy", gruppi:"Grupy", chi:"O nas", faq:"Pytania", blog:"Blog", contatti:"Kontakt", preventivo:"Poproś o wycenę" , destinazioni:"Kierunki"},
+
+destinazioni: {
+  titolo:"Kierunki — najpiękniejsze miasta świata",
+  descrizione:"Najpiękniejsze miasta świata, kontynent po kontynencie: Europa, Azja, Bliski Wschód, Afryka, Afryka Północna, Ameryki i Oceania. Wybierz, dokąd pojechać z grupą.",
+  h1:"Najpiękniejsze miasta świata",
+  intro:"Czterdzieści dwa kierunki, osiem zakątków świata. Zobacz, dokąd możemy Cię zabrać: dla każdego układamy wyjazd grupowy na miarę, od autokaru pod domem po lot powrotny.",
+  quante:"kierunków",
+  vaiA:"Przejdź do",
+  nota:"Nie ma Twojego miasta? Zapytaj: przez dziesięć lat zorganizowaliśmy ich znacznie więcej."
+},
 
 comune: {
   da:"od", persona:"od osoby", giorni:"dni", notti:"nocy", posti:"miejsc", minimo:"minimum",

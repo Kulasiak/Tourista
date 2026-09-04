@@ -306,17 +306,48 @@ Aprendo `sito/pubblica/index.html` si vedono tutte e due e si sceglie.
   programma giorno per giorno, cosa comprende e cosa no, quota, minimo, partenze.
 - **Gruppi** — la pagina che vende davvero: parrocchie, scuole, CRAL, associazioni,
   con le gratuità e le garanzie scritte.
+- **Destinazioni** — le **42 città più belle del mondo**, divise per continente:
+  Europa, Asia, Medio Oriente, Nord Africa, Africa, Nord America, Sud America,
+  Oceania. Ognuna con la sua immagine e una riga che dice perché vale il viaggio.
 - **Chi siamo**, **Domande** (14 con dati per Google), **Blog** (3 articoli lunghi),
   **Contatti** con il modulo, **Privacy**, **404**.
 - **Volantino** A4 da stampare e appendere in bacheca.
 - **Pubblicità**: testi già pronti da copiare — WhatsApp, Instagram, Facebook,
   annunci Google, email ai soci — più gli slogan.
 
+### Le immagini delle città
+
+Ogni città ha la sua immagine: **42 illustrazioni originali** in SVG, una per
+destinazione, con il monumento che la fa riconoscere al primo sguardo — la Torre
+Eiffel, il Colosseo, il Partenone, le piramidi, il Cristo di Rio, l'Opera di
+Sydney. Pesano pochi KB, restano nitide su qualsiasi schermo e **non hanno
+diritti d'autore da pagare**.
+
+Si rifanno tutte con:
+
+```
+cd sito
+node crea-immagini.mjs
+```
+
+Se un giorno vuoi le **foto vere**, basta metterle in `sito/immagini/foto/` con
+il nome della città (`parigi.jpg`, `roma.jpg`…): il sito usa la foto e il disegno
+resta sotto come rete di sicurezza. Per scaricarle in automatico, da foto libere
+anche per uso commerciale, con i crediti scritti da solo:
+
+```
+cd sito
+node scarica-foto.mjs
+```
+
+La guida completa, con i siti dove prendere le foto e le tre cose da non fare,
+sta in `sito/immagini/FOTO.md`.
+
 ### Per i motori di ricerca
 
 Titoli e descrizioni scritti pagina per pagina, indirizzo canonico, **hreflang** fra
 tutte e cinque le lingue, Open Graph per quando si condivide, dati strutturati
-(`TravelAgency`, `TouristTrip`, `FAQPage`, `BlogPosting`), `sitemap.xml` con 85
+(`TravelAgency`, `TouristTrip`, `FAQPage`, `BlogPosting`), `sitemap.xml` con 90
 indirizzi e `robots.txt`. Nessuna libreria esterna: le pagine pesano poco e si
 aprono subito anche da telefono.
 
@@ -334,7 +365,7 @@ cd sito
 node costruisci.mjs
 ```
 
-Rigenera tutto in `sito/pubblica/` — 200 pagine in pochi secondi, nessuna
+Rigenera tutto in `sito/pubblica/` — 210 pagine in pochi secondi, nessuna
 installazione. Se manca il file di una lingua, il sito si costruisce lo stesso
 con quelle che ci sono.
 
@@ -350,6 +381,7 @@ il suo `vercel.json`.
 | `server.js` | Il server dell'ufficio: fa vedere le stesse pratiche a più computer e tiene le copie di ogni giorno |
 | `lingue.esempio.json` | Esempio di file delle lingue (tedesco a metà), da copiare e completare |
 | `sito/` | Il sito pubblico: due versioni grafiche, cinque lingue, generatore e testi |
+| `sito/immagini/` | Le 42 illustrazioni delle città, il motore che le disegna e la guida alle foto |
 | `manifest.webmanifest` | Per installarlo come applicazione su telefono e computer |
 | `sw.js` | Fa funzionare il programma anche senza linea |
 | `vercel.json` | Per pubblicarlo su Vercel |

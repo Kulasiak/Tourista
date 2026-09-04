@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Il Cairo">
+<defs>
+  <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4A2418"/><stop offset="0.55" stop-color="#C2600F"/><stop offset="1" stop-color="#F2C579"/>
+  </linearGradient>
+  <radialGradient id="alone" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#FFB25C" stop-opacity="0.95"/><stop offset="0.42" stop-color="#FFB25C" stop-opacity="0.34"/>
+    <stop offset="1" stop-color="#FFB25C" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="acqua" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#a18d65"/><stop offset="1" stop-color="#2b1b1b"/>
+  </linearGradient>
+  <linearGradient id="velo" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F2C579" stop-opacity="0"/><stop offset="1" stop-color="#F2C579" stop-opacity="0.45"/>
+  </linearGradient>
+  <linearGradient id="terra" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#62543e"/><stop offset="1" stop-color="#13111a"/>
+  </linearGradient>
+  <radialGradient id="vign" cx="0.5" cy="0.42" r="0.80">
+    <stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.32"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#cielo)"/><circle cx="526.7" cy="457.3" r="352.8" fill="url(#alone)"/><circle cx="526.7" cy="457.3" r="84" fill="#FFE9BC"/><ellipse cx="626.4" cy="97.5" rx="324.3" ry="19.5" fill="#F2C579" opacity="0.1"/><ellipse cx="1103.2" cy="115.7" rx="239.9" ry="21.9" fill="#F2C579" opacity="0.2"/><ellipse cx="1467.6" cy="229.3" rx="371.4" ry="19.6" fill="#F2C579" opacity="0.2"/><path d="M-40 700 v-115.8 h29 v115.8 zM-3.3 700 v-110.9 h36.5 v110.9 zM39.7 700 v-65.5 h46.9 v65.5 zM92.4 700 v-100.7 h67.7 v100.7 zM126.2 599.3 v-18.1 h2 v18.1 zM169.5 700 v-90.7 h50.4 v90.7 zM194.7 609.3 v-16.3 h2 v16.3 zM1414 700 v-64.3 h35 v64.3 zM1456.8 700 v-65.6 h87.5 v65.6 zM1551 700 v-70.2 h21.7 v-21 l10.2 -15.4 l10.2 15.4 v21 h21.7 v70.2 zM1621.9 700 v-51.2 h80.2 v51.2 zM1662 648.8 v-9.2 h2 v9.2 z" fill="#753e14" opacity="0.45"/><path d="M-40 700 v-65.6 l30.8 -23 l30.8 23 v65.6 zM31.5 700 v-131.5 h41.5 v131.5 zM52.2 568.5 v-23.7 h2 v23.7 zM77.8 700 v-123.2 h86.1 v123.2 zM120.9 576.8 v-22.2 h2 v22.2 zM173 700 v-115.4 h67.8 v115.4 zM1414 700 v-81.8 l43.7 -28.6 l43.7 28.6 v81.8 zM1510.5 700 v-139.6 h47.7 v139.6 zM1534.4 560.4 v-25.1 h2 v25.1 zM1567.7 700 v-63.9 h63.4 v63.9 z" fill="#502d16" opacity="0.75"/><g transform="translate(-7 -6)" opacity="0.28"><g transform="translate(830 700) scale(1.88) translate(-830 -700)"><g transform="translate(830 700) scale(1)">
+    <path d="M-320 0 L-150 -280 L20 0 z" fill="#502d16" opacity="0.85"/>
+    <path d="M-60 0 L90 -220 L240 0 z" fill="#FFB25C"/>
+    <path d="M170 0 L270 -150 L370 0 z" fill="#FFB25C" opacity="0.9"/>
+    <g transform="translate(-160 0)">
+      <path d="M-90 0 v-42 q60 -14 118 -6 v48 z" fill="#FFB25C"/>
+      <path d="M28 -48 q26 -6 30 -34 q4 -30 -18 -34 q-22 -4 -26 26 q-4 26 14 42 z" fill="#FFB25C"/>
+      <path d="M4 -116 q22 -18 40 -2 l-6 14 q-16 -12 -30 2 z" fill="#FFB25C"/>
+    </g></g></g></g><g transform="translate(830 700) scale(1.88) translate(-830 -700)"><g transform="translate(830 700) scale(1)">
+    <path d="M-320 0 L-150 -280 L20 0 z" fill="#502d16" opacity="0.85"/>
+    <path d="M-60 0 L90 -220 L240 0 z" fill="#10101a"/>
+    <path d="M170 0 L270 -150 L370 0 z" fill="#10101a" opacity="0.9"/>
+    <g transform="translate(-160 0)">
+      <path d="M-90 0 v-42 q60 -14 118 -6 v48 z" fill="#10101a"/>
+      <path d="M28 -48 q26 -6 30 -34 q4 -30 -18 -34 q-22 -4 -26 26 q-4 26 14 42 z" fill="#10101a"/>
+      <path d="M4 -116 q22 -18 40 -2 l-6 14 q-16 -12 -30 2 z" fill="#10101a"/>
+    </g></g></g><path d="M-40 702 v-93.6 h24.8 v-28.1 l11.7 -20.6 l11.7 20.6 v28.1 h24.8 v93.6 zM43.3 702 v-83.9 h42.4 v83.9 zM95.8 702 v-49.7 h30.8 v49.7 zM111.3 652.3 v-9 h2 v9 zM133.9 702 v-66.5 h74.2 v66.5 zM217.7 702 v-89.2 h33.5 v89.2 zM258.3 702 v-66.6 h79.6 v66.6 zM347.4 702 v-50.7 h19 v11.2 h12.6 v39.5 zM389 702 v-52.2 l25.2 -18.3 l25.2 18.3 v52.2 zM1192.1 702 v-43.6 h67.1 v43.6 zM1270 702 v-60.7 l28.8 -21.2 l28.8 21.2 v60.7 zM1336.5 702 v-89.6 h82.7 v89.6 zM1377.9 612.4 v-16.1 h2 v16.1 zM1430.4 702 v-54.2 h37.7 v54.2 zM1479.4 702 v-58.7 h18.8 v-17.6 l8.9 -12.9 l8.9 12.9 v17.6 h18.8 v58.7 zM1538.9 702 v-79.5 h26.7 v79.5 zM1552.2 622.5 v-14.3 h2 v14.3 zM1570.7 702 v-50.2 h72.5 v50.2 z" fill="#16121a" opacity="1"/><rect x="0" y="700" width="1600" height="300" fill="url(#terra)"/><rect x="1205.6" y="768.6" width="379.4" height="3" rx="1.5" fill="#FFB25C" opacity="0"/><rect x="1543.5" y="977.2" width="145.5" height="3" rx="1.5" fill="#FFB25C" opacity="0.1"/><rect x="1168.2" y="818.1" width="112.2" height="3" rx="1.5" fill="#FFB25C" opacity="0"/><rect x="372" y="958.7" width="294.1" height="3" rx="1.5" fill="#FFB25C" opacity="0.1"/><rect x="644.1" y="966.8" width="331.2" height="3" rx="1.5" fill="#FFB25C" opacity="0.1"/><rect x="183.8" y="986.5" width="292.7" height="3" rx="1.5" fill="#FFB25C" opacity="0.1"/><rect x="690.8" y="775.3" width="141.6" height="3" rx="1.5" fill="#FFB25C" opacity="0.1"/><rect x="49.2" y="838.7" width="371.4" height="3" rx="1.5" fill="#FFB25C" opacity="0"/><rect x="85.5" y="863.7" width="293.6" height="3" rx="1.5" fill="#FFB25C" opacity="0"/><path d="M924.2 192.6 q7.9 -6.1 15.8 0 q7.9 -6.1 15.8 0" fill="none" stroke="#221619" stroke-width="1.9" stroke-linecap="round" opacity="0.5"/><path d="M152.9 255.8 q7 -5.4 14 0 q7 -5.4 14 0" fill="none" stroke="#221619" stroke-width="1.7" stroke-linecap="round" opacity="0.5"/><path d="M143.8 194.6 q5 -3.9 10 0 q5 -3.9 10 0" fill="none" stroke="#221619" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/><path d="M1103.2 341.8 q8.6 -6.7 17.2 0 q8.6 -6.7 17.2 0" fill="none" stroke="#221619" stroke-width="2.1" stroke-linecap="round" opacity="0.5"/><path d="M575.8 141.1 q7.4 -5.7 14.7 0 q7.4 -5.7 14.7 0" fill="none" stroke="#221619" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/><rect x="0" y="440" width="1600" height="260" fill="url(#velo)" opacity="0.45"/><rect width="1600" height="1000" fill="url(#vign)"/></svg>

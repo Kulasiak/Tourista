@@ -2,7 +2,17 @@ export default {
 lingua: "it",
 dir: "ltr",
 
-nav: { home:"Home", viaggi:"Viaggi", gruppi:"Gruppi", chi:"Chi siamo", faq:"Domande", blog:"Blog", contatti:"Contatti", preventivo:"Chiedi un preventivo" },
+nav: { home:"Home", viaggi:"Viaggi", gruppi:"Gruppi", chi:"Chi siamo", faq:"Domande", blog:"Blog", contatti:"Contatti", preventivo:"Chiedi un preventivo" , destinazioni:"Destinazioni"},
+
+destinazioni: {
+  titolo:"Destinazioni — le città più belle del mondo",
+  descrizione:"Le città più belle del mondo, continente per continente: Europa, Asia, Medio Oriente, Africa, Nord Africa, Americhe e Oceania. Scegli dove andare con il tuo gruppo.",
+  h1:"Le città più belle del mondo",
+  intro:"Quarantadue destinazioni, otto angoli di mondo. Guarda dove ti possiamo portare: per ognuna prepariamo il viaggio di gruppo su misura, dal pullman sotto casa al volo di ritorno.",
+  quante:"destinazioni",
+  vaiA:"Vai a",
+  nota:"Non trovi la tua città? Chiedicela: in dieci anni ne abbiamo organizzate molte di più."
+},
 
 comune: {
   da:"da", persona:"a persona", giorni:"giorni", notti:"notti", posti:"posti", minimo:"minimo",

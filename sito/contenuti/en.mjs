@@ -2,7 +2,17 @@ export default {
 lingua: "en",
 dir: "ltr",
 
-nav: { home:"Home", viaggi:"Trips", gruppi:"Groups", chi:"About us", faq:"FAQ", blog:"Blog", contatti:"Contact", preventivo:"Get a quote" },
+nav: { home:"Home", viaggi:"Trips", gruppi:"Groups", chi:"About us", faq:"FAQ", blog:"Blog", contatti:"Contact", preventivo:"Get a quote" , destinazioni:"Destinations"},
+
+destinazioni: {
+  titolo:"Destinations — the most beautiful cities in the world",
+  descrizione:"The world's most beautiful cities, continent by continent: Europe, Asia, the Middle East, Africa, North Africa, the Americas and Oceania. Choose where to go with your group.",
+  h1:"The most beautiful cities in the world",
+  intro:"Forty-two destinations, eight corners of the world. See where we can take you: for each one we build the group trip around you, from the coach at your door to the flight home.",
+  quante:"destinations",
+  vaiA:"Jump to",
+  nota:"Can't find your city? Just ask: in ten years we have organised many more."
+},
 
 comune: {
   da:"from", persona:"per person", giorni:"days", notti:"nights", posti:"seats", minimo:"minimum",

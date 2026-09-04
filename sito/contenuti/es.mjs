@@ -2,7 +2,17 @@ export default {
 lingua: "es",
 dir: "ltr",
 
-nav: { home:"Inicio", viaggi:"Viajes", gruppi:"Grupos", chi:"Quiénes somos", faq:"Preguntas", blog:"Blog", contatti:"Contacto", preventivo:"Pedir presupuesto" },
+nav: { home:"Inicio", viaggi:"Viajes", gruppi:"Grupos", chi:"Quiénes somos", faq:"Preguntas", blog:"Blog", contatti:"Contacto", preventivo:"Pedir presupuesto" , destinazioni:"Destinos"},
+
+destinazioni: {
+  titolo:"Destinos — las ciudades más bonitas del mundo",
+  descrizione:"Las ciudades más bonitas del mundo, continente por continente: Europa, Asia, Oriente Medio, África, Norte de África, América y Oceanía. Elige adónde ir con tu grupo.",
+  h1:"Las ciudades más bonitas del mundo",
+  intro:"Cuarenta y dos destinos, ocho rincones del mundo. Mira adónde podemos llevarte: para cada uno preparamos el viaje de grupo a medida, desde el autocar en tu calle hasta el vuelo de vuelta.",
+  quante:"destinos",
+  vaiA:"Ir a",
+  nota:"¿No encuentras tu ciudad? Pídenosla: en diez años hemos organizado muchas más."
+},
 
 comune: {
   da:"desde", persona:"por persona", giorni:"días", notti:"noches", posti:"plazas", minimo:"mínimo",

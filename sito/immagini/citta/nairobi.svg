@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Nairobi">
+<defs>
+  <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3B2350"/><stop offset="0.55" stop-color="#E0663F"/><stop offset="1" stop-color="#FFC98A"/>
+  </linearGradient>
+  <radialGradient id="alone" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#FF9E4D" stop-opacity="0.95"/><stop offset="0.42" stop-color="#FF9E4D" stop-opacity="0.34"/>
+    <stop offset="1" stop-color="#FF9E4D" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="acqua" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#a99070"/><stop offset="1" stop-color="#221a3a"/>
+  </linearGradient>
+  <linearGradient id="velo" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFC98A" stop-opacity="0"/><stop offset="1" stop-color="#FFC98A" stop-opacity="0.45"/>
+  </linearGradient>
+  <linearGradient id="terra" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#675545"/><stop offset="1" stop-color="#111122"/>
+  </linearGradient>
+  <radialGradient id="vign" cx="0.5" cy="0.42" r="0.80">
+    <stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.32"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#cielo)"/><circle cx="543.9" cy="388.7" r="352.8" fill="url(#alone)"/><circle cx="543.9" cy="388.7" r="84" fill="#FFE6B0"/><ellipse cx="342.5" cy="248.5" rx="356.4" ry="20.6" fill="#FFC98A" opacity="0.1"/><ellipse cx="945.5" cy="220.7" rx="260.5" ry="19.5" fill="#FFC98A" opacity="0.2"/><ellipse cx="556.1" cy="260.2" rx="354.7" ry="23.4" fill="#FFC98A" opacity="0.2"/><path d="M-40 700 v-110.1 h60.5 v110.1 zM27.4 700 v-66.2 h27.4 v66.2 zM41.1 633.8 v-11.9 h2 v11.9 zM64.2 700 v-56.4 h26.7 v12.4 h17.8 v44 zM117.5 700 v-103.1 h68.6 v103.1 zM151.8 596.9 v-18.6 h2 v18.6 zM192 700 v-100 h58.3 v100 zM1324 700 v-72 h61.2 v72 zM1395.7 700 v-113.5 h72.5 v113.5 zM1432 586.5 v-20.4 h2 v20.4 zM1476.7 700 v-79.8 l35.8 -27.9 l35.8 27.9 v79.8 zM1551.9 700 v-115.5 h59.1 v115.5 zM1581.4 584.5 v-20.8 h2 v20.8 zM1618 700 v-81.7 h32.6 v81.7 z" fill="#86412f" opacity="0.45"/><path d="M-40 700 v-132.2 h25.9 v-39.7 l12.2 -29.1 l12.2 29.1 v39.7 h25.9 v132.2 zM41.5 700 v-129.2 h11.5 v-38.8 l5.4 -28.4 l5.4 28.4 v38.8 h11.5 v129.2 zM87 700 v-112.1 h48 v112.1 zM143.6 700 v-109.4 h68 v109.4 zM220.7 700 v-151.7 h45.6 v151.7 zM279.3 700 v-63.5 h35.5 v63.5 zM1324 700 v-104 h65.3 v104 zM1392.8 700 v-136.6 h42.6 v136.6 zM1445.1 700 v-65.5 h20.6 v14.4 h13.7 v51.1 zM1486.1 700 v-134.9 h43.7 v134.9 zM1534.4 700 v-154.2 h61.9 v154.2 zM1565.3 545.8 v-27.8 h2 v27.8 zM1608.5 700 v-64.6 h75.7 v64.6 z" fill="#5b2f28" opacity="0.75"/><g transform="translate(-7 -6)" opacity="0.28"><g transform="translate(830 700) scale(1.58) translate(-830 -700)"><g transform="translate(830 700) scale(1)">
+    <path d="M-24 0 v-260 h48 V0 z" fill="#FF9E4D"/>
+    <path d="M-52 -260 a52 26 0 0 1 104 0 z" fill="#FF9E4D"/>
+    <path d="M0 -292 v-40" stroke="#FF9E4D" stroke-width="5"/>
+    <path d="M-160 0 v-150 h60 v150 z M80 0 v-190 h56 v190 z M160 0 v-110 h44 v110 z" fill="#FF9E4D" opacity="0.9"/>
+    <g transform="translate(-320 0)">
+      <path d="M-6 0 q4 -60 -2 -96 l14 0 q-4 40 0 96 z" fill="#FF9E4D"/>
+      <path d="M-96 -96 q40 -34 96 -30 q56 -4 96 30 q-50 -12 -96 -8 q-46 -4 -96 8 z" fill="#FF9E4D"/>
+    </g></g></g></g><g transform="translate(830 700) scale(1.58) translate(-830 -700)"><g transform="translate(830 700) scale(1)">
+    <path d="M-24 0 v-260 h48 V0 z" fill="#0f101f"/>
+    <path d="M-52 -260 a52 26 0 0 1 104 0 z" fill="#0f101f"/>
+    <path d="M0 -292 v-40" stroke="#0f101f" stroke-width="5"/>
+    <path d="M-160 0 v-150 h60 v150 z M80 0 v-190 h56 v190 z M160 0 v-110 h44 v110 z" fill="#0f101f" opacity="0.9"/>
+    <g transform="translate(-320 0)">
+      <path d="M-6 0 q4 -60 -2 -96 l14 0 q-4 40 0 96 z" fill="#0f101f"/>
+      <path d="M-96 -96 q40 -34 96 -30 q56 -4 96 30 q-50 -12 -96 -8 q-46 -4 -96 8 z" fill="#0f101f"/>
+    </g></g></g><path d="M-40 702 v-52.6 h23 v-15.8 l10.8 -11.6 l10.8 11.6 v15.8 h23 v52.6 zM37.2 702 v-72.3 l39.7 -25.3 l39.7 25.3 v72.3 zM120.8 702 v-89.8 h72.3 v89.8 zM205.4 702 v-59.1 h78.2 v59.1 zM288.3 702 v-93.6 h67.2 v93.6 zM362.2 702 v-65.4 h80.4 v65.4 zM447.8 702 v-73.5 h46.4 v73.5 zM1136.3 702 v-41.7 h25.5 v-12.5 l12 -9.2 l12 9.2 v12.5 h25.5 v41.7 zM1219.9 702 v-53.3 h39.1 v53.3 zM1268.2 702 v-54.4 l22.7 -19 l22.7 19 v54.4 zM1319.6 702 v-76.4 h28.9 v76.4 zM1354.3 702 v-40.6 h41.5 v40.6 zM1408.3 702 v-82.8 h72.6 v82.8 zM1484 702 v-53 h38 v11.7 h25.3 v41.3 zM1558.1 702 v-86.8 h46.3 v86.8 zM1581.2 615.2 v-15.6 h2 v15.6 zM1611.5 702 v-71.2 h35.6 v15.7 h23.7 v55.5 z" fill="#131224" opacity="1"/><rect x="0" y="700" width="1600" height="300" fill="url(#terra)"/><rect x="596.1" y="757.1" width="277.8" height="3" rx="1.5" fill="#FF9E4D" opacity="0"/><rect x="1468" y="912.8" width="388" height="3" rx="1.5" fill="#FF9E4D" opacity="0"/><rect x="535.2" y="718.6" width="336.3" height="3" rx="1.5" fill="#FF9E4D" opacity="0.1"/><rect x="464.8" y="718.2" width="102.5" height="3" rx="1.5" fill="#FF9E4D" opacity="0.1"/><rect x="201.4" y="751.3" width="142.8" height="3" rx="1.5" fill="#FF9E4D" opacity="0.1"/><rect x="384.4" y="947.3" width="343.6" height="3" rx="1.5" fill="#FF9E4D" opacity="0"/><rect x="876.6" y="889.8" width="193.1" height="3" rx="1.5" fill="#FF9E4D" opacity="0"/><rect x="1227.7" y="859.1" width="391.7" height="3" rx="1.5" fill="#FF9E4D" opacity="0.1"/><rect x="363.3" y="941.8" width="291.5" height="3" rx="1.5" fill="#FF9E4D" opacity="0"/><path d="M860.3 155.6 q7.2 -5.6 14.4 0 q7.2 -5.6 14.4 0" fill="none" stroke="#1d162f" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/><path d="M170.4 306.3 q7.5 -5.8 15 0 q7.5 -5.8 15 0" fill="none" stroke="#1d162f" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/><path d="M757.6 218.5 q11 -8.5 21.9 0 q11 -8.5 21.9 0" fill="none" stroke="#1d162f" stroke-width="2.7" stroke-linecap="round" opacity="0.5"/><path d="M140.8 340 q6 -4.7 12.1 0 q6 -4.7 12.1 0" fill="none" stroke="#1d162f" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><path d="M952.2 208.5 q11.2 -8.7 22.3 0 q11.2 -8.7 22.3 0" fill="none" stroke="#1d162f" stroke-width="2.7" stroke-linecap="round" opacity="0.5"/><rect x="0" y="440" width="1600" height="260" fill="url(#velo)" opacity="0.45"/><rect width="1600" height="1000" fill="url(#vign)"/></svg>
