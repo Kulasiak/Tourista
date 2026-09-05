@@ -27,7 +27,7 @@ comune: {
 },
 
 seo: {
-  sito:"Tourista Viaggi — viaggi di gruppo",
+  sito:"Urania — viaggi di gruppo",
   claim:"Agenzia viaggi a Milano specializzata in viaggi di gruppo: parrocchie, scuole, CRAL e associazioni. Bus granturismo, accompagnatore dall'Italia, quote chiare."
 },
 
@@ -40,9 +40,9 @@ slogan: [
 ],
 
 home: {
-  titolo:"Tourista Viaggi — viaggi di gruppo da Milano",
+  titolo:"Urania — viaggi di gruppo",
   descrizione:"Agenzia viaggi a Milano dal 2016: viaggi di gruppo per parrocchie, scuole, CRAL e associazioni. Bus granturismo, accompagnatore dall'Italia, quote chiare e nessun costo nascosto.",
-  occhiello:"Agenzia di viaggi · Milano · dal 2016",
+  occhiello:"Agenzia di viaggi · viaggi di gruppo",
   h1:"Viaggi di gruppo, organizzati come si deve",
   sotto:"Prepariamo il viaggio della tua parrocchia, della tua scuola o del tuo circolo: bus, hotel, guide, pasti e un accompagnatore che parte con voi. Un preventivo chiaro in due giorni.",
   cta1:"Chiedi un preventivo",
@@ -94,7 +94,7 @@ home: {
 },
 
 viaggi: {
-  titolo:"Viaggi di gruppo — catalogo | Tourista Viaggi",
+  titolo:"Viaggi di gruppo — catalogo | Urania",
   descrizione:"Il catalogo dei nostri viaggi di gruppo: Sicilia, Marocco, Praga, Lourdes, Grecia e Puglia. Bus o volo, accompagnatore dall'Italia, quote chiare da 520 €.",
   h1:"I nostri viaggi",
   intro:"Programmi collaudati, con partenze già fissate. Ognuno si può fare anche su misura per il tuo gruppo, nelle date che preferisci: dicci quando e prepariamo il preventivo.",
@@ -224,7 +224,7 @@ trips: {
 },
 
 gruppi: {
-  titolo:"Viaggi per parrocchie, scuole, CRAL e associazioni | Tourista Viaggi",
+  titolo:"Viaggi per parrocchie, scuole, CRAL e associazioni | Urania",
   descrizione:"Organizziamo viaggi su misura per gruppi: pellegrinaggi parrocchiali, viaggi d'istruzione, uscite per CRAL e associazioni. Preventivo formale, gratuità, polizze in regola.",
   h1:"Se il gruppo c'è, il viaggio si costruisce",
   intro:"Non vendiamo pacchetti: costruiamo il viaggio intorno al gruppo che parte. Quanti siete, che ritmo tenete, quanto potete spendere, cosa non deve mancare. Poi vi mandiamo un preventivo scritto, con dentro tutto.",
@@ -248,8 +248,8 @@ gruppi: {
 },
 
 chi: {
-  titolo:"Chi siamo — Tourista Viaggi, agenzia di Milano",
-  descrizione:"Tourista Viaggi è un'agenzia di Milano nata nel 2016, specializzata in viaggi di gruppo: 640 gruppi partiti, 26.400 passeggeri, 38 destinazioni.",
+  titolo:"Chi siamo — Urania, agenzia di Milano",
+  descrizione:"Urania è un'agenzia di Milano nata nel 2016, specializzata in viaggi di gruppo: 640 gruppi partiti, 26.400 passeggeri, 38 destinazioni.",
   h1:"Un'agenzia piccola che fa una cosa sola",
   intro:"Siamo nati nel 2016 in via Garibaldi, e da allora facciamo una cosa sola: viaggi di gruppo. Non biglietteria, non crociere last minute, non pacchetti da vetrina. Gruppi.",
   storia: [
@@ -276,7 +276,7 @@ chi: {
 },
 
 faq: {
-  titolo:"Domande frequenti sui viaggi di gruppo | Tourista Viaggi",
+  titolo:"Domande frequenti sui viaggi di gruppo | Urania",
   descrizione:"Acconto, saldo, assicurazioni, documenti, camere singole, minimo di partecipanti, annullamento: le risposte alle domande che ci fanno più spesso.",
   h1:"Le domande che ci fanno più spesso",
   intro:"Se non trovi la tua, scrivici: rispondiamo entro il giorno lavorativo e aggiungiamo la domanda a questa pagina.",
@@ -299,7 +299,7 @@ faq: {
 },
 
 blog: {
-  titolo:"Il quaderno di Tourista Viaggi — consigli per chi organizza gruppi",
+  titolo:"Il quaderno di Urania — consigli per chi organizza gruppi",
   descrizione:"Guide pratiche per chi organizza un viaggio di gruppo: come si prepara, cosa chiedere all'agenzia, bus o aereo, cosa mettere in valigia.",
   h1:"Il nostro quaderno",
   intro:"Appunti per chi organizza un gruppo la prima volta, e per chi lo fa da anni e ha ancora un dubbio.",
@@ -348,7 +348,7 @@ blog: {
 },
 
 contatti: {
-  titolo:"Contatti — Tourista Viaggi, via Garibaldi 42 Milano",
+  titolo:"Contatti — Urania, via Garibaldi 42 Milano",
   descrizione:"Telefono, email, WhatsApp e indirizzo dell'agenzia. Preventivo gratuito per viaggi di gruppo entro due giorni lavorativi.",
   h1:"Parliamone",
   intro:"Il preventivo è gratuito e arriva entro due giorni lavorativi. Se preferite, vi richiamiamo noi all'ora che ci dite.",
@@ -368,12 +368,12 @@ contatti: {
 },
 
 privacy: {
-  titolo:"Informativa privacy — Tourista Viaggi",
+  titolo:"Informativa privacy — Urania",
   descrizione:"Come trattiamo i dati personali di chi ci chiede un preventivo o parte con noi.",
   h1:"Informativa sulla privacy",
   aggiornata:"Aggiornata al 1° settembre 2026",
   sezioni: [
-    { t:"Chi tratta i tuoi dati", x:"Tourista Viaggi, via Garibaldi 42, 20121 Milano, P.IVA IT09876543210. Per qualsiasi domanda: gruppi@touristaviaggi.it." },
+    { t:"Chi tratta i tuoi dati", x:"Urania, via Garibaldi 42, 20121 Milano, P.IVA IT09876543210. Per qualsiasi domanda: gruppi@touristaviaggi.it." },
     { t:"Quali dati raccogliamo", x:"Quelli che ci scrivi nel modulo dei contatti (nome, telefono, email, ente, indicazioni sul viaggio) e, se poi parti con noi, i dati necessari alla prenotazione: data di nascita, documento di identità, eventuali esigenze alimentari o di mobilità." },
     { t:"Perché li usiamo", x:"Per prepararti il preventivo, per organizzare il viaggio (comunicando agli hotel e ai fornitori solo quello che serve) e per rispettare gli obblighi di legge, fiscali e assicurativi." },
     { t:"Per quanto tempo", x:"Le richieste di preventivo senza seguito: due anni. I dati dei viaggi effettuati: dieci anni, come impongono gli obblighi contabili." },
@@ -398,11 +398,11 @@ pubblicita: {
   titolo:"Testi pronti per la pubblicità",
   intro:"Testi già scritti da copiare e incollare: WhatsApp per il gruppo, post per Instagram e Facebook, annunci per Google, email ai soci.",
   whatsappTitolo:"Messaggio WhatsApp per il gruppo",
-  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} giorni\n💶 {PREZZO} a persona, tutto compreso\n🚌 Bus granturismo dall'Italia con accompagnatore\n🏨 Hotel, pasti e guide come da programma\n\n🎟 Posti limitati, si conferma con l'acconto\n📞 Tourista Viaggi — 02 8765 4321\n{SITO}",
+  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} giorni\n💶 {PREZZO} a persona, tutto compreso\n🚌 Bus granturismo dall'Italia con accompagnatore\n🏨 Hotel, pasti e guide come da programma\n\n🎟 Posti limitati, si conferma con l'acconto\n📞 Urania — 02 8765 4321\n{SITO}",
   instagramTitolo:"Post per Instagram",
   instagram:"Il gruppo è pronto. Il viaggio anche.\n{VIAGGIO}, {GIORNI} giorni, da {PREZZO} a persona.\nBus dall'Italia, accompagnatore nostro, quote chiare.\nScrivici in DM o chiama: siamo un'agenzia vera, con una porta e un telefono.\n\n#viaggidigruppo #parrocchia #gitascolastica #cral #milano #{TAG}",
   facebookTitolo:"Post per Facebook",
-  facebook:"Organizzate un viaggio per la parrocchia, la scuola o il circolo e non sapete da che parte cominciare?\n\nDite solo tre cose — dove, quando, quanti siete — e in due giorni lavorativi vi mandiamo il preventivo scritto: programma giorno per giorno, quota a persona e cosa comprende. Gratis e senza impegno.\n\nDal 2016 abbiamo fatto partire 640 gruppi. Tourista Viaggi, via Garibaldi 42, Milano — 02 8765 4321.",
+  facebook:"Organizzate un viaggio per la parrocchia, la scuola o il circolo e non sapete da che parte cominciare?\n\nDite solo tre cose — dove, quando, quanti siete — e in due giorni lavorativi vi mandiamo il preventivo scritto: programma giorno per giorno, quota a persona e cosa comprende. Gratis e senza impegno.\n\nDal 2016 abbiamo fatto partire 640 gruppi. Urania, via Garibaldi 42, Milano — 02 8765 4321.",
   googleTitolo:"Annunci per Google (titoli e descrizioni)",
   google: [
     { t:"Viaggi di gruppo su misura", d:"Parrocchie, scuole e CRAL. Preventivo scritto in 2 giorni, gratis. Agenzia di Milano dal 2016." },
@@ -410,7 +410,7 @@ pubblicita: {
     { t:"Gite scolastiche con gratuità", d:"Preventivo formale per la gara, polizze in regola, 1 gratuità ogni 15 studenti." }
   ],
   emailTitolo:"Email ai soci del circolo",
-  email:"Oggetto: {VIAGGIO} — {DATE}\n\nCari soci,\nabbiamo organizzato con Tourista Viaggi di Milano un viaggio di gruppo a {DESTINAZIONE}: {GIORNI} giorni, dal {DATE}, quota {PREZZO} a persona in camera doppia.\n\nNella quota sono compresi il bus granturismo, gli hotel con i pasti indicati, le guide locali, gli ingressi, l'accompagnatore dall'Italia e l'assicurazione.\n\nI posti sono {POSTI} e si assegnano in ordine di iscrizione, con un acconto di {ACCONTO}. Il programma completo è allegato.\n\nPer iscriversi o per informazioni: {REFERENTE}.",
+  email:"Oggetto: {VIAGGIO} — {DATE}\n\nCari soci,\nabbiamo organizzato con Urania di Milano un viaggio di gruppo a {DESTINAZIONE}: {GIORNI} giorni, dal {DATE}, quota {PREZZO} a persona in camera doppia.\n\nNella quota sono compresi il bus granturismo, gli hotel con i pasti indicati, le guide locali, gli ingressi, l'accompagnatore dall'Italia e l'assicurazione.\n\nI posti sono {POSTI} e si assegnano in ordine di iscrizione, con un acconto di {ACCONTO}. Il programma completo è allegato.\n\nPer iscriversi o per informazioni: {REFERENTE}.",
   slogansTitolo:"Slogan da usare sui materiali"
 },
 

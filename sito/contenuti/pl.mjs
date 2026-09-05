@@ -27,7 +27,7 @@ comune: {
 },
 
 seo: {
-  sito:"Tourista Viaggi — wyjazdy grupowe",
+  sito:"Urania — wyjazdy grupowe",
   claim:"Biuro podróży w Mediolanie specjalizujące się w wyjazdach grupowych: parafie, szkoły, kluby pracownicze i stowarzyszenia. Autokar, pilot z Włoch, jasne ceny."
 },
 
@@ -40,9 +40,9 @@ slogan: [
 ],
 
 home: {
-  titolo:"Tourista Viaggi — wyjazdy grupowe z Mediolanu",
+  titolo:"Urania — wyjazdy grupowe",
   descrizione:"Biuro podróży w Mediolanie od 2016 roku: wyjazdy grupowe dla parafii, szkół, klubów pracowniczych i stowarzyszeń. Autokar, pilot z Włoch, jasne ceny bez ukrytych kosztów.",
-  occhiello:"Biuro podróży · Mediolan · od 2016",
+  occhiello:"Biuro podróży · wyjazdy grupowe",
   h1:"Wyjazdy grupowe zorganizowane jak należy",
   sotto:"Przygotujemy wyjazd waszej parafii, szkoły albo klubu: autokar, hotele, przewodnicy, posiłki i pilot, który jedzie razem z wami. Jasna wycena w dwa dni.",
   cta1:"Poproś o wycenę",
@@ -94,7 +94,7 @@ home: {
 },
 
 viaggi: {
-  titolo:"Wyjazdy grupowe — katalog | Tourista Viaggi",
+  titolo:"Wyjazdy grupowe — katalog | Urania",
   descrizione:"Katalog naszych wyjazdów grupowych: Sycylia, Maroko, Praga, Lourdes, Grecja i Apulia. Autokarem lub samolotem, pilot z Włoch, jasne ceny od 520 €.",
   h1:"Nasze wyjazdy",
   intro:"Sprawdzone programy z ustalonymi terminami. Każdy można też przygotować na miarę waszej grupy, w wybranym przez was terminie: powiedzcie kiedy, a przygotujemy wycenę.",
@@ -224,7 +224,7 @@ trips: {
 },
 
 gruppi: {
-  titolo:"Wyjazdy dla parafii, szkół, klubów i stowarzyszeń | Tourista Viaggi",
+  titolo:"Wyjazdy dla parafii, szkół, klubów i stowarzyszeń | Urania",
   descrizione:"Organizujemy wyjazdy grupowe na zamówienie: pielgrzymki parafialne, wycieczki szkolne, wyjazdy klubów pracowniczych i stowarzyszeń. Formalna wycena, miejsca gratis, polisy w porządku.",
   h1:"Jeśli jest grupa, wyjazd da się zbudować",
   intro:"Nie sprzedajemy gotowych pakietów: budujemy wyjazd wokół grupy, która jedzie. Ile was jest, w jakim tempie chodzicie, ile możecie wydać, czego nie może zabraknąć. Potem wysyłamy pisemną wycenę, ze wszystkim w środku.",
@@ -248,8 +248,8 @@ gruppi: {
 },
 
 chi: {
-  titolo:"O nas — Tourista Viaggi, biuro podróży w Mediolanie",
-  descrizione:"Tourista Viaggi to mediolańskie biuro założone w 2016 roku, specjalizujące się w wyjazdach grupowych: 640 grup, 26 400 pasażerów, 38 kierunków.",
+  titolo:"O nas — Urania, biuro podróży w Mediolanie",
+  descrizione:"Urania to mediolańskie biuro założone w 2016 roku, specjalizujące się w wyjazdach grupowych: 640 grup, 26 400 pasażerów, 38 kierunków.",
   h1:"Małe biuro, które robi jedną rzecz",
   intro:"Zaczęliśmy w 2016 roku przy via Garibaldi i od tego czasu robimy jedną rzecz: wyjazdy grupowe. Żadnych biletów lotniczych, żadnych rejsów last minute, żadnych pakietów z wystawy. Grupy.",
   storia: [
@@ -276,7 +276,7 @@ chi: {
 },
 
 faq: {
-  titolo:"Najczęstsze pytania o wyjazdy grupowe | Tourista Viaggi",
+  titolo:"Najczęstsze pytania o wyjazdy grupowe | Urania",
   descrizione:"Zaliczka, dopłata, ubezpieczenia, dokumenty, pokoje jednoosobowe, minimalna liczba osób, rezygnacja: odpowiedzi na najczęstsze pytania.",
   h1:"Pytania, które słyszymy najczęściej",
   intro:"Jeśli waszego tu nie ma, napiszcie: odpowiadamy tego samego dnia roboczego i dopisujemy pytanie do tej strony.",
@@ -299,7 +299,7 @@ faq: {
 },
 
 blog: {
-  titolo:"Zeszyt Tourista Viaggi — porady dla organizatorów grup",
+  titolo:"Zeszyt Urania — porady dla organizatorów grup",
   descrizione:"Praktyczne poradniki dla organizujących wyjazd grupowy: jak się przygotować, o co pytać biuro, autokar czy samolot, co spakować.",
   h1:"Nasz zeszyt",
   intro:"Notatki dla tych, którzy organizują grupę pierwszy raz, i dla tych, którzy robią to od lat i wciąż mają wątpliwość.",
@@ -348,7 +348,7 @@ blog: {
 },
 
 contatti: {
-  titolo:"Kontakt — Tourista Viaggi, via Garibaldi 42, Mediolan",
+  titolo:"Kontakt — Urania, via Garibaldi 42, Mediolan",
   descrizione:"Telefon, e-mail, WhatsApp i adres biura. Bezpłatna wycena wyjazdów grupowych w dwa dni robocze.",
   h1:"Porozmawiajmy",
   intro:"Wycena jest bezpłatna i przychodzi w dwa dni robocze. Jeśli wolicie, oddzwonimy o godzinie, którą wskażecie.",
@@ -368,12 +368,12 @@ contatti: {
 },
 
 privacy: {
-  titolo:"Informacja o prywatności — Tourista Viaggi",
+  titolo:"Informacja o prywatności — Urania",
   descrizione:"Jak przetwarzamy dane osobowe osób, które proszą o wycenę albo jadą z nami.",
   h1:"Informacja o prywatności",
   aggiornata:"Zaktualizowano 1 września 2026",
   sezioni: [
-    { t:"Kto przetwarza wasze dane", x:"Tourista Viaggi, via Garibaldi 42, 20121 Mediolan, Włochy, NIP IT09876543210. W każdej sprawie: gruppi@touristaviaggi.it." },
+    { t:"Kto przetwarza wasze dane", x:"Urania, via Garibaldi 42, 20121 Mediolan, Włochy, NIP IT09876543210. W każdej sprawie: gruppi@touristaviaggi.it." },
     { t:"Jakie dane zbieramy", x:"Te, które wpisujecie w formularzu kontaktowym (imię, telefon, e-mail, instytucja, uwagi o wyjeździe), a jeśli potem jedziecie z nami — dane potrzebne do rezerwacji: data urodzenia, dokument tożsamości, ewentualne potrzeby żywieniowe lub ruchowe." },
     { t:"Po co ich używamy", x:"Żeby przygotować wycenę, zorganizować wyjazd (przekazując hotelom i dostawcom tylko to, co konieczne) i spełnić obowiązki prawne, podatkowe i ubezpieczeniowe." },
     { t:"Jak długo", x:"Zapytania bez dalszego ciągu: dwa lata. Dane z odbytych wyjazdów: dziesięć lat, zgodnie z obowiązkami księgowymi." },
@@ -398,11 +398,11 @@ pubblicita: {
   titolo:"Gotowe teksty reklamowe",
   intro:"Teksty już napisane, do skopiowania: WhatsApp dla grupy, posty na Instagram i Facebooka, reklamy Google, e-maile do członków.",
   whatsappTitolo:"Wiadomość na WhatsAppa dla grupy",
-  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} dni\n💶 {PREZZO} od osoby, wszystko w cenie\n🚌 Autokar z Włoch z pilotem\n🏨 Hotele, posiłki i przewodnicy zgodnie z programem\n\n🎟 Liczba miejsc ograniczona, potwierdzenie zaliczką\n📞 Tourista Viaggi — +39 02 8765 4321\n{SITO}",
+  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} dni\n💶 {PREZZO} od osoby, wszystko w cenie\n🚌 Autokar z Włoch z pilotem\n🏨 Hotele, posiłki i przewodnicy zgodnie z programem\n\n🎟 Liczba miejsc ograniczona, potwierdzenie zaliczką\n📞 Urania — +39 02 8765 4321\n{SITO}",
   instagramTitolo:"Post na Instagram",
   instagram:"Grupa gotowa. Wyjazd też.\n{VIAGGIO}, {GIORNI} dni, od {PREZZO} od osoby.\nAutokar z Włoch, nasz pilot, jasne ceny.\nNapiszcie w DM albo zadzwońcie: jesteśmy prawdziwym biurem, z drzwiami i telefonem.\n\n#wyjazdygrupowe #parafia #wycieczkaszkolna #klub #mediolan #{TAG}",
   facebookTitolo:"Post na Facebooka",
-  facebook:"Organizujecie wyjazd dla parafii, szkoły albo klubu i nie wiecie, od czego zacząć?\n\nPowiedzcie nam tylko trzy rzeczy — dokąd, kiedy, ile osób — a w dwa dni robocze wyślemy pisemną wycenę: program dzień po dniu, cenę od osoby i to, co obejmuje. Bezpłatnie i bez zobowiązań.\n\nOd 2016 roku wysłaliśmy w trasę 640 grup. Tourista Viaggi, via Garibaldi 42, Mediolan — +39 02 8765 4321.",
+  facebook:"Organizujecie wyjazd dla parafii, szkoły albo klubu i nie wiecie, od czego zacząć?\n\nPowiedzcie nam tylko trzy rzeczy — dokąd, kiedy, ile osób — a w dwa dni robocze wyślemy pisemną wycenę: program dzień po dniu, cenę od osoby i to, co obejmuje. Bezpłatnie i bez zobowiązań.\n\nOd 2016 roku wysłaliśmy w trasę 640 grup. Urania, via Garibaldi 42, Mediolan — +39 02 8765 4321.",
   googleTitolo:"Reklamy Google (nagłówki i opisy)",
   google: [
     { t:"Wyjazdy grupowe na miarę", d:"Parafie, szkoły i kluby. Pisemna wycena w 2 dni, bezpłatnie. Biuro z Mediolanu od 2016." },
@@ -410,7 +410,7 @@ pubblicita: {
     { t:"Wycieczki szkolne z miejscami gratis", d:"Formalna wycena do przetargu, polisy w porządku, 1 miejsce gratis na 15 uczniów." }
   ],
   emailTitolo:"E-mail do członków klubu",
-  email:"Temat: {VIAGGIO} — {DATE}\n\nDrodzy Członkowie,\nwspólnie z biurem Tourista Viaggi z Mediolanu zorganizowaliśmy wyjazd grupowy do {DESTINAZIONE}: {GIORNI} dni, od {DATE}, cena {PREZZO} od osoby w pokoju dwuosobowym.\n\nCena obejmuje autokar, hotele z wymienionymi posiłkami, miejscowych przewodników, bilety wstępu, pilota z Włoch i ubezpieczenie.\n\nMiejsc jest {POSTI}, przydzielane według kolejności zapisów, z zaliczką {ACCONTO}. Pełny program w załączeniu.\n\nZapisy i informacje: {REFERENTE}.",
+  email:"Temat: {VIAGGIO} — {DATE}\n\nDrodzy Członkowie,\nwspólnie z biurem Urania z Mediolanu zorganizowaliśmy wyjazd grupowy do {DESTINAZIONE}: {GIORNI} dni, od {DATE}, cena {PREZZO} od osoby w pokoju dwuosobowym.\n\nCena obejmuje autokar, hotele z wymienionymi posiłkami, miejscowych przewodników, bilety wstępu, pilota z Włoch i ubezpieczenie.\n\nMiejsc jest {POSTI}, przydzielane według kolejności zapisów, z zaliczką {ACCONTO}. Pełny program w załączeniu.\n\nZapisy i informacje: {REFERENTE}.",
   slogansTitolo:"Hasła do wykorzystania na materiałach"
 },
 

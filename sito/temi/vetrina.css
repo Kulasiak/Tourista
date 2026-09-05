@@ -44,7 +44,7 @@ p{ margin:0 0 14px; }
 .marchio{ display:flex; align-items:center; gap:11px; color:inherit; text-decoration:none; }
 .marchio:hover{ text-decoration:none; }
 .marchio-segno{ width:38px; height:38px; border-radius:11px; display:grid; place-items:center; flex:0 0 38px;
-  background:linear-gradient(150deg,var(--marca),var(--marca-scura)); color:#fff; }
+  background:#fff; border:1px solid var(--filo); color:var(--marca); overflow:hidden; }
 .marchio-segno svg{ width:21px; height:21px; }
 .marchio-testo b{ font-family:var(--titoli); font-size:19px; display:block; line-height:1.1; }
 .marchio-testo small{ font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--inchiostro-3); font-weight:600; }
@@ -348,3 +348,9 @@ p{ margin:0 0 14px; }
   .griglia-citta{ grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr)); }
   .nastro-citta{ grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
+
+/* il marchio dell'agenzia */
+.marchio-segno svg, .marchio-segno img{ width:34px !important; height:34px !important; object-fit:contain; }
+.piede-marchio{ display:flex; align-items:center; gap:9px; }
+.piede-segno{ display:inline-flex; flex:0 0 auto; }
+.piede-segno svg, .piede-segno img{ width:30px !important; height:30px !important; object-fit:contain; }

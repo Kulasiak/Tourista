@@ -13,6 +13,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { AGENZIA, LINGUE, VERSIONI, VIAGGI, ARTICOLI, PAGINE } from "./contenuti/comune.mjs";
 import { CITTA, GRUPPI, perGruppo } from "./immagini/citta.mjs";
+import { marchio } from "./temi/marchio.mjs";
 
 const QUI = dirname(fileURLToPath(import.meta.url));
 const FUORI = join(QUI, "pubblica");
@@ -70,7 +71,7 @@ function pagina(o){
 <meta property="og:url" content="${AGENZIA.sito}/${lingua}/${o.viaFile || ""}">
 <meta property="og:image" content="${AGENZIA.sito}/social.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="${b}../icona.png">
+<link rel="icon" href="${b}../icona.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${b}../icona.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,11 +86,7 @@ ${o.schema ? '<script type="application/ld+json">' + JSON.stringify(o.schema) + 
 <header class="testa">
   <div class="riga">
     <a class="marchio" href="${b}index.html">
-      <span class="marchio-segno" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-          <circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>
-        </svg>
-      </span>
+      <span class="marchio-segno" aria-hidden="true">${segno(b, 34, 1)}</span>
       <span class="marchio-testo"><b>${esc(AGENZIA.nome)}</b><small>${esc(T.seo.sito.split("—")[1] || "")}</small></span>
     </a>
     <input type="checkbox" id="apri-menu" class="apri-menu" hidden>
@@ -111,7 +108,7 @@ ${o.corpo}
 <footer class="piede">
   <div class="riga piede-griglia">
     <div>
-      <div class="piede-marchio">${esc(AGENZIA.nome)}</div>
+      <div class="piede-marchio"><span class="piede-segno">${segno(b, 30, 2)}</span>${esc(AGENZIA.nome)}</div>
       <p>${esc(T.footer.descrizione)}</p>
       <div class="piede-social">
         <a href="${AGENZIA.social.facebook}" rel="noopener">Facebook</a>
@@ -158,6 +155,12 @@ const FOTO = existsSync(join(QUI, "immagini", "foto"))
   : {};
 const IMG = (b, slug) => b + "../immagini/" + (FOTO[slug] ? "foto/" + FOTO[slug] : "citta/" + slug + ".svg");
 const NOMI = i => c => c.n[i] || c.n[0];
+
+/* il logo: se in temi/ c'è logo.svg o logo.png si usa quello, se no il disegno */
+const FILE_LOGO = ["logo.svg","logo.png","logo.webp","logo.jpg"].find(f => existsSync(join(QUI, "temi", f))) || "";
+const segno = (b, dim, n) => FILE_LOGO
+  ? '<img src="' + b + "../" + FILE_LOGO + '" alt="" width="' + dim + '" height="' + dim + '">'
+  : marchio(dim, n);
 
 
 function scheda(v, T, b, tema){
@@ -929,6 +932,8 @@ async function costruisci(){
     if(existsSync(join(QUI, "immagini", "foto")))
       cpSync(join(QUI, "immagini", "foto"), join(radice, "immagini", "foto"), { recursive:true });
     if(existsSync(join(QUI, "temi", "icona.png"))) cpSync(join(QUI, "temi", "icona.png"), join(radice, "icona.png"));
+    if(FILE_LOGO) cpSync(join(QUI, "temi", FILE_LOGO), join(radice, FILE_LOGO));
+    scrivi(join(radice, "icona.svg"), marchio(100, 9));
     if(existsSync(join(QUI, "temi", "social.png"))) cpSync(join(QUI, "temi", "social.png"), join(radice, "social.png"));
 
     for(const L of LING){

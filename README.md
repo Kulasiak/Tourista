@@ -211,6 +211,26 @@ server. Niente abbonamenti, niente nuvola, nessuno che guarda da fuori.
 
 ---
 
+## Il logo
+
+Il programma disegna da solo un marchio (mappamondo, anello d'oro, **BP**) e lo
+mette **nella barra a sinistra, nella schermata d'entrata e in cima a tutti i
+documenti che stampi**.
+
+Per mettere il tuo logo vero: **Impostazioni → Il logo → Carica il logo**.
+Va bene un PNG con lo sfondo trasparente o un SVG, meglio se quadrato, fino a
+mezzo mega. Da quel momento esce dappertutto al posto del disegno; con «Togli»
+si torna indietro.
+
+Nel **sito** basta mettere il file in `sito/temi/` col nome `logo.svg` (oppure
+`logo.png`, `logo.webp`, `logo.jpg`) e rifare `node costruisci.mjs`: il
+costruttore lo trova da solo e lo usa nell'intestazione e in fondo a ogni
+pagina. Se non c'è, disegna il marchio.
+
+C'è anche un colore dell'agenzia — **blu navy e oro**, come il logo — ed è
+quello di partenza. Gli altri (chiaro, notte, deserto, mare) restano lì:
+Impostazioni → Colore.
+
 ## Le sei lingue
 
 Italiano, inglese, francese, spagnolo, polacco e **arabo**. Si cambia con le

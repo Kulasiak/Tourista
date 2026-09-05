@@ -27,7 +27,7 @@ comune: {
 },
 
 seo: {
-  sito:"Tourista Viaggi — viajes de grupo",
+  sito:"Urania — viajes de grupo",
   claim:"Agencia de viajes en Milán especializada en viajes de grupo: parroquias, colegios, clubes de empresa y asociaciones. Autocar, acompañante desde Italia, precios claros."
 },
 
@@ -40,7 +40,7 @@ slogan: [
 ],
 
 home: {
-  titolo:"Tourista Viaggi — viajes de grupo desde Milán",
+  titolo:"Urania — viajes de grupo",
   descrizione:"Agencia de viajes en Milán desde 2016: viajes de grupo para parroquias, colegios, clubes de empresa y asociaciones. Autocar, acompañante desde Italia, precios claros y sin costes ocultos.",
   occhiello:"Agencia de viajes · Milán · desde 2016",
   h1:"Viajes de grupo, organizados como es debido",
@@ -94,7 +94,7 @@ home: {
 },
 
 viaggi: {
-  titolo:"Viajes de grupo — catálogo | Tourista Viaggi",
+  titolo:"Viajes de grupo — catálogo | Urania",
   descrizione:"El catálogo de nuestros viajes de grupo: Sicilia, Marruecos, Praga, Lourdes, Grecia y Apulia. Autocar o avión, acompañante desde Italia, precios claros desde 520 €.",
   h1:"Nuestros viajes",
   intro:"Programas probados, con salidas ya fijadas. Cada uno se puede hacer también a medida para tu grupo, en las fechas que prefieras: dinos cuándo y preparamos el presupuesto.",
@@ -224,7 +224,7 @@ trips: {
 },
 
 gruppi: {
-  titolo:"Viajes para parroquias, colegios, clubes y asociaciones | Tourista Viaggi",
+  titolo:"Viajes para parroquias, colegios, clubes y asociaciones | Urania",
   descrizione:"Organizamos viajes a medida para grupos: peregrinaciones parroquiales, viajes de estudios, salidas de clubes de empresa y asociaciones. Presupuesto formal, gratuidades, pólizas en regla.",
   h1:"Si el grupo existe, el viaje se construye",
   intro:"No vendemos paquetes: construimos el viaje alrededor del grupo que sale. Cuántos sois, qué ritmo lleváis, cuánto podéis gastar, qué no debe faltar. Después os mandamos un presupuesto escrito, con todo dentro.",
@@ -248,8 +248,8 @@ gruppi: {
 },
 
 chi: {
-  titolo:"Quiénes somos — Tourista Viaggi, agencia de Milán",
-  descrizione:"Tourista Viaggi es una agencia de Milán nacida en 2016, especializada en viajes de grupo: 640 grupos salidos, 26.400 pasajeros, 38 destinos.",
+  titolo:"Quiénes somos — Urania, agencia de Milán",
+  descrizione:"Urania es una agencia de Milán nacida en 2016, especializada en viajes de grupo: 640 grupos salidos, 26.400 pasajeros, 38 destinos.",
   h1:"Una agencia pequeña que hace una sola cosa",
   intro:"Nacimos en 2016 en via Garibaldi, y desde entonces hacemos una sola cosa: viajes de grupo. Ni billetes sueltos, ni cruceros de última hora, ni paquetes de escaparate. Grupos.",
   storia: [
@@ -276,7 +276,7 @@ chi: {
 },
 
 faq: {
-  titolo:"Preguntas frecuentes sobre viajes de grupo | Tourista Viaggi",
+  titolo:"Preguntas frecuentes sobre viajes de grupo | Urania",
   descrizione:"Señal, resto, seguros, documentos, habitaciones individuales, mínimo de participantes, anulación: las respuestas a las preguntas más frecuentes.",
   h1:"Las preguntas que más nos hacen",
   intro:"Si la tuya no está, escríbenos: respondemos dentro del día laborable y añadimos la pregunta a esta página.",
@@ -299,7 +299,7 @@ faq: {
 },
 
 blog: {
-  titolo:"El cuaderno de Tourista Viaggi — consejos para organizar grupos",
+  titolo:"El cuaderno de Urania — consejos para organizar grupos",
   descrizione:"Guías prácticas para quien organiza un viaje de grupo: cómo se prepara, qué pedir a la agencia, autocar o avión, qué meter en la maleta.",
   h1:"Nuestro cuaderno",
   intro:"Apuntes para quien organiza un grupo por primera vez, y para quien lleva años haciéndolo y aún tiene una duda.",
@@ -348,7 +348,7 @@ blog: {
 },
 
 contatti: {
-  titolo:"Contacto — Tourista Viaggi, via Garibaldi 42 Milán",
+  titolo:"Contacto — Urania, via Garibaldi 42 Milán",
   descrizione:"Teléfono, correo, WhatsApp y dirección de la agencia. Presupuesto gratuito para viajes de grupo en dos días laborables.",
   h1:"Hablemos",
   intro:"El presupuesto es gratuito y llega en dos días laborables. Si preferís, os llamamos nosotros a la hora que nos digáis.",
@@ -368,12 +368,12 @@ contatti: {
 },
 
 privacy: {
-  titolo:"Política de privacidad — Tourista Viaggi",
+  titolo:"Política de privacidad — Urania",
   descrizione:"Cómo tratamos los datos personales de quien nos pide un presupuesto o viaja con nosotros.",
   h1:"Política de privacidad",
   aggiornata:"Actualizada el 1 de septiembre de 2026",
   sezioni: [
-    { t:"Quién trata tus datos", x:"Tourista Viaggi, via Garibaldi 42, 20121 Milán, Italia, NIF-IVA IT09876543210. Para cualquier duda: gruppi@touristaviaggi.it." },
+    { t:"Quién trata tus datos", x:"Urania, via Garibaldi 42, 20121 Milán, Italia, NIF-IVA IT09876543210. Para cualquier duda: gruppi@touristaviaggi.it." },
     { t:"Qué datos recogemos", x:"Los que escribes en el formulario de contacto (nombre, teléfono, correo, entidad, indicaciones sobre el viaje) y, si luego viajas con nosotros, los datos necesarios para la reserva: fecha de nacimiento, documento de identidad, posibles necesidades alimentarias o de movilidad." },
     { t:"Para qué los usamos", x:"Para prepararte el presupuesto, para organizar el viaje (comunicando a hoteles y proveedores solo lo necesario) y para cumplir las obligaciones legales, fiscales y de seguros." },
     { t:"Durante cuánto tiempo", x:"Solicitudes de presupuesto sin continuidad: dos años. Datos de los viajes realizados: diez años, como exigen las obligaciones contables." },
@@ -398,11 +398,11 @@ pubblicita: {
   titolo:"Textos listos para la publicidad",
   intro:"Textos ya escritos para copiar y pegar: WhatsApp para el grupo, publicaciones para Instagram y Facebook, anuncios de Google, correos a los socios.",
   whatsappTitolo:"Mensaje de WhatsApp para el grupo",
-  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} días\n💶 {PREZZO} por persona, todo incluido\n🚌 Autocar desde Italia con acompañante\n🏨 Hoteles, comidas y guías según programa\n\n🎟 Plazas limitadas, se confirma con la señal\n📞 Tourista Viaggi — +39 02 8765 4321\n{SITO}",
+  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} días\n💶 {PREZZO} por persona, todo incluido\n🚌 Autocar desde Italia con acompañante\n🏨 Hoteles, comidas y guías según programa\n\n🎟 Plazas limitadas, se confirma con la señal\n📞 Urania — +39 02 8765 4321\n{SITO}",
   instagramTitolo:"Publicación para Instagram",
   instagram:"El grupo está listo. El viaje también.\n{VIAGGIO}, {GIORNI} días, desde {PREZZO} por persona.\nAutocar desde Italia, acompañante nuestro, precios claros.\nEscríbenos por DM o llama: somos una agencia de verdad, con puerta y teléfono.\n\n#viajesdegrupo #parroquia #viajedeestudios #club #milan #{TAG}",
   facebookTitolo:"Publicación para Facebook",
-  facebook:"¿Organizáis un viaje para la parroquia, el colegio o el club y no sabéis por dónde empezar?\n\nDecidnos solo tres cosas —dónde, cuándo, cuántos sois— y en dos días laborables os mandamos el presupuesto escrito: programa día a día, precio por persona y qué incluye. Gratis y sin compromiso.\n\nDesde 2016 hemos hecho salir 640 grupos. Tourista Viaggi, via Garibaldi 42, Milán — +39 02 8765 4321.",
+  facebook:"¿Organizáis un viaje para la parroquia, el colegio o el club y no sabéis por dónde empezar?\n\nDecidnos solo tres cosas —dónde, cuándo, cuántos sois— y en dos días laborables os mandamos el presupuesto escrito: programa día a día, precio por persona y qué incluye. Gratis y sin compromiso.\n\nDesde 2016 hemos hecho salir 640 grupos. Urania, via Garibaldi 42, Milán — +39 02 8765 4321.",
   googleTitolo:"Anuncios de Google (títulos y descripciones)",
   google: [
     { t:"Viajes de grupo a medida", d:"Parroquias, colegios y clubes. Presupuesto escrito en 2 días, gratis. Agencia de Milán desde 2016." },
@@ -410,7 +410,7 @@ pubblicita: {
     { t:"Viajes de estudios con gratuidades", d:"Presupuesto formal para el concurso, pólizas en regla, 1 gratuidad cada 15 alumnos." }
   ],
   emailTitolo:"Correo a los socios",
-  email:"Asunto: {VIAGGIO} — {DATE}\n\nQueridos socios:\njunto con Tourista Viaggi de Milán hemos organizado un viaje de grupo a {DESTINAZIONE}: {GIORNI} días, del {DATE}, precio {PREZZO} por persona en habitación doble.\n\nEl precio incluye el autocar, los hoteles con las comidas indicadas, las guías locales, las entradas, el acompañante desde Italia y el seguro.\n\nHay {POSTI} plazas, que se asignan por orden de inscripción, con una señal de {ACCONTO}. El programa completo va adjunto.\n\nPara inscribirse o para más información: {REFERENTE}.",
+  email:"Asunto: {VIAGGIO} — {DATE}\n\nQueridos socios:\njunto con Urania de Milán hemos organizado un viaje de grupo a {DESTINAZIONE}: {GIORNI} días, del {DATE}, precio {PREZZO} por persona en habitación doble.\n\nEl precio incluye el autocar, los hoteles con las comidas indicadas, las guías locales, las entradas, el acompañante desde Italia y el seguro.\n\nHay {POSTI} plazas, que se asignan por orden de inscripción, con una señal de {ACCONTO}. El programa completo va adjunto.\n\nPara inscribirse o para más información: {REFERENTE}.",
   slogansTitolo:"Eslóganes para vuestros materiales"
 },
 

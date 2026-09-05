@@ -27,7 +27,7 @@ comune: {
 },
 
 seo: {
-  sito:"Tourista Viaggi — voyages de groupe",
+  sito:"Urania — voyages de groupe",
   claim:"Agence de voyages à Milan spécialisée dans les voyages de groupe : paroisses, écoles, comités d'entreprise et associations. Autocar, accompagnateur au départ d'Italie, prix clairs."
 },
 
@@ -40,9 +40,9 @@ slogan: [
 ],
 
 home: {
-  titolo:"Tourista Viaggi — voyages de groupe au départ de Milan",
+  titolo:"Urania — voyages de groupe",
   descrizione:"Agence de voyages à Milan depuis 2016 : voyages de groupe pour paroisses, écoles, comités d'entreprise et associations. Autocar, accompagnateur au départ d'Italie, prix clairs et sans frais cachés.",
-  occhiello:"Agence de voyages · Milan · depuis 2016",
+  occhiello:"Agence de voyages · voyages de groupe",
   h1:"Des voyages de groupe organisés comme il faut",
   sotto:"Nous préparons le voyage de votre paroisse, de votre école ou de votre club : autocar, hôtels, guides, repas et un accompagnateur qui part avec vous. Un devis clair en deux jours.",
   cta1:"Demander un devis",
@@ -94,7 +94,7 @@ home: {
 },
 
 viaggi: {
-  titolo:"Voyages de groupe — catalogue | Tourista Viaggi",
+  titolo:"Voyages de groupe — catalogue | Urania",
   descrizione:"Le catalogue de nos voyages de groupe : Sicile, Maroc, Prague, Lourdes, Grèce et Pouilles. Autocar ou avion, accompagnateur au départ d'Italie, prix clairs à partir de 520 €.",
   h1:"Nos voyages",
   intro:"Des programmes éprouvés, avec des départs déjà fixés. Chacun peut aussi être fait sur mesure pour votre groupe, aux dates que vous préférez : dites-nous quand et nous préparons le devis.",
@@ -224,7 +224,7 @@ trips: {
 },
 
 gruppi: {
-  titolo:"Voyages pour paroisses, écoles, comités d'entreprise et associations | Tourista Viaggi",
+  titolo:"Voyages pour paroisses, écoles, comités d'entreprise et associations | Urania",
   descrizione:"Nous organisons des voyages sur mesure pour les groupes : pèlerinages paroissiaux, voyages scolaires, sorties de comités d'entreprise et d'associations. Devis formel, gratuités, assurances en règle.",
   h1:"Si le groupe est là, le voyage se construit",
   intro:"Nous ne vendons pas des forfaits : nous construisons le voyage autour du groupe qui part. Combien vous êtes, quel rythme vous tenez, ce que vous pouvez dépenser, ce qui ne doit pas manquer. Ensuite nous envoyons un devis écrit, avec tout dedans.",
@@ -248,8 +248,8 @@ gruppi: {
 },
 
 chi: {
-  titolo:"Qui sommes-nous — Tourista Viaggi, agence de Milan",
-  descrizione:"Tourista Viaggi est une agence milanaise née en 2016, spécialisée dans les voyages de groupe : 640 groupes partis, 26 400 voyageurs, 38 destinations.",
+  titolo:"Qui sommes-nous — Urania, agence de Milan",
+  descrizione:"Urania est une agence milanaise née en 2016, spécialisée dans les voyages de groupe : 640 groupes partis, 26 400 voyageurs, 38 destinations.",
   h1:"Une petite agence qui ne fait qu'une chose",
   intro:"Nous sommes nés en 2016 via Garibaldi, et depuis nous ne faisons qu'une chose : des voyages de groupe. Pas de billetterie, pas de croisières de dernière minute, pas de forfaits en vitrine. Des groupes.",
   storia: [
@@ -276,7 +276,7 @@ chi: {
 },
 
 faq: {
-  titolo:"Questions fréquentes sur les voyages de groupe | Tourista Viaggi",
+  titolo:"Questions fréquentes sur les voyages de groupe | Urania",
   descrizione:"Acompte, solde, assurances, documents, chambres individuelles, minimum de participants, annulation : les réponses aux questions les plus fréquentes.",
   h1:"Les questions qu'on nous pose le plus",
   intro:"Si la vôtre n'y est pas, écrivez-nous : nous répondons dans la journée ouvrée et ajoutons la question à cette page.",
@@ -299,7 +299,7 @@ faq: {
 },
 
 blog: {
-  titolo:"Le carnet de Tourista Viaggi — conseils pour organiser un groupe",
+  titolo:"Le carnet de Urania — conseils pour organiser un groupe",
   descrizione:"Guides pratiques pour qui organise un voyage de groupe : comment le préparer, quoi demander à l'agence, autocar ou avion, quoi mettre dans la valise.",
   h1:"Notre carnet",
   intro:"Des notes pour ceux qui organisent un groupe pour la première fois, et pour ceux qui le font depuis des années et ont encore un doute.",
@@ -348,7 +348,7 @@ blog: {
 },
 
 contatti: {
-  titolo:"Contact — Tourista Viaggi, via Garibaldi 42 Milan",
+  titolo:"Contact — Urania, via Garibaldi 42 Milan",
   descrizione:"Téléphone, e-mail, WhatsApp et adresse de l'agence. Devis gratuit pour voyages de groupe en deux jours ouvrés.",
   h1:"Parlons-en",
   intro:"Le devis est gratuit et arrive en deux jours ouvrés. Si vous préférez, nous vous rappelons à l'heure que vous nous indiquez.",
@@ -368,12 +368,12 @@ contatti: {
 },
 
 privacy: {
-  titolo:"Politique de confidentialité — Tourista Viaggi",
+  titolo:"Politique de confidentialité — Urania",
   descrizione:"Comment nous traitons les données personnelles de ceux qui demandent un devis ou partent avec nous.",
   h1:"Politique de confidentialité",
   aggiornata:"Mise à jour le 1er septembre 2026",
   sezioni: [
-    { t:"Qui traite vos données", x:"Tourista Viaggi, via Garibaldi 42, 20121 Milan, Italie, TVA IT09876543210. Pour toute question : gruppi@touristaviaggi.it." },
+    { t:"Qui traite vos données", x:"Urania, via Garibaldi 42, 20121 Milan, Italie, TVA IT09876543210. Pour toute question : gruppi@touristaviaggi.it." },
     { t:"Quelles données nous recueillons", x:"Celles que vous écrivez dans le formulaire de contact (nom, téléphone, e-mail, organisme, indications sur le voyage) et, si vous partez ensuite avec nous, les données nécessaires à la réservation : date de naissance, pièce d'identité, éventuels besoins alimentaires ou de mobilité." },
     { t:"Pourquoi nous les utilisons", x:"Pour préparer votre devis, pour organiser le voyage (en ne communiquant aux hôtels et aux fournisseurs que le nécessaire) et pour respecter les obligations légales, fiscales et d'assurance." },
     { t:"Pendant combien de temps", x:"Demandes de devis sans suite : deux ans. Données des voyages effectués : dix ans, comme l'imposent les obligations comptables." },
@@ -398,11 +398,11 @@ pubblicita: {
   titolo:"Textes prêts pour la publicité",
   intro:"Des textes déjà écrits, à copier-coller : WhatsApp pour le groupe, posts pour Instagram et Facebook, annonces Google, e-mails aux adhérents.",
   whatsappTitolo:"Message WhatsApp pour le groupe",
-  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} jours\n💶 {PREZZO} par personne, tout compris\n🚌 Autocar au départ d'Italie avec accompagnateur\n🏨 Hôtels, repas et guides selon le programme\n\n🎟 Places limitées, confirmation avec l'acompte\n📞 Tourista Viaggi — +39 02 8765 4321\n{SITO}",
+  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} jours\n💶 {PREZZO} par personne, tout compris\n🚌 Autocar au départ d'Italie avec accompagnateur\n🏨 Hôtels, repas et guides selon le programme\n\n🎟 Places limitées, confirmation avec l'acompte\n📞 Urania — +39 02 8765 4321\n{SITO}",
   instagramTitolo:"Post pour Instagram",
   instagram:"Le groupe est prêt. Le voyage aussi.\n{VIAGGIO}, {GIORNI} jours, à partir de {PREZZO} par personne.\nAutocar au départ d'Italie, notre accompagnateur, prix clairs.\nÉcrivez-nous en DM ou appelez : nous sommes une vraie agence, avec une porte et un téléphone.\n\n#voyagedegroupe #paroisse #voyagescolaire #ce #milan #{TAG}",
   facebookTitolo:"Post pour Facebook",
-  facebook:"Vous organisez un voyage pour la paroisse, l'école ou le club et vous ne savez pas par où commencer ?\n\nDites-nous seulement trois choses — où, quand, combien vous êtes — et en deux jours ouvrés nous envoyons le devis écrit : programme jour par jour, prix par personne et ce qu'il comprend. Gratuit et sans engagement.\n\nDepuis 2016, 640 groupes sont partis avec nous. Tourista Viaggi, via Garibaldi 42, Milan — +39 02 8765 4321.",
+  facebook:"Vous organisez un voyage pour la paroisse, l'école ou le club et vous ne savez pas par où commencer ?\n\nDites-nous seulement trois choses — où, quand, combien vous êtes — et en deux jours ouvrés nous envoyons le devis écrit : programme jour par jour, prix par personne et ce qu'il comprend. Gratuit et sans engagement.\n\nDepuis 2016, 640 groupes sont partis avec nous. Urania, via Garibaldi 42, Milan — +39 02 8765 4321.",
   googleTitolo:"Annonces Google (titres et descriptions)",
   google: [
     { t:"Voyages de groupe sur mesure", d:"Paroisses, écoles et comités. Devis écrit en 2 jours, gratuit. Agence de Milan depuis 2016." },
@@ -410,7 +410,7 @@ pubblicita: {
     { t:"Voyages scolaires avec gratuités", d:"Devis formel pour l'appel d'offres, assurances en règle, 1 gratuité pour 15 élèves." }
   ],
   emailTitolo:"E-mail aux adhérents",
-  email:"Objet : {VIAGGIO} — {DATE}\n\nChers adhérents,\nnous avons organisé avec Tourista Viaggi de Milan un voyage de groupe à {DESTINAZIONE} : {GIORNI} jours, du {DATE}, prix {PREZZO} par personne en chambre double.\n\nLe prix comprend l'autocar, les hôtels avec les repas indiqués, les guides locales, les entrées, l'accompagnateur au départ d'Italie et l'assurance.\n\nIl y a {POSTI} places, attribuées par ordre d'inscription, avec un acompte de {ACCONTO}. Le programme complet est en pièce jointe.\n\nPour s'inscrire ou pour tout renseignement : {REFERENTE}.",
+  email:"Objet : {VIAGGIO} — {DATE}\n\nChers adhérents,\nnous avons organisé avec Urania de Milan un voyage de groupe à {DESTINAZIONE} : {GIORNI} jours, du {DATE}, prix {PREZZO} par personne en chambre double.\n\nLe prix comprend l'autocar, les hôtels avec les repas indiqués, les guides locales, les entrées, l'accompagnateur au départ d'Italie et l'assurance.\n\nIl y a {POSTI} places, attribuées par ordre d'inscription, avec un acompte de {ACCONTO}. Le programme complet est en pièce jointe.\n\nPour s'inscrire ou pour tout renseignement : {REFERENTE}.",
   slogansTitolo:"Slogans à utiliser sur vos supports"
 },
 

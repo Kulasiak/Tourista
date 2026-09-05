@@ -27,7 +27,7 @@ comune: {
 },
 
 seo: {
-  sito:"Tourista Viaggi — group travel",
+  sito:"Urania — group travel",
   claim:"Travel agency in Milan specialising in group trips: parishes, schools, staff clubs and associations. Coach travel, tour leader from Italy, clear prices."
 },
 
@@ -40,9 +40,9 @@ slogan: [
 ],
 
 home: {
-  titolo:"Tourista Viaggi — group trips from Milan",
+  titolo:"Urania — group travel",
   descrizione:"Travel agency in Milan since 2016: group trips for parishes, schools, staff clubs and associations. Coach travel, tour leader from Italy, clear prices and no hidden costs.",
-  occhiello:"Travel agency · Milan · since 2016",
+  occhiello:"Travel agency · group travel",
   h1:"Group trips, organised properly",
   sotto:"We prepare the trip for your parish, your school or your club: coach, hotels, guides, meals and a tour leader who travels with you. A clear quote in two days.",
   cta1:"Get a quote",
@@ -94,7 +94,7 @@ home: {
 },
 
 viaggi: {
-  titolo:"Group trips — catalogue | Tourista Viaggi",
+  titolo:"Group trips — catalogue | Urania",
   descrizione:"Our catalogue of group trips: Sicily, Morocco, Prague, Lourdes, Greece and Apulia. Coach or flight, tour leader from Italy, clear prices from €520.",
   h1:"Our trips",
   intro:"Tried and tested programmes with dates already set. Each one can also be tailored to your group on the dates you prefer: tell us when, and we will prepare the quote.",
@@ -224,7 +224,7 @@ trips: {
 },
 
 gruppi: {
-  titolo:"Trips for parishes, schools, staff clubs and associations | Tourista Viaggi",
+  titolo:"Trips for parishes, schools, staff clubs and associations | Urania",
   descrizione:"We organise tailor-made group trips: parish pilgrimages, school trips, outings for staff clubs and associations. Formal quotes, free places, insurance in order.",
   h1:"If the group is there, the trip can be built",
   intro:"We do not sell packages: we build the trip around the group that is travelling. How many you are, what pace you keep, what you can spend, what must not be missing. Then we send you a written quote with everything in it.",
@@ -248,8 +248,8 @@ gruppi: {
 },
 
 chi: {
-  titolo:"About us — Tourista Viaggi, a travel agency in Milan",
-  descrizione:"Tourista Viaggi is a Milan agency founded in 2016 and specialising in group travel: 640 groups, 26,400 passengers, 38 destinations.",
+  titolo:"About us — Urania, a travel agency in Milan",
+  descrizione:"Urania is a Milan agency founded in 2016 and specialising in group travel: 640 groups, 26,400 passengers, 38 destinations.",
   h1:"A small agency that does one thing only",
   intro:"We started in 2016 in via Garibaldi, and since then we have done one thing only: group travel. No ticketing, no last-minute cruises, no shop-window packages. Groups.",
   storia: [
@@ -276,7 +276,7 @@ chi: {
 },
 
 faq: {
-  titolo:"Frequently asked questions about group travel | Tourista Viaggi",
+  titolo:"Frequently asked questions about group travel | Urania",
   descrizione:"Deposit, balance, insurance, documents, single rooms, minimum numbers, cancellation: the answers to the questions we are asked most often.",
   h1:"The questions we are asked most",
   intro:"If yours is not here, write to us: we answer within the working day and add the question to this page.",
@@ -299,7 +299,7 @@ faq: {
 },
 
 blog: {
-  titolo:"The Tourista Viaggi notebook — advice for group organisers",
+  titolo:"The Urania notebook — advice for group organisers",
   descrizione:"Practical guides for anyone organising a group trip: how to prepare it, what to ask the agency, coach or plane, what to pack.",
   h1:"Our notebook",
   intro:"Notes for people organising a group for the first time, and for those who have done it for years and still have a doubt.",
@@ -348,7 +348,7 @@ blog: {
 },
 
 contatti: {
-  titolo:"Contact — Tourista Viaggi, via Garibaldi 42 Milan",
+  titolo:"Contact — Urania, via Garibaldi 42 Milan",
   descrizione:"Phone, email, WhatsApp and address of the agency. Free quote for group trips within two working days.",
   h1:"Let us talk",
   intro:"The quote is free and arrives within two working days. If you prefer, we will call you back at the time you tell us.",
@@ -368,12 +368,12 @@ contatti: {
 },
 
 privacy: {
-  titolo:"Privacy notice — Tourista Viaggi",
+  titolo:"Privacy notice — Urania",
   descrizione:"How we handle the personal data of people who ask us for a quote or travel with us.",
   h1:"Privacy notice",
   aggiornata:"Updated 1 September 2026",
   sezioni: [
-    { t:"Who handles your data", x:"Tourista Viaggi, via Garibaldi 42, 20121 Milan, Italy, VAT no. IT09876543210. For any question: gruppi@touristaviaggi.it." },
+    { t:"Who handles your data", x:"Urania, via Garibaldi 42, 20121 Milan, Italy, VAT no. IT09876543210. For any question: gruppi@touristaviaggi.it." },
     { t:"What data we collect", x:"What you write in the contact form (name, phone, email, organisation, notes about the trip) and, if you then travel with us, the data needed for the booking: date of birth, identity document, any dietary or mobility needs." },
     { t:"Why we use it", x:"To prepare your quote, to organise the trip (passing hotels and suppliers only what they need) and to meet legal, tax and insurance obligations." },
     { t:"For how long", x:"Quote requests with no follow-up: two years. Data from trips actually taken: ten years, as accounting obligations require." },
@@ -398,11 +398,11 @@ pubblicita: {
   titolo:"Ready-made texts for advertising",
   intro:"Texts already written, to copy and paste: WhatsApp for the group, posts for Instagram and Facebook, Google ads, emails to members.",
   whatsappTitolo:"WhatsApp message for the group",
-  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} days\n💶 {PREZZO} per person, all included\n🚌 Coach from Italy with a tour leader\n🏨 Hotels, meals and guides as per programme\n\n🎟 Limited seats, confirmed with a deposit\n📞 Tourista Viaggi — +39 02 8765 4321\n{SITO}",
+  whatsapp:"✈️ {VIAGGIO}\n📅 {DATE} · {GIORNI} days\n💶 {PREZZO} per person, all included\n🚌 Coach from Italy with a tour leader\n🏨 Hotels, meals and guides as per programme\n\n🎟 Limited seats, confirmed with a deposit\n📞 Urania — +39 02 8765 4321\n{SITO}",
   instagramTitolo:"Post for Instagram",
   instagram:"The group is ready. So is the trip.\n{VIAGGIO}, {GIORNI} days, from {PREZZO} per person.\nCoach from Italy, our own tour leader, clear prices.\nDM us or call: we are a real agency, with a door and a telephone.\n\n#grouptravel #parish #schooltrip #staffclub #milan #{TAG}",
   facebookTitolo:"Post for Facebook",
-  facebook:"Organising a trip for your parish, school or club and not sure where to start?\n\nTell us just three things — where, when, how many of you — and within two working days we will send you a written quote: day-by-day programme, price per person and what it includes. Free and with no obligation.\n\nSince 2016 we have sent 640 groups on the road. Tourista Viaggi, via Garibaldi 42, Milan — +39 02 8765 4321.",
+  facebook:"Organising a trip for your parish, school or club and not sure where to start?\n\nTell us just three things — where, when, how many of you — and within two working days we will send you a written quote: day-by-day programme, price per person and what it includes. Free and with no obligation.\n\nSince 2016 we have sent 640 groups on the road. Urania, via Garibaldi 42, Milan — +39 02 8765 4321.",
   googleTitolo:"Google ads (headlines and descriptions)",
   google: [
     { t:"Tailor-made group trips", d:"Parishes, schools and staff clubs. Written quote in 2 days, free. Milan agency since 2016." },
@@ -410,7 +410,7 @@ pubblicita: {
     { t:"School trips with free places", d:"Formal quote for the tender, insurance in order, 1 free place per 15 students." }
   ],
   emailTitolo:"Email to club members",
-  email:"Subject: {VIAGGIO} — {DATE}\n\nDear members,\ntogether with Tourista Viaggi of Milan we have organised a group trip to {DESTINAZIONE}: {GIORNI} days, from {DATE}, price {PREZZO} per person in a double room.\n\nThe price includes the coach, hotels with the meals listed, local guides, entrance fees, the tour leader from Italy and insurance.\n\nThere are {POSTI} seats, assigned in booking order, with a deposit of {ACCONTO}. The full programme is attached.\n\nTo book or for information: {REFERENTE}.",
+  email:"Subject: {VIAGGIO} — {DATE}\n\nDear members,\ntogether with Urania of Milan we have organised a group trip to {DESTINAZIONE}: {GIORNI} days, from {DATE}, price {PREZZO} per person in a double room.\n\nThe price includes the coach, hotels with the meals listed, local guides, entrance fees, the tour leader from Italy and insurance.\n\nThere are {POSTI} seats, assigned in booking order, with a deposit of {ACCONTO}. The full programme is attached.\n\nTo book or for information: {REFERENTE}.",
   slogansTitolo:"Slogans for your materials"
 },
 

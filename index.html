@@ -76,6 +76,12 @@
   --bg:#FAF6EE; --bg-2:#FFFFFF; --bg-3:#F2EADA;
   --bg-side:rgba(250,246,238,.90);
 }
+:root[data-skin="urania"]{
+  --brand:#1D4E7C; --brand-2:#14385C; --brand-soft:rgba(29,78,124,.12);
+  --accent:#B08B3E; --accent-soft:rgba(176,139,62,.16);
+  --bg:#F6F7F9; --bg-2:#FFFFFF; --bg-3:#E9EDF2;
+  --bg-side:rgba(246,247,249,.92);
+}
 :root[data-skin="mare"]{
   --brand:#15588F; --brand-2:#0E4270; --brand-soft:rgba(21,88,143,.12);
   --accent:#C2600F; --accent-soft:rgba(194,96,15,.13);
@@ -98,6 +104,8 @@ button,input,select,textarea{ font:inherit; color:inherit; }
 table{ border-collapse:collapse; width:100%; }
 /* Le icone hanno sempre una misura: senza questa riga riempirebbero tutto il riquadro. */
 svg{ width:17px; height:17px; flex:0 0 auto; }
+.marchio{ display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; }
+.marchio > svg, .marchio > img{ width:100% !important; height:100% !important; object-fit:contain; display:block; }
 .card-h > svg{ color:var(--brand); }
 ::-webkit-scrollbar{ width:10px; height:10px; }
 ::-webkit-scrollbar-thumb{ background:var(--fill-2); border-radius:99px; border:3px solid transparent; background-clip:content-box; }
@@ -113,9 +121,10 @@ svg{ width:17px; height:17px; flex:0 0 auto; }
 .brand{ display:flex; align-items:center; gap:11px; padding:16px 16px 12px; }
 .brand .logo{
   width:38px; height:38px; border-radius:11px; display:grid; place-items:center; flex:0 0 38px;
-  background:linear-gradient(150deg,var(--brand),var(--brand-2)); color:var(--on-brand); box-shadow:var(--sh-1);
+  background:#fff; border:1px solid var(--sep); color:var(--brand); box-shadow:var(--sh-1); overflow:hidden;
 }
 .brand .logo svg{ width:21px; height:21px; }
+.brand .logo .marchio > svg, .brand .logo .marchio > img{ width:100% !important; height:100% !important; }
 .brand b{ font-family:var(--serif); font-size:19px; letter-spacing:-.02em; display:block; line-height:1.1; }
 .brand small{ color:var(--txt-3); font-size:11px; letter-spacing:.06em; text-transform:uppercase; font-weight:600; }
 #nav{ flex:1; overflow-y:auto; padding:4px 10px 14px; }
@@ -455,6 +464,9 @@ input[type=checkbox],input[type=radio]{ width:17px; height:17px; accent-color:va
 .sheet h1{ font-family:var(--serif); font-size:22pt; margin:0 0 2pt; }
 .sheet h2{ font-size:13pt; margin:14pt 0 5pt; border-bottom:1pt solid #999; padding-bottom:3pt; }
 .sheet .p-head{ display:flex; align-items:flex-start; gap:12pt; border-bottom:2pt solid #111; padding-bottom:8pt; margin-bottom:10pt; }
+.sheet .p-head .p-logo{ flex:0 0 auto; margin-right:10pt; }
+.sheet .p-head .p-logo svg, .sheet .p-head .p-logo img{ width:46px; height:46px; }
+[dir="rtl"] .sheet .p-head .p-logo{ margin-right:0; margin-left:10pt; }
 .sheet .p-head .p-ag{ margin-left:auto; text-align:right; font-size:8.5pt; line-height:1.35; color:#444; }
 .sheet table{ width:100%; border-collapse:collapse; font-size:9.5pt; }
 .sheet th{ text-align:left; background:#eee; padding:4pt 5pt; border:.5pt solid #999; font-size:8.5pt; text-transform:uppercase; letter-spacing:.04em; }
@@ -497,7 +509,10 @@ input[type=checkbox],input[type=radio]{ width:17px; height:17px; accent-color:va
 [dir="rtl"] .badge{ margin-left:0; margin-right:auto; }
 [dir="rtl"] select{ background-position:15px 55%, 10px 55%; padding-right:11px; padding-left:30px; }
 [dir="rtl"] .sheet th{ text-align:right; }
-[dir="rtl"] .sheet .p-head .p-ag{ margin-left:0; margin-right:auto; text-align:left; }
+[dir="rtl"] .sheet .p-head .p-logo{ flex:0 0 auto; margin-right:10pt; }
+.sheet .p-head .p-logo svg, .sheet .p-head .p-logo img{ width:46px; height:46px; }
+[dir="rtl"] .sheet .p-head .p-logo{ margin-right:0; margin-left:10pt; }
+.sheet .p-head .p-ag{ margin-left:0; margin-right:auto; text-align:left; }
 [dir="rtl"] .kv b, [dir="rtl"] .kpi .k-v{ direction:ltr; unicode-bidi:isolate; }
 @media(max-width:1000px){ [dir="rtl"] #side{ left:auto; right:0; transform:translateX(100%); } body.side-open[dir] #side{ transform:none; } }
 
@@ -798,6 +813,18 @@ function copia(txt){
    ============================================================ */
 const DIZ = {};
 Object.assign(DIZ, {
+"Agenzia":["Agency","Agence","Agencia","Biuro","الوكالة"],
+"Il logo":["The logo","Le logo","El logotipo","Logo","الشعار"],
+"Carica il logo":["Upload the logo","Charger le logo","Subir el logotipo","Wgraj logo","حمّل الشعار"],
+"Logo messo":["Logo set","Logo enregistré","Logotipo puesto","Logo ustawione","تمّ وضع الشعار"],
+"Logo tolto":["Logo removed","Logo retiré","Logotipo quitado","Logo usunięte","تمّ حذف الشعار"],
+"Tolgo il logo e rimetto quello disegnato?":["Remove the logo and put back the drawn one?","Retirer le logo et remettre celui dessiné ?","¿Quito el logotipo y vuelvo a poner el dibujado?","Usunąć logo i wrócić do rysowanego?","هل أحذف الشعار وأعيد المرسوم؟"],
+"Il file è troppo grande: al massimo mezzo mega":["The file is too big: half a megabyte at most","Le fichier est trop lourd : un demi-méga au maximum","El archivo es demasiado grande: medio mega como máximo","Plik jest za duży: najwyżej pół megabajta","الملف كبير جداً: نصف ميغابايت كحد أقصى"],
+"Questo non è un file di immagine":["This is not an image file","Ce n'est pas un fichier image","Esto no es un archivo de imagen","To nie jest plik obrazu","هذا ليس ملف صورة"],
+"Questo è il tuo logo. Esce nella barra, nella schermata d'entrata e in cima a tutti i documenti che stampi.":["This is your logo. It appears in the sidebar, on the entry screen and at the top of every document you print.","Voici votre logo. Il apparaît dans la barre, sur l'écran d'entrée et en haut de chaque document imprimé.","Este es tu logotipo. Sale en la barra, en la pantalla de entrada y en la cabecera de todos los documentos que imprimes.","To Twoje logo. Pojawia się w pasku, na ekranie logowania i u góry każdego drukowanego dokumentu.","هذا شعارك. يظهر في الشريط الجانبي وفي شاشة الدخول وأعلى كل مستند تطبعه."],
+"Adesso c'è un logo disegnato da noi. Carica il tuo: esce nella barra, nella schermata d'entrata e in cima a tutti i documenti che stampi.":["Right now there is a logo we drew. Upload yours: it appears in the sidebar, on the entry screen and at the top of every document you print.","Pour l'instant, c'est un logo que nous avons dessiné. Chargez le vôtre : il apparaîtra dans la barre, sur l'écran d'entrée et en haut de chaque document imprimé.","Ahora hay un logotipo dibujado por nosotros. Sube el tuyo: saldrá en la barra, en la pantalla de entrada y en la cabecera de todos los documentos que imprimes.","Na razie jest logo, które narysowaliśmy. Wgraj swoje: pojawi się w pasku, na ekranie logowania i u góry każdego drukowanego dokumentu.","حالياً يوجد شعار رسمناه نحن. حمّل شعارك: سيظهر في الشريط الجانبي وفي شاشة الدخول وأعلى كل مستند تطبعه."],
+"Va bene un PNG con lo sfondo trasparente, oppure un SVG. Quadrato viene meglio. Massimo mezzo mega.":["A PNG with a transparent background works well, or an SVG. Square looks best. Half a megabyte at most.","Un PNG à fond transparent convient, ou un SVG. Carré, c'est mieux. Un demi-méga au maximum.","Va bien un PNG con fondo transparente, o un SVG. Cuadrado queda mejor. Medio mega como máximo.","Dobrze sprawdzi się PNG z przezroczystym tłem albo SVG. Kwadratowe wygląda najlepiej. Najwyżej pół megabajta.","يصلح ملف PNG بخلفية شفافة أو SVG. المربع أفضل. نصف ميغابايت كحد أقصى."],
+"Urania":["Urania","Urania","Urania","Urania","أورانيا"],
 "Ci costa, a persona":["It costs us, per person","Ça nous coûte, par personne","Nos cuesta, por persona","Kosztuje nas, na osobę","تكلفتنا للشخص"],
 "Chiediamo, a persona":["We ask, per person","On demande, par personne","Pedimos, por persona","Bierzemy, od osoby","نطلب للشخص"],
 "Metti {q} come quota":["Set {q} as the price","Fixer {q} comme prix","Poner {q} como cuota","Ustaw {q} jako cenę","اجعل {q} هو السعر"],
@@ -2090,7 +2117,7 @@ function buildSeed(){
         polizza: "Garanzia assicurativa Signal Iduna",
         iban: "PL15 1160 2202 0000 0006 9907 4199", banca: "Bank Millennium"
       },
-      demo:true, valuta: "PLN", skin: "chiaro", ricarico: 28, accontoPct: 25, giorniOpzione: 7,
+      demo:true, valuta: "PLN", skin: "urania", ricarico: 28, accontoPct: 25, giorniOpzione: 7,
       saldoGiorni: 30, ivaModo: "margine", quotaIscrizione: 25, assicurazione: 0,
       creato: T, ver: 1
     },
@@ -2902,6 +2929,44 @@ const TITOLI = {
   fornitore:"Fornitore", impostazioni:"Impostazioni"
 };
 
+/* --- il marchio dell'agenzia --- */
+/* Se in Impostazioni è stato caricato un logo vero si usa quello.
+   Se no si disegna questo, che è fatto apposta e non pesa niente. */
+let MARCHIO_N = 0;
+function marchio(dim, mono){
+  const c = mono ? "currentColor" : null;
+  const n = ++MARCHIO_N;                 /* nomi diversi per ogni copia, se no si scambiano i colori */
+  const idO = "bpOro" + n, idB = "bpBlu" + n;
+  const blu = c || ("url(#" + idB + ")"), oro = c || ("url(#" + idO + ")"), grigio = c || "#8FA3B5";
+  return '<svg viewBox="0 0 100 100" width="' + dim + '" height="' + dim + '" role="img" aria-label="' +
+    esc((DB && DB.meta && DB.meta.agenzia && DB.meta.agenzia.nome) || "logo") + '">' +
+  '<defs>' +
+    '<linearGradient id="' + idO + '" x1="0" y1="1" x2="1" y2="0">' +
+      '<stop offset="0" stop-color="#A8822F"/><stop offset=".45" stop-color="#E0C689"/><stop offset="1" stop-color="#B08B3E"/></linearGradient>' +
+    '<linearGradient id="' + idB + '" x1="0" y1="0" x2=".9" y2="1">' +
+      '<stop offset="0" stop-color="#2E6396"/><stop offset="1" stop-color="#14385C"/></linearGradient>' +
+  '</defs>' +
+  '<g fill="none" stroke="' + grigio + '" stroke-width="2.4" stroke-linecap="round">' +
+    '<path d="M50 17.5a32.5 32.5 0 0 1 27.6 49.6"/><path d="M22.4 67.1A32.5 32.5 0 0 1 50 17.5"/>' +
+    '<path d="M50 82.5a32.5 32.5 0 0 1-27.6-15.4"/><path d="M77.6 67.1A32.5 32.5 0 0 1 50 82.5"/>' +
+    '<path d="M50 17.5c-8 8-12 19-12 32.5s4 24.5 12 32.5"/><path d="M50 17.5c8 8 12 19 12 32.5s-4 24.5-12 32.5"/>' +
+    '<path d="M27 31.5h46 M18.5 50h63 M27 68.5h46"/></g>' +
+  '<g transform="rotate(-22 50 52)"><path d="M50 26.5c21.5 0 39 11.4 39 25.5S71.5 77.5 50 77.5 11 66.1 11 52s17.5-25.5 39-25.5z' +
+    'm0 4.2c-19.2 0-34.8 9.5-34.8 21.3s15.6 21.3 34.8 21.3 34.8-9.5 34.8-21.3S69.2 30.7 50 30.7z" fill="' + oro + '"/></g>' +
+  '<path d="M58 72C63 55 72 40 97 18 82 40 74 57 70 76c-1.5 6-2 10-2.4 14-2-8-5-13-9.6-18z" fill="' + blu + '"/>' +
+  '<text x="46" y="62" text-anchor="middle" font-family="Georgia,\'Times New Roman\',serif" ' +
+    'font-weight="700" font-size="39" fill="' + blu + '" letter-spacing="-1.5">BP</text>' +
+  '</svg>';
+}
+/* quello che si vede davvero: il file caricato, o il disegno */
+function logoHTML(dim){
+  const l = (DB && DB.meta && DB.meta.agenzia && DB.meta.agenzia.logo) || "";
+  const dentro = l
+    ? '<img src="' + esc(l) + '" alt="">'
+    : marchio(dim);
+  return '<span class="marchio" style="width:' + dim + 'px;height:' + dim + 'px">' + dentro + '</span>';
+}
+
 function badgeOf(v){
   if(v === "cruscotto"){ const n = allarmi().filter(a=> a.p === 0).length; return n ? { n:n, hot:true } : null; }
   if(v === "agenda"){ const n = (DB.cose||[]).filter(c=> !c.fatto).length; return n ? { n:n } : null; }
@@ -2928,7 +2993,7 @@ function drawNav(){
   document.getElementById("brand-name").textContent = DB.meta.agenzia.nome || "Urania";
   document.title = (DB.meta.agenzia.nome || "Urania") + " — " + L("gestione viaggi di gruppo");
   document.getElementById("brand-sub").textContent = L(DB.meta.agenzia.motto || "viaggi di gruppo");
-  document.getElementById("logo").innerHTML = ico("mondo");
+  document.getElementById("logo").innerHTML = logoHTML(32);
   document.getElementById("burger").innerHTML = ico("menu");
   document.getElementById("side-foot").innerHTML =
     '<div class="lingue">' +
@@ -4903,6 +4968,26 @@ VISTE.impostazioni = function(){
   return '<div class="grid g2" style="align-items:start">' +
     '<div class="stack">' +
       '<div class="card">' +
+        '<div class="card-h">' + ico("stella") + '<h3>' + esc(L("Il logo")) + '</h3></div>' +
+        '<div class="card-b">' +
+          '<div class="row" style="align-items:center;gap:14px">' +
+            '<div style="flex:0 0 auto;background:var(--bg-2);border:1px solid var(--sep);border-radius:var(--r-m);padding:10px">' +
+              logoHTML(64) + '</div>' +
+            '<div style="min-width:0;flex:1">' +
+              '<p class="small muted" style="margin:0 0 10px">' + esc(a.logo
+                ? L("Questo è il tuo logo. Esce nella barra, nella schermata d'entrata e in cima a tutti i documenti che stampi.")
+                : L("Adesso c'è un logo disegnato da noi. Carica il tuo: esce nella barra, nella schermata d'entrata e in cima a tutti i documenti che stampi.")) + '</p>' +
+              '<div class="row" style="gap:8px;flex-wrap:wrap">' +
+                '<button class="btn pri sm" data-act="logo-carica">' + ico("su") + esc(L("Carica il logo")) + '</button>' +
+                (a.logo ? '<button class="btn ghost sm" data-act="logo-togli">' + esc(L("Togli")) + '</button>' : "") +
+              '</div>' +
+              '<p class="tiny dim" style="margin:8px 0 0">' + esc(L("Va bene un PNG con lo sfondo trasparente, oppure un SVG. Quadrato viene meglio. Massimo mezzo mega.")) + '</p>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="card">' +
         '<div class="card-h">' + ico("palazzo") + '<h3>' + esc(L("L'agenzia")) + '</h3></div>' +
         '<div class="card-b grid g2" style="gap:11px">' +
           campo("ag-nome", L("Nome"), a.nome) +
@@ -4947,7 +5032,7 @@ VISTE.impostazioni = function(){
         (typeof cartaLingue === "function" ? cartaLingue() : "") +
         '<div class="sep-line"></div>' +
         '<h3 class="mb">' + esc(L("Colore")) + '</h3>' +
-        '<div class="pill-row">' + [["chiaro","Chiaro"],["notte","Notte"],["deserto","Deserto"],["mare","Mare"]].map(s=>
+        '<div class="pill-row">' + [["urania","Agenzia"],["chiaro","Chiaro"],["notte","Notte"],["deserto","Deserto"],["mare","Mare"]].map(s=>
           '<button class="btn' + (DB.meta.skin === s[0] ? " pri" : "") + '" data-act="skin" data-v="' + s[0] + '">' + esc(L(s[1])) + '</button>').join("") + '</div>' +
       '</div>' +
 
@@ -4989,7 +5074,7 @@ ACT.close = ()=> chiudi();
 ACT.ok    = ()=>{ const f = M_OK; chiudi(); if(f) f(); };
 ACT.lang  = (e, el)=> setLang(el.dataset.l);
 ACT.skin  = (e, el)=>{
-  const skins = ["chiaro","notte","deserto","mare"];
+  const skins = ["urania","chiaro","notte","deserto","mare"];
   DB.meta.skin = el.dataset.v || skins[(skins.indexOf(DB.meta.skin) + 1) % skins.length];
   document.documentElement.setAttribute("data-skin", DB.meta.skin);
   save(); render();
@@ -5941,6 +6026,42 @@ ACT["salva-regole"] = function(){
   DB.meta.quotaIscrizione = VN("re-quo"); DB.meta.valuta = V("re-val");
   save(); render(); toast(L("Regole salvate"), "ok");
 };
+/* --- il logo dell'agenzia --- */
+ACT["logo-carica"] = function(){
+  const inp = document.createElement("input");
+  inp.type = "file";
+  inp.accept = "image/png,image/jpeg,image/svg+xml,image/webp,.png,.jpg,.jpeg,.svg,.webp";
+  inp.onchange = function(){
+    const f = inp.files && inp.files[0];
+    if(!f) return;
+    if(f.size > 512000){ toast(L("Il file è troppo grande: al massimo mezzo mega"), "err"); return; }
+    if(!/^image\//.test(f.type || "")){ toast(L("Questo non è un file di immagine"), "err"); return; }
+    const r = new FileReader();
+    r.onload = function(){
+      const dato = String(r.result || "");
+      if(dato.indexOf("data:image/") !== 0){ toast(L("Il file non si legge"), "err"); return; }
+      /* un'immagine che non si apre non la teniamo */
+      const prova = new Image();
+      prova.onload = function(){
+        DB.meta.agenzia.logo = dato;
+        save(); render();
+        toast(L("Logo messo"), "ok");
+      };
+      prova.onerror = function(){ toast(L("Il file non si legge"), "err"); };
+      prova.src = dato;
+    };
+    r.onerror = function(){ toast(L("Il file non si legge"), "err"); };
+    r.readAsDataURL(f);
+  };
+  inp.click();
+};
+ACT["logo-togli"] = function(){
+  conferma(L("Tolgo il logo e rimetto quello disegnato?"), ()=>{
+    DB.meta.agenzia.logo = "";
+    save(); render(); toast(L("Logo tolto"), "ok");
+  });
+};
+
 function scarica(nome, testo, tipo){
   const b = new Blob([testo], { type: tipo || "application/json;charset=utf-8" });
   const u = URL.createObjectURL(b);
@@ -6022,10 +6143,11 @@ ACT["rimetti-demo"] = function(){
   width:min(94vw,360px); text-align:center; animation:pop .3s var(--ease);
 }
 #lock .logo{
-  width:56px; height:56px; border-radius:17px; margin:0 auto 10px; display:grid; place-items:center;
-  background:linear-gradient(150deg,var(--brand),var(--brand-2)); color:var(--on-brand);
+  width:60px; height:60px; border-radius:17px; margin:0 auto 10px; display:grid; place-items:center;
+  background:#fff; border:1px solid var(--sep); color:var(--brand); overflow:hidden;
 }
 #lock .logo svg{ width:30px; height:30px; }
+#lock .logo .marchio > svg, #lock .logo .marchio > img{ width:100% !important; height:100% !important; }
 #lock h2{ font-family:var(--serif); font-size:22px; }
 #lock .who{ font-size:13px; color:var(--txt-2); margin-bottom:14px; }
 #lock .pips{ display:flex; gap:11px; justify-content:center; margin:16px 0 18px; height:15px; }
@@ -6071,7 +6193,7 @@ function blocca(){
   if(!conPin()) return;
   UTENTE = null; PIN = "";
   const l = document.getElementById("lock");
-  document.getElementById("lock-logo").innerHTML = ico("chiave");
+  document.getElementById("lock-logo").innerHTML = logoHTML(50);
   document.getElementById("lock-nome").textContent = DB.meta.agenzia.nome || "Urania";
   document.getElementById("lock-sub").textContent = L("Digita il tuo codice per entrare");
   document.getElementById("lock-tasti").innerHTML =
@@ -6163,6 +6285,7 @@ ACT.pin = function(e, el){
 function testa(titolo, sotto){
   const a = DB.meta.agenzia;
   return '<div class="p-head">' +
+    '<div class="p-logo">' + logoHTML(46) + '</div>' +
     '<div><h1>' + esc(titolo) + '</h1>' +
       (sotto ? '<div style="font-size:10pt;color:#444">' + esc(sotto) + '</div>' : "") + '</div>' +
     '<div class="p-ag"><b style="font-size:11pt">' + esc(a.nome) + '</b><br>' +
