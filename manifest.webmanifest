@@ -1,0 +1,73 @@
+{
+  "name": "Urania — viaggi di gruppo",
+  "short_name": "Urania",
+  "description": "Gestionale per agenzia viaggi: partenze, quote, pratiche, rooming list, posti in bus, fornitori, scadenze, contabilita e documenti di viaggio.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F7F5F1",
+  "theme_color": "#0E6E7A",
+  "lang": "it",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "travel"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Partenze",
+      "short_name": "Partenze",
+      "url": "./index.html#/partenze",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Pratiche",
+      "short_name": "Pratiche",
+      "url": "./index.html#/pratiche",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Scadenzario",
+      "short_name": "Scadenze",
+      "url": "./index.html#/scadenzario",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

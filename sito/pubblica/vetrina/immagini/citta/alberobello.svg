@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Alberobello">
+<defs>
+  <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2E86C7"/><stop offset="0.55" stop-color="#7FC4EA"/><stop offset="1" stop-color="#DCF0FB"/>
+  </linearGradient>
+  <radialGradient id="alone" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#FFF3C4" stop-opacity="0.95"/><stop offset="0.42" stop-color="#FFF3C4" stop-opacity="0.34"/>
+    <stop offset="1" stop-color="#FFF3C4" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="acqua" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#93a9ba"/><stop offset="1" stop-color="#1b517b"/>
+  </linearGradient>
+  <linearGradient id="velo" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#DCF0FB" stop-opacity="0"/><stop offset="1" stop-color="#DCF0FB" stop-opacity="0.45"/>
+  </linearGradient>
+  <linearGradient id="terra" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#5a6470"/><stop offset="1" stop-color="#0f1f32"/>
+  </linearGradient>
+  <radialGradient id="vign" cx="0.5" cy="0.42" r="0.80">
+    <stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.32"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#cielo)"/><circle cx="1161.8" cy="377.3" r="352.8" fill="url(#alone)"/><circle cx="1161.8" cy="377.3" r="84" fill="#FFFFFF"/><ellipse cx="899.3" cy="235.8" rx="406.4" ry="24" fill="#DCF0FB" opacity="0.2"/><ellipse cx="1432" cy="195" rx="317.7" ry="13.7" fill="#DCF0FB" opacity="0.2"/><ellipse cx="1565.5" cy="198.2" rx="193.3" ry="12.1" fill="#DCF0FB" opacity="0.2"/><path d="M-40 700 v-56.5 h43.5 v12.4 h29 v44.1 zM44.6 700 v-102.1 h23.7 v-30.6 l11.1 -22.5 l11.1 22.5 v30.6 h23.7 v102.1 zM1528 700 v-72.8 h30.7 v72.8 zM1571.6 700 v-87.4 h27.9 v19.2 h18.6 v68.1 zM1628.3 700 v-51.7 h38 v11.4 h25.4 v40.4 z" fill="#4e7893" opacity="0.45"/><path d="M-40 700 v-90.8 h26.6 v-27.2 l12.5 -20 l12.5 20 v27.2 h26.6 v90.8 zM44.9 700 v-145.7 h63.1 v145.7 zM76.4 554.3 v-26.2 h2 v26.2 zM1528 700 v-135 h10.1 v-40.5 l4.8 -29.7 l4.8 29.7 v40.5 h10.1 v135 zM1570.1 700 v-146.4 h50.1 v146.4 zM1595.2 553.6 v-26.4 h2 v26.4 zM1631.7 700 v-110.4 h60.8 v110.4 zM1662.1 589.6 v-19.9 h2 v19.9 z" fill="#365369" opacity="0.75"/><g transform="translate(7 -6)" opacity="0.28"><g transform="translate(830 700) scale(2.26) translate(-830 -700)"><g transform="translate(830 700) scale(1)"><g transform="translate(-200 0) scale(0.85)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#FFF3C4"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#FFF3C4"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#FFF3C4"/>
+    <path d="M-40 -100 h80" stroke="#FFF3C4" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(-90 0) scale(1.05)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#FFF3C4"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#FFF3C4"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#FFF3C4"/>
+    <path d="M-40 -100 h80" stroke="#FFF3C4" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(30 0) scale(0.95)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#FFF3C4"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#FFF3C4"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#FFF3C4"/>
+    <path d="M-40 -100 h80" stroke="#FFF3C4" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(140 0) scale(1.15)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#FFF3C4"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#FFF3C4"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#FFF3C4"/>
+    <path d="M-40 -100 h80" stroke="#FFF3C4" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(270 0) scale(0.8)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#FFF3C4"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#FFF3C4"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#FFF3C4"/>
+    <path d="M-40 -100 h80" stroke="#FFF3C4" stroke-width="3" opacity="0.4"/>
+  </g>
+    <path d="M-260 0 h560 v14 h-560 z" fill="#FFF3C4"/></g></g></g><g transform="translate(830 700) scale(2.26) translate(-830 -700)"><g transform="translate(830 700) scale(1)"><g transform="translate(-200 0) scale(0.85)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#0e1a2b"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#0e1a2b"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#0e1a2b"/>
+    <path d="M-40 -100 h80" stroke="#0e1a2b" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(-90 0) scale(1.05)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#0e1a2b"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#0e1a2b"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#0e1a2b"/>
+    <path d="M-40 -100 h80" stroke="#0e1a2b" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(30 0) scale(0.95)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#0e1a2b"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#0e1a2b"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#0e1a2b"/>
+    <path d="M-40 -100 h80" stroke="#0e1a2b" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(140 0) scale(1.15)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#0e1a2b"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#0e1a2b"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#0e1a2b"/>
+    <path d="M-40 -100 h80" stroke="#0e1a2b" stroke-width="3" opacity="0.4"/>
+  </g><g transform="translate(270 0) scale(0.8)">
+    <path d="M-46 0 v-64 h92 V0 z" fill="#0e1a2b"/>
+    <path d="M-58 -64 L0 -160 L58 -64 z" fill="#0e1a2b"/>
+    <path d="M0 -160 v-16 a7 7 0 0 1 0 14 z" fill="#0e1a2b"/>
+    <path d="M-40 -100 h80" stroke="#0e1a2b" stroke-width="3" opacity="0.4"/>
+  </g>
+    <path d="M-260 0 h560 v14 h-560 z" fill="#0e1a2b"/></g></g><path d="M-40 702 v-62.5 l32.4 -21.9 l32.4 21.9 v62.5 zM36.6 702 v-73.6 h60.3 v73.6 zM108.4 702 v-53.7 h53 v53.7 zM134.9 648.3 v-9.7 h2 v9.7 zM165.7 702 v-65.1 h30.6 v65.1 zM207.5 702 v-93.3 h59.6 v93.3 zM278.7 702 v-46.9 h37.1 v10.3 h24.8 v36.6 zM1262.8 702 v-53.9 h17 v-16.2 l8 -11.8 l8 11.8 v16.2 h17 v53.9 zM1322.4 702 v-66.9 h41.1 v66.9 zM1343 635.1 v-12 h2 v12 zM1371.2 702 v-72 l33.2 -25.2 l33.2 25.2 v72 zM1441.1 702 v-64.8 h57.3 v64.8 zM1507.5 702 v-87.8 h21.1 v-26.3 l9.9 -19.3 l9.9 19.3 v26.3 h21.1 v87.8 zM1581.3 702 v-50.6 h62.5 v50.6 zM1612.5 651.4 v-9.1 h2 v9.1 z" fill="#102439" opacity="1"/><rect x="0" y="700" width="1600" height="300" fill="url(#terra)"/><rect x="362.6" y="730.6" width="188.4" height="3" rx="1.5" fill="#FFF3C4" opacity="0.1"/><rect x="766.2" y="889.4" width="241.1" height="3" rx="1.5" fill="#FFF3C4" opacity="0.1"/><rect x="778.1" y="882.3" width="307.5" height="3" rx="1.5" fill="#FFF3C4" opacity="0.1"/><rect x="1482.5" y="784.3" width="363.4" height="3" rx="1.5" fill="#FFF3C4" opacity="0"/><rect x="405.4" y="772.2" width="338.3" height="3" rx="1.5" fill="#FFF3C4" opacity="0.1"/><rect x="1394.4" y="943.2" width="389.9" height="3" rx="1.5" fill="#FFF3C4" opacity="0.1"/><rect x="940.3" y="913.5" width="306.6" height="3" rx="1.5" fill="#FFF3C4" opacity="0.1"/><rect x="986.6" y="866.5" width="229.4" height="3" rx="1.5" fill="#FFF3C4" opacity="0.1"/><rect x="697.5" y="801.1" width="397.9" height="3" rx="1.5" fill="#FFF3C4" opacity="0"/><path d="M878.2 205.3 q6.8 -5.3 13.6 0 q6.8 -5.3 13.6 0" fill="none" stroke="#183c5c" stroke-width="1.7" stroke-linecap="round" opacity="0.5"/><path d="M1382.8 349.4 q5.6 -4.3 11.2 0 q5.6 -4.3 11.2 0" fill="none" stroke="#183c5c" stroke-width="1.4" stroke-linecap="round" opacity="0.5"/><path d="M1325.3 215.2 q11.3 -8.8 22.6 0 q11.3 -8.8 22.6 0" fill="none" stroke="#183c5c" stroke-width="2.8" stroke-linecap="round" opacity="0.5"/><path d="M123.3 215.7 q11.4 -8.9 22.8 0 q11.4 -8.9 22.8 0" fill="none" stroke="#183c5c" stroke-width="2.8" stroke-linecap="round" opacity="0.5"/><path d="M854.3 353.3 q9.3 -7.2 18.5 0 q9.3 -7.2 18.5 0" fill="none" stroke="#183c5c" stroke-width="2.3" stroke-linecap="round" opacity="0.5"/><rect x="0" y="440" width="1600" height="260" fill="url(#velo)" opacity="0.45"/><rect width="1600" height="1000" fill="url(#vign)"/></svg>

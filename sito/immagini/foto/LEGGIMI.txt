@@ -1,0 +1,14 @@
+Qui dentro ci vanno le foto vere delle città.
+
+Il nome del file deve essere uguale al nome della città usato dal
+programma, per esempio:  parigi.jpg  roma.jpg  newyork.jpg
+Vanno bene .jpg .png .webp .avif
+
+Se il file c'è, il sito usa la foto. Se non c'è, usa il disegno,
+che è già pronto in immagini/citta/. Non si rompe mai niente.
+
+Per scaricarle in automatico (foto libere, con i crediti):
+    node scarica-foto.mjs
+
+Poi rifai il sito:
+    node costruisci.mjs

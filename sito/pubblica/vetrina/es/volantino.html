@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartel — Urania</title>
+<meta name="robots" content="noindex">
+<style>
+  @page{ size:A4; margin:12mm; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:#14201f; background:#eceae5; }
+  .foglio{ width:210mm; min-height:297mm; margin:14px auto; background:#fff; padding:14mm 13mm; box-shadow:0 10px 40px rgba(0,0,0,.18); }
+  .cima{ display:flex; align-items:flex-start; gap:10mm; border-bottom:2pt solid #0E6E7A; padding-bottom:5mm; }
+  .cima h1{ font-size:30pt; line-height:1.02; margin:0; letter-spacing:-.02em; }
+  .cima .occhiello{ font-size:10pt; letter-spacing:.18em; text-transform:uppercase; color:#0E6E7A; margin:0 0 3mm; font-weight:700; }
+  .sotto{ font-size:12.5pt; color:#4a5754; margin:4mm 0 7mm; }
+  .viaggi{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+  .v{ border:.6pt solid #cfd6d4; border-radius:4mm; overflow:hidden; }
+  .v .testa{ height:16mm; display:flex; align-items:center; padding:0 5mm; color:#fff; font-weight:800; font-size:12pt; gap:3mm; }
+  .v .corpo{ padding:4mm 5mm 5mm; }
+  .v h3{ margin:0 0 1mm; font-size:12pt; }
+  .v p{ margin:0; font-size:9.5pt; color:#4a5754; line-height:1.35; }
+  .v .prezzo{ margin-top:3mm; font-size:14pt; font-weight:800; color:#0E6E7A; }
+  .v .prezzo small{ font-size:8.5pt; color:#4a5754; font-weight:600; }
+  .punti{ margin:7mm 0; padding:5mm 6mm; background:#f2f6f5; border-radius:4mm; }
+  .punti h2{ margin:0 0 3mm; font-size:12pt; }
+  .punti ul{ margin:0; padding-left:5mm; columns:2; font-size:10pt; line-height:1.7; }
+  .piede{ margin-top:auto; border-top:1.5pt solid #0E6E7A; padding-top:5mm; display:flex; gap:8mm; align-items:flex-end; }
+  .piede b{ font-size:15pt; display:block; }
+  .piede .rec{ font-size:10.5pt; line-height:1.5; }
+  .piede .legale{ font-size:7pt; color:#69736f; margin-top:3mm; }
+  .taglia{ text-align:center; font-size:8pt; color:#8a938f; margin-top:4mm; letter-spacing:.1em; text-transform:uppercase; }
+  /* sul telefono il foglio si restringe: sulla carta resta un A4 */
+  @media(max-width:820px){
+    body{ background:#fff; }
+    .foglio{ width:auto; min-height:0; margin:0; padding:16px; box-shadow:none; }
+    .cima h1{ font-size:26pt; }
+    .viaggi{ grid-template-columns:1fr; }
+    .punti ul{ columns:1; }
+    .piede{ flex-direction:column; gap:14px; align-items:flex-start; }
+    .piede div[style]{ margin-left:0 !important; text-align:left !important; max-width:none !important; }
+  }
+  @media print{ body{ background:#fff; } .foglio{ box-shadow:none; margin:0; width:auto; min-height:0; padding:0; } }
+</style></head>
+<body>
+<div class="foglio">
+  <div class="cima">
+    <div>
+      <p class="occhiello">Viajes de grupo · Urania</p>
+      <h1>El viaje de vuestro grupo</h1>
+    </div>
+  </div>
+  <p class="sotto">Parroquias · Colegios · Clubes de empresa · Asociaciones — El viaje lo pensamos nosotros. Vosotros disfrutadlo.</p>
+  <div class="viaggi">
+    <div class="v">
+      <div class="testa" style="background:linear-gradient(135deg,#B3325F 0%,#E0723F 100%)"><span>🇮🇹</span><span>8 días</span></div>
+      <div class="corpo"><h3>Gran Tour de Sicilia</h3><p>Palermo, Erice, Agrigento, Piazza Armerina, Siracusa, Taormina y el Etna, en autocar desde Italia.</p>
+      <div class="prezzo">€ 890 <small>por persona</small></div></div></div>
+    <div class="v">
+      <div class="testa" style="background:linear-gradient(135deg,#C2600F 0%,#E3A93A 100%)"><span>🇲🇦</span><span>8 días</span></div>
+      <div class="corpo"><h3>Marruecos — Ciudades Imperiales</h3><p>Ocho días entre las cuatro ciudades imperiales, con vuelo regular desde Milán y guía que habla italiano.</p>
+      <div class="prezzo">€ 1090 <small>por persona</small></div></div></div>
+    <div class="v">
+      <div class="testa" style="background:linear-gradient(135deg,#15588F 0%,#3196D6 100%)"><span>🇨🇿</span><span>5 días</span></div>
+      <div class="corpo"><h3>Fin de Año en Praga</h3><p>El Puente de Carlos, el Castillo, Karlovy Vary y la cena de Nochevieja con fuegos sobre el Moldava.</p>
+      <div class="prezzo">€ 690 <small>por persona</small></div></div></div>
+    <div class="v">
+      <div class="testa" style="background:linear-gradient(135deg,#2F6B57 0%,#6FAE86 100%)"><span>🇫🇷</span><span>5 días</span></div>
+      <div class="corpo"><h3>Peregrinación a Lourdes</h3><p>Autocar, pensión completa con bebidas y el tiempo justo para las celebraciones.</p>
+      <div class="prezzo">€ 520 <small>por persona</small></div></div></div>
+  </div>
+  <div class="punti">
+    <h2>Qué incluye el precio</h2>
+    <ul><li>Autocar o vuelo regular</li><li>Hoteles y comidas según programa</li><li>Guías locales y entradas</li><li>Acompañante desde Italia</li><li>Seguro médico y de equipaje</li></ul>
+  </div>
+  <div class="piede">
+    <div class="rec">
+      <b>Urania</b>
+      DA METTERE — via e numero, DA METTERE DA METTERE<br>
+      +48 573 533 847 · +48 573 533 847 · info@uraniatravel.pl<br>
+      uraniatravel.pl
+      <div class="legale">REGON 543565701 — Garanzia assicurativa Signal Iduna</div>
+    </div>
+    <div style="margin-left:auto;text-align:right;font-size:10.5pt;max-width:70mm">Llamad, decid dónde y cuándo, y en dos días tenéis el presupuesto escrito.</div>
+  </div>
+  <p class="taglia">Recortad y colgad en el tablón</p>
+</div>
+</body></html>

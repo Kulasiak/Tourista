@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Urania — due versioni del sito</title><meta name="robots" content="noindex">
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0d1512;color:#f2f5f4;
+   min-height:100vh;display:flex;align-items:center;justify-content:center;padding:44px 20px}
+ .box{max-width:980px;width:100%}
+ h1{font-size:clamp(28px,4vw,42px);margin:0 0 6px;letter-spacing:-.02em}
+ p.sotto{color:#9fb0ab;margin:0 0 30px;font-size:16px;line-height:1.55}
+ .due{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+ .v{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid #2a3a35;
+   background:#131e1a;transition:transform .2s,border-color .2s}
+ .v:hover{transform:translateY(-4px);border-color:#3FB0BE}
+ .cima{position:relative;display:block;height:178px;text-decoration:none;color:#fff}
+ .cima .foto{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr)}
+ .cima .foto img{width:100%;height:100%;object-fit:cover;display:block}
+ .cima .velo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,16,.06),rgba(6,10,16,.78))}
+ .cima b{position:absolute;left:20px;bottom:15px;font-size:22px;letter-spacing:-.01em}
+ .corpo{padding:18px 20px 22px}
+ .corpo strong{display:block;font-size:17px;margin-bottom:6px}
+ .corpo span{color:#9fb0ab;font-size:14.5px;line-height:1.55;display:block}
+ .lingue{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}
+ .lingue a{font-size:13px;color:#9fb0ab;text-decoration:none;border:1px solid #2a3a35;border-radius:99px;padding:4px 11px}
+ .lingue a:hover{color:#fff;border-color:#3FB0BE}
+ .piede{margin-top:26px;color:#6f827c;font-size:13.5px;line-height:1.6}
+ .piede b{color:#9fb0ab;font-weight:600}
+</style></head>
+<body><div class="box">
+  <h1>Urania</h1>
+  <p class="sotto">Due versioni dello stesso sito, stessi testi in cinque lingue.<br>
+  Guarda tutte e due e scegli quella che ti piace: dentro c'è già tutto.</p>
+  <div class="due">
+    
+    <div class="v">
+      <a class="cima" href="vetrina/it/index.html">
+        <span class="foto"><img src="vetrina/immagini/citta/roma.svg" alt=""><img src="vetrina/immagini/citta/praga.svg" alt=""><img src="vetrina/immagini/citta/lisbona.svg" alt=""></span>
+        <span class="velo"></span>
+        <b>Vetrina</b>
+      </a>
+      <div class="corpo">
+        <strong>Elegante, da agenzia storica</strong>
+        <span>Caratteri con le grazie, spazi larghi, colori caldi. Fa pensare a un&#39;agenzia che c&#39;è da vent&#39;anni.</span>
+        <div class="lingue"><a href="vetrina/it/index.html">🇮🇹 Italiano</a><a href="vetrina/en/index.html">🇬🇧 English</a><a href="vetrina/fr/index.html">🇫🇷 Français</a><a href="vetrina/es/index.html">🇪🇸 Español</a><a href="vetrina/pl/index.html">🇵🇱 Polski</a></div>
+      </div>
+    </div>
+    
+    <div class="v">
+      <a class="cima" href="moderna/it/index.html">
+        <span class="foto"><img src="moderna/immagini/citta/tokyo.svg" alt=""><img src="moderna/immagini/citta/dubai.svg" alt=""><img src="moderna/immagini/citta/newyork.svg" alt=""></span>
+        <span class="velo"></span>
+        <b>Moderna</b>
+      </a>
+      <div class="corpo">
+        <strong>Colorata, da agenzia giovane</strong>
+        <span>Sfondo scuro, colori vivi, caratteri grandi. Fa pensare a un&#39;agenzia che si muove in fretta.</span>
+        <div class="lingue"><a href="moderna/it/index.html">🇮🇹 Italiano</a><a href="moderna/en/index.html">🇬🇧 English</a><a href="moderna/fr/index.html">🇫🇷 Français</a><a href="moderna/es/index.html">🇪🇸 Español</a><a href="moderna/pl/index.html">🇵🇱 Polski</a></div>
+      </div>
+    </div>
+  </div>
+  <p class="piede">
+    In ogni versione e in ogni lingua: <b>Home</b>, <b>Viaggi</b> (con la scheda di ogni viaggio),
+    <b>Destinazioni</b> (42 città), <b>Gruppi</b>, <b>Chi siamo</b>, <b>Domande</b>, <b>Blog</b>,
+    <b>Contatti</b>, <b>Privacy</b>, pagina <b>404</b>, <b>volantino A4</b> da stampare
+    e i <b>testi per la pubblicità</b> già pronti da copiare.<br>
+    Per pubblicarlo: punta il progetto alla cartella <b>vetrina</b> oppure <b>moderna</b>, il resto è già dentro.
+  </p>
+</div></body></html>
